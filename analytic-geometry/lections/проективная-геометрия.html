@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Проективная геометрия</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+            <link rel="stylesheet" type="text/css" href="https://jsxgraph.org/distrib/jsxgraph.css" />
+            <script type="text/javascript" src="https://jsxgraph.org/distrib/jsxgraphcore.js"></script>
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="поверхности-второго-порядка.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="снова-линии-второго-порядка.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="6" id="проективная-геометрия">Проективная
+геометрия</h1>
+<h2 data-number="6.1"
+id="модели-проективной-плоскости-пополненная-плоскость-связка.-перспективное-соответствие">Модели
+проективной плоскости: пополненная плоскость, связка. Перспективное
+соответствие</h2>
+<div id="definition-75">
+<p><strong>Определение:</strong> <em>Инцидентность</em> – это отношение
+между прямыми и точками.</p>
+</div>
+<div id="definition-76">
+<p><strong>Определение:</strong> (аксиоматика проективной плоскости)</p>
+<ol type="1">
+<li>Любые две точки инцидентны одной и только одной прямой.</li>
+<li>Любые две прямые инцидентны одной и только одной точке.</li>
+<li>Существуют <span class="math inline">\(3\)</span> точки не
+инцидентные одной прямой.</li>
+<li>Любая прямая инцидентна <span class="math inline">\(3\)</span>
+точкам.</li>
+</ol>
+<p>Множество точек и прямых с введенной индицентностью, удовлетворяющее
+данным аксиомам – это <em>проективная плоскость</em>.</p>
+</div>
+<div id="definition-77">
+<p><strong>Определение:</strong> (<em>Модель пополненной
+плоскости</em>)</p>
+<p>Рассмотрим <span style="color:orange;">плоскость</span>, как
+множество пучков (собственных и несобственных) прямых. Назовем пучки
+точками (соответственно собственными и несобственными). Назовем
+несобственной прямой множество всех несобственных точек. Собственная
+прямая это пара: несобственная точка + собственная точка или собственная
+точка + собственная точка.</p>
+<p>Точка <em>инцидентна прямой</em>, если она принадлежит этой
+прямой.</p>
+</div>
+<div id="statement-76">
+<p><strong>Утверждение:</strong> Модель пополненной плоскости – это
+проективная плоскость.</p>
+<p><em>Доказательство:</em> Проверим справедливость аксиом.</p>
+<ol type="1">
+<li>очев</li>
+<li>очев</li>
+<li>не очев</li>
+<li>не очев</li>
+</ol>
+</div>
+<div id="definition-78">
+<p><strong>Определение:</strong> (<em>Модель связки</em>)</p>
+<p>Рассмотрим множество всех <span style="color:green">прямых</span> и
+<span style="color:orange;">плоскостей</span>, проходящих через,
+заданную точку <span class="math inline">\(O\)</span> пространства.
+Пусть <span style="color:green">прямая</span> – это точка, <span
+style="color:orange;">плоскость</span> – это прямая.</p>
+<p><em>Инцидентность</em> – точка принадлежит прямой (<span
+style="color:green">прямая</span> принадлежит <span
+style="color:orange;">плоскости</span>).</p>
+</div>
+<div id="statement-77">
+<p><strong>Утверждение:</strong> Модель связки – проективная
+плоскость.</p>
+<p><em>Доказательство:</em> что-то тут не так.</p>
+</div>
+<div id="definition-79">
+<p><strong>Определение:</strong> Проективные плоскости
+<em>изоморфны</em>, если существует биекция (<em>проективное
+соответствие</em>) из одной проективной плоскости в другую, сохраняющая
+инцидентность.</p>
+</div>
+<div id="statement-78">
+<p><strong>Утверждение:</strong> Связка изоморфна пополненной
+плоскости.</p>
+<p><em>Доказательство:</em> Построим биекцию. Пусть несобственная прямая
+пополненной плоскости переходит в <span
+style="color:orange;">плоскость</span>, принадлежащуюю связке и
+параллельную <span style="color:orange;">плоскости</span>, для которой
+построено множество пополненной плоскости. Пусть <span
+style="color:green;">прямая</span> из связки(то есть точка на
+проективном) параллельная <span style="color:orange;">плоскости</span>,
+для которой построено множество пополненной плоскости, переходит в
+несобственную точку, образованную пучком прямых параллельных данной.
+Остальные <span style="color:orange;">плоскости</span> и <span
+style="color:green;">прямые</span> связки переходят в соответственно
+прямые и точки их пересечения с <span
+style="color:orange;">плоскостью</span>, для которой построено множество
+пополненной плоскости.</p>
+</div>
+<h2 data-number="6.2"
+id="однородные-координаты.-арифметическая-модель-проективной-плоскости">Однородные
+координаты. Арифметическая модель проективной плоскости</h2>
+<div id="definition-80">
+<p><strong>Определение:</strong> Однородные координаты в связке. Пусть
+есть система координат <span class="math inline">\(Oxyz\)</span> с
+началом в точке <span class="math inline">\(O\)</span>, образующей
+связку. Тогда условие принадлежности <span
+style="color:green;">прямой</span> из связки <span
+style="color:orange;">плоскости</span> из связки в <span
+class="math inline">\(Oxy\)</span> имеет вид:</p>
+<p><span class="math display">\[A\alpha + B\beta + C\gamma = 0\]</span>
+Будем называть множество пропорциональных троек <span
+class="math inline">\(\{A:B:C\}\)</span> <em>однородными координатами
+прямой</em> проективной плоскости. Множество пропорциональных троек
+<span class="math inline">\(\(\alpha:\beta:\gamma\)\)</span>
+<em>однородными координатами точки</em> проективной плоскости.</p>
+</div>
+<div id="definition-81">
+<p><strong>Определение:</strong> (<em>Арифметичекая модель</em>)</p>
+<p>Рассмотрим множество пропорциональных троек <span
+class="math inline">\(\{A:B:C\}\)</span>, которые назовем прямыми и
+множество пропорциональных троек <span
+class="math inline">\(\(\alpha:\beta:\gamma\)\)</span>, которые назовем
+точками.</p>
+<p><em>Инцидентность</em> – <span class="math inline">\(A\alpha + B\beta
++ C\gamma = 0\)</span>.</p>
+</div>
+<div id="statement-79">
+<p><strong>Утверждение:</strong> Арифметическая модель – это проективная
+плоскость.</p>
+<p><em>Доказательство:</em> очев.</p>
+</div>
+<h2 data-number="6.3"
+id="принцип-двойственности.-теорема-дезарга">Принцип двойственности.
+Теорема Дезарга</h2>
+<div id="definition-82">
+<p><strong>Определение:</strong> <em>Треугольник</em> – это три точки не
+инцидентные одной прямой.</p>
+</div>
+<div id="theorem-17">
+<p><strong>Теорема:</strong> (Дезарга)</p>
+<p><em>Доказательство:</em></p>
+</div>
+<h2 data-number="6.4" id="проективные-системы-координат">Проективные
+системы координат</h2>
+<div id="definition-83">
+<p><strong>Определение:</strong> Репер <span
+class="math inline">\(Oe_1e_2e_3\)</span> <em>эквивалентен</em> реперу
+<span class="math inline">\(Oe_1’e_2’e_3’\)</span>, если <span
+class="math inline">\(\exists \lambda: \,\,\,\, \forall i \in \{1, 2,
+3\} \,\,\,\, e_i = \lambda e_i’\)</span>.</p>
+</div>
+<div id="statement-80">
+<p><strong>Утверждение:</strong> Репер <span
+class="math inline">\(Oe_1e_2e_3\)</span> эквивалентен реперу <span
+class="math inline">\(Oe_1’e_2’e_3’ \Leftrightarrow\)</span> любая <span
+style="color:green;">прямая</span>, проходящая через точку <span
+class="math inline">\(O\)</span> имеет одни и те же однородные
+координаты в обоих связках (связка одна, но координаты разные, так как
+разные реперы).</p>
+<p><em>Доказательство:</em> <span
+class="math display">\[\Rightarrow\]</span> очев (нет)</p>
+<p><span class="math display">\[\Leftarrow\]</span></p>
+<p><span class="math display">\[\begin{array}{c}
+e_1’ = (\lambda:0:0)\\
+e_2’ = (0:\lambda:0)\\
+e_3’ = (0:0:\lambda)
+\end{array} \Rightarrow\]</span></p>
+<p><span class="math display">\[\begin{array}{c}
+e_1’ = \lambda_1 e_1\\
+e_2’ = \lambda_2 e_2\\
+e_3’ = \lambda_3 e_3
+\end{array}\]</span></p>
+<p>Рассмотрим <span class="math inline">\(s = e_1’ + e_2’ +
+e_3’\)</span>. Он имеет однородные координаты <span
+class="math inline">\((1:1:1)\)</span> вобоих реперах, следовательно
+существует <span class="math inline">\(\lambda\)</span>, такая что:
+<span class="math display">\[s = e_1’ + e_2’ + e_3’ = \lambda(e_1 + e_2
++ e_3) = \lambda_1 e_1 + \lambda_2 e_2 + \lambda_3 e_3
+\,\,\,\,\blacksquare\]</span></p>
+</div>
+<div id="definition-84">
+<p><strong>Определение:</strong> <em>Проективная система координат</em>
+– это класс эквивалентных реперов.</p>
+<p>Чтобы задать проективную систему координат нужно <span
+class="math inline">\(4\)</span> точки (проективные, т.е. координаты
+направляющих векторов <span style="color:green;">прямых</span>) с
+однородными координатами: <span class="math display">\[\begin{cases}
+    X_1 = (1:0:0)\\
+    X_2 = (0:1:0)\\
+    X_3 = (0:0:1)\\
+    E = (1:1:1)
+\end{cases}\]</span></p>
+</div>
+<h3 data-number="6.4.1"
+id="переход-от-одной-проективной-системы-координат-к-другой">Переход от
+одной проективной системы координат к другой</h3>
+<p>Пусть есть две проективные системы координат <span
+class="math inline">\(X_1X_2X_3E\)</span> и <span
+class="math inline">\(X_1’X_2’X_3’E’\)</span>. Пусть однородные
+координаты точек, задающих <span
+class="math inline">\(X_1’X_2’X_3’E’\)</span>, имеют в <span
+class="math inline">\(X_1X_2X_3E\)</span> однородные координаты:</p>
+<p><span class="math display">\[\begin{cases}
+    X_1’ = (c_{11}:c_{21}:c_{31})\\
+    X_2’= (c_{12}:c_{22}:c_{32})\\
+    X_3’= (c_{13}:c_{23}:c_{33})\\
+    E = (\varepsilon_1:\varepsilon_2:\varepsilon_3)
+\end{cases}\]</span></p>
+<p>Имеем <span
+class="math display">\[(c_{11}:c_{21}:c_{31})+(c_{12}:c_{22}:c_{32})+(c_{13}:c_{23}:c_{33})=
+(\varepsilon_1:\varepsilon_2:\varepsilon_3)\]</span> <span
+class="math display">\[(c_{11}+с_{12}+c_{13}:c_{21}+c_{22}+c_{23}:c_{31}+c_{32}+c_{33})=
+(\varepsilon_1:\varepsilon_2:\varepsilon_3)\]</span> Пусть <span
+class="math display">\[C = \left(\begin{array}{ccc}
+    c_{11} &amp; c_{12} &amp; c_{13}\\
+    c_{21} &amp; c_{22} &amp; c_{23}\\
+    c_{31} &amp; c_{32} &amp; c_{33}\\
+\end{array}\right)\]</span></p>
+<p>Тогда</p>
+<p><span class="math display">\[\lambda \left(\begin{array}{c}
+x_1\\
+x_2\\
+x_3
+\end{array}\right) = C\left(\begin{array}{c}
+x_1’\\
+x_2’\\
+x_3’
+\end{array}\right)\]</span></p>
+<h2 data-number="6.5" id="проективные-преобразования">Проективные
+преобразования</h2>
+<div id="definition-85">
+<p><strong>Определение:</strong> <em>Проективное преобразование</em> –
+это биекция между проективными системы координат. (То есть точка с
+некоторыми однородными координатами переходит в точку с теми же
+координатами в другой проетивной системе координат).</p>
+</div>
+<div id="statement-81">
+<p><strong>Утверждение:</strong> При проективном преобразовании с
+матрицей <span class="math inline">\(C\)</span> прямая с кординатами
+<span class="math inline">\(\{a_1, a_2, a_3\}\)</span> переходит в
+прямую с координатами <span class="math inline">\(\{a_1, a_2,
+a_3\}C^{-1}\)</span>.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<h2 data-number="6.6"
+id="линии-второго-порядка-в-однородных-координатах">Линии второго
+порядка в однородных координатах</h2>
+<p>Пусть кривая второго порядка задана в аффинной системе координат
+общим уравнением <span class="math display">\[a_{11} x^2 + 2 a_{12} xy +
+a_{22} y^2 + a_1 x + a_2 y + a_0 = 0\]</span>. Переобозначим индексы
+<span class="math inline">\(a\)</span> и получим: <span
+class="math display">\[a_{11} x^2 + 2 a_{12} xy + a_{22} y^2 + a_{13} x
++ a_{23} y + a_{33} = 0\]</span> Перейдем к однородным координатам <span
+class="math inline">\(\begin{cases}
+    x = \frac{x_1}{x_3}\\
+    y = \frac{x_2}{x_3}
+\end{cases}\)</span> Получим <span class="math display">\[a_{11} x_1^2 +
+2 a_{12} x_1x_2 + a_{22} x_2^2 + a_{13} x_1x_3 + a_{23} x_2x_3 + a_{33}
+x_3^2 = 0\]</span></p>
+<p>На обычной плоскости <span class="math inline">\(x_3 \ne 0\)</span>,
+то есть на проективной плоскости к точкам, заданным обычным уравнением
+кривой второго порядка, добавляются еще точки с <span
+class="math inline">\(x_3 = 0\)</span>: <span
+class="math display">\[a_{11} x_1^2 + 2 a_{12} x_1x_2 + a_{22} x_2^2 =
+0\]</span></p>
+<p>Это асимптоты кривых второго порядка на плоскости.</p>
+<div id="definition-86">
+<p><strong>Определение:</strong> <em>Кривая второго порядка на
+проективной плоскости</em> – это множество точек, удовлетворяющих
+уравнению:</p>
+<p><span class="math display">\[a_{11} x_1^2 + 2 a_{12} x_1x_2 + a_{22}
+x_2^2 + a_{13} x_1x_3 + a_{23} x_2x_3 + a_{33} x_3^2 = 0\]</span></p>
+</div>
+<h2 data-number="6.7"
+id="проективная-классификация-линий-второго-порядка">Проективная
+классификация линий второго порядка</h2>
+<div id="theorem-18">
+<p><strong>Теорема:</strong> Существует пять классов проективной
+эквивалентности линий второго порядка:</p>
+<ol type="1">
+<li><span class="math inline">\(x_1^2 + x_2^2 - x_3^2 = 0\)</span>
+овал.</li>
+<li><span class="math inline">\(x_1^2 + x_2^2 + x_3^2 = 0\)</span>
+мнимый овал.</li>
+<li><span class="math inline">\(x_1^2 - x_2^2 = 0\)</span>
+пересекающиеся прямые.</li>
+<li><span class="math inline">\(x_1^2 + x_2^2 = 0\)</span> мнимые
+пересекающиеся прямые.</li>
+<li><span class="math inline">\(x_1^2 = 0\)</span> совпадающие
+прямые.</li>
+</ol>
+<p><em>Доказательство:</em> Во-первых, докажем, что эллипс, гипербола и
+парабола проективно эквивалентны овалу <span class="math inline">\(x_1^2
++ x_2^2 - x_3^2 = 0\)</span>, то есть переводятся а него с помощью
+проективного преобразования.</p>
+<p>Во-вторых, любые две прямые на проективной плоскости переводятся в
+любые две другие прямые на проективной плоскости.</p>
+</div>
+<h2 data-number="6.8"
+id="проективно-аффинные-преобразования">Проективно-аффинные
+преобразования</h2>
+<div id="definition-87">
+<p><strong>Определение:</strong> <em>Проективно-аффинное
+преобразование</em> – это проективное преобразование, переводящее
+несобственную прямую в себя.</p>
+</div>
+<h2 data-number="6.9"
+id="проективно-аффинная-классификация-линий-второго-порядка">Проективно-аффинная
+классификация линий второго порядка</h2>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="поверхности-второго-порядка.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="снова-линии-второго-порядка.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

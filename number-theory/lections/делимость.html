@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Делимость</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="конечные-цепные-дроби.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="1" id="делимость">Делимость</h1>
+<h2 data-number="1.1" id="теоремы-о-делении-с-остатком">Теоремы о
+делении с остатком</h2>
+<div id="definition-1">
+<p><strong>Определение:</strong> Пусть <span class="math inline">\(a \in
+\mathbb{Z}, b \in \mathbb{Z}, a \ne 0\)</span>. Если <span
+class="math inline">\(\exists c \in \mathbb{Z}\)</span>, такое что <span
+class="math inline">\(b = ac\)</span>, то <span
+class="math inline">\(a\,\,|\,\,b\)</span> (<span
+class="math inline">\(a\)</span> <em>делит</em> <span
+class="math inline">\(b\)</span>)</p>
+</div>
+<h3 data-number="1.1.1" id="простейшие-свойства">Простейшие
+свойства</h3>
+<p><span class="math inline">\(\forall a, b, c \in
+\mathbb{Z}\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(1\,\,|\,\,a\)</span></li>
+<li>Если <span class="math inline">\(a \ne 0\)</span>, то <span
+class="math inline">\(a\,\,|\,\,a\)</span></li>
+<li>Если <span class="math inline">\(a\,\,|\,\,b\)</span>, то <span
+class="math inline">\(a\,\,|\,\,bc\)</span></li>
+<li>Если <span class="math inline">\(a\,\,|\,\,b\)</span> и <span
+class="math inline">\(b\,\,|\,\,с\)</span>, то <span
+class="math inline">\(a\,\,|\,\,c\)</span></li>
+<li>Если <span class="math inline">\(a\,\,|\,\,b\)</span> и <span
+class="math inline">\(a\,\,|\,\,с\)</span>, то <span
+class="math inline">\(a\,\,|\,\,(b \pm c)\)</span></li>
+<li>Если <span class="math inline">\(a\,\,|\,\,b\)</span>, то <span
+class="math inline">\(|a| \le |b|\)</span></li>
+</ol>
+<h3 data-number="1.1.2" id="простейшие-функции">Простейшие функции</h3>
+<div id="definition-2">
+<p><strong>Определение:</strong> (<em>(нижняя) целая часть числа</em>)
+<span class="math inline">\([x] = \max \{z \in \mathbb{Z}: z \le x\} =
+\lceil x \rceil\)</span></p>
+</div>
+<blockquote>
+<p><span class="math inline">\([-4.5] = -5\)</span><br> <span
+class="math inline">\([5.6] = [5]\)</span></p>
+</blockquote>
+<div id="definition-3">
+<p><strong>Определение:</strong> (<em>дробная часть числа</em>) <span
+class="math inline">\(\{x\} = x - [x]\)</span></p>
+</div>
+<div id="definition-4">
+<p><strong>Определение:</strong> (<em>верхняя целая часть числа</em>)
+<span class="math inline">\(\lfloor x \rfloor = \min \{z \in \mathbb{Z}:
+z \ge x\}\)</span></p>
+<blockquote>
+<p><span class="math inline">\(\lfloor -4.5 \rfloor = -4\)</span> <br>
+<span class="math inline">\(\lfloor 5.5 \rfloor = [6]\)</span></p>
+</blockquote>
+</div>
+<div id="definition-5">
+<p><strong>Определение:</strong> (<em>расстояние до ближайшего
+целого</em>) <span class="math inline">\(\displaystyle ||x|| = \min_{a
+\in \mathbb{Z}} |x - a|\)</span></p>
+</div>
+<p><strong>Упражнение:</strong><a name="exercise-1"></a> <span
+class="math inline">\(||x|| = \min (\{x\}, 1 - \{x\})\)</span></p>
+<p><strong>Упражнение:</strong><a name="exercise-2"></a> <span
+class="math inline">\(||x + y|| \le ||x|| + ||y||\)</span></p>
+<div id="theorem-1">
+<p><strong>Теорема:</strong> (<em>обычное деление с остатком</em>) <span
+class="math display">\[\forall a \in \mathbb{Z},\, b \in
+\mathbb{N}\,\,\,\, \exists !\,\, q, r \in \mathbb{Z}: a = bq + r,\,\, 0
+\le r &lt; b\]</span></p>
+<p><em>Доказательство:</em></p>
+<p><em>Существование</em>: 1. Если <span
+class="math inline">\(a\,\,|\,\,b\)</span>, то <span
+class="math inline">\(q = \frac{a}{b} \in \mathbb{Z},\,\,\,\,r =
+0\)</span>. 2. Иначе рассмотрим множество <span
+class="math display">\[M=\{z \in \mathbb{N}: z = a - bq, q \in
+\mathbb{Z}\}\]</span> Докажем, что <span class="math inline">\(M \ne
+\varnothing\)</span> рассмотрим <span class="math inline">\(q_0 = -|a| -
+1\)</span> <span class="math display">\[z = a - bq_0 = a + b(|a| + 1)
+\ge a + |a| + 1 \ge 1 \Rightarrow z \in \mathbb{N} \Rightarrow z \in
+M\]</span> Следовательно, по аксиоме Архимеда <span
+class="math inline">\(\exists r = \min M = a - bq\)</span>. <span
+class="math display">\[r_1 = r - b = a - b(q + 1), \,\,\,\, b \in
+\mathbb{N} \Rightarrow r_1 &lt; r \Rightarrow r_1 \not\in M \Rightarrow
+\]</span> <span class="math display">\[r_1 \le 0, \,\,\,\, r \ne 0
+\Rightarrow r_1 &lt; 0 \Rightarrow 0 \le r &lt; b
+\,\,\,\,\blacksquare\]</span></p>
+<p><em>Единственность</em>:</p>
+<p>Пусть: <span class="math display">\[ a = bq_0 + r_0\]</span> <span
+class="math display">\[a = bq_1 + r_1 \Rightarrow\]</span> <span
+class="math display">\[0 = b(q_1 - q_0) + (r_1 - r_0) \Rightarrow
+b\,\,|\,\,(r_0 - r_1) \Rightarrow b \le |r_0 - r_1|\]</span> <span
+class="math display">\[0 \le r_0, r_1 \le b - 1 \Rightarrow |r_0 - r_1|
+\le b \Rightarrow r_0 = r_1, \,\,\, q_0 = q_1
+\,\,\,\,\blacksquare\]</span></p>
+</div>
+<h2 data-number="1.2" id="нод">НОД</h2>
+<div id="definition-6">
+<p><strong>Определение:</strong> (<em>НОД</em>) Пусть <span
+class="math inline">\(a, b \in \mathbb{Z},\,\,\,\,\mathcal{D}_{a, b}=
+\{z \in \mathbb{N}: z\,\,|\,\,a, z\,\,|\,\,b\}\)</span>. Тогда <span
+class="math display">\[\mathbf{НОД}(a, b) = \max
+\mathcal{D}\]</span></p>
+</div>
+<div id="statement-1">
+<p><strong>Утверждение:</strong> (корректность определения)
+<em>Доказательство:</em> очев.</p>
+</div>
+<div id="lemma-1">
+<p><strong>Лемма:</strong> <span class="math display">\[(a, b) = (a, a
+\pm b)\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[\begin{cases}
+z\,\,|\,\,a \\ z\,\,|\,\,b
+\end{cases} \Rightarrow z\,\,|\,\,b \pm a \Rightarrow \mathcal{D}_{a, b}
+\subset \mathcal{D}_{a, b \pm a}\]</span> <span
+class="math display">\[\begin{cases}
+z\,\,|\,\,a \\ z\,\,|\,\,b + a
+\end{cases} \Rightarrow z\,\,|\,\,b \Rightarrow \mathcal{D}_{a, b+a}
+\subset \mathcal{D}_{a, b}\,\,\,\,\blacksquare\]</span></p>
+</div>
+<h2 data-number="1.3" id="алгоритм-евклида">Алгоритм Евклида</h2>
+<p><span class="math display">\[a \in \mathbb{Z}, b \in
+\mathbb{N}\]</span> <span class="math display">\[a = bq_0 + r_1,
+\,\,\,\, 0 \le r_1 &lt; b\]</span> <span class="math display">\[b =
+r_1q_1 + r_2, \,\,\,\, 0 \le r_2 &lt; r_1\]</span> <span
+class="math display">\[r_0 = r_2q_2 + r_3, \,\,\,\, 0 \le r_3 \le
+r_2\]</span> <span class="math display">\[\vdots\]</span> <span
+class="math display">\[r_{j - 1} = r_{j}q_{j} + r_{j + 1}, \,\,\,\, 0
+\le r_{j + 1} \le r_j\]</span> <span
+class="math display">\[\vdots\]</span> <span class="math display">\[r_{n
+- 2} = r_{n - 1}q_{n - 1} + r_{n}, \,\,\,\, 0 \le r_{n} \le r_{n -
+1}\]</span> <span class="math display">\[r_{n - 1} = r_{n}q_{n} + r_{n +
+1}, \,\,\,\, r_{n + 1} = 0\]</span> <span class="math display">\[\exists
+n \in \mathbb{N}: r_{n + 1} = 0\]</span></p>
+<div id="statement-2">
+<p><strong>Утверждение:</strong> <span
+class="math inline">\(\mathbf{НОД} (a, b) = r_n\)</span></p>
+<p><em>Доказательство:</em> <span class="math inline">\(\forall j \le n
+(r_{j - 1}, r_j) = (r_j, r_{j + 1}) \,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="theorem-2">
+<p><strong>Теорема:</strong> (<em>о линейном представлении НОД</em>)
+Пусть <span class="math inline">\(a, b \in \mathbb{Z}, \,\,\,\,\,\, d =
+(a, b)\)</span>. Тогда <span class="math display">\[\exists x, y \in
+\mathbb{Z}: d = ax + by\]</span></p>
+<p><em>Доказательство:</em> Обратный ход алгоритма Евклида <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span>.</p>
+</div>
+<div id="lemma-2">
+<p><strong>Лемма:</strong> (<em>важная</em>) <span
+class="math display">\[\begin{cases}
+a\,\,|\,\,bc \\ (a, b) = 1
+\end{cases} \Rightarrow a\,\,|\,\,c\]</span> <em>Доказательство:</em>
+<span class="math display">\[(a, b) = 1 \Rightarrow \exists x, y \in
+\mathbb{Z}: 1 = ax + by\]</span> <span class="math display">\[acx + bcy
+= c\]</span> <span class="math display">\[\begin{cases}
+a\,\,|\,\,acx \\ a\,\,|\,\,bcy
+\end{cases} \Rightarrow a\,\,|\,\,c \,\,\,\,\blacksquare\]</span></p>
+</div>
+<h2 data-number="1.4" id="нок-и-нод-нескольких-чисел">НОК и НОД
+нескольких чисел</h2>
+<div id="definition-7">
+<p><strong>Определение:</strong> <span class="math inline">\(z \in
+\mathbb{Z}\)</span> - общее кратное чисел <span
+class="math inline">\(a_1, \ldots, a_n\)</span>, если <span
+class="math inline">\(a_j \,\,|\,\,z \forall j\)</span></p>
+</div>
+<div id="definition-8">
+<p><strong>Определение:</strong> <span
+class="math inline">\(\mathbf{НОК} (a_1, \ldots, a_n) = \min \{z \in
+\mathbb{N} : z\)</span> общее кратное чисел <span
+class="math inline">\(a_1, \ldots, a_n \}\)</span></p>
+</div>
+<div id="theorem-3">
+<p><strong>Теорема:</strong> Если <span class="math inline">\(z_0 -
+\mathbf{НОК} (a_1, \ldots, a_n)\)</span>, то <span
+class="math inline">\(z_0 \,\,|\,\,z\)</span></p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="definition-9">
+<p><strong>Определение:</strong> <span
+class="math inline">\(\mathbf{НОД} (a_1, \ldots, a_n) = \max \{z \in
+\mathbb{N}: z \,\,|\,\,a_j \,\,\,\,\,\, \forall j = 1, \ldots,
+n\}\)</span></p>
+</div>
+<div id="theorem-4">
+<p><strong>Теорема:</strong> Пусть <span
+class="math inline">\(d\)</span> - общий делитель <span
+class="math inline">\(a_1, \ldots, a_n\)</span>. Тогда <span
+class="math inline">\(d \,\,|\,\,\mathbf{НОД} (a_1, \ldots,
+a_n)\)</span></p>
+<p><em>Доказательство:</em></p>
+</div>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="конечные-цепные-дроби.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

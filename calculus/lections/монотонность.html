@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Монотонность</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="пределы.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="глобальные-свойства-непрерывных-функций.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="2" id="монотонность">Монотонность</h1>
+<h2 data-number="2.1"
+id="монотонные-функции-теорема-о-пределе-монотонной-и-ограниченной-функции">Монотонные
+функции, теорема о пределе монотонной и ограниченной функции</h2>
+<div id="definition-7">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(f(x)\)</span> определена на <span
+class="math inline">\((a, b)\)</span> и <span
+class="math inline">\(\forall x_1 &lt; x_2 \in (a, b):\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(f(x_1) &lt; f(x_2)\)</span> - функция
+<span class="math inline">\(f(x)\)</span> возрастающая на <span
+class="math inline">\((a, b)\)</span></li>
+<li><span class="math inline">\(f(x_1) \le f(x_2)\)</span> - функция
+<span class="math inline">\(f(x)\)</span> неубывающая на <span
+class="math inline">\((a, b)\)</span></li>
+<li><span class="math inline">\(f(x_1) \ge f(x_2)\)</span> - функция
+<span class="math inline">\(f(x)\)</span> невозрастающая на <span
+class="math inline">\((a, b)\)</span></li>
+<li><span class="math inline">\(f(x_1) &gt; f(x_2)\)</span> - функция
+<span class="math inline">\(f(x)\)</span> убывающая на <span
+class="math inline">\((a, b)\)</span></li>
+</ol>
+</div>
+<div id="theorem-12">
+<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\forall x
+\in \mathring{B}_{\delta}(x_0) \,\,\,\, f(x) \ge g(x)\)</span> и <span
+class="math inline">\(\exists \displaystyle \lim_{x\to x_0}f(x) = a,
+\,\,\,\,\exists \displaystyle \lim_{x\to x_0}g(x) = b\)</span>.
+Тогда</p>
+<ol type="1">
+<li><span class="math inline">\(a \ge b\)</span></li>
+<li>Если <span class="math inline">\(a &gt; b\)</span>, то <span
+class="math inline">\(\exists \mathring{B}_{\delta_1}(x_0):\,\,\,\, f(x)
+&gt; g(x) \,\,\,\, \forall x \in
+\mathring{B}_{\delta_1}(x_0)\)</span></li>
+</ol>
+<p><em>Доказательство:</em></p>
+<ol type="1">
+<li>Гейне.</li>
+<li>Определение для <span class="math inline">\(\varepsilon = \frac{|a -
+b|}{3}\)</span></li>
+</ol>
+</div>
+<div id="theorem-13">
+<p><strong>Теорема:</strong> Пусть <span
+class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) = \displaystyle
+\lim_{x\to x_0}g(x) = a\)</span> и <span class="math inline">\(f(x) \le
+h(x) \le g(x) \,\,\,\, \forall x \in
+\mathring{B}_{\delta}(x_0)\)</span>. Тогда <span
+class="math inline">\(\displaystyle \lim_{x\to x_0}h(x) =
+a\)</span>.</p>
+<p><em>Доказательство:</em> Гейне.</p>
+</div>
+<div id="theorem-14">
+<p><strong>Теорема:</strong> Пусть <span
+class="math inline">\(f(x)\)</span> неубывает и ограничена сверху в
+<span class="math inline">\((x_0 - \delta, x_0)\)</span>. Тогда <span
+class="math inline">\(\exists \displaystyle \lim_{x\to
+x_0-0}f(x)\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(f(x)\)</span>
+ограничена сверху <span class="math inline">\(\Rightarrow \exists \sup
+(f(x)) = \alpha \,\,\,\, \forall \varepsilon &gt; 0 \,\,\,\,\exists
+x_{\varepsilon} \in (x_0 - \delta, x_0): \,\,\,\, f(x_{\varepsilon})
+&gt; \alpha - \varepsilon \Rightarrow\)</span>, т.к. функция <span
+class="math inline">\(f(x)\)</span> неубывает <span
+class="math inline">\(\forall x &gt; x_{\varepsilon} \,\,\,\, x &gt;
+\alpha - \varepsilon ????\)</span></p>
+</div>
+<h2 data-number="2.2"
+id="непрерывные-функции-локальные-свойства-непрерывных-функций.-точки-разрыва-их-классификация">Непрерывные
+функции, локальные свойства непрерывных функций. Точки разрыва, их
+классификация</h2>
+<div id="definition-8">
+<p><strong>Определение:</strong> Функция <span
+class="math inline">\(f(x)\)</span> непрерывна в т. <span
+class="math inline">\(x_0\)</span>, если <span
+class="math inline">\(f(x)\)</span> определена в т. <span
+class="math inline">\(x_0\)</span> и <span
+class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) =
+f(x_0)\)</span></p>
+</div>
+<p><strong>Упражнение:</strong><a name="exercise-0"></a> Найдите пять
+отличий с определением предела и придумайте определение непрерывности
+“по Гейне”.</p>
+<div id="theorem-15">
+<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x),
+g(x)\)</span> непрерывны в т. <span class="math inline">\(x_0\)</span>.
+Тогда <span class="math inline">\(\forall \alpha, \beta \in
+\mathbb{R}\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(\alpha f(x) + \beta g(x)\)</span> -
+непрерывна в точке <span class="math inline">\(x_0\)</span>.</li>
+<li><span class="math inline">\(f(x)\cdot g(x)\)</span> - непрерывна в
+точке <span class="math inline">\(x_0\)</span>.</li>
+<li>Если <span class="math inline">\(g(x_0) \ne 0\)</span>, то <span
+class="math inline">\(\frac{f(x)}{g(x)}\)</span> - непрерывна в точке
+<span class="math inline">\(x_0\)</span>.</li>
+</ol>
+<p><em>Доказательство:</em> Пределы.</p>
+</div>
+<div id="theorem-16">
+<p><strong>Теорема:</strong> (Непрерывность композиции) Пусть <span
+class="math inline">\(f(x)\)</span> непрерывна в т. <span
+class="math inline">\(x_0\)</span>, <span class="math inline">\(y_0 =
+f(x_0), \,\,\,\, g(y)\)</span> непрерывна в т. <span
+class="math inline">\(y_0\)</span>. Тогда <span
+class="math inline">\(g(f(x))\)</span> непрерывна в т. <span
+class="math inline">\(x_0\)</span>.</p>
+<p><em>Доказательство:</em> Гейне ????.</p>
+</div>
+<div id="definition-9">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(f(x)\)</span> определена в <span
+class="math inline">\(B(x_0)\)</span> и <span
+class="math inline">\(f(x)\)</span> не является непрерывной в т. <span
+class="math inline">\(x_0\)</span>. Тогда <span
+class="math inline">\(x_0\)</span> <em>точка разрыва</em> функции <span
+class="math inline">\(f(x)\)</span>.</p>
+</div>
+<div id="definition-10">
+<p><strong>Определение:</strong> (Классификация точек разрыва) Пусть
+<span class="math inline">\(x_0\)</span> точка разрыва функции <span
+class="math inline">\(f(x)\)</span></p>
+<ol type="1">
+<li>Если <span class="math inline">\(\exists \displaystyle \lim_{x\to
+x_0+0}f(x)\)</span> и <span class="math inline">\(\exists \displaystyle
+\lim_{x\to x_0-0}f(x)\)</span> и</li>
+</ol>
+<ol type="a">
+<li><span class="math inline">\(\displaystyle \lim_{x\to x_0+0}f(x) =
+\displaystyle \lim_{x\to x_0-0}f(x)\)</span>, то <span
+class="math inline">\(x_0\)</span> точка <em>устранимого</em>
+разрыва.</li>
+<li><span class="math inline">\(\displaystyle \lim_{x\to x_0+0}f(x) \ne
+\displaystyle \lim_{x\to x_0-0}f(x)\)</span>, то <span
+class="math inline">\(x_0\)</span> точка разрыва <em>первого
+рода</em>.</li>
+</ol>
+<ol start="2" type="1">
+<li>Если <span class="math inline">\(\not\exists \displaystyle
+\lim_{x\to x_0+0}f(x)\)</span> и <span class="math inline">\(\nexists
+\displaystyle \lim_{x\to x_0-0}f(x)\)</span>, то <span
+class="math inline">\(x_0\)</span> точка разрыва <em>второго
+рода</em>.</li>
+</ol>
+<p><strong>Замечание:</strong> Если предел равен <span
+class="math inline">\(\pm \infty\)</span>, то его не сущесвует.</p>
+</div>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="пределы.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="глобальные-свойства-непрерывных-функций.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

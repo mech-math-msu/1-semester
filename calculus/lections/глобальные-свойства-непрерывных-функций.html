@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Глобальные свойства непрерывных функций</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="монотонность.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="равномерно-непрерывные-функции-теорема-кантора.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="3"
+id="глобальные-свойства-непрерывных-функций">Глобальные свойства
+непрерывных функций</h1>
+<div id="definition-11">
+<p><strong>Определение:</strong> Если функция <span
+class="math inline">\(f(x)\)</span> непрерывна в каждой точке множества
+<span class="math inline">\(A \subset \mathbb{R}\)</span>, то пишут
+<span class="math inline">\(f \in C(A)\)</span>.</p>
+</div>
+<div id="theorem-17">
+<p><strong>Теорема:</strong> (<em>1-я теорема Вейерштрасса</em>) Пусть
+<span class="math inline">\(f(x) \in C[a, b]\)</span> (непрерывна на
+отрезке). Тогда <span class="math inline">\(f(x)\)</span> ограничена на
+отрезке <span class="math inline">\([a, b]\)</span>.</p>
+<p><em>Доказательство:</em> (От противного) Пусть <span
+class="math inline">\(f(x)\)</span> не ограничена на <span
+class="math inline">\([a, b]\)</span>, т.е. <span
+class="math inline">\(\forall M &gt; 0 \,\,\,\, \exists x_M \in [a, b]:
+\,\,\,\, |f(x_M)| &gt; M\)</span>. Рассмотрим последовательность <span
+class="math inline">\(\{x_n\}_{n = 1}^{\infty}\)</span>: <span
+class="math inline">\(|f(x_1)| &gt; 1, \,\,\,\, |f(x_2)| &gt; 2,
+\,\,\,\,\ldots \,\,\,\,\,\,\,\, \forall n \,\,\,\, x_n \in [a, b]
+\Rightarrow\)</span> последовательность ограничена <span
+class="math inline">\(\Rightarrow\)</span> существует сходящаяся
+подпоследовательность <span class="math inline">\(\{x_{n_k}\}_{k =
+1}^{\infty}\)</span>. Пусть <span class="math inline">\(\displaystyle
+\lim_{k \to \infty}x_{n_k} = x_0\)</span>. А так как <span
+class="math inline">\(f(x)\)</span> непрерывна на <span
+class="math inline">\([a, b]\)</span> и <span class="math inline">\(x_0
+\in [a, b]\)</span>(Почему?) <span class="math inline">\(\exists
+\displaystyle \lim_{x\to x_0}f(x_{n_k}) = f(x_0)\)</span>, что
+противоречит <span class="math inline">\(|f(x_{n_k})| &gt; n_k \,\,\,\,
+\forall k\)</span>(Где противоречие?).</p>
+</div>
+<div id="theorem-18">
+<p><strong>Теорема:</strong> (<em>2-я теорема Вейерштрасса</em>) Если
+<span class="math inline">\(f(x) \in C[a, b]\)</span>, то <span
+class="math inline">\(\exists \min f(x)\)</span> и <span
+class="math inline">\(\max f(x)\)</span> на <span
+class="math inline">\([a, b]\)</span>.</p>
+<p><em>Доказательство:</em> По <a
+href="глобальные-свойства-непрерывных-функций.html#theorem-17">1-й
+теореме Вейерштрасса</a> <span class="math inline">\(f(x)\)</span>
+ограничена, а значит <span class="math inline">\(\exists \sup \limits_{x
+\in [a, b]}f(x) = \alpha\)</span>. Хочется доказать, что <span
+class="math inline">\(\alpha \in [a, b]\)</span>. <br> <span
+class="math inline">\(\alpha\)</span> - точная верхняя грань,
+следовательно <span class="math inline">\(\exists x_1 \in [a, b]:
+\,\,\,\, f(x_1) &gt; \alpha - 1, \,\,\,\,\ldots, \,\,\,\, \exists x_n
+\in [a, b]: \,\,\,\, f(x_n) &gt; \alpha - \frac{1}{n},
+\,\,\,\,\ldots\)</span> <span class="math inline">\(x_n \in [a, b]
+\,\,\,\,\forall n \Rightarrow \{x_n\}\)</span> - ограничена на <span
+class="math inline">\([a, b]\)</span>. Значит <span
+class="math inline">\(\exists \{x_{n_k}\}: \,\,\,\, \exists
+\displaystyle \lim_{k\to \infty}x_{n_k} = x_m \in [a,
+b]\)</span>(почему?). <span class="math inline">\(\,\,\,\,\alpha -
+\frac{1}{n_k} &lt; f(x_{n_k}) \le \alpha \Rightarrow \displaystyle
+\lim_{k\to \infty}f(x_{n_k}) = \alpha\)</span>, а также, так как <span
+class="math inline">\(f(x)\)</span> непрерывна на <span
+class="math inline">\([a, b]\)</span>, <span
+class="math inline">\(\displaystyle \lim_{k \to \infty}f(x_{n_k}) =
+f(x_m) \,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="theorem-19">
+<p><strong>Теорема:</strong> (<em>О промежуточных значениях</em>) Пусть
+<span class="math inline">\(f(x) \in C[a, b], \,\,\,\, A = f(a),
+\,\,\,\, B = f(b)\)</span>. Пусть для определенности <span
+class="math inline">\(A \le B\)</span>. Тогда <span
+class="math inline">\(\forall C: A \le C \le B \,\,\,\, \exists c \in
+[a, b]: C = f(c)\)</span>.</p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(C = 0,
+\,\,\,\, A \le 0, \,\,\,\, B \ge 0\)</span>.(В остальных случаях
+достаточно рассмотреть <span class="math inline">\(f_1(x) = f(x) -
+C\)</span>) Рассмотрим последовательность вложенных отрезков <span
+class="math inline">\(a_1 = a, \,\,\,\, b_1 = b,\,\,\,\, [a_{n+1},
+b_{n+1}] = \begin{cases}
+    [\frac{a_n + b_n}{2}, b_n], &amp;\text{ если }\frac{a_n + b_n}{2}
+\le 0\\
+    [a_n, \frac{a_n + b_n}{2}], &amp;\text{ если }\frac{a_n + b_n}{2}
+&gt; 0
+\end{cases}\)</span>. По принципу полноты Кантора <span
+class="math inline">\(\exists c: \forall n \,\,\,\, a_n \le c \le b_n,
+\,\,\,\, a_n \to c, \,\,\,\, b_n \to c\)</span>(почему?). Так как <span
+class="math inline">\(f(x)\)</span> непрерывна на <span
+class="math inline">\([a, b]\)</span> и <span
+class="math inline">\(\forall n: f(a_n) \le 0 \,\,\,\,\,\,\,\, \exists
+\displaystyle \lim_{n\to \infty}f(a_n) \le 0\)</span>. Аналогично <span
+class="math inline">\(\exists \displaystyle \lim_{n\to \infty}f(b_n) \ge
+0 \Rightarrow \displaystyle \lim_{n\to \infty}f(a_n) = \displaystyle
+\lim_{n\to \infty}f(b_n) = 0 = f(c) = C
+\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="3.1"
+id="теорема-о-разрывах-монотонной-функции-теорема-о-обратной-функции-к-непрерывной-и-монотонной">Теорема
+о разрывах монотонной функции Теорема о обратной функции к непрерывной и
+монотонной</h2>
+<div id="theorem-20">
+<p><strong>Теорема:</strong> Пусть <span
+class="math inline">\(f(x)\)</span> - монотонно возрастает. Тогда <span
+class="math inline">\(f(x)\)</span> может иметь разрывы только первого
+рода.</p>
+<p><em>Доказательство:</em> Какая-то тут лажа.</p>
+</div>
+<div id="theorem-21">
+<p><strong>Теорема:</strong> Пусть <span class="math inline">\(y =
+f(x)\)</span> непрерывна и строго возрастает на <span
+class="math inline">\([a, b]\)</span>. Тогда <span
+class="math inline">\(\exists x = f^{-1}(y)\)</span> непрерывная и
+строго возрастающая на <span class="math inline">\([f(a),
+f(b)]\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(f(x)\)</span>
+непрерывна на <span class="math inline">\([a, b] \Rightarrow \forall C:
+f(a) \le C \le f(b) \,\,\,\, \exists c: f(c) = C\)</span> по <a
+href="глобальные-свойства-непрерывных-функций.html#theorem-19">теореме</a>.
+Так как функция строго возрастает, такое <span
+class="math inline">\(c\)</span> единственно для каждого <span
+class="math inline">\(C\)</span>. А значит <span
+class="math inline">\(\exists x = f^{-1}(y)\)</span>. Докажем, что <span
+class="math inline">\(f^{-1}(y)\)</span> строго возрастает. <span
+class="math inline">\(\forall x_1, x_2 \in [a, b]: x_1 &lt; x_2 \,\,\,\,
+f(x_1) &lt; f(x_2) \Rightarrow \forall y_1, y_2 \in [f(a), f(b)]: y_1
+&lt; y_2 \,\,\,\, f^{-1}(x_1) &lt; f^{-1}(x_2)\)</span>. Докажем от
+противного, что <span class="math inline">\(f^{-1}(y)\)</span>
+непрерывна на <span class="math inline">\([f(a), f(b)]\)</span>. Пусть
+<span class="math inline">\(f^{-1}(y)\)</span> не является непрерывной
+на <span class="math inline">\([f(a), f(b)]\)</span>. По <a
+href="глобальные-свойства-непрерывных-функций.html#theorem-20">теореме</a>
+у <span class="math inline">\(f^{-1}(y)\)</span> могут быть только <a
+href="монотонность.html#definition-10">разрывы первого рода</a>. Значит
+на <span class="math inline">\([f^{-1}(f(a)), f^{-1}(f(b))]\)</span>
+существует интервал, в котором не существует значений <span
+class="math inline">\(f^{-1}(y)\)</span>. Но <span
+class="math inline">\(\forall x \in [a, b]: \exists y = f(x) \Rightarrow
+\exists x = f^{-1}(y) \,\,\,\,\blacksquare\)</span></p>
+</div>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="монотонность.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="равномерно-непрерывные-функции-теорема-кантора.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

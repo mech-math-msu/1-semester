@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Линии второго порядка</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+            <link rel="stylesheet" type="text/css" href="https://jsxgraph.org/distrib/jsxgraph.css" />
+            <script type="text/javascript" src="https://jsxgraph.org/distrib/jsxgraphcore.js"></script>
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="линии-и-поверхности-первого-порядка.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="аффинные-преобразования.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="3" id="линии-второго-порядка">Линии второго
+порядка</h1>
+<div id="beautiful" class="jxgbox" style="width:500px; height:500px;">
+
+</div>
+<h2 data-number="3.1" id="линии-второго-порядка-и-их-матрицы">Линии
+второго порядка и их матрицы</h2>
+<div id="definition-51">
+<p><strong>Определение:</strong> <em>Линия второго порядка</em> – это
+множество точек, удовлетворяющих уравнению:</p>
+<p><span class="math display">\[F(x, y) = a_{11} x^2 + 2 a_{12} xy +
+a_{22} y^2 + a_1 x + a_2 y + a_0 = 0\]</span></p>
+<p>Введем обозначения для матриц:</p>
+<p>Матрица квадратичной части <span class="math inline">\(F_1(x, y) =
+a_{11} x^2 + 2 a_{12} xy + a_{22} y^2\)</span>: <span
+class="math display">\[A_1 = \left(\begin{array}{cc} a_{11} &amp; a_{12}
+\\ a_{12} &amp; a_{22} \end{array}\right)\]</span> <span
+class="math display">\[F_1(x, y) = \left(\begin{array}{cc}
+x &amp; y
+\end{array}\right)\cdot A_1\cdot\left(\begin{array}{c}
+x\\
+y
+\end{array}\right)\]</span> <span class="math display">\[A =
+\left(\begin{array}{ccc}
+a_{11} &amp; a_{12} &amp; a_1 \\
+a_{12} &amp; a_{22} &amp; a_2 \\
+a_1 &amp; a_2 &amp; a_0
+\end{array}\right)\]</span></p>
+<p><span class="math display">\[F(x, y) = \left(\begin{array}{ccc}
+x &amp; y &amp; 1
+\end{array}\right)\cdot A\cdot\left(\begin{array}{c}
+x\\
+y\\
+1
+\end{array}\right)\]</span></p>
+<p>Введем обозначения:</p>
+<p><span class="math display">\[\delta = \left|\begin{array}{cc} a_{11}
+&amp; a_{12} \\ a_{12} &amp; a_{22} \end{array}\right|\]</span> <span
+class="math display">\[\Delta = \begin{vmatrix}
+a_{11} &amp; a_{12} &amp; a_1 \\
+a_{12} &amp; a_{22} &amp; a_2 \\
+a_1 &amp; a_2 &amp; a_0 \end{vmatrix}\]</span> <span
+class="math display">\[S = \operatorname{tr}\left( \begin{array}{cc}
+a_{11} &amp; a_{12} \\ a_{12} &amp; a_{22} \end{array} \right) = a_{11}
++ a_{22}\]</span> <span class="math display">\[K =
+\left|\begin{array}{cc}  a_{22} &amp; a_2 \\
+a_1 &amp; a_2  \end{array}\right| + \left|\begin{array}{cc} a_{11} &amp;
+a_1 \\ a_1 &amp; a_0 \end{array}\right|\]</span></p>
+</div>
+<h2 data-number="3.2"
+id="ортогональные-инварианты-линий-второго-порядка">Ортогональные
+инварианты линий второго порядка</h2>
+<div id="statement-40">
+<p><strong>Утверждение:</strong> Пусть заданы две аффинные системы
+координат <span class="math inline">\(Oe_1e_2\)</span> и <span
+class="math inline">\(O’e_1’e_2’\)</span> и <span
+class="math inline">\(C = \left(\begin{array}{cc}
+c_{11} &amp; c_{12}\\
+c_{21} &amp; c_{22}
+\end{array}\right)\)</span> матрица перехода между ними, то есть <span
+class="math inline">\(\begin{cases}
+    x = c_{11} x’ + c_{12} y’ + x_0\\
+    y = c_{21} x’ + c_{22} y’ + y_0
+\end{cases}\)</span>. Пусть в <span
+class="math inline">\(Oe_1e_2\)</span> задана кривая второго порядка
+<span class="math inline">\(F(x, y)\)</span>. Тогда матрица квадратичной
+части этой кривой и матрица этой кривой в системе координат <span
+class="math inline">\(O’e_1’e_2’\)</span> находятся по формулам: <span
+class="math display">\[A_1’ = C^T\cdot A_1 \cdot C\]</span> <span
+class="math display">\[A’ = D^T\cdot A \cdot D\]</span></p>
+<p><em>Доказательство:</em> Пусть <span class="math display">\[D =
+\left(\begin{array}{ccc}
+c_{11} &amp; c_{12} &amp; x_0\\
+c_{21} &amp; c_{22} &amp; y_0\\
+0 &amp; 0 &amp; 1
+\end{array}\right)\]</span> <span
+class="math display">\[\left(\begin{array}{c}
+x\\
+y\\
+1
+\end{array}\right) = D\cdot\left(\begin{array}{c}
+x’\\
+y’\\
+1
+\end{array}\right)\]</span></p>
+<p><span class="math display">\[\left(\begin{array}{ccc}
+x &amp; y &amp; 1
+\end{array}\right) = \left(\begin{array}{ccc}
+x’ &amp; y’ &amp; 1
+\end{array}\right)\cdot D^T\]</span></p>
+<p><span class="math display">\[F(x, y) = \left(\begin{array}{ccc}
+x &amp; y &amp; 1
+\end{array}\right)\cdot A\cdot\left(\begin{array}{c}
+x\\
+y\\
+1
+\end{array}\right) = \left(\begin{array}{ccc}
+x’ &amp; y’ &amp; 1
+\end{array}\right)\cdot D^T\cdot A\cdot D\cdot\left(\begin{array}{c}
+x’\\
+y’\\
+1
+\end{array}\right)=\]</span> <span class="math display">\[= F’(x’, y’) =
+\left(\begin{array}{ccc}
+x’ &amp; y’ &amp; 1
+\end{array}\right)\cdot A’\cdot\left(\begin{array}{c}
+x’\\
+y’\\
+1
+\end{array}\right) \,\,\,\,\blacksquare\]</span></p>
+<p>Почему это верно <span class="math inline">\(F’(x’, y’) = F(x,
+y)\)</span>?</p>
+</div>
+<div id="theorem-8">
+<p><strong>Теорема:</strong> (Ортогональные инварианты линий второго
+второго порядка) Пусть заданы две <a
+href="векторы.html#definition-22">прямоугольные системы координат</a> и
+<span class="math inline">\(C = \left(\begin{array}{cc}
+c_{11} &amp; c_{12}\\
+c_{21} &amp; c_{22}
+\end{array}\right)\)</span> матрица перехода между ними, то есть <span
+class="math inline">\(\begin{cases}
+    x = c_{11} x’ + c_{12} y’ + x_0\\
+    y = c_{21} x’ + c_{22} y’ + y_0
+\end{cases}\)</span>. Пусть <span class="math inline">\(F(x, y) = a_{11}
+x^2 + 2 a_{12} xy + a_{22} y^2 + a_1 x + a_2 y + a_0 = 0\)</span>. Тогда
+<span class="math display">\[\delta = \left|\begin{array}{cc} a_{11}
+&amp; a_{12} \\ a_{12} &amp; a_{22} \end{array}\right|\]</span> <span
+class="math display">\[\Delta = \begin{vmatrix}
+a_{11} &amp; a_{12} &amp; a_1 \\
+a_{12} &amp; a_{22} &amp; a_2 \\
+a_1 &amp; a_2 &amp; a_0 \end{vmatrix}\]</span> ортогональные инварианты
+<span class="math inline">\(F(x, y)\)</span>, то есть они не меняются
+при переходе между системами координат.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(C\)</span> –
+ортогональная матрица, так как системы координат прямоугольные <span
+class="math inline">\(\Rightarrow\)</span> по <a
+href="векторы.html#statement-10">утверждению</a> <span
+class="math inline">\(\det C = \pm 1\)</span>. По <a
+href="линии-второго-порядка.html#statement-40">предыдущему
+утверждению</a> <span class="math display">\[|A’| = |D^T\cdot A \cdot D|
+= |A|\cdot |D|^2 = |A|\,\,\,\,\blacksquare\]</span></p>
+</div>
+<div id="definition-52">
+<p><strong>Определение:</strong> <em>Характеристический многочлен</em> –
+это <span class="math display">\[|A_1 - \lambda E| =
+\left|\begin{array}{cc}
+a_{11} - \lambda &amp; a_{12} \\
+a_{12} &amp; a_{22} - \lambda \end{array}\right| = \lambda^2 - \lambda
+(a_{11}+a_{22}) + \delta\]</span></p>
+</div>
+<div id="statement-41">
+<p><strong>Утверждение:</strong> Пусть заданы две <a
+href="векторы.html#definition-22">прямоугольные системы координат</a> и
+<span class="math inline">\(C = \left(\begin{array}{cc}
+c_{11} &amp; c_{12}\\
+c_{21} &amp; c_{22}
+\end{array}\right)\)</span> матрица перехода между ними, то есть <span
+class="math inline">\(\begin{cases}
+    x = c_{11} x’ + c_{12} y’ + x_0\\
+    y = c_{21} x’ + c_{22} y’ + y_0
+\end{cases}\)</span>. Пусть <span class="math inline">\(F(x, y) = a_{11}
+x^2 + 2 a_{12} xy + a_{22} y^2 + a_1 x + a_2 y + a_0 = 0\)</span>. Тогда
+характеристичекий многочлен является ортогональным инвариантом.</p>
+<p><em>Доказательство:</em> Характеристичекий многочлен во второй
+системе координат <span class="math display">\[|A_1’ - \lambda E| = |C^T
+A C - \lambda C^T E C| = |C^T|\cdot |A_1 - \lambda E|\cdot |C| = |A_1 -
+\lambda E| \,\,\,\,\blacksquare\]</span></p>
+</div>
+<h2 data-number="3.3"
+id="преобразование-уравнения-линии-второго-порядка-при-повороте-осей-координат">Преобразование
+уравнения линии второго порядка при повороте осей координат</h2>
+<div id="theorem-9">
+<p><strong>Теорема:</strong> Пусть в прямоугольной системе координат
+задана кривая второго порядка <span class="math inline">\(F(x, y),
+\,\,\,\, a_{12} \ne 0\)</span>. Тогда существует такой угол <span
+class="math inline">\(\varphi\)</span>, что при повороте системы
+координат на него <span class="math inline">\(a_{12}’ = 0\)</span>.</p>
+<p><em>Доказательство:</em></p>
+<p><span class="math display">\[F_1(x, y) = a_{11} x^2 + 2 a_{12} xy +
+a_{22} y^2\]</span></p>
+<p><span class="math display">\[C = \left(
+\begin{array}{cc}
+\cos{\varphi} &amp; -\sin{\varphi}\\
+\sin{\varphi} &amp; \cos{\varphi}
+\end{array}
+\right)\]</span></p>
+<p><span class="math display">\[A_1’ = C^T A_1 C = \left(
+\begin{array}{cc}
+\cos{\varphi} &amp; \sin{\varphi}\\
+-\sin{\varphi} &amp; \cos{\varphi}
+\end{array}
+\right)A_1\left(
+\begin{array}{cc}
+\cos{\varphi} &amp; -\sin{\varphi}\\
+\sin{\varphi} &amp; \cos{\varphi}
+\end{array}
+\right)\]</span></p>
+<p>Вычисляя, получаем:</p>
+<p><span class="math display">\[a_{12}’ = (a_{22} -
+a_{11})\cdot\cos{\varphi}\cdot\sin{\varphi} + a_{12}\cdot
+(\cos^2{\varphi} - \sin^2{\varphi})\]</span></p>
+<p>Возьмем <span class="math inline">\(\varphi: \,\,\,\, \cot{\varphi} =
+\frac{a_{11} - a_{22}}{a_{12}} \,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-42">
+<p><strong>Утверждение:</strong><br />
+<span class="math display">\[\tan{\varphi} = \frac{\lambda_1 -
+a_{11}}{a_{12}}\]</span></p>
+<p><em>Доказательство:</em></p>
+</div>
+<h2 data-number="3.4"
+id="приведение-уравнения-линии-второго-порядка-к-каноническому-виду">Приведение
+уравнения линии второго порядка к каноническому виду</h2>
+<div id="theorem-10">
+<p><strong>Теорема:</strong> Пусть в некоторой прямоугольной системе
+координат общим уравнением задана кривая второго порядка <span
+class="math inline">\(F(x, y)\)</span>. Тогда существует прямоугольная
+система координат <span class="math inline">\(Oxy\)</span>, в которой
+это уравнение имеет вид:</p>
+<ol type="1">
+<li><span class="math display">\[\frac{x^2}{a^2} + \frac{y^2}{b^2} =
+1\]</span></li>
+<li><span class="math display">\[\frac{x^2}{a^2} + \frac{y^2}{b^2} =
+-1\]</span></li>
+<li><span class="math display">\[\frac{x^2}{a^2} + \frac{y^2}{b^2} =
+0\]</span></li>
+<li><span class="math display">\[\frac{x^2}{a^2} - \frac{y^2}{b^2} =
+1\]</span></li>
+<li><span class="math display">\[\frac{x^2}{a^2} - \frac{y^2}{b^2} =
+0\]</span></li>
+<li><span class="math display">\[y^2 = 2px\]</span></li>
+<li><span class="math display">\[y^2 = a^2\]</span></li>
+<li><span class="math display">\[y^2 = -a^2\]</span></li>
+<li><span class="math display">\[y^2 = 0\]</span></li>
+</ol>
+<p><em>Доказательство:</em> все что выше.</p>
+</div>
+<h2 data-number="3.5"
+id="определение-канонического-уравнения-по-ортогональным-инвариантам-в-центральном-случае">Определение
+канонического уравнения по ортогональным инвариантам в центральном
+случае</h2>
+<div id="definition-53">
+<p><strong>Определение:</strong> <em>Центральный случай</em> – <span
+class="math inline">\(\delta \ne 0\)</span>.</p>
+</div>
+<div id="statement-43">
+<p><strong>Утверждение:</strong></p>
+<ol type="1">
+<li><span class="math inline">\(\delta &lt; 0\)</span>, то есть корни
+характеристического многочлена разных знаков.
+<ol type="a">
+<li><span class="math inline">\(\Delta \ne 0\)</span> – гипербола.</li>
+<li><span class="math inline">\(\Delta = 0\)</span> – пара
+пересекающихся прямых.</li>
+</ol></li>
+<li><span class="math inline">\(\delta &gt; 0\)</span>, то есть корни
+характеристического многочлена одного знака.
+<ol type="a">
+<li><span class="math inline">\(\Delta \cdot S &lt; 0\)</span> –
+эллипс.</li>
+<li><span class="math inline">\(\Delta \cdot S &lt; 0\)</span> – мнимый
+эллипс.</li>
+<li><span class="math inline">\(\Delta = 0\)</span> – пара мнимых
+пересекающихся прямых.</li>
+</ol></li>
+<li><span class="math inline">\(\delta = 0\)</span>
+<ol type="a">
+<li><span class="math inline">\(\Delta \ne 0\)</span> – парабола.</li>
+<li>см.ниже.</li>
+</ol></li>
+</ol>
+<p><em>Доказательство:</em></p>
+</div>
+<h2 data-number="3.6"
+id="определение-канонического-уравнения-параболы-по-ортогональным-инвариантам">Определение
+канонического уравнения параболы по ортогональным инвариантам</h2>
+<div id="statement-44">
+<p><strong>Утверждение:</strong> <span class="math display">\[y^2 =
+2\sqrt{\frac{\Delta}{-S^3}}x\]</span></p>
+<p><em>Доказательство:</em></p>
+</div>
+<h2 data-number="3.7"
+id="семиинвариант-линии-второго-порядка">Семиинвариант линии второго
+порядка</h2>
+<div id="statement-46">
+<p><strong>Утверждение:</strong> <span class="math inline">\(K\)</span>
+не меняется при повороте координат и отражении.</p>
+<p><em>Доказательство:</em> подставить в уравнение.</p>
+</div>
+<div id="statement-45">
+<p><strong>Утверждение:</strong> Если <span class="math inline">\(\Delta
+= \delta = 0\)</span>, то <span class="math inline">\(K\)</span> –
+ортогональный инвариант.</p>
+<p><em>Доказательство:</em> охххх</p>
+</div>
+<div id="statement-47">
+<p><strong>Утверждение:</strong> Если <span class="math inline">\(\delta
+= \Delta = 0\)</span>, то:</p>
+<ol type="1">
+<li><span class="math inline">\(K&lt;0\)</span> – пара параллельных
+прямых.</li>
+<li><span class="math inline">\(K&gt;0\)</span> – пара мнимых
+параллельных прямых.</li>
+<li><span class="math inline">\(K=0\)</span> – совпадющие прямые.</li>
+</ol>
+<p><em>Доказательство:</em></p>
+</div>
+<h2 data-number="3.8" id="центры-линий-второго-порядка">Центры линий
+второго порядка</h2>
+<div id="definition-54">
+<p><strong>Определение:</strong> Пусть в некоторой аффинной системе
+координат задана кривая второго порядка</p>
+<p><span class="math display">\[F(x, y) = a_{11} x^2 + 2 a_{12} xy +
+a_{22} y^2 + a_1 x + a_2 y + a_0 = 0\]</span> Тогда точка <span
+class="math inline">\(M(x_0, y_0)\)</span> <em>центр линии</em>, если
+<span class="math display">\[\begin{cases}
+    a_{11}x_0 + a_{12}y_0 + a_1 = 0\\
+    a_{12}x_0 + a_{22}y_0 + a_2 = 0
+\end{cases}\]</span></p>
+</div>
+<div id="statement-48">
+<p><strong>Утверждение:</strong> <a
+href="линии-второго-порядка.html#definition-54">Определение</a>
+корректно, то есть, если в системе координат <span
+class="math inline">\(Oe_1e_2\)</span> центр линии второго порядка <span
+class="math inline">\(M\)</span> имеет координаты <span
+class="math inline">\((x_0, y_0)\)</span>, а в системе координат <span
+class="math inline">\(O’e_1’e_2’ \,\,\,\, (x_0’, y_0’)\)</span>, то
+верно: <span class="math display">\[\begin{cases}
+    a_{11}’x_0’ + a_{12}’y_0’ + a_1’ = 0\\
+    a_{12}’x_0’ + a_{22}’y_0’ + a_2’ = 0
+\end{cases}\]</span></p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(a_{1}x_0 +
+a_{2}y_0 + a_0 = d\)</span>. Тогда <span class="math display">\[A\cdot
+\left(\begin{array}{c}
+x_0\\
+y_0\\
+1
+\end{array}\right) = \left(\begin{array}{c}
+0\\
+0\\
+d
+\end{array}\right)\]</span></p>
+<p><span class="math display">\[A’\cdot \left(\begin{array}{c}
+x_0’\\
+y_0’\\
+1
+\end{array}\right) = D^T A D \cdot \left(\begin{array}{c}
+x_0’\\
+y_0’\\
+1
+\end{array}\right) = D^T A \cdot \left(\begin{array}{c}
+x_0\\
+y_0\\
+1
+\end{array}\right) = D^T\cdot\left(\begin{array}{c}
+0\\
+0\\
+d
+\end{array}\right) = \left(\begin{array}{c}
+0\\
+0\\
+d
+\end{array}\right)\,\,\,\,\blacksquare\]</span></p>
+</div>
+<div id="definition-55">
+<p><strong>Определение:</strong> точка <span
+class="math inline">\(C\)</span> – <em>центр симметрии</em> кривой <span
+class="math inline">\(L\)</span>, если <span
+class="math inline">\(\forall M \in L\)</span> симметричная $M
+относительно <span class="math inline">\(C\)</span> точка тоже
+принадлежит кривой <span class="math inline">\(L\)</span>.</p>
+</div>
+<div id="theorem-11">
+<p><strong>Теорема:</strong> Центр непустой кривой второго порядка
+является центром симметрии этой кривой.</p>
+<p><em>Доказательство:</em> совершим параллельный перенос, так чтобы
+начало координат перешло в центр симметрии, получим что <span
+class="math inline">\(a_1 = a_2 = 0\)</span>, а следовательно <span
+class="math inline">\(F’(-x, -y) \in F’
+\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="theorem-12">
+<p><strong>Теорема:</strong></p>
+<ol type="1">
+<li><span class="math inline">\(\delta = 0\)</span> – один центр.</li>
+<li><span class="math inline">\(\Delta = \delta = 0\)</span> – прямая
+центров.</li>
+<li><span class="math inline">\(\Delta \ne 0\)</span> или <span
+class="math inline">\(\delta \ne 0\)</span> – нет центров.</li>
+</ol>
+<p><em>Доказательство:</em> Посмотреть на количество решений системы из
+определения центра в зависимости от значения <span
+class="math inline">\(\delta\)</span>.</p>
+</div>
+<h2 data-number="3.9"
+id="директориальное-свойство-параболы-эллипса-и-гиперболы">Директориальное
+свойство параболы, эллипса и гиперболы</h2>
+<h2 data-number="3.10"
+id="фокальное-свойство-эллипса-и-гиперболы">Фокальное свойство эллипса и
+гиперболы</h2>
+<h2 data-number="3.11"
+id="фокальный-параметр.-уравнение-при-вершине">Фокальный параметр.
+Уравнение при вершине</h2>
+<h2 data-number="3.12"
+id="эллипс-гипербола-и-парабола-в-полярных-координатах">Эллипс,
+гипербола и парабола в полярных координатах</h2>
+<h2 data-number="3.13"
+id="пересечение-линии-второго-порядка-с-прямой.-асимптотические-направления">Пересечение
+линии второго порядка с прямой. Асимптотические направления</h2>
+<p>Пусть задана кривая второго порядка <span class="math inline">\(F(x,
+y) = a_{11} x^2 + 2 a_{12} xy + a_{22} y^2 + a_1 x + a_2 y + a_0 =
+0\)</span>.</p>
+<p>И параметрическим уравнением задана прямая <span
+class="math inline">\(l\)</span>:</p>
+<p><span class="math display">\[\begin{cases}
+    x = x_0 + \alpha \cdot t\\
+    y = y_0 + \beta \cdot t
+\end{cases}\]</span></p>
+<p>Подставим: <span class="math display">\[(a_{11}\alpha^2 +
+2a_{12}\alpha\beta + a_{22}\beta^2)\cdot t^2 +\]</span> <span
+class="math display">\[\,\,\,\,\,\,\,\,\,\,\,\, + \ldots\]</span></p>
+<div id="definition-56">
+<p><strong>Определение:</strong> <span class="math inline">\(\{\alpha,
+\beta\}\)</span> <em>асимптотическое направление</em>, если <span
+class="math inline">\(a_{11}\alpha^2 + 2a_{12}\alpha\beta +
+a_{22}\beta^2 = 0\)</span> или в матричном виде</p>
+<p><span class="math display">\[\left(\begin{array}{cc}
+\alpha &amp; \beta
+\end{array}\right)\cdot \left(\begin{array}{cc}
+a_{11} &amp; a_{12}\\
+a_{12} &amp; a_{22}
+\end{array}\right)\cdot \left(\begin{array}{c}
+\alpha\\
+\beta
+\end{array}\right) = 0\]</span></p>
+</div>
+<div id="statement-49">
+<p><strong>Утверждение:</strong> <a
+href="линии-второго-порядка.html#definition-56">Определение</a>
+корректно, то есть, если в системе координат <span
+class="math inline">\(Oe_1e_2\)</span> вектор асимптотичекого
+направления линии второго порядка <span class="math inline">\(p\)</span>
+имеет координаты <span class="math inline">\(\{\alpha, \beta\}\)</span>,
+а в системе координат <span class="math inline">\(O’e_1’e_2’ \,\,\,\,
+\{\alpha’, \beta’\}\)</span>, то верно: <span
+class="math display">\[\left(\begin{array}{cc}
+\alpha’ &amp; \beta’
+\end{array}\right)\cdot \left(\begin{array}{cc}
+a_{11}’ &amp; a_{12}’\\
+a_{12}’ &amp; a_{22}’
+\end{array}\right)\cdot \left(\begin{array}{c}
+\alpha’\\
+\beta’
+\end{array}\right) = 0\]</span></p>
+<p><em>Доказательство:</em> записать дано. кто изобрел эту науку</p>
+</div>
+<div id="statement-53">
+<p><strong>Утверждение:</strong></p>
+<ol type="1">
+<li>У кривых гиперболического типа <span class="math inline">\(\delta
+&lt; 0\)</span> два асимптотичеких направления.</li>
+<li>У кривых эллиптического типа <span class="math inline">\(\delta &gt;
+0\)</span> два мнимых асимптотичеких направления.</li>
+<li>У кривых параболического типа <span class="math inline">\(\delta =
+0\)</span> одно асимптотическое направление.</li>
+</ol>
+<p><em>Доказательство:</em></p>
+<p><span class="math display">\[a_{11}\alpha^2 + 2a_{12}\alpha\beta +
+a_{22}\beta^2 = 0\]</span> <span
+class="math display">\[a_{11}\left(\frac{\alpha}{\beta}\right)^2 +
+2a_{12}\frac{\alpha}{\beta} + a_{22} = 0\]</span> <span
+class="math display">\[D = 4a_{12}^2 -- 4a_{22}a_{11} = -4
+\left|\begin{array}{cc} a_{11} &amp; a_{12} \\ a_{12} &amp; a_{22}
+\end{array}\right| = -4 \delta\]</span> У кривых гиперболического типа
+<span class="math inline">\(\delta &lt; 0 \Rightarrow D &gt; 0
+\Rightarrow\)</span> два асимптотичеких направления. У кривых
+эллиптического типа <span class="math inline">\(\delta &gt; 0
+\Rightarrow D &lt; 0 \Rightarrow\)</span> два мнимых асимптотичеких
+направления. У кривых параболического типа <span
+class="math inline">\(\delta = 0 \Rightarrow D = 0 \Rightarrow\)</span>
+одно асимптотическое направление.</p>
+</div>
+<h2 data-number="3.14"
+id="асимптоты.-уравнение-гиперболы-в-асимптотах">Асимптоты. Уравнение
+гиперболы в асимптотах</h2>
+<div id="definition-57">
+<p><strong>Определение:</strong> <em>Асимптота</em> – это прямая
+асимптотичекого направления, проходящая через центр кривой второго
+порядка.</p>
+</div>
+<div id="statement-50">
+<p><strong>Утверждение:</strong></p>
+<ol type="1">
+<li><span class="math inline">\(\delta = \Delta = 0\)</span> мнимые,
+совпадающие или вещественные параллельные прямые. 1 асимптота.</li>
+<li><span class="math inline">\(\delta &lt; 0\)</span> гиперболический
+тип (пересекающиеся прямые и гипербола). 2 асимптоты.</li>
+<li>все остальное. нет асимптот.</li>
+</ol>
+<p><em>Доказательство:</em></p>
+</div>
+<h2 data-number="3.15" id="диаметры-линий-второго-порядка">Диаметры
+линий второго порядка</h2>
+<div id="theorem-13">
+<p><strong>Теорема:</strong> Середины хорд всех прямых неасимптотическго
+направления <span class="math inline">\(\{\alpha, \beta\}\)</span> лежат
+на одной прямой, заданной уравнением <span
+class="math inline">\(\alpha(a_{11}x + a_{12}y + a_1) + \beta(a_{12}x +
+a_{22}y + c_2) = 0\)</span>.</p>
+<p><em>Доказательство:</em> Пусть прямая <span
+class="math inline">\(l\)</span> задана параметрическим уравнением <span
+class="math inline">\(\begin{cases}
+    x = x_0 + \alpha \cdot t\\
+    y = y_0 + \beta \cdot t
+\end{cases}\)</span>, где <span class="math inline">\((x_0,
+y_0)\)</span> середина хорды <span
+class="math inline">\(M_1M_2\)</span>. Пусть координаты <span
+class="math inline">\(M_1\)</span> можно получить при подстановке
+параметра <span class="math inline">\(t_1\)</span>. <span
+class="math inline">\(M_2\)</span> при подстановке <span
+class="math inline">\(t_2\)</span>. Тогда <span
+class="math inline">\(\frac{t_1 + t_2}{2} = t = 0\)</span>.
+Следовательно по теореме Виета в общем уравнении кривой второго порядка
+после подстановки <span class="math inline">\(x, y\)</span> коэффицент
+при <span class="math inline">\(t\)</span> будет равен <span
+class="math inline">\(t_1 + t_2 = 0\)</span>. <span
+class="math display">\[\alpha(a_{11}x_0 + a_{12}y_0 + a_1) +
+\beta(a_{12}x_0 + a_{22}y_0 + c_2) = t_1 + t_2 = 0
+\,\,\,\,\blacksquare\]</span></p>
+</div>
+<div id="definition-58">
+<p><strong>Определение:</strong> <em>Диаметр кривой второго порядка
+сопряженный неасимптотичекому направлению</em> <span
+class="math inline">\(\{\alpha, \beta\}\)</span> – это прямая <span
+class="math inline">\(\alpha(a_{11}x + a_{12}y + a_1) + \beta(a_{12} +
+a_{22}y + c_2)\)</span>.</p>
+</div>
+<div id="statement-51">
+<p><strong>Утверждение:</strong> <a
+href="линии-второго-порядка.html#definition-58">Определение</a>
+корректно, то есть при переходе между системами координат …
+сохраняется.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<h2 data-number="3.16"
+id="сопряженные-направления.-особые-направления">Сопряженные
+направления. Особые направления</h2>
+<div id="definition-59">
+<p><strong>Определение:</strong> Направления <span
+class="math inline">\(\{\alpha_1, \beta_1\}\)</span> и <span
+class="math inline">\(\{\alpha_2, \beta_2\}\)</span> <em>сопряжены</em>
+относительно кривой второго порядка, если: <span
+class="math display">\[\left(\begin{array}{cc}
+\alpha_1 &amp; \beta_1
+\end{array}\right)\cdot \left(\begin{array}{cc}
+a_{11} &amp; a_{12}\\
+a_{12} &amp; a_{22}
+\end{array}\right)\cdot \left(\begin{array}{c}
+\alpha_2\\
+\beta_2
+\end{array}\right) = 0\]</span></p>
+</div>
+<div id="definition-60">
+<p><strong>Определение:</strong> Направление <em>особое</em>, если оно
+сопряжено с любым направлением.</p>
+</div>
+<div id="statement-52">
+<p><strong>Утверждение:</strong> <a
+href="линии-второго-порядка.html#definition-60">Определение</a>
+корректно, то есть при переходе между системами координат …
+сохраняется.</p>
+<p><em>Доказательство:</em> стас</p>
+</div>
+<div id="theorem-14">
+<p><strong>Теорема:</strong> Особое направление – это асимптотическое
+направление параболы и только оно.</p>
+<p><em>Доказательство:</em> Рассмотрим все направления сопряженные <span
+class="math inline">\(\{\alpha_1, \beta_1\}\)</span> относительно кривой
+второго порядка <span class="math inline">\(F(x, y)\)</span>:</p>
+<p><span class="math display">\[\left(\begin{array}{cc}
+\alpha_1 &amp; \beta_1
+\end{array}\right)\cdot \left(\begin{array}{cc}
+a_{11} &amp; a_{12}\\
+a_{12} &amp; a_{22}
+\end{array}\right)\cdot \left(\begin{array}{c}
+\alpha_2\\
+\beta_2
+\end{array}\right) = 0\]</span></p>
+<p><span class="math display">\[a_{11}\alpha_1\alpha_2 +
+a_{12}(\alpha_{1}\beta_{2} + \alpha_{2}\beta_{1}) + a_{22}\beta_1\beta_2
+= 0\]</span> Это уравнение имеет ровно одно решение</p>
+</div>
+<h2 data-number="3.17"
+id="диаметры-центральных-линий.-сопряженные-диаметры">Диаметры
+центральных линий. Сопряженные диаметры</h2>
+<div id="statement-54">
+<p><strong>Утверждение:</strong> Направление диаметра сопряжено с тем
+направлением, которое задает этот диаметр.</p>
+<p><em>Доказательство:</em> записать дано и взять направляющий вектор
+прямой, задающей диаметр.</p>
+</div>
+<div id="statement-55">
+<p><strong>Утверждение:</strong> Любая прямая неасимптотического
+направления, проходящая через центр линии второго порядка, является ее
+диаметром.</p>
+<p><em>Доказательство:</em> пучок.</p>
+</div>
+<div id="statement-56">
+<p><strong>Утверждение:</strong> Пусть два диаметра сопряжены. Тогда
+каждый из них делит пополам хорды сопряженного.</p>
+<p><em>Доказательство:</em> дано.</p>
+</div>
+<h2 data-number="3.18"
+id="главные-направления-и-главные-диаметры-линий-второго-порядка">Главные
+направления и главные диаметры линий второго порядка</h2>
+<div id="definition-61">
+<p><strong>Определение:</strong> Направление является <em>главным</em>
+направлением линии второго порядка, если оно сопряжено перпендикулярному
+направлению.</p>
+</div>
+<div id="definition-62">
+<p><strong>Определение:</strong> <em>обобщенная окружность</em> – это
+кривая второго порядка, имеющая каноническое уравнение <span
+class="math inline">\(x^2+y^2=c\)</span>.</p>
+</div>
+<div id="statement-57">
+<p><strong>Утверждение:</strong> Для обобщенной окружности любое
+направление главное.</p>
+<p><em>Доказательство:</em> <span class="math display">\[С^T A_1 C = С^T
+E C = A_1’ = E \,\,\,\,\blacksquare\]</span></p>
+</div>
+<div id="statement-58">
+<p><strong>Утверждение:</strong> У любой кривой, которая не является
+необобщенной окружностью, существует ровно два главных направления.</p>
+<p><em>Доказательство:</em> Рассмотрим <span
+class="math display">\[a_{11}\alpha_1\alpha_2 +
+a_{12}(\alpha_{1}\beta_{2} + \alpha_{2}\beta_{1}) + a_{22}\beta_1\beta_2
+= 0\]</span>. Т.к. направление должно быть сопряжено перпендикулярному,
+имеем:</p>
+<p><span class="math display">\[-a_{11}\alpha\beta +
+2a_{12}(\alpha\alpha - \beta\beta) + a_{22}\beta\alpha = 0\]</span>
+решаем.</p>
+</div>
+<div id="definition-63">
+<p><strong>Определение:</strong> <em>Главный диаметр</em> – это диаметр,
+который является главным направлением.</p>
+</div>
+<div id="statement-59">
+<p><strong>Утверждение:</strong> Для центральной линии любая прямая
+главного направления, проходящая через центр, является главным
+диаметром.</p>
+<p><em>Доказательство:</em> <a
+href="линии-второго-порядка.html#statement-55">По утверждению</a> любая
+прямая неасимптотического направления, проходящая через центр линии
+второго порядка, является ее диаметром. То есть нужно доказать, что
+главное направление неасимптотическое. Каждому направлению линии второго
+порядка сопряжено ровно одно направление.</p>
+</div>
+<h2 data-number="3.19"
+id="ось-и-вершина-параболы-выбор-угла-поворота">Ось и вершина параболы,
+выбор угла поворота</h2>
+<div id="definition-64">
+<p><strong>Определение:</strong> Прямая <span
+class="math inline">\(l\)</span> <em>ось симметрии</em> для кривой <span
+class="math inline">\(L\)</span>, если для любой точки <span
+class="math inline">\(M\)</span> принадлежащей кривой <span
+class="math inline">\(L\)</span> симметричная относительно <span
+class="math inline">\(l\)</span> к <span
+class="math inline">\(M\)</span> точка принадлежит <span
+class="math inline">\(L\)</span>.</p>
+</div>
+<div id="statement-60">
+<p><strong>Утверждение:</strong> Главный диаметр является осью
+симметрии.</p>
+<p><em>Доказательство:</em> …</p>
+</div>
+<h2 data-number="3.20"
+id="касательные-к-линиям-второго-порядка">Касательные к линиям второго
+порядка</h2>
+<div id="definition-65">
+<p><strong>Определение:</strong> Прямая <span
+class="math inline">\(l\)</span> неасимптотического направления является
+<em>касательной</em> к кривой второго порядка, если <span
+class="math inline">\(l\)</span> пересекает кривую в одной точке (двух
+совпадающих).</p>
+</div>
+<h2 data-number="3.21"
+id="касательная-и-диаметр-проведенный-в-точку-касания">Касательная и
+диаметр, проведенный в точку касания</h2>
+<div id="statement-61">
+<p><strong>Утверждение:</strong> Направляющий вектор касательной к
+кривой второго порядка в точке пересечения кривой и ее диаметра
+сопряженного направлению <span class="math inline">\(\{\alpha,
+\beta\}\)</span> – это <span class="math inline">\(\{\alpha,
+\beta\}\)</span>.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<script>
+    (function() {
+        var brd6=JXG.JSXGraph.initBoard('beautiful',{boundingbox:[-3,3,3,-3], keepaspectratio:true, showCopyright: false, showNavigation: false});
+        var A = brd6.create('point',[0.55,0]);
+        var B = brd6.create('point',[1,1]);
+        var C = brd6.create('point',[2,-1]);
+        var D = brd6.create('point',[2,2]);
+        var E = brd6.create('point',[0.3,-2]);
+        var con = brd6.create('conic',[A,B,C,D,E]);
+    })();
+</script>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="линии-и-поверхности-первого-порядка.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="аффинные-преобразования.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

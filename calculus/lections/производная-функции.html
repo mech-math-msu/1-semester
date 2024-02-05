@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Производная функции</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="равномерно-непрерывные-функции-теорема-кантора.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="дифференцируемость-функций-первый-дифференциал.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="5" id="производная-функции">Производная функции</h1>
+<h2 data-number="5.1"
+id="производная-суммы-произведения-и-отношения-функций">Производная
+суммы, произведения и отношения функций</h2>
+<div id="definition-13">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(f(x)\)</span> определена в <span
+class="math inline">\(B(x_0), \,\,\,\, \Delta x = x - x_0\)</span>. Если
+<span class="math display">\[\exists \displaystyle \lim_{\Delta x\to
+0}\frac{f(x + \Delta x) - f(x)}{\Delta x} = f’(x_0),\]</span> то <span
+class="math inline">\(f(x)\)</span> имеет производную <span
+class="math inline">\(f’(x_0)\)</span> в т. <span
+class="math inline">\(x_0\)</span>.</p>
+</div>
+<div id="definition-14">
+<p><strong>Определение:</strong> Пусть <span class="math inline">\(A
+\subset \mathbb{R}, \,\,\,\, \Delta x = x - x_0\)</span>. Если <span
+class="math display">\[\exists \displaystyle \lim_{\Delta x\to 0, \Delta
+x + x_0 \in A}\frac{f(x + \Delta x) - f(x)}{\Delta x} =
+f’(x_0),\]</span> то <span class="math inline">\(f(x)\)</span> имеет
+производную <span class="math inline">\(f’(x_0)\)</span> по множеству
+<span class="math inline">\(A\)</span> в т. <span
+class="math inline">\(x_0\)</span>.</p>
+</div>
+<p><strong>Обозначение:</strong> <span
+class="math inline">\(\displaystyle \lim_{\Delta x\to 0, \Delta x &lt;
+0}\frac{f(x + \Delta x) - f(x)}{\Delta x} \stackrel{def}{=} f’_{-}(x_0)
+\stackrel{def}{=} f’(x_0 - 0)\)</span></p>
+<p><strong>Обозначение:</strong> <span
+class="math inline">\(\displaystyle \lim_{\Delta x\to 0, \Delta x &gt;
+0}\frac{f(x + \Delta x) - f(x)}{\Delta x} \stackrel{def}{=} f’_{+}(x_0)
+\stackrel{def}{=} f’(x_0 + 0)\)</span></p>
+<div id="theorem-25">
+<p><strong>Теорема:</strong> Пусть <span
+class="math inline">\(f(x)\)</span> имеет производную <span
+class="math inline">\(f’(x_0)\)</span> в т. <span
+class="math inline">\(x_0\)</span>. Тогда <span
+class="math inline">\(f(x)\)</span> непрерывна в т. <span
+class="math inline">\(x_0\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(\displaystyle
+\lim_{x\to x_0}(f(x) - f(x_0)) = \displaystyle \lim_{x\to x_0}\frac{f(x)
+- f(x_0)}{x - x_0}\cdot(x - x_0) = f’(x_0)\cdot 0 = 0\)</span>. А значит
+по <a href="пределы.html#theorem-2">теореме</a> <span
+class="math inline">\(f(x)\)</span> непрерывна в т. <span
+class="math inline">\(x_0 \,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="theorem-26">
+<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\exists
+f’(x_0)\)</span> и <span class="math inline">\(\exists g’(x_0)\)</span>.
+Тогда <span class="math display">\[\exists (f(x) + g(x))’_{|x = x_0} =
+f’(x_0) + g’(x_0)\]</span></p>
+<p><em>Доказательство:</em> очев <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="theorem-27">
+<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\exists
+f’(x_0)\)</span> и <span class="math inline">\(\exists g’(x_0)\)</span>.
+Тогда <span class="math display">\[\exists (f(x) \cdot g(x))’_{|x = x_0}
+= f’(x_0)\cdot g(x_0) + g’(x_0) \cdot f(x_0)\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[\displaystyle
+\lim_{\Delta x\to 0}\frac{f(x + \Delta x) \cdot g(x + \Delta x) -
+f(x)\cdot g(x)}{\Delta x} =\]</span> <span
+class="math display">\[=\displaystyle \lim_{\Delta x\to 0}\frac{f(x +
+\Delta x) \cdot g(x + \Delta x) - g(x + \Delta x) \cdot f(x) - f(x)\cdot
+g(x) + g(x + \Delta x) \cdot f(x)}{\Delta x} =\]</span> <span
+class="math display">\[=\displaystyle \lim_{\Delta x\to 0}\frac{g(x +
+\Delta x)\cdot (f(x + \Delta x) - f(x)) + f(x)\cdot (g(x + \Delta x) -
+g(x))}{\Delta x} =\]</span> <span class="math display">\[=\displaystyle
+\lim_{\Delta x\to 0}\frac{g(x + \Delta x)\cdot (f(x + \Delta x) -
+f(x))}{\Delta x} + \frac{f(x)\cdot (g(x + \Delta x) - g(x))}{\Delta x}
+=\]</span> <span class="math display">\[=f’(x_0)\cdot g(x_0) + g’(x_0)
+\cdot f(x_0) \,\,\,\,\blacksquare\]</span></p>
+</div>
+<div id="theorem-28">
+<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\exists
+f’(x_0)\)</span> и <span class="math inline">\(\exists g’(x_0)\)</span>.
+Тогда <span class="math display">\[\exists \left(
+\frac{f(x)}{g(x)}\right)’_{|x = x_0} = \frac{f’(x_0)\cdot g(x_0) -
+g’(x_0) \cdot f(x_0)}{g(x_0)^2}\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[\left(
+\frac{f(x)}{g(x)}\right)’_{|x = x_0} =\]</span> <span
+class="math display">\[\displaystyle \lim_{\Delta x\to 0}\frac{\frac{f(x
++ \Delta x)}{g(x + \Delta x)} - \frac{f(x)}{g(x)}}{\Delta x} =\]</span>
+<span class="math display">\[\displaystyle \lim_{\Delta x\to 0}\frac{f(x
++ \Delta x) \cdot g(x) - f(x)\cdot g(x + \Delta x)}{\Delta x \cdot g(x +
+\Delta x) \cdot g(x)} =\]</span> <span class="math display">\[= \left(
+\frac{f(x)}{g(x)}\right)’_{|x = x_0} = \frac{f’(x_0)\cdot g(x_0) -
+g’(x_0) \cdot f(x_0)}{g(x_0)^2} \,\,\,\,\blacksquare\]</span></p>
+</div>
+<h2 data-number="5.2"
+id="производная-композиции-функций-производная-обратной-функции">Производная
+композиции функций, производная обратной функции</h2>
+<div id="theorem-29">
+<p><strong>Теорема:</strong> Пусть <span
+class="math inline">\(f(x)\)</span> непрерывна строго возрастает в <span
+class="math inline">\(B(x_0)\)</span>, <span
+class="math inline">\(\exists f^{-1}(y)\)</span> в <span
+class="math inline">\(B(y_0), \,\,\,\, y_0 = f(x_0)\)</span> и <span
+class="math inline">\(\exists f’(x_0) \ne 0\)</span>. Тогда <span
+class="math inline">\(\exists \left(f^{-1}(y)\right)’_{|y = y_0} =
+\frac{1}{f’(x_0)}\)</span>.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\left(f^{-1}(y)\right)’_{|y = y_0} = \displaystyle
+\lim_{y\to y_0}\frac{f^{-1}(y) - f^{-1}(y_0)}{y - y_0} = \displaystyle
+\lim_{x\to x_0}\frac{x - x_0}{f(x) - f(x_0)} =
+\frac{1}{f’(x_0)}\)</span> (С чего мы можем заменить <span
+class="math inline">\(x \to x_0\)</span> на <span
+class="math inline">\(y \to y_0\)</span>?)</p>
+</div>
+<div id="theorem-30">
+<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\exists
+g’(x_0)\)</span> и <span class="math inline">\(\exists
+f’(g(x_0)\)</span>. Тогда <span class="math display">\[\exists
+f(g(x))’_{|x = x_0} = f’(g(x_0))\cdot g’(x_0)\]</span></p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(f(x) \ne
+f(x_0)\)</span> при <span class="math inline">\(x \ne x_0\)</span>.
+<span class="math display">\[f(g(x))’_{|x = x_0} = \displaystyle
+\lim_{x\to x_0}\frac{f(g(x)) - f(g(x_0))}{x - x_0}\]</span> <span
+class="math display">\[= \displaystyle \lim_{x\to x_0}\frac{f(g(x)) -
+f(g(x_0))}{x - x_0}\cdot \frac{g(x) - g(x_0)}{g(x) - g(x_0)} =
+f’(g(x_0))\cdot g’(x_0)\,\,\,\,\blacksquare\]</span></p>
+</div>
+<h2 data-number="5.3" id="таблица-производных">Таблица производных</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Функция</th>
+<th>Производная</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x^{\alpha}\)</span></td>
+<td><span class="math inline">\(\alpha \cdot x^{\alpha -
+1}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\sin(x)\)</span></td>
+<td><span class="math inline">\(\cos(x)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\cos(x)\)</span></td>
+<td><span class="math inline">\(-\sin(x)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\tan(x)\)</span></td>
+<td><span class="math inline">\(\frac{1}{\cos^2(x)}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\cot(x)\)</span></td>
+<td><span class="math inline">\(-\frac{1}{\sin^2(x)}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\sin^{-1}(x)\)</span></td>
+<td><span class="math inline">\(\frac{1}{\sqrt{1 - x^2}}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\cos^{-1}(x)\)</span></td>
+<td><span class="math inline">\(-\frac{1}{\sqrt{1 - x^2}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\tan^{-1}(x)\)</span></td>
+<td><span class="math inline">\(\frac{1}{1 + x^2}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\cot^{-1}(x)\)</span></td>
+<td><span class="math inline">\(-\frac{1}{1 + x^2}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\ln(x)\)</span></td>
+<td><span class="math inline">\(\frac{1}{x}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\log_a(x)\)</span></td>
+<td><span class="math inline">\(\frac{1}{x\cdot \ln(a)}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(e^x\)</span></td>
+<td><span class="math inline">\(e^x\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(a^x\)</span></td>
+<td><span class="math inline">\(a^x\cdot \ln(a)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\sinh(x)\)</span></td>
+<td><span class="math inline">\(\cosh(x)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\cosh(x)\)</span></td>
+<td><span class="math inline">\(\sinh(x)\)</span></td>
+</tr>
+</tbody>
+</table>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="равномерно-непрерывные-функции-теорема-кантора.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="дифференцируемость-функций-первый-дифференциал.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

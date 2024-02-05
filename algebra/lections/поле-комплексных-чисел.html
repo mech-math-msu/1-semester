@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Поле комплексных чисел</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="кольца-и-поля.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="многочлены.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="3" id="поле-комплексных-чисел">Поле комплексных
+чисел</h1>
+<div id="definition-4">
+<p><strong>Определение:</strong> (Комплексные числа) Множество <span
+class="math inline">\(\mathbb{C} = \{(a, b): \,\,\,\, a, b \in
+\mathbb{R}\}\)</span> – это множество комплексных чисел. Пара <span
+class="math inline">\((a, b)\)</span> записывается в виде <span
+class="math inline">\(a + bi\)</span>.</p>
+</div>
+<h2 data-number="3.1" id="комплексное-сопряжение">Комплексное
+сопряжение</h2>
+<h2 data-number="3.2" id="деление">Деление</h2>
+<h2 data-number="3.3"
+id="изображение-комплексных-чисел-на-плоскости">Изображение комплексных
+чисел на плоскости</h2>
+<h2 data-number="3.4" id="модуль-и-аргумент-комплексного-числа">Модуль и
+аргумент комплексного числа</h2>
+<h2 data-number="3.5"
+id="тригонометрическая-форма-комплексного-числа">Тригонометрическая
+форма комплексного числа</h2>
+<div id="statement-3">
+<p><strong>Утверждение:</strong> <span class="math inline">\(\forall z
+\in \mathbb{C} \,\,\,\, \exists \rho \in \mathbb{R} \ge 0, \,\,\,\,
+\varphi \in \mathbb{R}\)</span> такие что <span class="math inline">\(z
+= \rho \cdot (\cos{\varphi} + i \cdot \sin{\varphi})\)</span>.</p>
+<p><span class="math inline">\(\rho\)</span> – называется модулем <span
+class="math inline">\(z\)</span> и обозначается <span
+class="math inline">\(\rho = |z|\)</span> <span
+class="math inline">\(\varphi\)</span> – называется аргументом <span
+class="math inline">\(z\)</span> и обозначается <span
+class="math inline">\(\varphi = \operatorname{Arg} z\)</span></p>
+<p><em>Доказательство:</em> <span class="math inline">\(\rho = \sqrt{a^2
++ b^2} \,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="3.6"
+id="умножение-и-деление-комплексных-чисел-в-тригонометрической-форме">Умножение
+и деление комплексных чисел в тригонометрической форме</h2>
+<div id="statement-4">
+<p><strong>Утверждение:</strong> <span class="math inline">\(\forall x,
+y \in \mathbb{C}\)</span> <span class="math display">\[|x\cdot y| =
+|x||y|\]</span> <span class="math display">\[\operatorname{Arg} (x \cdot
+y) = \operatorname{Arg}x + \operatorname{Arg}y\]</span></p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(x =
+\rho(\cos{\varphi} + i\sin{\varphi}), \,\,\,\, y = \rho’(\cos{\varphi’}
++ i\sin{\varphi’})\)</span> <span class="math display">\[xy =
+(\rho(\cos{\varphi} + i\sin{\varphi}))\cdot (\rho’(\cos{\varphi’} +
+i\sin{\varphi’})) = \rho \cdot \rho ’ (\cos{(\varphi + \varphi’)} + i
+\sin{(\varphi + \varphi’)}) \,\,\,\,\blacksquare\]</span></p>
+</div>
+<h2 data-number="3.7" id="формула-муавра">Формула Муавра</h2>
+<div id="statement-5">
+<p><strong>Утверждение:</strong> <span
+class="math display">\[(\rho(\cos{\varphi} + i\sin{\varphi}))^n =
+\rho^n(\cos{n\varphi} + i\sin{n\varphi})\]</span></p>
+<p><em>Доказательство:</em> <a
+href="поле-комплексных-чисел.html#statement-4">следует отсюда</a> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="3.8"
+id="извлечение-корней-из-комплексных-чисел">Извлечение корней из
+комплексных чисел</h2>
+<div id="definition-5">
+<p><strong>Определение:</strong> <span class="math inline">\(\sqrt[n]z =
+\{w \in \mathbb{C}: \,\,\,\, w^n = c\}, \,\,\,\, n \in
+\mathbb{N}\)</span></p>
+</div>
+<h2 data-number="3.9" id="комплексные-корни-из-единицы">Комплексные
+корни из единицы</h2>
+<div id="statement-7">
+<p><strong>Утверждение:</strong> <span
+class="math inline">\(\sqrt[n]{1}\)</span> – коммутативная (абелева)
+группа.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<h2 data-number="3.10" id="первообразные-корни">Первообразные корни</h2>
+<div id="definition-6">
+<p><strong>Определение:</strong> Группа <span
+class="math inline">\(G\)</span> <em>циклическая</em>, если <span
+class="math inline">\(\exists a \in G: \,\,\,\, \forall b \in G \,\,\,\,
+\exists k \in \mathbb{Z}: \,\,\,\, b = a^k\)</span>.<br></p>
+<p>Элемент <span class="math inline">\(a\)</span> – <em>порождающий
+элемент</em> группы <span class="math inline">\(G\)</span>.</p>
+</div>
+<div id="definition-7">
+<p><strong>Определение:</strong> <span class="math inline">\(a \in
+\sqrt[n]{1}\)</span> – <em>первообразный корень</em>, если он является
+порождающим элементом <span
+class="math inline">\(\sqrt[n]{1}\)</span>.</p>
+</div>
+<h2 data-number="3.11"
+id="среди-корней-степени-сто-из-единицы-сколько-первообразных">Среди
+корней степени сто из единицы сколько первообразных?</h2>
+<div id="theorem-0">
+<p><strong>Теорема:</strong> <span class="math inline">\(\varepsilon_l
+\in \sqrt[n]{1}\)</span> – первообразный корень <span
+class="math inline">\(\Leftrightarrow \gcd{(n, l)} = 1\)</span></p>
+<p><em>Доказательство:</em> непонятно.</p>
+</div>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="кольца-и-поля.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="многочлены.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

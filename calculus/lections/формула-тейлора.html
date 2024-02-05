@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Формула Тейлора</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="правила-лопиталя.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="выпуклые-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="8" id="формула-тейлора">Формула Тейлора</h1>
+<div id="definition-20">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\exists f^{(n)}(x_0)\)</span>. Выражение <span
+class="math inline">\(f(x) = \displaystyle \sum_{k =
+0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x - x_0)^k + r_n(x, x_0)\)</span> -
+<em>формула Тейлора</em> для <span class="math inline">\(f(x)\)</span> с
+центром разложения в т.<span class="math inline">\(x_0\)</span>.</p>
+</div>
+<h2 data-number="8.1"
+id="остаточный-член-в-форме-пеано-и-в-общей-форме.-остаточный-член-в-форме-лагранжа">Остаточный
+член в форме Пеано и в общей форме. Остаточный член в форме
+Лагранжа</h2>
+<div id="theorem-43">
+<p><strong>Теорема:</strong> (Остаточный член в форме Пеано) <span
+class="math display">\[r_n(x, x_0) = \overline{\overline{o}}((x -
+x_0)^n)\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[\displaystyle
+\lim_{x\to x_0}\frac{r_n(x, x_0)}{(x - x_0)^n} = \displaystyle
+\lim_{x\to x_0}\frac{f(x) - \displaystyle \sum_{k =
+0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x - x_0)^k}{(x - x_0)^n}
+\stackrel{?}{=}\]</span> <span
+class="math display">\[\stackrel{?}{=}\displaystyle \lim_{x\to
+x_0}\frac{f’(x) - \displaystyle \sum_{k = 1}^{n}\frac{f^{(k)}(x_0)}{(k -
+1)!}\cdot (x - x_0)^{k - 1}}{n \cdot (x - x_0)^{n -
+1}}\stackrel{?}{=}\ldots \stackrel{?}{=}\]</span> <span
+class="math display">\[\stackrel{?}{=} \displaystyle \lim_{x\to
+x_0}\frac{f^{(n - 1)}(x) - f^{(n - 1)}(x_0) - f^{(n)}(x_0)\cdot (x -
+x_0)}{n! \cdot (x - x_0)} = 0 \,\,\,\,\blacksquare\]</span></p>
+</div>
+<div id="theorem-44">
+<p><strong>Теорема:</strong> (Остаточный член в общей форме) Пусть <span
+class="math inline">\(f(t) \in \mathcal{D}^n[x, x_0]\)</span> и <span
+class="math inline">\(f(t) \in \mathcal{D}^{n + 1}(x, x_0), \,\,\,\,
+\varphi (x) \in C[x, x_0], \,\,\,\, \varphi (x) \in \mathcal{D}(x, x_0),
+\,\,\,\, \varphi’(x) \ne 0\)</span>. Тогда <span
+class="math display">\[\exists c \in (x, x_0): \,\,\,\,r_n(x, x_0) =
+\frac{f^{(n + 1)}(c) \cdot (x - c)^n}{n!} \cdot \frac{\varphi(x) -
+\varphi(x_0)}{\varphi’(c)}\]</span></p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(\psi(t) =
+\displaystyle \sum_{k = 0}^{n}\frac{f^{(k)}(t)}{k!}\cdot (x -
+t)^k\)</span>. Тогда <span class="math inline">\(\psi(x_0) =
+\displaystyle \sum_{k = 0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x - x_0)^k,
+\,\,\,\, \psi(x) = f(x)\)</span>. <span class="math display">\[\psi’(t)
+= \displaystyle \sum_{k = 0}^{n}\frac{f^{(k + 1)}(t)}{k!}\cdot (x - t)^k
+- \displaystyle \sum_{k = 1}^{n}\frac{f^{(k)}(t)}{(k - 1)!}\cdot (x -
+t)^{k - 1} = \frac{f^{(n + 1)}(t)}{n!}\cdot (x - t)^n\]</span> <span
+class="math display">\[\frac{r_n(x, x_0)}{\varphi(x) - \varphi(x_0)} =
+\frac{\psi(x) - \psi(x_0)}{\varphi(x) - \varphi(x_0)} \stackrel{\text{т.
+Коши}}{=} \frac{\psi’(c)}{\varphi’(c)} = \frac{1}{\varphi’(c)}\cdot
+\frac{f^{(n + 1)}(c)}{n!}\cdot (x - c)^n
+\,\,\,\,\blacksquare\]</span></p>
+</div>
+<div id="corollary-5">
+<p><strong>Следствие:</strong> (Остаточный член в форме Лагранжа) <span
+class="math display">\[r_n(x, x_0) = \frac{f^{(n + 1)}(c)\cdot (x -
+x_0)^{n + 1}}{(n + 1)!}\]</span></p>
+<p><em>Доказательство:</em> Возьмем <span
+class="math inline">\(\varphi(x) = (x - x_0)^{n}\)</span>. Запишем
+остаточный член в общей форме: <span class="math display">\[\frac{f^{(n
++ 1)}(c) \cdot (x - c)^n}{n!} \cdot \frac{(x - x_0)^{n} - 0}{n \cdot (x
+- x_0)^{n - 1}} = \frac{f^{(n + 1)}(c)\cdot (x - x_0)^{n + 1}}{(n + 1)!}
+\,\,\,\,\blacksquare\]</span></p>
+</div>
+<h2 data-number="8.2"
+id="формула-тейлора-для-основных-элементарных-функций.-достаточные-условия-локального-экстремума.-общая-схема-поиска-глобального-экстремума-функции-на-отрезке">Формула
+Тейлора для основных элементарных функций. Достаточные условия
+локального экстремума. Общая схема поиска глобального экстремума функции
+на отрезке</h2>
+<div id="theorem-45">
+<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x) \in
+\mathcal{D}(x_0)\)</span>. Если при <span class="math inline">\(x &lt;
+x_0 \,\,\,\, f’(x) &lt; 0\)</span>, при <span class="math inline">\(x
+&gt; x_0 \,\,\,\, f’(x) &gt; 0\)</span>, то в т. <span
+class="math inline">\(x_0\)</span> минимум функции <span
+class="math inline">\(f(x)\)</span>.</p>
+<p><em>Доказательство:</em> По <a
+href="дифференцируемость-функций-первый-дифференциал.html#theorem-34">т.
+Лагранжа</a> для <span class="math inline">\(\forall x &lt; x_0 \,\,\,\,
+\exists c \in (x, x_0): \,\,\,\, f(x_0) - f(x) = f’(c)\cdot (x_0 - x)
+(1)\)</span>. Так как <span class="math inline">\(c \in (x, x_0)
+\,\,\,\, f’(c) &lt; 0\)</span> и из <span class="math inline">\(x &lt;
+x_0\)</span> следует <span class="math inline">\(x_0 - x &gt;
+0\)</span>. Значит правая часть равенства <span
+class="math inline">\((1)\)</span> отрицательна <span
+class="math inline">\(\Rightarrow \forall x &lt; x_0 \,\,\,\, f(x) &gt;
+f(x_0) \,\,\,\,\blacksquare\)</span></p>
+</div>
+<p><strong>Упражнение:</strong><a name="exercise-2"></a> Дописать
+доказательство, сформулировать теорему для максимума и доказать ее.</p>
+<p><strong>Упражнение:</strong><a name="exercise-3"></a> Понять почему в
+доказательстве можно применять т. Лагранжа.</p>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="правила-лопиталя.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="выпуклые-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>
