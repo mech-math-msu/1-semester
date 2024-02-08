@@ -11,7 +11,9 @@
     
     <title>Формула Тейлора</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="правила-лопиталя.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="выпуклые-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="правила-лопиталя.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="выпуклые-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,7 +256,7 @@
 
 <h1 data-number="8" id="формула-тейлора">Формула Тейлора</h1>
 <div id="definition-20">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(\exists f^{(n)}(x_0)\)</span>. Выражение <span
 class="math inline">\(f(x) = \displaystyle \sum_{k =
 0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x - x_0)^k + r_n(x, x_0)\)</span> -
@@ -259,7 +268,7 @@ id="остаточный-член-в-форме-пеано-и-в-общей-фо
 член в форме Пеано и в общей форме. Остаточный член в форме
 Лагранжа</h2>
 <div id="theorem-43">
-<p><strong>Теорема:</strong> (Остаточный член в форме Пеано) <span
+<p><strong>Теорема: </strong>(Остаточный член в форме Пеано) <span
 class="math display">\[r_n(x, x_0) = \overline{\overline{o}}((x -
 x_0)^n)\]</span></p>
 <p><em>Доказательство:</em> <span class="math display">\[\displaystyle
@@ -276,7 +285,7 @@ x_0}\frac{f^{(n - 1)}(x) - f^{(n - 1)}(x_0) - f^{(n)}(x_0)\cdot (x -
 x_0)}{n! \cdot (x - x_0)} = 0 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-44">
-<p><strong>Теорема:</strong> (Остаточный член в общей форме) Пусть <span
+<p><strong>Теорема: </strong>(Остаточный член в общей форме) Пусть <span
 class="math inline">\(f(t) \in \mathcal{D}^n[x, x_0]\)</span> и <span
 class="math inline">\(f(t) \in \mathcal{D}^{n + 1}(x, x_0), \,\,\,\,
 \varphi (x) \in C[x, x_0], \,\,\,\, \varphi (x) \in \mathcal{D}(x, x_0),
@@ -299,7 +308,7 @@ class="math display">\[\frac{r_n(x, x_0)}{\varphi(x) - \varphi(x_0)} =
 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="corollary-5">
-<p><strong>Следствие:</strong> (Остаточный член в форме Лагранжа) <span
+<p><strong>Следствие: </strong>(Остаточный член в форме Лагранжа) <span
 class="math display">\[r_n(x, x_0) = \frac{f^{(n + 1)}(c)\cdot (x -
 x_0)^{n + 1}}{(n + 1)!}\]</span></p>
 <p><em>Доказательство:</em> Возьмем <span
@@ -315,7 +324,7 @@ id="формула-тейлора-для-основных-элементарны
 локального экстремума. Общая схема поиска глобального экстремума функции
 на отрезке</h2>
 <div id="theorem-45">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x) \in
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f(x) \in
 \mathcal{D}(x_0)\)</span>. Если при <span class="math inline">\(x &lt;
 x_0 \,\,\,\, f’(x) &lt; 0\)</span>, при <span class="math inline">\(x
 &gt; x_0 \,\,\,\, f’(x) &gt; 0\)</span>, то в т. <span
@@ -340,7 +349,7 @@ f(x_0) \,\,\,\,\blacksquare\)</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="правила-лопиталя.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

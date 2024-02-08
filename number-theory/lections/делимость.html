@@ -11,7 +11,9 @@
     
     <title>Делимость</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="конечные-цепные-дроби.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="конечные-цепные-дроби.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -249,7 +258,7 @@
 <h2 data-number="1.1" id="теоремы-о-делении-с-остатком">Теоремы о
 делении с остатком</h2>
 <div id="definition-1">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(a \in
+<p><strong>Определение: </strong>Пусть <span class="math inline">\(a \in
 \mathbb{Z}, b \in \mathbb{Z}, a \ne 0\)</span>. Если <span
 class="math inline">\(\exists c \in \mathbb{Z}\)</span>, такое что <span
 class="math inline">\(b = ac\)</span>, то <span
@@ -278,7 +287,7 @@ class="math inline">\(|a| \le |b|\)</span></li>
 </ol>
 <h3 data-number="1.1.2" id="простейшие-функции">Простейшие функции</h3>
 <div id="definition-2">
-<p><strong>Определение:</strong> (<em>(нижняя) целая часть числа</em>)
+<p><strong>Определение: </strong>(<em>(нижняя) целая часть числа</em>)
 <span class="math inline">\([x] = \max \{z \in \mathbb{Z}: z \le x\} =
 \lceil x \rceil\)</span></p>
 </div>
@@ -287,11 +296,11 @@ class="math inline">\(|a| \le |b|\)</span></li>
 class="math inline">\([5.6] = [5]\)</span></p>
 </blockquote>
 <div id="definition-3">
-<p><strong>Определение:</strong> (<em>дробная часть числа</em>) <span
+<p><strong>Определение: </strong>(<em>дробная часть числа</em>) <span
 class="math inline">\(\{x\} = x - [x]\)</span></p>
 </div>
 <div id="definition-4">
-<p><strong>Определение:</strong> (<em>верхняя целая часть числа</em>)
+<p><strong>Определение: </strong>(<em>верхняя целая часть числа</em>)
 <span class="math inline">\(\lfloor x \rfloor = \min \{z \in \mathbb{Z}:
 z \ge x\}\)</span></p>
 <blockquote>
@@ -300,7 +309,7 @@ z \ge x\}\)</span></p>
 </blockquote>
 </div>
 <div id="definition-5">
-<p><strong>Определение:</strong> (<em>расстояние до ближайшего
+<p><strong>Определение: </strong>(<em>расстояние до ближайшего
 целого</em>) <span class="math inline">\(\displaystyle ||x|| = \min_{a
 \in \mathbb{Z}} |x - a|\)</span></p>
 </div>
@@ -309,7 +318,7 @@ class="math inline">\(||x|| = \min (\{x\}, 1 - \{x\})\)</span></p>
 <p><strong>Упражнение:</strong><a name="exercise-2"></a> <span
 class="math inline">\(||x + y|| \le ||x|| + ||y||\)</span></p>
 <div id="theorem-1">
-<p><strong>Теорема:</strong> (<em>обычное деление с остатком</em>) <span
+<p><strong>Теорема: </strong>(<em>обычное деление с остатком</em>) <span
 class="math display">\[\forall a \in \mathbb{Z},\, b \in
 \mathbb{N}\,\,\,\, \exists !\,\, q, r \in \mathbb{Z}: a = bq + r,\,\, 0
 \le r &lt; b\]</span></p>
@@ -341,18 +350,18 @@ class="math display">\[0 \le r_0, r_1 \le b - 1 \Rightarrow |r_0 - r_1|
 </div>
 <h2 data-number="1.2" id="нод">НОД</h2>
 <div id="definition-6">
-<p><strong>Определение:</strong> (<em>НОД</em>) Пусть <span
+<p><strong>Определение: </strong>(<em>НОД</em>) Пусть <span
 class="math inline">\(a, b \in \mathbb{Z},\,\,\,\,\mathcal{D}_{a, b}=
 \{z \in \mathbb{N}: z\,\,|\,\,a, z\,\,|\,\,b\}\)</span>. Тогда <span
 class="math display">\[\mathbf{НОД}(a, b) = \max
 \mathcal{D}\]</span></p>
 </div>
 <div id="statement-1">
-<p><strong>Утверждение:</strong> (корректность определения)
+<p><strong>Утверждение: </strong>(корректность определения)
 <em>Доказательство:</em> очев.</p>
 </div>
 <div id="lemma-1">
-<p><strong>Лемма:</strong> <span class="math display">\[(a, b) = (a, a
+<p><strong>Лемма: </strong><span class="math display">\[(a, b) = (a, a
 \pm b)\]</span></p>
 <p><em>Доказательство:</em> <span class="math display">\[\begin{cases}
 z\,\,|\,\,a \\ z\,\,|\,\,b
@@ -378,13 +387,13 @@ class="math display">\[\vdots\]</span> <span class="math display">\[r_{n
 1}, \,\,\,\, r_{n + 1} = 0\]</span> <span class="math display">\[\exists
 n \in \mathbb{N}: r_{n + 1} = 0\]</span></p>
 <div id="statement-2">
-<p><strong>Утверждение:</strong> <span
+<p><strong>Утверждение: </strong><span
 class="math inline">\(\mathbf{НОД} (a, b) = r_n\)</span></p>
 <p><em>Доказательство:</em> <span class="math inline">\(\forall j \le n
 (r_{j - 1}, r_j) = (r_j, r_{j + 1}) \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-2">
-<p><strong>Теорема:</strong> (<em>о линейном представлении НОД</em>)
+<p><strong>Теорема: </strong>(<em>о линейном представлении НОД</em>)
 Пусть <span class="math inline">\(a, b \in \mathbb{Z}, \,\,\,\,\,\, d =
 (a, b)\)</span>. Тогда <span class="math display">\[\exists x, y \in
 \mathbb{Z}: d = ax + by\]</span></p>
@@ -392,7 +401,7 @@ class="math inline">\(\mathbf{НОД} (a, b) = r_n\)</span></p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span>.</p>
 </div>
 <div id="lemma-2">
-<p><strong>Лемма:</strong> (<em>важная</em>) <span
+<p><strong>Лемма: </strong>(<em>важная</em>) <span
 class="math display">\[\begin{cases}
 a\,\,|\,\,bc \\ (a, b) = 1
 \end{cases} \Rightarrow a\,\,|\,\,c\]</span> <em>Доказательство:</em>
@@ -405,31 +414,31 @@ a\,\,|\,\,acx \\ a\,\,|\,\,bcy
 <h2 data-number="1.4" id="нок-и-нод-нескольких-чисел">НОК и НОД
 нескольких чисел</h2>
 <div id="definition-7">
-<p><strong>Определение:</strong> <span class="math inline">\(z \in
+<p><strong>Определение: </strong><span class="math inline">\(z \in
 \mathbb{Z}\)</span> - общее кратное чисел <span
 class="math inline">\(a_1, \ldots, a_n\)</span>, если <span
 class="math inline">\(a_j \,\,|\,\,z \forall j\)</span></p>
 </div>
 <div id="definition-8">
-<p><strong>Определение:</strong> <span
+<p><strong>Определение: </strong><span
 class="math inline">\(\mathbf{НОК} (a_1, \ldots, a_n) = \min \{z \in
 \mathbb{N} : z\)</span> общее кратное чисел <span
 class="math inline">\(a_1, \ldots, a_n \}\)</span></p>
 </div>
 <div id="theorem-3">
-<p><strong>Теорема:</strong> Если <span class="math inline">\(z_0 -
+<p><strong>Теорема: </strong>Если <span class="math inline">\(z_0 -
 \mathbf{НОК} (a_1, \ldots, a_n)\)</span>, то <span
 class="math inline">\(z_0 \,\,|\,\,z\)</span></p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="definition-9">
-<p><strong>Определение:</strong> <span
+<p><strong>Определение: </strong><span
 class="math inline">\(\mathbf{НОД} (a_1, \ldots, a_n) = \max \{z \in
 \mathbb{N}: z \,\,|\,\,a_j \,\,\,\,\,\, \forall j = 1, \ldots,
 n\}\)</span></p>
 </div>
 <div id="theorem-4">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(d\)</span> - общий делитель <span
 class="math inline">\(a_1, \ldots, a_n\)</span>. Тогда <span
 class="math inline">\(d \,\,|\,\,\mathbf{НОД} (a_1, \ldots,
@@ -439,7 +448,7 @@ a_n)\)</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

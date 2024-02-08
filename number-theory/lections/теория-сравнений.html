@@ -11,7 +11,9 @@
     
     <title>Теория сравнений</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="конечные-цепные-дроби.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="первообразные-корни.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="конечные-цепные-дроби.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="первообразные-корни.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,10 +256,10 @@
 
 <h1 data-number="3" id="теория-сравнений">Теория сравнений</h1>
 <div id="definition-12">
-<p><strong>Определение:</strong> <span class="math display">\[a, b \in
-\mathbb{Z} \,\,\,\, m \in \mathbb{N}, \,\,\,\, m \ge 2\]</span> <span
-class="math display">\[a \equiv b \mod m \,\,\,\, m \,\,|\,\,(a -
-b)\]</span></p>
+<p><strong>Определение: </strong><strong>Определение:</strong> <span
+class="math display">\[a, b \in \mathbb{Z} \,\,\,\, m \in \mathbb{N},
+\,\,\,\, m \ge 2\]</span> <span class="math display">\[a \equiv b \mod m
+\,\,\,\, m \,\,|\,\,(a - b)\]</span></p>
 </div>
 <h2 data-number="3.1" id="простейшие-свойства-сравнений">Простейшие
 свойства сравнений</h2>
@@ -289,20 +298,20 @@ class="math inline">\(\forall b \,\,\,\, \exists ! \,\, x: ax \equiv b
 </ol>
 <h2 data-number="3.2" id="функция-эйлера">Функция Эйлера</h2>
 <div id="definition-13">
-<p><strong>Определение:</strong></p>
-<p><span class="math inline">\(\varphi (m)=\)</span> количество
-элементов в множестве <span class="math inline">\(\{x \in \mathbb{N}, x
-\le m, (x, m) = 1\}\)</span></p>
+<p><strong>Определение: </strong><span class="math inline">\(\varphi
+(m)=\)</span> количество элементов в множестве <span
+class="math inline">\(\{x \in \mathbb{N}, x \le m, (x, m) =
+1\}\)</span></p>
 </div>
 <h2 data-number="3.3" id="теорема-эйлера">Теорема Эйлера</h2>
 <div id="theorem-6">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\((a, m) =
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\((a, m) =
 1\)</span>. Тогда <span class="math display">\[a^{\varphi(m)} \equiv 1
 \mod m\]</span></p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="corollary-5">
-<p><strong>Следствие:</strong> Если <span
+<p><strong>Следствие: </strong>Если <span
 class="math inline">\(p\)</span> - простое, то: <span
 class="math display">\[a^{p - 1} \equiv 1 \mod p\]</span></p>
 <p><em>Доказательство:</em></p>
@@ -311,7 +320,7 @@ class="math display">\[a^{p - 1} \equiv 1 \mod p\]</span></p>
 <p><span class="math inline">\(m \ge 2, \,\,\,\, m \in
 \mathbb{N}\)</span></p>
 <div id="definition-15">
-<p><strong>Определение:</strong> <em>Класс вычетов</em> <span
+<p><strong>Определение: </strong><em>Класс вычетов</em> <span
 class="math inline">\(a\)</span> <em>по модулю</em> <span
 class="math inline">\(m\)</span><br></p>
 <p><span class="math inline">\(\overline{a} = \{x \in \mathbb{Z}: x
@@ -324,7 +333,7 @@ class="math inline">\(\overline{a} \cdot \overline{b} = \overline{a_0
 <p><em>Доказательство: корректности</em></p>
 </div>
 <div id="definition-16">
-<p><strong>Определение:</strong> класс <span
+<p><strong>Определение: </strong>класс <span
 class="math inline">\(\overline{a}\)</span> вычетов по модулю <span
 class="math inline">\(m\)</span> называется <em>обратимым</em>,
 если:</p>
@@ -339,7 +348,7 @@ m) = 1\)</span></li>
 <p><em>Доказательство:</em> (эквивалентности 1. 2. 3.)</p>
 </div>
 <div id="definition-17">
-<p><strong>Определение:</strong> <span class="math inline">\(B \subset
+<p><strong>Определение: </strong><span class="math inline">\(B \subset
 \mathbb{Z}\)</span> - <em>полная</em> система вычетов по модулю <span
 class="math inline">\(m\)</span>, если <span
 class="math inline">\(B\)</span> содержит ровно по одному числу из
@@ -347,7 +356,7 @@ class="math inline">\(B\)</span> содержит ровно по одному �
 class="math inline">\(m\)</span>.</p>
 </div>
 <div id="definition-18">
-<p><strong>Определение:</strong> <span class="math inline">\(B^* \subset
+<p><strong>Определение: </strong><span class="math inline">\(B^* \subset
 \mathbb{Z}\)</span> - <em>приведенная</em> система вычетов по модулю
 <span class="math inline">\(m\)</span>, если <span
 class="math inline">\(B^*\)</span> содержит ровно по одному числу из
@@ -358,7 +367,7 @@ class="math inline">\(m\)</span>.</p>
 |B| = m\)</span><br> <span class="math inline">\(\forall B^* \,\,\,\,
 |B^* | = \varphi(m)\)</span><br></p>
 <div id="statement-3">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(B\)</span> обладает свойствами:</p>
 <ol type="1">
 <li>Все элементы <span class="math inline">\(B\)</span> различны по
@@ -371,7 +380,7 @@ class="math inline">\(B\)</span> обладает свойствами:</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="statement-4">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(B^*\)</span> обладает свойствами:</p>
 <ol type="1">
 <li>Все элементы <span class="math inline">\(B^*\)</span> различны по
@@ -386,7 +395,7 @@ class="math inline">\(B^*\)</span> обладает свойствами:</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="theorem-8">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\((m, n) =
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\((m, n) =
 1\)</span><br> <span class="math inline">\(B_1\)</span> - полная система
 вычетов по модулю <span class="math inline">\(m\)</span>.<br> <span
 class="math inline">\(B_2\)</span> - полная система вычетов по модулю
@@ -398,7 +407,7 @@ class="math inline">\(mn\)</span></p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="theorem-9">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\((m, n) =
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\((m, n) =
 1\)</span><br> <span class="math inline">\(B_1^*\)</span> - полная
 система вычетов по модулю <span class="math inline">\(m\)</span>.<br>
 <span class="math inline">\(B_2^*\)</span> - полная система вычетов по
@@ -410,14 +419,14 @@ class="math inline">\(mn\)</span></p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="corollary-1">
-<p><strong>Следствие:</strong> (<em>мультипликативность функции
+<p><strong>Следствие: </strong>(<em>мультипликативность функции
 Эйлера</em>) <span class="math display">\[\begin{cases}
 |B_1^*| = \varphi(m) \\ |B_2^*| = \varphi(n)
 \end{cases} \Rightarrow |B^*| = \varphi(mn)\]</span></p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="corollary-2">
-<p><strong>Следствие:</strong> Если <span class="math inline">\(m =
+<p><strong>Следствие: </strong>Если <span class="math inline">\(m =
 p_1^{\alpha_1} \cdot \ldots \cdot p_t^{\alpha_t}, p_i\)</span> - простое
 <span class="math inline">\(\forall i\)</span><br> <span
 class="math display">\[\varphi(m) = m(1 - \frac{1}{p_1})\cdot \ldots
@@ -431,13 +440,13 @@ href="теория-сравнений.html#corollary-1">следствие 1</a>
 </div>
 <h2 data-number="3.5" id="простые-числа">Простые числа</h2>
 <div id="definition-19">
-<p><strong>Определение:</strong> <span class="math inline">\(n \in
+<p><strong>Определение: </strong><span class="math inline">\(n \in
 \mathbb{N}\)</span> - <em>простое</em>, если имеет ровно 2 делителя
 <span class="math inline">\(1\)</span> и <span
 class="math inline">\(n\)</span>.</p>
 </div>
 <div id="definition-20">
-<p><strong>Определение:</strong> <span class="math inline">\(n \in
+<p><strong>Определение: </strong><span class="math inline">\(n \in
 \mathbb{N} \,\,\,\, n &gt; 1\)</span> - <em>составное</em>, если оно не
 простое.</p>
 </div>
@@ -445,7 +454,7 @@ class="math inline">\(n\)</span>.</p>
 <p><span class="math inline">\(1\)</span> не составное и не простое.</p>
 </blockquote>
 <div id="theorem-9">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(a &gt; 1
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(a &gt; 1
 \,\,\,\,  a \in \mathbb{Z}\)</span>. Тогда наименьший делитель <span
 class="math inline">\(c\)</span> числа <span
 class="math inline">\(a\)</span> неравный <span
@@ -453,11 +462,11 @@ class="math inline">\(1\)</span> - простое число.</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="theorem-10">
-<p><strong>Теорема:</strong> Множество простых чисел бесконечно.</p>
+<p><strong>Теорема: </strong>Множество простых чисел бесконечно.</p>
 <p><em>Доказательство:</em> (от противного)</p>
 </div>
 <div id="theorem-11">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(a, b \in
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(a, b \in
 \mathbb{Z}\)</span>, <span class="math inline">\(p\)</span> - простое,
 <span class="math inline">\(p \,\,|\,\, ab\)</span>. Тогда <span
 class="math inline">\(p \,\,|\,\, a\)</span> или <span
@@ -465,7 +474,7 @@ class="math inline">\(p \,\,|\,\, b\)</span>.</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="theorem-12">
-<p><strong>Теорема:</strong> (<em>основная теорема арифметики</em>)
+<p><strong>Теорема: </strong>(<em>основная теорема арифметики</em>)
 Всякое <span class="math inline">\(n \in \mathbb{N} \,\,\,\, n &gt;
 1\)</span> раскладывается в произведение простых сомножителей
 единственным образом.</p>
@@ -479,7 +488,7 @@ p_k^{\alpha_k}\)</span>, где <span class="math inline">\(\forall i \ne j
 \,\,\,\, 1 \le i, j \le k \,\,\,\, p_i \ne p_j \,\,\,\, \alpha_i \in
 \mathbb{N} \,\,\,\, \alpha_i \ge 1\)</span>.</p>
 <div id="theorem-13">
-<p><strong>Теорема:</strong> Наименьший простой делитель <span
+<p><strong>Теорема: </strong>Наименьший простой делитель <span
 class="math inline">\(p\)</span> составного числа <span
 class="math inline">\(n\)</span> не больше <span
 class="math inline">\(\sqrt{n}\)</span>.</p>
@@ -487,7 +496,7 @@ class="math inline">\(\sqrt{n}\)</span>.</p>
 </div>
 <h3 data-number="3.5.2" id="решето-эратосфена">Решето Эратосфена</h3>
 <div id="lemma-4">
-<p><strong>Лемма:</strong> <span class="math display">\[\ln(N + 1) \le
+<p><strong>Лемма: </strong><span class="math display">\[\ln(N + 1) \le
 \displaystyle \sum_{n = 1}^{N}\frac{1}{n}\]</span></p>
 <p><em>Доказательство:</em> <span class="math inline">\(\ln(1 + t) \le
 t\)</span> по теореме Лагранжа.<br> Рассмотрим <span
@@ -502,7 +511,7 @@ class="math display">\[\ln(N + 1) \le \displaystyle \sum_{n =
 1}^{N}\frac{1}{n} \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-14">
-<p><strong>Теорема:</strong> При любом <span class="math inline">\(x \ge
+<p><strong>Теорема: </strong>При любом <span class="math inline">\(x \ge
 2\)</span> справедливо неравенство: <span
 class="math display">\[\displaystyle \sum_{p \le x}^{}\frac{1}{p} \ge
 \ln(\ln(x)) - 1\]</span></p>
@@ -530,12 +539,12 @@ class="math inline">\(= \displaystyle \prod_{p \le x}\left(1 +
 \le x}\frac{1}{p} + 1 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-21">
-<p><strong>Определение:</strong> (количество простых меньших <span
+<p><strong>Определение: </strong>(количество простых меньших <span
 class="math inline">\(x\)</span>) <span class="math display">\[\pi(x) =
 \displaystyle \sum_{p \le x}^{}1\]</span></p>
 </div>
 <div id="definition-22">
-<p><strong>Определение:</strong> (<em>функция Мёбиуса</em>)</p>
+<p><strong>Определение: </strong>(<em>функция Мёбиуса</em>)</p>
 <p><span class="math display">\[\mu(n) = \begin{cases} 1,\,\,\,\, n = 1
 \\
 0,\,\,\,\, n = p^2m,\,\,\,\, p - простое \\
@@ -547,29 +556,31 @@ class="math inline">\(\displaystyle \sum_{d \,\,|\,\, n}\)</span> -
 class="math inline">\(1\)</span>.</p>
 </div>
 <div id="definition-23">
-<p><strong>Определение:</strong> <span class="math display">\[\tau(n) =
-\displaystyle \sum_{d \,\,|\,\, n}1\]</span></p>
+<p><strong>Определение: </strong><strong>Определение:</strong> <span
+class="math display">\[\tau(n) = \displaystyle \sum_{d \,\,|\,\,
+n}1\]</span></p>
 </div>
 <div id="definition-24">
-<p><strong>Определение:</strong> <span class="math display">\[\sigma(n)
-= \displaystyle \sum_{d \,\,|\,\, n}d\]</span></p>
+<p><strong>Определение: </strong><strong>Определение:</strong> <span
+class="math display">\[\sigma(n) = \displaystyle \sum_{d \,\,|\,\,
+n}d\]</span></p>
 </div>
 <div id="theorem-10">
-<p><strong>Теорема:</strong> (<em>основное свойство функции
+<p><strong>Теорема: </strong>(<em>основное свойство функции
 Мёбиуса</em>) <span class="math display">\[\displaystyle \sum_{d
 \,\,|\,\, n}\mu(n) = \begin{cases} 1,\,\,\,\, n = 1 \\
 0,\,\,\,\, n \ne 1 \end{cases}\]</span></p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="corollary-3">
-<p><strong>Следствие:</strong> Пусть <span class="math inline">\(a, b
+<p><strong>Следствие: </strong>Пусть <span class="math inline">\(a, b
 \in \mathbb{N}\)</span> <span class="math display">\[\displaystyle
 \sum_{d \,\,|\,\, (a, b)}\mu(n) = \begin{cases} 1,\,\,\,\, (a, b) = 1 \\
 0,\,\,\,\, (a, b) \ne 1 \end{cases}\]</span></p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="theorem-11">
-<p><strong>Теорема:</strong> Если <span class="math inline">\(x\)</span>
+<p><strong>Теорема: </strong>Если <span class="math inline">\(x\)</span>
 достаточно велико, то <span class="math display">\[\pi(x) \le
 \frac{2x}{\ln\ln(x)}\]</span></p>
 <p><em>Доказательство:</em></p>
@@ -584,7 +595,7 @@ class="math display">\[(m_i, m_j) = 1 \,\,\,\,\,\,\,\, \forall i \ne
 j\]</span> <span class="math display">\[m_i \in \mathbb{N}
 \,\,\,\,\,\,\,\, a_i \in \mathbb{Z}\]</span></p>
 <div id="theorem-12">
-<p><strong>Теорема:</strong> <span class="math display">\[x_0 = M_1x_1 +
+<p><strong>Теорема: </strong><span class="math display">\[x_0 = M_1x_1 +
 \ldots + M_kx_k\]</span> <span class="math inline">\(M = m_1 \cdot
 \ldots \cdot m_k,\,\,\,\, M_i = \frac{M}{m_i},\,\,\,\,\)</span> <span
 class="math inline">\(x_i\)</span> - решение сравнения <span
@@ -593,7 +604,7 @@ class="math inline">\(M_ix_i \equiv a_i \mod m_i\)</span> - является
 <p><em>Доказательство:</em></p>
 </div>
 <div id="corollary-4">
-<p><strong>Следствие:</strong> Если <span class="math inline">\(f(x) =
+<p><strong>Следствие: </strong>Если <span class="math inline">\(f(x) =
 a_nx^n + a_{n - 1}x^{n - 1} + \ldots + a_0\)</span> - полином с целыми
 коэффицентами, <span class="math inline">\(J(f, m)\)</span> - число
 решений сравнения <span class="math inline">\(f(x) \equiv 0 \mod
@@ -607,7 +618,7 @@ class="math inline">\(f\)</span>.</p>
 <p>Рассмотрим сравнение <span class="math inline">\(ax \equiv b \mod
 m\)</span>, где <span class="math inline">\((a, m) = 1\)</span>.</p>
 <div id="theorem-15">
-<p><strong>Теорема:</strong> <span class="math inline">\((-1)^{n}bp_{n -
+<p><strong>Теорема: </strong><span class="math inline">\((-1)^{n}bp_{n -
 1}\)</span> - является решением сравнения, приведенного выше.</p>
 <p><em>Доказательство:</em> <span class="math inline">\(p_nq_{n - 1} -
 p_{n - 1}q_n = (-1)^{n}, \,\,\,\,\,\,\,\, \frac{p_n}{q_n} = \frac{m}{a}
@@ -617,7 +628,7 @@ p_{n - 1}q_n = (-1)^{n}, \,\,\,\,\,\,\,\, \frac{p_n}{q_n} = \frac{m}{a}
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-16">
-<p><strong>Теорема:</strong> <span class="math inline">\(a^{\varphi(m) -
+<p><strong>Теорема: </strong><span class="math inline">\(a^{\varphi(m) -
 1}b\)</span> - является решением сравнения, приведенного выше.</p>
 <p><em>Доказательство:</em> <span class="math inline">\((a, m) = 1
 \Rightarrow\)</span> по <a
@@ -652,7 +663,7 @@ b \mod m\)</span> имеет <span class="math inline">\(d = (a, m)\)</span>
 - 1}x^{n - 1} + \ldots + a_0 \,\,\,\,(17)\]</span>
 <a name="equation-17"></a></p>
 <div id="theorem-17">
-<p><strong>Теорема:</strong> Полиномиальное сравнение степени <span
+<p><strong>Теорема: </strong>Полиномиальное сравнение степени <span
 class="math inline">\(n\)</span> по простому модулю <span
 class="math inline">\(p\)</span> равносильно некоторому сравнению
 степени не выше <span class="math inline">\(p - 1\)</span>.</p>
@@ -666,7 +677,7 @@ class="math inline">\(x^p - x \equiv 1 \mod p
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-18">
-<p><strong>Теорема:</strong> Если <span class="math inline">\(f(x)
+<p><strong>Теорема: </strong>Если <span class="math inline">\(f(x)
 \equiv 0 \mod p\)</span>(<span class="math inline">\(p\)</span> -
 простое) имеет более чем <span class="math inline">\(n\)</span> решений,
 то все коэффиценты <span class="math inline">\(f(x)\)</span> делятся на
@@ -674,7 +685,7 @@ class="math inline">\(x^p - x \equiv 1 \mod p
 <p><em>Доказательство:</em></p>
 </div>
 <div id="theorem-19">
-<p><strong>Теорема:</strong> (<em>Вильсона</em>) <span
+<p><strong>Теорема: </strong>(<em>Вильсона</em>) <span
 class="math inline">\(p\)</span> - простое <span
 class="math inline">\(\Rightarrow\)</span> <span
 class="math display">\[(p - 1)! + 1 \equiv 0 \mod p\]</span></p>
@@ -693,7 +704,7 @@ class="math inline">\((-1)^{p - 1}(p - 1)! + 1
 <h3 data-number="3.8.1" id="метод-подъёма-решения">Метод “подъёма”
 решения</h3>
 <div id="theorem-20">
-<p><strong>Теорема:</strong> (<em>Лемма Гензеля</em>) Пусть <span
+<p><strong>Теорема: </strong>(<em>Лемма Гензеля</em>) Пусть <span
 class="math inline">\(p\)</span> - простое, <span
 class="math inline">\(f(x) \in \mathbb{Z}[x]\)</span>, <span
 class="math inline">\(f(x_1) \equiv 0 \mod p \,\,\,\,\)</span>, <span
@@ -731,7 +742,7 @@ class="math display">\[\frac{f(x_{k - 1})}{p^{k - 1}} + f’(x_{k - 1})t
 <p>Рассмотрим сравнение <span class="math inline">\(x^n \equiv a \mod m,
 \,\,\,\, (a, m) = 1\)</span></p>
 <div id="definition-25">
-<p><strong>Определение:</strong> Если сравнение, написанное выше, имеет
+<p><strong>Определение: </strong>Если сравнение, написанное выше, имеет
 решение, то <span class="math inline">\(a\)</span> - вычет <span
 class="math inline">\(n\)</span>-й степени.</p>
 </div>
@@ -740,7 +751,7 @@ class="math inline">\(n\)</span>-й степени.</p>
 class="math inline">\(n = 3\)</span> кубический вычет</p>
 </blockquote>
 <div id="theorem-21">
-<p><strong>Теорема:</strong> Если <span class="math inline">\(a,
+<p><strong>Теорема: </strong>Если <span class="math inline">\(a,
 \,\,\,\, a \ne 0\)</span> - квадратичный вычет, то сравнение <span
 class="math inline">\(x^2 \equiv a \mod p, \,\,\,\, p \ge 3, \,\,\,\,
 p\)</span> - простое имеет ровно <span class="math inline">\(2\)</span>
@@ -748,7 +759,7 @@ p\)</span> - простое имеет ровно <span class="math inline">\(2\
 <p><em>Доказательство:</em></p>
 </div>
 <div id="theorem-22">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(p \ge 3,
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(p \ge 3,
 \,\,\,\, p\)</span> - простое. Тогда по модулю <span
 class="math inline">\(p\)</span> существует ровно <span
 class="math inline">\(\frac{p - 1}{2}\)</span> - квадратичных вычетов и
@@ -760,7 +771,7 @@ class="math inline">\(1^2, 2^2, \ldots, \left(\frac{p -
 </div>
 <h3 data-number="3.9.1" id="символ-лежандра">Символ Лежандра</h3>
 <div id="definition-26">
-<p><strong>Определение:</strong> (<em>Символ Лежандра</em>) <span
+<p><strong>Определение: </strong>(<em>Символ Лежандра</em>) <span
 class="math inline">\(a \in \mathbb{Z}, \,\,\,\, p \ge 3,
 \,\,\,\,p\)</span> - простое.</p>
 <p><span class="math display">\[\left(\frac{a}{p}\right) = \begin{cases}
@@ -771,7 +782,7 @@ class="math inline">\(a \in \mathbb{Z}, \,\,\,\, p \ge 3,
 вычет \,\,\,\,по \,\,\,\, модулю \,\,\,\, p \end{cases}\]</span></p>
 </div>
 <p>:::: {#theorem-23}</p>
-<p><strong>Теорема:</strong> (<em>Свойства символа Лежандра</em>)</p>
+<p>(<em>Свойства символа Лежандра</em>)</p>
 <ol type="1">
 <li>(<em>Критерий Эйлера</em>) <span class="math inline">\(a^{\frac{p -
 1}{2}} \equiv \left(\frac{a}{p}\right) \mod p\)</span></li>
@@ -792,7 +803,7 @@ class="math inline">\(a \in \mathbb{Z}, \,\,\,\, p \ge 3,
 <h3 data-number="3.9.2" id="квадратичный-закон-взаимности">Квадратичный
 закон взаимности</h3>
 <div id="lemma-5">
-<p><strong>Лемма:</strong> (<em>Лемма Гаусса</em>) Пусть <span
+<p><strong>Лемма: </strong>(<em>Лемма Гаусса</em>) Пусть <span
 class="math inline">\(p \ne 2, \,\,\,\, p\)</span> - простое, <span
 class="math inline">\(p \nmid a\)</span>. Тогда <span
 class="math display">\[\left(\frac{a}{p}\right) = \varepsilon_1 \cdot
@@ -818,8 +829,8 @@ class="math inline">\(a^{\frac{p - 1}{2}} \equiv \varepsilon_1 \cdot
 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="corollary-6">
-<p><strong>Следствие:</strong></p>
 <ol type="1">
+<li><strong>Следствие: </strong></li>
 <li>Пусть <span class="math inline">\(a\)</span> - нечетное, <span
 class="math inline">\(S = \displaystyle \sum_{x = 1}^{\frac{p -
 1}{2}}\left[\frac{ax}{p}\right]\)</span>. Тогда <span
@@ -848,7 +859,7 @@ class="math display">\[\left(\frac{p^2 - 1}{8}\right)a + \displaystyle
 \left(\frac{p^2 - 1}{8}\right) \mod 2 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-24">
-<p><strong>Теорема:</strong> (<em>Квадратичный закон
+<p><strong>Теорема: </strong>(<em>Квадратичный закон
 взаимности</em>)</p>
 <p>Пусть <span class="math inline">\(p \ne q, \,\,\,\, q \ne 2, \,\,\,\,
 p \ne 2, \,\,\,\, p, q\)</span> - простые. Тогда: <span
@@ -860,14 +871,14 @@ class="math display">\[\left(\frac{p}{q}\right) \cdot
 <h2 data-number="3.10" id="суммы-двух-и-четырех-квадратов">Суммы двух и
 четырех квадратов</h2>
 <div id="theorem-25">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(p = 4k +
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(p = 4k +
 1, \,\,\,\, p\)</span> - простое. Тогда уравнение <span
 class="math inline">\(x^2 + y^2 = p\)</span> разрешимо в целых
 числах.</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="lemma-6">
-<p><strong>Лемма:</strong> Если <span class="math inline">\(u,
+<p><strong>Лемма: </strong>Если <span class="math inline">\(u,
 v\)</span> представимы в виде суммы четырех квадратов, то их
 произведение <span class="math inline">\(u\cdot v\)</span> представимо в
 виде суммы четырех квадратов.</p>
@@ -892,7 +903,7 @@ y_4^2\]</span> <span class="math display">\[\mathbf{AB} =
 + z_3^2 + z_4^2 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="lemma-7">
-<p><strong>Лемма:</strong> Для любого простого <span
+<p><strong>Лемма: </strong>Для любого простого <span
 class="math inline">\(p \,\,\,\,\,\,\,\, \exists a, b\)</span>:<span
 class="math display">\[1 + a^2 + b^2 \equiv 0 \mod p\]</span></p>
 <p><em>Доказательство:</em> Рассмотрим множества <span
@@ -908,14 +919,14 @@ class="math inline">\(p - 1\)</span> различный класс вычето�
 b^2 \mod p \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="lemma-8">
-<p><strong>Лемма:</strong> Любое простое число <span
+<p><strong>Лемма: </strong>Любое простое число <span
 class="math inline">\(p\)</span> представимо в виде суммы четырех
 квадратов.</p>
 <p><em>Доказательство:</em> Опять рассмотрение чего-то и принцип
 Дирихле.</p>
 </div>
 <div id="theorem-26">
-<p><strong>Теорема:</strong> Любое натуральное число <span
+<p><strong>Теорема: </strong>Любое натуральное число <span
 class="math inline">\(n\)</span> представимо в виде суммы четырех
 квадратов.</p>
 <p><em>Доказательство:</em> Следует из лемм <a
@@ -931,7 +942,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 x_k^m, \,\,\,\,\,\,\,\, x_i \ge 0\]</span></p>
 <h2 data-number="3.11" id="показатель-числа">Показатель числа</h2>
 <div id="definition-14">
-<p><strong>Определение:</strong> <em>Показатель числа</em> <span
+<p><strong>Определение: </strong><em>Показатель числа</em> <span
 class="math inline">\(a\)</span> по модулю <span
 class="math inline">\(m\)</span> (<span
 class="math inline">\(ord_ma\)</span>)</p>
@@ -943,14 +954,14 @@ href="теория-сравнений.html#theorem-6">теореме Эйлер�
 ord_ma\)</span></p>
 </div>
 <div id="theorem-7">
-<p><strong>Теорема:</strong> (<em>о показателе</em>) Пусть <span
+<p><strong>Теорема: </strong>(<em>о показателе</em>) Пусть <span
 class="math inline">\((a, m) = 1, \,\,\,\, z \in \mathbb{N}, \,\,\,\,
 a^z \equiv 1 \mod m\)</span>. Тогда <span
 class="math display">\[ord_am\,\,|\,\,z\]</span></p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="theorem-27">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\((a, m) =
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\((a, m) =
 1\)</span>. Тогда <span class="math display">\[a^k \equiv a^n \mod m
 \Leftrightarrow k \equiv n \mod ord_ma\]</span></p>
 <p><em>Доказательство:</em></p>
@@ -958,7 +969,7 @@ class="math display">\[ord_am\,\,|\,\,z\]</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="конечные-цепные-дроби.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

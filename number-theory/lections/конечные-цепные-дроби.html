@@ -11,7 +11,9 @@
     
     <title>Конечные цепные дроби</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="делимость.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="теория-сравнений.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="делимость.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="теория-сравнений.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -252,18 +261,18 @@ b) = 1\]</span> <span class="math display">\[\frac{a}{b} = A_0 +
 \frac{1}{A_1 + \frac{1}{A_2 + \frac{1}{\ddots
 \frac{1}{A_n}}}}\]</span></p>
 <div id="definition-10">
-<p><strong>Определение:</strong> <span class="math inline">\([A_0,
+<p><strong>Определение: </strong><span class="math inline">\([A_0,
 \ldots, A_n]\)</span> - разложение числа <span
 class="math inline">\(\frac{a}{b}\)</span> в конечную цепную дробь.</p>
 </div>
 <div id="definition-11">
-<p><strong>Определение:</strong> <span class="math inline">\([A_0,
+<p><strong>Определение: </strong><span class="math inline">\([A_0,
 \ldots, A_k], \,\,\,\, k \le n\)</span> - подходящая дробь для
 разложения <span class="math inline">\(\frac{a}{b}\)</span> в конечную
 цепную дробь.</p>
 </div>
 <div id="lemma-3">
-<p><strong>Лемма:</strong> (<em>основная лемма о подходящих
+<p><strong>Лемма: </strong>(<em>основная лемма о подходящих
 дробях</em>)</p>
 <ol type="1">
 <li><span class="math display">\[\begin{cases}
@@ -276,7 +285,7 @@ p_{k + 1} = A_{k + 1}p_k + p_{k - 1} \\ q_{k + 1} = A_{k + 1}q_k + q_{k
 <p><em>Доказательство:</em></p>
 </div>
 <div id="theorem-5">
-<p><strong>Теорема:</strong> (<em>Перрона</em>) <span
+<p><strong>Теорема: </strong>(<em>Перрона</em>) <span
 class="math display">\[\left| \alpha - \frac{p_k}{q_k} \right| =
 \frac{1}{q_k^2(\alpha_{k + 1} + \alpha_{k})} \,\,\,\, \alpha_k =
 [A_k;A_{k - 1};\ldots ;A_1]\]</span></p>
@@ -285,7 +294,7 @@ class="math display">\[\left| \alpha - \frac{p_k}{q_k} \right| =
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="делимость.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

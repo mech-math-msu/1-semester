@@ -11,7 +11,9 @@
     
     <title>Аффинные преобразования</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -233,15 +235,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="линии-второго-порядка.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="поверхности-второго-порядка.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="линии-второго-порядка.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="поверхности-второго-порядка.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -253,7 +262,7 @@
 id="определение-и-свойства-аффинных-преобразований">Определение и
 свойства аффинных преобразований</h2>
 <div id="definition-66">
-<p><strong>Определение:</strong> Отображение <span
+<p><strong>Определение: </strong>Отображение <span
 class="math inline">\(f: \,\,\,\, E^n \to E^n\)</span> – <em>аффинное
 преобразование</em>, если существуют два репера <span
 class="math inline">\(Oe_1e_2\)</span> и <span
@@ -264,7 +273,7 @@ class="math inline">\(M\)</span> в первом репере имеет так�
 преобразованием <em>ассоциированым</em> с этими реперами.</p>
 </div>
 <div id="definition-67">
-<p><strong>Определение:</strong> Пусть задано аффинное преобразование
+<p><strong>Определение: </strong>Пусть задано аффинное преобразование
 <span class="math inline">\(f: \,\,\,\, E^n \to E^n\)</span>.
 Отображение <span class="math inline">\(\hat{f}: \,\,\,\,
 \operatorname{vect}(n) \to \operatorname{vect}(n)\)</span>, определяемое
@@ -274,7 +283,7 @@ class="math inline">\(M\)</span> в первом репере имеет так�
 class="math inline">\(f\)</span>.</p>
 </div>
 <div id="statement-62">
-<p><strong>Утверждение:</strong> Пусть задано аффинное преобразование
+<p><strong>Утверждение: </strong>Пусть задано аффинное преобразование
 <span class="math inline">\(f\)</span> и некоторый репер <span
 class="math inline">\(Oe_1\ldots e_n\)</span>. Тогда репер <span
 class="math inline">\(f(O)\hat{f}(e_1)\ldots\hat{f}(e_n)\)</span>
@@ -287,7 +296,7 @@ class="math inline">\(f(O)\hat{f}(e_1)\ldots\hat{f}(e_n)\)</span> репер,
 т.е. векторы л.н. Проверить равенство координат.</p>
 </div>
 <div id="statement-63">
-<p><strong>Утверждение:</strong> При аффинных преобразованиях</p>
+<p><strong>Утверждение: </strong>При аффинных преобразованиях</p>
 <ol type="1">
 <li>Плоскость переходит в плоскость.</li>
 <li>Сохраняется параллельность плоскостей.</li>
@@ -312,16 +321,16 @@ id="аналитическая-запись-аффинных-преобразо�
 <h2 data-number="4.3" id="движения-и-изометрии">Движения и
 изометрии</h2>
 <div id="definition-68">
-<p><strong>Определение:</strong> <em>Движение</em> – это афинное
+<p><strong>Определение: </strong><em>Движение</em> – это афинное
 преобразование ассоциированное с прямоугольными системами координат.</p>
 </div>
 <div id="definition-69">
-<p><strong>Определение:</strong> <em>Изометрия</em> – это такое
+<p><strong>Определение: </strong><em>Изометрия</em> – это такое
 отображение, что расстояние между образами точек равно расстоянию между
 точками.</p>
 </div>
 <div id="statement-64">
-<p><strong>Утверждение:</strong> Движения <span
+<p><strong>Утверждение: </strong>Движения <span
 class="math inline">\(\Leftarrow\)</span> изометрия.</p>
 <p><em>Доказательство:</em> <span
 class="math display">\[\Rightarrow\]</span></p>
@@ -333,12 +342,12 @@ class="math display">\[\Rightarrow\]</span></p>
 id="аффинная-классификация-линий-второго-порядка">Аффинная классификация
 линий второго порядка</h2>
 <div id="statement-65">
-<p><strong>Утверждение:</strong> При аффинном преобразовании уравнение
+<p><strong>Утверждение: </strong>При аффинном преобразовании уравнение
 линии второго порядка сохраняется.</p>
 <p><em>Доказательство:</em> почему всем это очевидно? мне вот нет</p>
 </div>
 <div id="statement-66">
-<p><strong>Утверждение:</strong> При аффинном преобразрвании
+<p><strong>Утверждение: </strong>При аффинном преобразрвании
 сохраняются</p>
 <ol type="1">
 <li>Координаты центров.</li>
@@ -350,12 +359,12 @@ id="аффинная-классификация-линий-второго-пор
 <p><em>Доказательство:</em></p>
 </div>
 <div id="statement-67">
-<p><strong>Утверждение:</strong> (Аффинная классификация линий второго
+<p><strong>Утверждение: </strong>(Аффинная классификация линий второго
 порядка)</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="statement-68">
-<p><strong>Утверждение:</strong> Линии второго порядка с разными
+<p><strong>Утверждение: </strong>Линии второго порядка с разными
 названиями аффинно неэквивалентны.</p>
 <p><em>Доказательство:</em></p>
 </div>
@@ -365,7 +374,7 @@ id="основная-теорема-об-аффинных-преобразова
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="линии-второго-порядка.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

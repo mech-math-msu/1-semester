@@ -11,7 +11,9 @@
     
     <title>Производная функции</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="равномерно-непрерывные-функции-теорема-кантора.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="дифференцируемость-функций-первый-дифференциал.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="равномерно-непрерывные-функции-теорема-кантора.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="дифференцируемость-функций-первый-дифференциал.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -250,7 +259,7 @@
 id="производная-суммы-произведения-и-отношения-функций">Производная
 суммы, произведения и отношения функций</h2>
 <div id="definition-13">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(f(x)\)</span> определена в <span
 class="math inline">\(B(x_0), \,\,\,\, \Delta x = x - x_0\)</span>. Если
 <span class="math display">\[\exists \displaystyle \lim_{\Delta x\to
@@ -260,7 +269,7 @@ class="math inline">\(f’(x_0)\)</span> в т. <span
 class="math inline">\(x_0\)</span>.</p>
 </div>
 <div id="definition-14">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(A
+<p><strong>Определение: </strong>Пусть <span class="math inline">\(A
 \subset \mathbb{R}, \,\,\,\, \Delta x = x - x_0\)</span>. Если <span
 class="math display">\[\exists \displaystyle \lim_{\Delta x\to 0, \Delta
 x + x_0 \in A}\frac{f(x + \Delta x) - f(x)}{\Delta x} =
@@ -278,7 +287,7 @@ class="math inline">\(\displaystyle \lim_{\Delta x\to 0, \Delta x &gt;
 0}\frac{f(x + \Delta x) - f(x)}{\Delta x} \stackrel{def}{=} f’_{+}(x_0)
 \stackrel{def}{=} f’(x_0 + 0)\)</span></p>
 <div id="theorem-25">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(f(x)\)</span> имеет производную <span
 class="math inline">\(f’(x_0)\)</span> в т. <span
 class="math inline">\(x_0\)</span>. Тогда <span
@@ -292,7 +301,7 @@ class="math inline">\(f(x)\)</span> непрерывна в т. <span
 class="math inline">\(x_0 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-26">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\exists
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(\exists
 f’(x_0)\)</span> и <span class="math inline">\(\exists g’(x_0)\)</span>.
 Тогда <span class="math display">\[\exists (f(x) + g(x))’_{|x = x_0} =
 f’(x_0) + g’(x_0)\]</span></p>
@@ -300,7 +309,7 @@ f’(x_0) + g’(x_0)\]</span></p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-27">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\exists
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(\exists
 f’(x_0)\)</span> и <span class="math inline">\(\exists g’(x_0)\)</span>.
 Тогда <span class="math display">\[\exists (f(x) \cdot g(x))’_{|x = x_0}
 = f’(x_0)\cdot g(x_0) + g’(x_0) \cdot f(x_0)\]</span></p>
@@ -319,7 +328,7 @@ f(x))}{\Delta x} + \frac{f(x)\cdot (g(x + \Delta x) - g(x))}{\Delta x}
 \cdot f(x_0) \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-28">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\exists
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(\exists
 f’(x_0)\)</span> и <span class="math inline">\(\exists g’(x_0)\)</span>.
 Тогда <span class="math display">\[\exists \left(
 \frac{f(x)}{g(x)}\right)’_{|x = x_0} = \frac{f’(x_0)\cdot g(x_0) -
@@ -338,7 +347,7 @@ g’(x_0) \cdot f(x_0)}{g(x_0)^2} \,\,\,\,\blacksquare\]</span></p>
 id="производная-композиции-функций-производная-обратной-функции">Производная
 композиции функций, производная обратной функции</h2>
 <div id="theorem-29">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(f(x)\)</span> непрерывна строго возрастает в <span
 class="math inline">\(B(x_0)\)</span>, <span
 class="math inline">\(\exists f^{-1}(y)\)</span> в <span
@@ -355,7 +364,7 @@ class="math inline">\(x \to x_0\)</span> на <span
 class="math inline">\(y \to y_0\)</span>?)</p>
 </div>
 <div id="theorem-30">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\exists
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(\exists
 g’(x_0)\)</span> и <span class="math inline">\(\exists
 f’(g(x_0)\)</span>. Тогда <span class="math display">\[\exists
 f(g(x))’_{|x = x_0} = f’(g(x_0))\cdot g’(x_0)\]</span></p>
@@ -442,7 +451,7 @@ f’(g(x_0))\cdot g’(x_0)\,\,\,\,\blacksquare\]</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="равномерно-непрерывные-функции-теорема-кантора.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

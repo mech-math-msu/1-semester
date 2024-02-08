@@ -1,0 +1,437 @@
+[
+    {
+        "keyword": "упорядоченная пара точек направленный отрезок нулевой вектор",
+        "html": "<p><a href=\"векторы.html#definition-1\"><strong>Перейти к\nопределению:</strong></a> Вектор – это <em>упорядоченная пара точек</em>\nили <em>направленный отрезок</em>.</p>\n<p>Обозначение: <em>нулевой вектор</em> – <span\nclass=\"math inline\">\\(\\vec{0}\\)</span>. Это отрезок длины <span\nclass=\"math inline\">\\(0\\)</span>.</p>",
+        "url": "векторы.html#definition-1"
+    },
+    {
+        "keyword": "равны",
+        "html": "<p><a href=\"векторы.html#definition-2\"><strong>Перейти к\nопределению:</strong></a> Векторы <span class=\"math inline\">\\(\\vec{a} =\n\\vec{M_1N_1}, \\,\\,\\,\\, \\vec{b} = \\vec{M_2N_2}\\)</span> <em>равны</em>,\nесли:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(\\vec{a} = \\vec{0}\\)</span> и <span\nclass=\"math inline\">\\(\\vec{b} = \\vec{0}\\)</span>.</li>\n<li><span class=\"math inline\">\\(\\vec{a}\\)</span> и <span\nclass=\"math inline\">\\(\\vec{b}\\)</span> одинаковой длины, лежат на одной\nпрямой и пересечение двух лучей <span class=\"math inline\">\\((M_1N_1)\n\\cap (M_2N_2)\\)</span> – луч.</li>\n<li><span class=\"math inline\">\\(M_1N_1N_2M_2\\)</span> –\nпараллелограм.</li>\n</ol>",
+        "url": "векторы.html#definition-2"
+    },
+    {
+        "keyword": "отношение эквивалентности",
+        "html": "<p><a href=\"векторы.html#definition-3\"><strong>Перейти к\nопределению:</strong></a> Отношение <span class=\"math inline\">\\(R\n\\subset X \\times Y\\)</span> (обозначение для <span\nclass=\"math inline\">\\(\\langle x_1, x_2\\rangle \\in R: x_1 \\sim\nx_2\\)</span>) – <em>отношение эквивалентности</em>, если:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(x \\sim x\\)</span></li>\n<li><span class=\"math inline\">\\(x_1 \\sim x_2 \\Rightarrow x_2 \\sim\nx_1\\)</span></li>\n<li><span class=\"math inline\">\\(x_1 \\sim x_2\\)</span> и <span\nclass=\"math inline\">\\(x_2 \\sim x_3 \\Rightarrow x_1 \\sim\nx_3\\)</span></li>\n</ol>",
+        "url": "векторы.html#definition-3"
+    },
+    {
+        "keyword": "класс эквивалентности",
+        "html": "<p><a href=\"векторы.html#definition-4\"><strong>Перейти к\nопределению:</strong></a> <em>Класс эквивалентности</em> <span\nclass=\"math inline\">\\(a \\in X\\)</span> – это множество всех элементов\n<span class=\"math inline\">\\(X\\)</span> эквивалентных данному. <span\nclass=\"math inline\">\\(C_a = \\{x \\in X: \\,\\,\\,\\, x \\sim a\\}\\)</span></p>",
+        "url": "векторы.html#definition-4"
+    },
+    {
+        "keyword": "свободный",
+        "html": "<p><a href=\"векторы.html#definition-5\"><strong>Перейти к\nопределению:</strong></a> <em>Свободный</em> вектор – это класс\nэквивалентности вектора <span class=\"math inline\">\\(\\vec{a}\\)</span>. С\nэтого момента “вектор” обозначает свободный вектор, если не сказано\nиное.</p>",
+        "url": "векторы.html#definition-5"
+    },
+    {
+        "keyword": "ось",
+        "html": "<p><a href=\"векторы.html#definition-6\"><strong>Перейти к\nопределению:</strong></a> <em>Ось</em> – это прямая и выбранный на ней\nвектор <span class=\"math inline\">\\(e\\)</span>. <span\nclass=\"math inline\">\\(e\\)</span> – задает положительное направление.</p>",
+        "url": "векторы.html#definition-6"
+    },
+    {
+        "keyword": "алгебраическое значение вектора",
+        "html": "<p><a href=\"векторы.html#definition-7\"><strong>Перейти к\nопределению:</strong></a> <em>Алгебраическое значение вектора</em> <span\nclass=\"math inline\">\\(a\\)</span> на вектор <span\nclass=\"math inline\">\\(e\\)</span>(<span\nclass=\"math inline\">\\(\\operatorname{аз}_{e}a\\)</span>) – это <span\nclass=\"math inline\">\\(\\alpha: \\alpha \\cdot e = a\\)</span>.</p>",
+        "url": "векторы.html#definition-7"
+    },
+    {
+        "keyword": "линейная комбинация нетривиальная тривиальная",
+        "html": "<p><a href=\"векторы.html#definition-8\"><strong>Перейти к\nопределению:</strong></a> Выражение <span\nclass=\"math inline\">\\(\\lambda_1a_1 + \\ldots + \\lambda_na_n\\)</span> –\n<em>линейная комбинация</em> векторов <span class=\"math inline\">\\(a_1,\n\\ldots, a_n\\)</span>.</p>\n<p>Если <span class=\"math inline\">\\(\\lambda_1^2 + \\ldots + \\lambda_n^2\n\\ne 0\\)</span>, то линейная комбинация <em>нетривиальная</em>.</p>\n<p>Если <span class=\"math inline\">\\(\\lambda_1^2 + \\ldots + \\lambda_n^2 =\n0\\)</span>, то линейная комбинация <em>тривиальная</em>.</p>",
+        "url": "векторы.html#definition-8"
+    },
+    {
+        "keyword": "линейно зависимы линейно независимы",
+        "html": "<p><a href=\"векторы.html#definition-10\"><strong>Перейти к\nопределению:</strong></a> Векторы <span class=\"math inline\">\\(a_1,\n\\ldots, a_n\\)</span> – <em>линейно зависимы</em>, если существует их\nнетривиальная линейная комбинация равная <span\nclass=\"math inline\">\\(0\\)</span>.</p>\n<p>Векторы <span class=\"math inline\">\\(a_1, \\ldots, a_n\\)</span> –\n<em>линейно независимы</em>, если только их тривиальная линейная\nкомбинация равна <span class=\"math inline\">\\(0\\)</span>.</p>",
+        "url": "векторы.html#definition-10"
+    },
+    {
+        "keyword": "коллинеарны",
+        "html": "<p><a href=\"векторы.html#definition-11\"><strong>Перейти к\nопределению:</strong></a> Векторы <em>коллинеарны</em>, если они\nпараллельны одной и той же прямой.</p>",
+        "url": "векторы.html#definition-11"
+    },
+    {
+        "keyword": "векторное (линейное) пространство",
+        "html": "<p><a href=\"векторы.html#definition-11\"><strong>Перейти к\nопределению:</strong></a> <em>Векторное (линейное) пространство</em>\n<span class=\"math inline\">\\(V\\)</span> над полем <span\nclass=\"math inline\">\\(F\\)</span> – это множество с операциями:</p>\n<p><span class=\"math display\">\\[+: V \\times V \\to V\\]</span> <span\nclass=\"math display\">\\[*: F \\times V \\to V\\]</span> Для которого\nвыполнены аксиомы:</p>\n<p><span class=\"math inline\">\\(\\forall \\,\\,\\,\\, a, b, c \\in V, \\,\\,\\,\\,\n\\lambda, \\mu \\in F\\)</span></p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(a + b = b + a\\)</span></li>\n<li><span class=\"math inline\">\\(a + (b + c) = (a + b) + c\\)</span></li>\n<li><span class=\"math inline\">\\(\\exists 0 \\in V: \\,\\,\\,\\, a + 0 =\na\\)</span></li>\n<li><span class=\"math inline\">\\(\\exists (-a) \\in V: \\,\\,\\,\\, a + (-a) =\n0\\)</span></li>\n<li><span class=\"math inline\">\\(\\lambda(a + b) = \\lambda a + \\lambda\nb\\)</span></li>\n<li><span class=\"math inline\">\\((\\lambda + \\mu)a = \\lambda a + \\mu\na\\)</span></li>\n<li><span class=\"math inline\">\\((\\lambda \\mu)a = \\lambda (\\mu\na)\\)</span></li>\n<li><span class=\"math inline\">\\(1 \\cdot a = a, \\,\\,\\,\\, 1 \\in\n\\mathbb{F}\\)</span></li>\n</ol>",
+        "url": "векторы.html#definition-11"
+    },
+    {
+        "keyword": "полная",
+        "html": "<p><a href=\"векторы.html#definition-12\"><strong>Перейти к\nопределению:</strong></a> Система векторов <span\nclass=\"math inline\">\\(\\{e_1, \\ldots, e_n\\} \\subset V\\)</span>\n<em>полная</em>, если <span class=\"math inline\">\\(\\forall \\,\\, v \\in V\n\\,\\,\\,\\, \\exists \\,\\, x_1, \\ldots, x_n: \\,\\,\\,\\, v = x_1e_1 + \\ldots +\nx_ne_n\\)</span></p>",
+        "url": "векторы.html#definition-12"
+    },
+    {
+        "keyword": "базис",
+        "html": "<p><a href=\"векторы.html#definition-13\"><strong>Перейти к\nопределению:</strong></a> <em>Базис</em> – это полная линейно\nнезависимая система векторов.</p>",
+        "url": "векторы.html#definition-13"
+    },
+    {
+        "keyword": "координаты вектора",
+        "html": "<p><a href=\"векторы.html#definition-14\"><strong>Перейти к\nопределению:</strong></a> <em>Координаты вектора</em> <span\nclass=\"math inline\">\\(v\\)</span> в базисе <span\nclass=\"math inline\">\\(B\\)</span> – это коэффиценты его линейного\nвыражения через векторы базиса.</p>",
+        "url": "векторы.html#definition-14"
+    },
+    {
+        "keyword": "ортогональная проекция вектора",
+        "html": "<p><a href=\"векторы.html#definition-15\"><strong>Перейти к\nопределению:</strong></a> <em>Ортогональная проекция вектора</em> <span\nclass=\"math inline\">\\(b\\)</span> на вектор <span\nclass=\"math inline\">\\(a\\)</span> – это …</p>\n<p><strong>Обозначение</strong> <span\nclass=\"math inline\">\\(\\operatorname{пр}_{a}b\\)</span></p>",
+        "url": "векторы.html#definition-15"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"векторы.html#definition-17\"><strong>Перейти к\nопределению:</strong></a> Угол между векторами.</p>",
+        "url": "векторы.html#definition-17"
+    },
+    {
+        "keyword": "скалярное произведение векторов",
+        "html": "<p><a href=\"векторы.html#definition-16\"><strong>Перейти к\nопределению:</strong></a> <em>Скалярное произведение векторов</em> <span\nclass=\"math inline\">\\(a, b \\,\\,\\,\\,\\,\\,\\,\\, (a, b) = |a| \\cdot |b|\n\\cos{\\varphi}\\)</span>, где <span class=\"math inline\">\\(\\varphi\\)</span>\n– угол между векторами <span class=\"math inline\">\\(a\\)</span> и <span\nclass=\"math inline\">\\(b\\)</span>.</p>",
+        "url": "векторы.html#definition-16"
+    },
+    {
+        "keyword": "ортонормированный",
+        "html": "<p><a href=\"векторы.html#definition-18\"><strong>Перейти к\nопределению:</strong></a> Базис <em>ортонормированный</em>, если\nскалярное произведение любых двух неравных векторов базиса равно нулю, а\nскалярное произведение равных векторов (вектор умножается сам на себя)\nравно единице.</p>",
+        "url": "векторы.html#definition-18"
+    },
+    {
+        "keyword": "аффинная система координат начало координат базис",
+        "html": "<p><a href=\"векторы.html#definition-19\"><strong>Перейти к\nопределению:</strong></a> <em>Аффинная система координат</em> (репёр) –\nэто пара <span class=\"math inline\">\\(\\{O, B\\}\\)</span>. Точка <span\nclass=\"math inline\">\\(O(x_1 , \\ldots, x_n)\\)</span> – <em>начало\nкоординат</em>. <span class=\"math inline\">\\(B=\\{e_1, \\ldots,\ne_n\\}\\)</span> – <em>базис</em>. Обозначение: <span\nclass=\"math inline\">\\(Oe_1 , \\ldots, e_n\\)</span>.</p>",
+        "url": "векторы.html#definition-19"
+    },
+    {
+        "keyword": "радиус-вектор",
+        "html": "<p><a href=\"векторы.html#definition-20\"><strong>Перейти к\nопределению:</strong></a> <em>Радиус-вектор</em> точки <span\nclass=\"math inline\">\\(M\\)</span> в репере <span\nclass=\"math inline\">\\(Oe_1 , \\ldots, e_n\\)</span> – это вектор <span\nclass=\"math inline\">\\(\\vec{OM}\\)</span>.</p>",
+        "url": "векторы.html#definition-20"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"векторы.html#definition-21\"><strong>Перейти к\nопределению:</strong></a> Координаты т. <span\nclass=\"math inline\">\\(M\\)</span> в репере <span\nclass=\"math inline\">\\(Oe_1 , \\ldots, e_n\\)</span> – это координаты ее\nрадиус-вектора в этом репере.</p>",
+        "url": "векторы.html#definition-21"
+    },
+    {
+        "keyword": "прямоугольная система координат",
+        "html": "<p><a href=\"векторы.html#definition-22\"><strong>Перейти к\nопределению:</strong></a> <em>Прямоугольная система координат</em> – это\nаффинная система координат с <a href=\"#definition-18\">ортонормированным\nбазисом</a>.</p>",
+        "url": "векторы.html#definition-22"
+    },
+    {
+        "keyword": "делится в отношении",
+        "html": "<p><a href=\"векторы.html#definition-23\"><strong>Перейти к\nопределению:</strong></a> Отрезок <span\nclass=\"math inline\">\\(AB\\)</span> <em>делится</em> точкой <span\nclass=\"math inline\">\\(C\\)</span> <em>в отношении</em> <span\nclass=\"math inline\">\\(\\lambda\\)</span>, если <span\nclass=\"math inline\">\\(\\vec{AC} = \\lambda \\cdot \\vec{CB}\\)</span></p>",
+        "url": "векторы.html#definition-23"
+    },
+    {
+        "keyword": "матрица перехода",
+        "html": "<p><a href=\"векторы.html#definition-50\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math display\">\\[C =\n\\left(\\begin{array}{cccc}\nc_{11} &amp; c_{12} &amp; \\ldots &amp; c_{1n} \\\\\nc_{21} &amp; c_{22} &amp; \\ldots &amp; c_{2n} \\\\\n\\vdots &amp; \\vdots &amp; \\ddots &amp; \\vdots \\\\\nc_{n1} &amp; c_{n2} &amp; \\ldots &amp; c_{nn}\n\\end{array}\\right)\\]</span> <em>матрица перехода</em> от базиса <span\nclass=\"math inline\">\\(B_1\\)</span> к базису <span\nclass=\"math inline\">\\(B_2\\)</span>.</p>",
+        "url": "векторы.html#definition-50"
+    },
+    {
+        "keyword": "ортогональная",
+        "html": "<p><a href=\"векторы.html#definition-24\"><strong>Перейти к\nопределению:</strong></a> Матрица <em>ортогональная</em>, если:</p>\n<ol type=\"1\">\n<li>Формальные скалярные произведения разных строк равны <span\nclass=\"math inline\">\\(0\\)</span> и формальные скалярные квадраты строк\nравны <span class=\"math inline\">\\(1\\)</span>. <span\nclass=\"math display\">\\[\\displaystyle \\sum_{k = 1}^{n}c_{ik}c_{jk} =\n\\begin{cases} 0,\\,\\,\\,\\, i \\ne j\\\\\n1, \\,\\,\\,\\, i = j  \\end{cases}\\]</span></li>\n<li><span class=\"math inline\">\\(C\\cdot C^T = E\\)</span></li>\n<li><span class=\"math inline\">\\(C^T = C^{-1}\\)</span></li>\n<li><span class=\"math inline\">\\(C^T \\cdot C = E\\)</span></li>\n<li>Формальные скалярные произведения разных столбцов равны <span\nclass=\"math inline\">\\(0\\)</span> и формальные скалярные квадраты\nстолбцов равны <span class=\"math inline\">\\(1\\)</span>.</li>\n</ol>",
+        "url": "векторы.html#definition-24"
+    },
+    {
+        "keyword": "одноименными",
+        "html": "<p><a href=\"векторы.html#definition-25\"><strong>Перейти к\nопределению:</strong></a> Два базиса <span class=\"math inline\">\\(e_1 ,\n\\ldots, e_n\\)</span> и <span class=\"math inline\">\\(e_1’ , \\ldots,\ne_n’\\)</span> – <em>одноименными</em>, если матрица перехода <span\nclass=\"math inline\">\\(C\\)</span> от одного базиса к другому имеет\nположительный определитель.</p>",
+        "url": "векторы.html#definition-25"
+    },
+    {
+        "keyword": "ориентации",
+        "html": "<p><a href=\"векторы.html#definition-26\"><strong>Перейти к\nопределению:</strong></a> Задание <em>ориентации</em> в векторном\nпространстве <span class=\"math inline\">\\(V\\)</span> – это выбор одного\nиз двух классов эквивалентности одноименных базисов.(!)</p>",
+        "url": "векторы.html#definition-26"
+    },
+    {
+        "keyword": "положительный",
+        "html": "<p><a href=\"векторы.html#definition-27\"><strong>Перейти к\nопределению:</strong></a> Базис <em>положительный</em>, если он\nпринадлежит классу эквивалентности, выбранному при задании ориентации в\nвекторном пространстве.</p>",
+        "url": "векторы.html#definition-27"
+    },
+    {
+        "keyword": "ориентированная длина",
+        "html": "<p><a href=\"векторы.html#definition-28\"><strong>Перейти к\nопределению:</strong></a> <em>Ориентированная длина</em> вектора – это\nдлина этого вектора, взятая со знаком плюс, если вектор ориентирован\nположительно, то есть базис, состоящий из этого вектора принадлежит\nположительному классу эквивалентности векторов, и со знаком минус иначе.\nЕсли длина вектора равна нулю, то есть он не является базисом, то\nориентированная длина равна нулю.</p>",
+        "url": "векторы.html#definition-28"
+    },
+    {
+        "keyword": "ориентированная площадь",
+        "html": "<p><a href=\"векторы.html#definition-29\"><strong>Перейти к\nопределению:</strong></a> <em>Ориентированная площадь</em>\nпараллелограмма (<span class=\"math inline\">\\(2\\)</span>-х векторов)\nравна <span class=\"math inline\">\\(0\\)</span>, если векторы коллинеарны\n(т.е. не являются базисом в <span\nclass=\"math inline\">\\(\\mathbb{R}^2\\)</span>), иначе: если <span\nclass=\"math inline\">\\(2\\)</span>-ка векторов ориентированна\nположительно, то площадь параллелограмма, построенного на этих векторах,\nвзятая со знаком плюс, и со знаком минус иначе.</p>",
+        "url": "векторы.html#definition-29"
+    },
+    {
+        "keyword": "ориентированная площадь треугольника abc",
+        "html": "<p><a href=\"векторы.html#definition-30\"><strong>Перейти к\nопределению:</strong></a> <em>Ориентированная площадь треугольника <span\nclass=\"math inline\">\\(ABC\\)</span></em> – это $, $.</p>",
+        "url": "векторы.html#definition-30"
+    },
+    {
+        "keyword": "угол от первого вектора до второго",
+        "html": "<p><a href=\"векторы.html#definition-49\"><strong>Перейти к\nопределению:</strong></a> <em>Угол от первого вектора до второго</em> –\nэто угол между векторами, взятый со знаком ориентации пары векторов.</p>",
+        "url": "векторы.html#definition-49"
+    },
+    {
+        "keyword": "векторное произведение",
+        "html": "<p><a href=\"векторы.html#definition-31\"><strong>Перейти к\nопределению:</strong></a> <em>Векторное произведение</em> векторов <span\nclass=\"math inline\">\\(a, b\\)</span> – это вектор <span\nclass=\"math inline\">\\(c = [a, \\,\\,\\,\\,b]\\)</span>, такой что:</p>\n<ol start=\"0\" type=\"1\">\n<li><span class=\"math inline\">\\(c = 0\\)</span>, если <span\nclass=\"math inline\">\\(a, b\\)</span> коллинеарны.</li>\n<li>Вектор <span class=\"math inline\">\\(с\\)</span> перпендикулярен\nплоскости, содержащей векторы <span class=\"math inline\">\\(a,\nb\\)</span>.</li>\n<li>Тройка <span class=\"math inline\">\\(a, b, c\\)</span> ориентирована\nположительно.</li>\n<li>Модуль (длина) вектора <span class=\"math inline\">\\(c\\)</span> равна\nплощади параллелограмма, построенного на векторах <span\nclass=\"math inline\">\\(a, b\\)</span>.</li>\n</ol>",
+        "url": "векторы.html#definition-31"
+    },
+    {
+        "keyword": "смешанное произведение",
+        "html": "<p><a href=\"векторы.html#definition-32\"><strong>Перейти к\nопределению:</strong></a> <em>Смешанное произведение</em> 3-х векторов –\nэто <span class=\"math inline\">\\(([a, b], c)\\)</span>, т.е. скалярное\nпроизведние векторного произведения первых двух векторов и третьего\nвектора.</p>",
+        "url": "векторы.html#definition-32"
+    },
+    {
+        "keyword": "направляющий вектор прямой",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-33\"><strong>Перейти\nк определению:</strong></a> Вектор параллельный прямой – это\n<em>направляющий вектор прямой</em>.</p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-33"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-34\"><strong>Перейти\nк определению:</strong></a> Векторное уравнение прямой – это <span\nclass=\"math display\">\\[r = r_0 + t\\cdot p\\]</span></p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-34"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-35\"><strong>Перейти\nк определению:</strong></a> Векторное уравнение прямой – это <span\nclass=\"math display\">\\[r = r_0 + u\\cdot a + v\\cdot b\\]</span></p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-35"
+    },
+    {
+        "keyword": "векторное уравнение прямой параметрическое уравнение прямой каноническое уравнение прямой общее уравнение прямой",
+        "html": "<ol type=\"1\">\n<li><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-36\"><strong>Перейти\nк определению:</strong></a></li>\n<li> </li>\n<li><p><em>Векторное уравнение прямой</em>: <span\nclass=\"math display\">\\[r = r_0 + t \\cdot p\\]</span> Перейдем к\nкоординатам <span class=\"math inline\">\\(r_0 = \\{x_0, y_0\\}, \\,\\,\\,\\, p =\n\\{\\alpha, \\beta\\}\\)</span> следовательно:</p></li>\n<li><p><em>Параметрическое уравнение прямой</em>: <span\nclass=\"math display\">\\[\\begin{cases}\nx = x_0 + \\alpha\\cdot t\\\\\ny = y_0 + \\beta \\cdot t\n\\end{cases}\\]</span></p></li>\n</ol>\n<p>Исключим параметр <span class=\"math inline\">\\(t\\)</span>\nследовательно:</p>\n<ol start=\"3\" type=\"1\">\n<li><em>Каноническое уравнение прямой</em>: <span\nclass=\"math display\">\\[\\frac{x - x_0}{\\alpha} = \\frac{y -\ny_0}{\\beta}\\]</span></li>\n</ol>\n<p>Причем и <span class=\"math inline\">\\(\\alpha\\)</span>, и <span\nclass=\"math inline\">\\(\\beta\\)</span> могут равняться <span\nclass=\"math inline\">\\(0\\)</span>. Домножим и получим: <span\nclass=\"math inline\">\\(x\\cdot\\beta - y\\cdot\\alpha - x_0\\cdot\\beta +\ny_0\\cdot\\alpha = 0\\)</span>. Пусть <span class=\"math inline\">\\(\\beta =\nA, \\,\\,\\,\\, -\\alpha = B, \\,\\,\\,\\,  - x_0\\cdot\\beta + y_0\\cdot\\alpha =\nC\\)</span> следовательно:</p>\n<ol start=\"4\" type=\"1\">\n<li><em>Общее уравнение прямой</em>: <span class=\"math display\">\\[Ax +\nBy + C = 0\\]</span></li>\n</ol>\n<p>Заметим, что направляющий вектор <span class=\"math inline\">\\(p =\n\\{\\alpha, \\beta\\}\\)</span> через <span class=\"math inline\">\\(A,\nB\\)</span> выражается так: <span class=\"math inline\">\\(p = \\{-B,\nA\\}\\)</span></p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-36"
+    },
+    {
+        "keyword": "линия первого порядка",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-37\"><strong>Перейти\nк определению:</strong></a> <em>Линия первого порядка</em> – это\nмножество точек <span class=\"math inline\">\\(L = \\{(x, y): \\,\\,\\,\\, Ax +\nBy + C = 0\\}\\)</span>, где <span class=\"math inline\">\\(A^2+B^2 \\ne\n0\\)</span>.</p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-37"
+    },
+    {
+        "keyword": "собственный пучок прямых несобственный пучок прямых",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-38\"><strong>Перейти\nк определению:</strong></a> Пусть <span class=\"math inline\">\\(l_1 \\cap\nl_2 \\ne \\varnothing\\)</span>. Тогда множество прямых, проходящих через\nобщую точку <span class=\"math inline\">\\(l_1\\)</span> и <span\nclass=\"math inline\">\\(l_2\\)</span> – это <em>собственный пучок\nпрямых</em> <span class=\"math inline\">\\(l_1\\)</span> и <span\nclass=\"math inline\">\\(l_2\\)</span>.</p>\n<p>Пусть <span class=\"math inline\">\\(l_1 \\cap l_2 =\n\\varnothing\\)</span>. Тогда множество прямых, параллельных либо\nсовпадающих с прямыми <span class=\"math inline\">\\(l_1\\)</span> и <span\nclass=\"math inline\">\\(l_2\\)</span> – это <em>несобственный пучок\nпрямых</em> <span class=\"math inline\">\\(l_1\\)</span> и <span\nclass=\"math inline\">\\(l_2\\)</span>.</p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-38"
+    },
+    {
+        "keyword": "положительная полуплоскость",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-39\"><strong>Перейти\nк определению:</strong></a> <em>Положительная полуплоскость</em>\nотносительно прямой <span class=\"math inline\">\\(l: \\,\\,\\,\\, Ax + By + C\n= 0\\)</span> – это множество точек <span class=\"math inline\">\\(\\{(x, y):\n\\,\\,\\,\\, Ax + By + C &gt; 0\\}\\)</span>.</p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-39"
+    },
+    {
+        "keyword": "отрицательная полуплоскость",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-40\"><strong>Перейти\nк определению:</strong></a> <em>Отрицательная полуплоскость</em>\nотносительно прямой <span class=\"math inline\">\\(l: \\,\\,\\,\\, Ax + By + C\n= 0\\)</span> – это множество точек <span class=\"math inline\">\\(\\{(x, y):\n\\,\\,\\,\\, Ax + By + C &lt; 0\\}\\)</span>.</p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-40"
+    },
+    {
+        "keyword": "выпуклое",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-41\"><strong>Перейти\nк определению:</strong></a> Множество <span\nclass=\"math inline\">\\(A\\)</span> <em>выпуклое</em>, если отрезок,\nсоединяющий любые две точки <span class=\"math inline\">\\(A\\)</span>,\nпринадлежит <span class=\"math inline\">\\(A\\)</span>.</p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-41"
+    },
+    {
+        "keyword": "угол между прямыми",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-42\"><strong>Перейти\nк определению:</strong></a> <em>Угол между прямыми</em> с направляющими\nвекторами <span class=\"math inline\">\\(p_1\\)</span> и <span\nclass=\"math inline\">\\(p_2\\)</span> (пусть угол между <span\nclass=\"math inline\">\\(p_1\\)</span> и <span\nclass=\"math inline\">\\(p_2\\)</span> равен <span\nclass=\"math inline\">\\(\\varphi\\)</span>) – это <span\nclass=\"math inline\">\\(\\varphi\\)</span>, если <span\nclass=\"math inline\">\\((p_1, p_2) &gt; 0\\)</span>, т.е. <span\nclass=\"math inline\">\\(\\varphi \\le \\frac{\\pi}{2}\\)</span> и <span\nclass=\"math inline\">\\(\\pi - \\varphi\\)</span>, если <span\nclass=\"math inline\">\\((p_1, p_2) &lt; 0\\)</span>.</p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-42"
+    },
+    {
+        "keyword": "угол от первой прямой до второй",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-43\"><strong>Перейти\nк определению:</strong></a> <em>Угол от первой прямой до второй</em> –\nэто угол от направляющего вектора первой прямой до направляющего вектора\nвторой прямой. Так как направляющие векторы можно выбрать по-разному\nэтот угол может быть различным.</p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-43"
+    },
+    {
+        "keyword": "векторное уравнение плоскости параметрическое уравнение плоскости общее уравнение плоскости",
+        "html": "<ol type=\"1\">\n<li><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-44\"><strong>Перейти\nк определению:</strong></a></li>\n<li> </li>\n<li><p><em>Векторное уравнение плоскости</em>: <span\nclass=\"math display\">\\[r = r_0 + u \\cdot a + v \\cdot b\\]</span> <span\nclass=\"math inline\">\\(u, v\\)</span> параметры. Перейдем к координатам\n<span class=\"math inline\">\\(r_0 = \\{x_0, y_0, z_0\\}, \\,\\,\\,\\, a =\n\\{\\alpha_1, \\beta_1, \\gamma_1\\}, \\,\\,\\,\\,b = \\{\\alpha_2, \\beta_2,\n\\gamma_2\\}\\)</span> следовательно:</p></li>\n<li><p><em>Параметрическое уравнение плоскости</em>: <span\nclass=\"math display\">\\[\\begin{cases}\nx = x_0 + \\alpha_1\\cdot u + \\alpha_2\\cdot v\\\\\ny = y_0 + \\beta_1 \\cdot u + \\beta_2 \\cdot v\\\\\nz = z_0 + \\gamma_1 \\cdot u + \\gamma_2 \\cdot v\\\\\n\\end{cases}\\]</span></p></li>\n</ol>\n<p>Запишем матрицу <span class=\"math display\">\\[\\left(\\begin{array}{ccc}\nx - x_0 &amp; \\alpha_1 &amp; \\alpha_2 \\\\\ny - y_0 &amp; \\beta_1 &amp; \\beta_2 \\\\\nz - z_0 &amp; \\gamma_1 &amp; \\gamma_2 \\end{array}\\right)\\]</span> Её\nопределитель равен <span class=\"math inline\">\\(0\\)</span>, так как\nстроки матрицы линейно зависимы. Разложим определитель по первому\nстолбцу: <span class=\"math display\">\\[(x - x_0)\\cdot\n\\left|\\begin{array}{cc} \\beta_1 &amp; \\beta_2 \\\\ \\gamma_1 &amp; \\gamma_2\n\\end{array}\\right| - (y - y_0)\\cdot \\left|\\begin{array}{cc} \\alpha_1\n&amp; \\alpha_2 \\\\ \\gamma_1 &amp; \\gamma_2 \\end{array}\\right| + (z -\nz_0)\\cdot \\left|\\begin{array}{cc} \\alpha_1 &amp; \\alpha_2 \\\\ \\beta_1\n&amp; \\beta_1 \\end{array}\\right|\\]</span></p>\n<p>Пусть <span class=\"math display\">\\[A = \\left|\\begin{array}{cc}\n\\beta_1 &amp; \\beta_2 \\\\ \\gamma_1 &amp; \\gamma_2 \\end{array}\\right|,\n\\,\\,\\,\\, B = -\\left|\\begin{array}{cc} \\alpha_1 &amp; \\alpha_2 \\\\\n\\gamma_1 &amp; \\gamma_2 \\end{array}\\right|, \\,\\,\\,\\, C =\n\\left|\\begin{array}{cc} \\alpha_1 &amp; \\alpha_2 \\\\ \\beta_1 &amp; \\beta_1\n\\end{array}\\right|\\]</span> <span class=\"math display\">\\[D = - x_0 \\cdot\n\\left|\\begin{array}{cc} \\beta_1 &amp; \\beta_2 \\\\ \\gamma_1 &amp; \\gamma_2\n\\end{array}\\right| + y_0\\cdot \\left|\\begin{array}{cc} \\alpha_1 &amp;\n\\alpha_2 \\\\ \\gamma_1 &amp; \\gamma_2 \\end{array}\\right| - z_0\\cdot\n\\left|\\begin{array}{cc} \\alpha_1 &amp; \\alpha_2 \\\\ \\beta_1 &amp; \\beta_1\n\\end{array}\\right|\\]</span> Получаем:</p>\n<ol start=\"3\" type=\"1\">\n<li><em>Общее уравнение плоскости</em>: <span class=\"math display\">\\[Ax\n+ By + Cz + D = 0\\]</span></li>\n</ol>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-44"
+    },
+    {
+        "keyword": "поверхность первого порядка",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-45\"><strong>Перейти\nк определению:</strong></a> <em>Поверхность первого порядка</em> – это\nмножество точек <span class=\"math inline\">\\(L = \\{(x, y): \\,\\,\\,\\, Ax +\nBy + C = 0\\}\\)</span>, где <span class=\"math inline\">\\(A^2+B^2 \\ne\n0\\)</span>.</p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-45"
+    },
+    {
+        "keyword": "векторное уравнение прямой параметрическое уравнение прямой каноническое уравнение прямой",
+        "html": "<ol type=\"1\">\n<li><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-46\"><strong>Перейти\nк определению:</strong></a></li>\n<li> </li>\n<li><p><em>Векторное уравнение прямой</em>: <span\nclass=\"math display\">\\[r = r_0 + t \\cdot p\\]</span> Перейдем к\nкоординатам <span class=\"math inline\">\\(r_0 = \\{x_0, y_0, z_0\\},\n\\,\\,\\,\\, p = \\{\\alpha, \\beta, \\gamma\\}\\)</span> следовательно:</p></li>\n<li><p><em>Параметрическое уравнение прямой</em>: <span\nclass=\"math display\">\\[\\begin{cases}\nx = x_0 + \\alpha\\cdot t\\\\\ny = y_0 + \\beta \\cdot t\\\\\nz = z_0 + \\gamma \\cdot t\n\\end{cases}\\]</span></p></li>\n</ol>\n<p>Исключим параметр <span class=\"math inline\">\\(t\\)</span>\nследовательно:</p>\n<ol start=\"3\" type=\"1\">\n<li><em>Каноническое уравнение прямой</em>: <span\nclass=\"math display\">\\[\\frac{x - x_0}{\\alpha} = \\frac{y - y_0}{\\beta} =\n\\frac{z - z_0}{\\gamma}\\]</span></li>\n</ol>\n<p>Причем <span class=\"math inline\">\\(\\alpha\\)</span>, <span\nclass=\"math inline\">\\(\\beta\\)</span> и <span\nclass=\"math inline\">\\(\\gamma\\)</span> могут равняться <span\nclass=\"math inline\">\\(0\\)</span>.</p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-46"
+    },
+    {
+        "keyword": "угол между плоскостями",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-47\"><strong>Перейти\nк определению:</strong></a> <em>Угол между плоскостями</em> – это угол\nмежду прямыми с направляющими векторами <span class=\"math inline\">\\(n_1\n= \\{A_1, B_1, C_1\\}, \\,\\,\\,\\, n_2 = \\{A_2, B_2, C_2\\}\\)</span>.</p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-47"
+    },
+    {
+        "keyword": "угол между прямой и плоскостью",
+        "html": "<p><a\nhref=\"линии-и-поверхности-первого-порядка.html#definition-48\"><strong>Перейти\nк определению:</strong></a> <em>Угол между прямой и плоскостью</em> –\nэто угол между прямой и ее ортогональной проекцией на плоскость.</p>",
+        "url": "линии-и-поверхности-первого-порядка.html#definition-48"
+    },
+    {
+        "keyword": "линия второго порядка",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-51\"><strong>Перейти к\nопределению:</strong></a> <em>Линия второго порядка</em> – это множество\nточек, удовлетворяющих уравнению:</p>\n<p><span class=\"math display\">\\[F(x, y) = a_{11} x^2 + 2 a_{12} xy +\na_{22} y^2 + a_1 x + a_2 y + a_0 = 0\\]</span></p>\n<p>Введем обозначения для матриц:</p>\n<p>Матрица квадратичной части <span class=\"math inline\">\\(F_1(x, y) =\na_{11} x^2 + 2 a_{12} xy + a_{22} y^2\\)</span>: <span\nclass=\"math display\">\\[A_1 = \\left(\\begin{array}{cc} a_{11} &amp; a_{12}\n\\\\ a_{12} &amp; a_{22} \\end{array}\\right)\\]</span> <span\nclass=\"math display\">\\[F_1(x, y) = \\left(\\begin{array}{cc}\nx &amp; y\n\\end{array}\\right)\\cdot A_1\\cdot\\left(\\begin{array}{c}\nx\\\\\ny\n\\end{array}\\right)\\]</span> <span class=\"math display\">\\[A =\n\\left(\\begin{array}{ccc}\na_{11} &amp; a_{12} &amp; a_1 \\\\\na_{12} &amp; a_{22} &amp; a_2 \\\\\na_1 &amp; a_2 &amp; a_0\n\\end{array}\\right)\\]</span></p>\n<p><span class=\"math display\">\\[F(x, y) = \\left(\\begin{array}{ccc}\nx &amp; y &amp; 1\n\\end{array}\\right)\\cdot A\\cdot\\left(\\begin{array}{c}\nx\\\\\ny\\\\\n1\n\\end{array}\\right)\\]</span></p>\n<p>Введем обозначения:</p>\n<p><span class=\"math display\">\\[\\delta = \\left|\\begin{array}{cc} a_{11}\n&amp; a_{12} \\\\ a_{12} &amp; a_{22} \\end{array}\\right|\\]</span> <span\nclass=\"math display\">\\[\\Delta = \\begin{vmatrix}\na_{11} &amp; a_{12} &amp; a_1 \\\\\na_{12} &amp; a_{22} &amp; a_2 \\\\\na_1 &amp; a_2 &amp; a_0 \\end{vmatrix}\\]</span> <span\nclass=\"math display\">\\[S = \\operatorname{tr}\\left( \\begin{array}{cc}\na_{11} &amp; a_{12} \\\\ a_{12} &amp; a_{22} \\end{array} \\right) = a_{11}\n+ a_{22}\\]</span> <span class=\"math display\">\\[K =\n\\left|\\begin{array}{cc}  a_{22} &amp; a_2 \\\\\na_1 &amp; a_2  \\end{array}\\right| + \\left|\\begin{array}{cc} a_{11} &amp;\na_1 \\\\ a_1 &amp; a_0 \\end{array}\\right|\\]</span></p>",
+        "url": "линии-второго-порядка.html#definition-51"
+    },
+    {
+        "keyword": "характеристический многочлен",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-52\"><strong>Перейти к\nопределению:</strong></a> <em>Характеристический многочлен</em> – это\n<span class=\"math display\">\\[|A_1 - \\lambda E| = \\left|\\begin{array}{cc}\na_{11} - \\lambda &amp; a_{12} \\\\\na_{12} &amp; a_{22} - \\lambda \\end{array}\\right| = \\lambda^2 - \\lambda\n(a_{11}+a_{22}) + \\delta\\]</span></p>",
+        "url": "линии-второго-порядка.html#definition-52"
+    },
+    {
+        "keyword": "центральный случай",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-53\"><strong>Перейти к\nопределению:</strong></a> <em>Центральный случай</em> – <span\nclass=\"math inline\">\\(\\delta \\ne 0\\)</span>.</p>",
+        "url": "линии-второго-порядка.html#definition-53"
+    },
+    {
+        "keyword": "центр линии",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-54\"><strong>Перейти к\nопределению:</strong></a> Пусть в некоторой аффинной системе координат\nзадана кривая второго порядка</p>\n<p><span class=\"math display\">\\[F(x, y) = a_{11} x^2 + 2 a_{12} xy +\na_{22} y^2 + a_1 x + a_2 y + a_0 = 0\\]</span> Тогда точка <span\nclass=\"math inline\">\\(M(x_0, y_0)\\)</span> <em>центр линии</em>, если\n<span class=\"math display\">\\[\\begin{cases}\n    a_{11}x_0 + a_{12}y_0 + a_1 = 0\\\\\n    a_{12}x_0 + a_{22}y_0 + a_2 = 0\n\\end{cases}\\]</span></p>",
+        "url": "линии-второго-порядка.html#definition-54"
+    },
+    {
+        "keyword": "центр симметрии",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-55\"><strong>Перейти к\nопределению:</strong></a> точка <span class=\"math inline\">\\(C\\)</span> –\n<em>центр симметрии</em> кривой <span class=\"math inline\">\\(L\\)</span>,\nесли <span class=\"math inline\">\\(\\forall M \\in L\\)</span> симметричная\n$M относительно <span class=\"math inline\">\\(C\\)</span> точка тоже\nпринадлежит кривой <span class=\"math inline\">\\(L\\)</span>.</p>",
+        "url": "линии-второго-порядка.html#definition-55"
+    },
+    {
+        "keyword": "асимптотическое направление",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-56\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(\\{\\alpha,\n\\beta\\}\\)</span> <em>асимптотическое направление</em>, если <span\nclass=\"math inline\">\\(a_{11}\\alpha^2 + 2a_{12}\\alpha\\beta +\na_{22}\\beta^2 = 0\\)</span> или в матричном виде</p>\n<p><span class=\"math display\">\\[\\left(\\begin{array}{cc}\n\\alpha &amp; \\beta\n\\end{array}\\right)\\cdot \\left(\\begin{array}{cc}\na_{11} &amp; a_{12}\\\\\na_{12} &amp; a_{22}\n\\end{array}\\right)\\cdot \\left(\\begin{array}{c}\n\\alpha\\\\\n\\beta\n\\end{array}\\right) = 0\\]</span></p>",
+        "url": "линии-второго-порядка.html#definition-56"
+    },
+    {
+        "keyword": "асимптота",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-57\"><strong>Перейти к\nопределению:</strong></a> <em>Асимптота</em> – это прямая\nасимптотичекого направления, проходящая через центр кривой второго\nпорядка.</p>",
+        "url": "линии-второго-порядка.html#definition-57"
+    },
+    {
+        "keyword": "диаметр кривой второго порядка сопряженный неасимптотичекому направлению",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-58\"><strong>Перейти к\nопределению:</strong></a> <em>Диаметр кривой второго порядка сопряженный\nнеасимптотичекому направлению</em> <span class=\"math inline\">\\(\\{\\alpha,\n\\beta\\}\\)</span> – это прямая <span class=\"math inline\">\\(\\alpha(a_{11}x\n+ a_{12}y + a_1) + \\beta(a_{12} + a_{22}y + c_2)\\)</span>.</p>",
+        "url": "линии-второго-порядка.html#definition-58"
+    },
+    {
+        "keyword": "сопряжены",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-59\"><strong>Перейти к\nопределению:</strong></a> Направления <span\nclass=\"math inline\">\\(\\{\\alpha_1, \\beta_1\\}\\)</span> и <span\nclass=\"math inline\">\\(\\{\\alpha_2, \\beta_2\\}\\)</span> <em>сопряжены</em>\nотносительно кривой второго порядка, если: <span\nclass=\"math display\">\\[\\left(\\begin{array}{cc}\n\\alpha_1 &amp; \\beta_1\n\\end{array}\\right)\\cdot \\left(\\begin{array}{cc}\na_{11} &amp; a_{12}\\\\\na_{12} &amp; a_{22}\n\\end{array}\\right)\\cdot \\left(\\begin{array}{c}\n\\alpha_2\\\\\n\\beta_2\n\\end{array}\\right) = 0\\]</span></p>",
+        "url": "линии-второго-порядка.html#definition-59"
+    },
+    {
+        "keyword": "особое",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-60\"><strong>Перейти к\nопределению:</strong></a> Направление <em>особое</em>, если оно\nсопряжено с любым направлением.</p>",
+        "url": "линии-второго-порядка.html#definition-60"
+    },
+    {
+        "keyword": "главным",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-61\"><strong>Перейти к\nопределению:</strong></a> Направление является <em>главным</em>\nнаправлением линии второго порядка, если оно сопряжено перпендикулярному\nнаправлению.</p>",
+        "url": "линии-второго-порядка.html#definition-61"
+    },
+    {
+        "keyword": "обобщенная окружность",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-62\"><strong>Перейти к\nопределению:</strong></a> <em>обобщенная окружность</em> – это кривая\nвторого порядка, имеющая каноническое уравнение <span\nclass=\"math inline\">\\(x^2+y^2=c\\)</span>.</p>",
+        "url": "линии-второго-порядка.html#definition-62"
+    },
+    {
+        "keyword": "главный диаметр",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-63\"><strong>Перейти к\nопределению:</strong></a> <em>Главный диаметр</em> – это диаметр,\nкоторый является главным направлением.</p>",
+        "url": "линии-второго-порядка.html#definition-63"
+    },
+    {
+        "keyword": "ось симметрии",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-64\"><strong>Перейти к\nопределению:</strong></a> Прямая <span class=\"math inline\">\\(l\\)</span>\n<em>ось симметрии</em> для кривой <span\nclass=\"math inline\">\\(L\\)</span>, если для любой точки <span\nclass=\"math inline\">\\(M\\)</span> принадлежащей кривой <span\nclass=\"math inline\">\\(L\\)</span> симметричная относительно <span\nclass=\"math inline\">\\(l\\)</span> к <span\nclass=\"math inline\">\\(M\\)</span> точка принадлежит <span\nclass=\"math inline\">\\(L\\)</span>.</p>",
+        "url": "линии-второго-порядка.html#definition-64"
+    },
+    {
+        "keyword": "касательной",
+        "html": "<p><a href=\"линии-второго-порядка.html#definition-65\"><strong>Перейти к\nопределению:</strong></a> Прямая <span class=\"math inline\">\\(l\\)</span>\nнеасимптотического направления является <em>касательной</em> к кривой\nвторого порядка, если <span class=\"math inline\">\\(l\\)</span> пересекает\nкривую в одной точке (двух совпадающих).</p>",
+        "url": "линии-второго-порядка.html#definition-65"
+    },
+    {
+        "keyword": "аффинное преобразование ассоциированым",
+        "html": "<p><a href=\"аффинные-преобразования.html#definition-66\"><strong>Перейти\nк определению:</strong></a> Отображение <span class=\"math inline\">\\(f:\n\\,\\,\\,\\, E^n \\to E^n\\)</span> – <em>аффинное преобразование</em>, если\nсуществуют два репера <span class=\"math inline\">\\(Oe_1e_2\\)</span> и\n<span class=\"math inline\">\\(O’e_1’e_2’\\)</span> такие что точка <span\nclass=\"math inline\">\\(M\\)</span> в первом репере имеет такие же\nкоординаты, как и образ <span class=\"math inline\">\\(M\\)</span> во втором\nрепере. <span class=\"math inline\">\\(f\\)</span> называется аффинным\nпреобразованием <em>ассоциированым</em> с этими реперами.</p>",
+        "url": "аффинные-преобразования.html#definition-66"
+    },
+    {
+        "keyword": "линейное отображение, порожденное аффинным преобразованием",
+        "html": "<p><a href=\"аффинные-преобразования.html#definition-67\"><strong>Перейти\nк определению:</strong></a> Пусть задано аффинное преобразование <span\nclass=\"math inline\">\\(f: \\,\\,\\,\\, E^n \\to E^n\\)</span>. Отображение\n<span class=\"math inline\">\\(\\hat{f}: \\,\\,\\,\\, \\operatorname{vect}(n) \\to\n\\operatorname{vect}(n)\\)</span>, определяемое равенством <span\nclass=\"math inline\">\\(\\hat{f}(\\vec{MN}) = \\vec{f(M)f(N)}\\)</span> – это\n<em>линейное отображение, порожденное аффинным преобразованием</em>\n<span class=\"math inline\">\\(f\\)</span>.</p>",
+        "url": "аффинные-преобразования.html#definition-67"
+    },
+    {
+        "keyword": "движение",
+        "html": "<p><a href=\"аффинные-преобразования.html#definition-68\"><strong>Перейти\nк определению:</strong></a> <em>Движение</em> – это афинное\nпреобразование ассоциированное с прямоугольными системами координат.</p>",
+        "url": "аффинные-преобразования.html#definition-68"
+    },
+    {
+        "keyword": "изометрия",
+        "html": "<p><a href=\"аффинные-преобразования.html#definition-69\"><strong>Перейти\nк определению:</strong></a> <em>Изометрия</em> – это такое отображение,\nчто расстояние между образами точек равно расстоянию между точками.</p>",
+        "url": "аффинные-преобразования.html#definition-69"
+    },
+    {
+        "keyword": "поверхность второго порядка",
+        "html": "<p><a\nhref=\"поверхности-второго-порядка.html#definition-70\"><strong>Перейти к\nопределению:</strong></a> <em>Поверхность второго порядка</em> – это\nмножество точек, удовлетворяющих уравнению:</p>\n<p><span class=\"math display\">\\[a_{11}x^2 + a_{22}y^2 + a_{33}z^2 +\n2a_{12}xy + 2a_{13}xz + 2a_{23}yz + 2a_1x + 2a_2y + 2a_3z + a_0 =\n0\\]</span></p>\n<p>Введем обозначения:</p>\n<p><span class=\"math display\">\\[A = \\left(\\begin{array}{cccc}\na_{11} &amp; a_{12} &amp; a_{13} &amp; a_1\\\\\na_{12} &amp; a_{22} &amp; a_{23} &amp; a_2\\\\\na_{13} &amp; a_{23} &amp; a_{33} &amp; a_3\\\\\na_{1} &amp; a_{2} &amp; a_{3} &amp; a_0\n\\end{array}\\right)\\]</span></p>\n<p><span class=\"math display\">\\[A_1 = \\left(\\begin{array}{ccc}\na_{11} &amp; a_{12} &amp; a_{13}\\\\\na_{12} &amp; a_{22} &amp; a_{23}\\\\\na_{13} &amp; a_{23} &amp; a_{33}\n\\end{array}\\right)\\]</span></p>\n<p>Рассмотрим эти матрицы при переходе к другой аффинной системе\nкоординат.</p>\n<p>…</p>",
+        "url": "поверхности-второго-порядка.html#definition-70"
+    },
+    {
+        "keyword": "характеристический многочлен",
+        "html": "<p><a\nhref=\"поверхности-второго-порядка.html#definition-71\"><strong>Перейти к\nопределению:</strong></a> <em>Характеристический многочлен</em> – это\n<span class=\"math display\">\\[A_1 - \\lambda \\cdot E\\]</span></p>",
+        "url": "поверхности-второго-порядка.html#definition-71"
+    },
+    {
+        "keyword": "характеристическое уравнение",
+        "html": "<p><a\nhref=\"поверхности-второго-порядка.html#definition-72\"><strong>Перейти к\nопределению:</strong></a> <em>Характеристическое уравнение</em> –\nэто</p>\n<p><span class=\"math display\">\\[|A_1 - \\lambda \\cdot E| = 0\\]</span></p>\n<p>что за бред? какие-то новые обозначения</p>",
+        "url": "поверхности-второго-порядка.html#definition-72"
+    },
+    {
+        "keyword": "цилиндр",
+        "html": "<p><a\nhref=\"поверхности-второго-порядка.html#definition-74\"><strong>Перейти к\nопределению:</strong></a> Поверхность второго порядка <em>цилиндр</em>,\nесли сущесвует система координат, такая что <span\nclass=\"math display\">\\[F(x, y) = 0\\]</span>, то есть в общем уравнении\n<span class=\"math display\">\\[a_{11}x^2 + a_{22}y^2 + a_{33}z^2 +\n2a_{12}xy + 2a_{13}xz + 2a_{23}yz + 2a_1x + 2a_2y + 2a_3z + a_0 =\n0\\]</span> все коэффиценты содержащие <span\nclass=\"math inline\">\\(3\\)</span> равны <span\nclass=\"math inline\">\\(0\\)</span>.</p>",
+        "url": "поверхности-второго-порядка.html#definition-74"
+    },
+    {
+        "keyword": "прямолинейной образующей",
+        "html": "<p><a\nhref=\"поверхности-второго-порядка.html#definition-73\"><strong>Перейти к\nопределению:</strong></a> Прямая <span class=\"math inline\">\\(l\\)</span>\nявляется <em>прямолинейной образующей</em> поверхности второго порядка\n<span class=\"math inline\">\\(\\Phi\\)</span>, если <span\nclass=\"math inline\">\\(l \\subset \\Phi\\)</span>.</p>",
+        "url": "поверхности-второго-порядка.html#definition-73"
+    },
+    {
+        "keyword": "инцидентность",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-75\"><strong>Перейти к\nопределению:</strong></a> <em>Инцидентность</em> – это отношение между\nпрямыми и точками.</p>",
+        "url": "проективная-геометрия.html#definition-75"
+    },
+    {
+        "keyword": "проективная плоскость",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-76\"><strong>Перейти к\nопределению:</strong></a> (аксиоматика проективной плоскости)</p>\n<ol type=\"1\">\n<li>Любые две точки инцидентны одной и только одной прямой.</li>\n<li>Любые две прямые инцидентны одной и только одной точке.</li>\n<li>Существуют <span class=\"math inline\">\\(3\\)</span> точки не\nинцидентные одной прямой.</li>\n<li>Любая прямая инцидентна <span class=\"math inline\">\\(3\\)</span>\nточкам.</li>\n</ol>\n<p>Множество точек и прямых с введенной индицентностью, удовлетворяющее\nданным аксиомам – это <em>проективная плоскость</em>.</p>",
+        "url": "проективная-геометрия.html#definition-76"
+    },
+    {
+        "keyword": "модель пополненной плоскости инцидентна прямой",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-77\"><strong>Перейти к\nопределению:</strong></a> (<em>Модель пополненной плоскости</em>)</p>\n<p>Рассмотрим <span style=\"color:orange;\">плоскость</span>, как\nмножество пучков (собственных и несобственных) прямых. Назовем пучки\nточками (соответственно собственными и несобственными). Назовем\nнесобственной прямой множество всех несобственных точек. Собственная\nпрямая это пара: несобственная точка + собственная точка или собственная\nточка + собственная точка.</p>\n<p>Точка <em>инцидентна прямой</em>, если она принадлежит этой\nпрямой.</p>",
+        "url": "проективная-геометрия.html#definition-77"
+    },
+    {
+        "keyword": "модель связки инцидентность",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-78\"><strong>Перейти к\nопределению:</strong></a> (<em>Модель связки</em>)</p>\n<p>Рассмотрим множество всех <span style=\"color:green\">прямых</span> и\n<span style=\"color:orange;\">плоскостей</span>, проходящих через,\nзаданную точку <span class=\"math inline\">\\(O\\)</span> пространства.\nПусть <span style=\"color:green\">прямая</span> – это точка, <span\nstyle=\"color:orange;\">плоскость</span> – это прямая.</p>\n<p><em>Инцидентность</em> – точка принадлежит прямой (<span\nstyle=\"color:green\">прямая</span> принадлежит <span\nstyle=\"color:orange;\">плоскости</span>).</p>",
+        "url": "проективная-геометрия.html#definition-78"
+    },
+    {
+        "keyword": "изоморфны проективное соответствие",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-79\"><strong>Перейти к\nопределению:</strong></a> Проективные плоскости <em>изоморфны</em>, если\nсуществует биекция (<em>проективное соответствие</em>) из одной\nпроективной плоскости в другую, сохраняющая инцидентность.</p>",
+        "url": "проективная-геометрия.html#definition-79"
+    },
+    {
+        "keyword": "однородными координатами прямой однородными координатами точки",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-80\"><strong>Перейти к\nопределению:</strong></a> Однородные координаты в связке. Пусть есть\nсистема координат <span class=\"math inline\">\\(Oxyz\\)</span> с началом в\nточке <span class=\"math inline\">\\(O\\)</span>, образующей связку. Тогда\nусловие принадлежности <span style=\"color:green;\">прямой</span> из\nсвязки <span style=\"color:orange;\">плоскости</span> из связки в <span\nclass=\"math inline\">\\(Oxy\\)</span> имеет вид:</p>\n<p><span class=\"math display\">\\[A\\alpha + B\\beta + C\\gamma = 0\\]</span>\nБудем называть множество пропорциональных троек <span\nclass=\"math inline\">\\(\\{A:B:C\\}\\)</span> <em>однородными координатами\nпрямой</em> проективной плоскости. Множество пропорциональных троек\n<span class=\"math inline\">\\(\\(\\alpha:\\beta:\\gamma\\)\\)</span>\n<em>однородными координатами точки</em> проективной плоскости.</p>",
+        "url": "проективная-геометрия.html#definition-80"
+    },
+    {
+        "keyword": "арифметичекая модель инцидентность",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-81\"><strong>Перейти к\nопределению:</strong></a> (<em>Арифметичекая модель</em>)</p>\n<p>Рассмотрим множество пропорциональных троек <span\nclass=\"math inline\">\\(\\{A:B:C\\}\\)</span>, которые назовем прямыми и\nмножество пропорциональных троек <span\nclass=\"math inline\">\\(\\(\\alpha:\\beta:\\gamma\\)\\)</span>, которые назовем\nточками.</p>\n<p><em>Инцидентность</em> – <span class=\"math inline\">\\(A\\alpha + B\\beta\n+ C\\gamma = 0\\)</span>.</p>",
+        "url": "проективная-геометрия.html#definition-81"
+    },
+    {
+        "keyword": "треугольник",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-82\"><strong>Перейти к\nопределению:</strong></a> <em>Треугольник</em> – это три точки не\nинцидентные одной прямой.</p>",
+        "url": "проективная-геометрия.html#definition-82"
+    },
+    {
+        "keyword": "эквивалентен",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-83\"><strong>Перейти к\nопределению:</strong></a> Репер <span\nclass=\"math inline\">\\(Oe_1e_2e_3\\)</span> <em>эквивалентен</em> реперу\n<span class=\"math inline\">\\(Oe_1’e_2’e_3’\\)</span>, если <span\nclass=\"math inline\">\\(\\exists \\lambda: \\,\\,\\,\\, \\forall i \\in \\{1, 2,\n3\\} \\,\\,\\,\\, e_i = \\lambda e_i’\\)</span>.</p>",
+        "url": "проективная-геометрия.html#definition-83"
+    },
+    {
+        "keyword": "проективная система координат",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-84\"><strong>Перейти к\nопределению:</strong></a> <em>Проективная система координат</em> – это\nкласс эквивалентных реперов.</p>\n<p>Чтобы задать проективную систему координат нужно <span\nclass=\"math inline\">\\(4\\)</span> точки (проективные, т.е. координаты\nнаправляющих векторов <span style=\"color:green;\">прямых</span>) с\nоднородными координатами: <span class=\"math display\">\\[\\begin{cases}\n    X_1 = (1:0:0)\\\\\n    X_2 = (0:1:0)\\\\\n    X_3 = (0:0:1)\\\\\n    E = (1:1:1)\n\\end{cases}\\]</span></p>",
+        "url": "проективная-геометрия.html#definition-84"
+    },
+    {
+        "keyword": "проективное преобразование",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-85\"><strong>Перейти к\nопределению:</strong></a> <em>Проективное преобразование</em> – это\nбиекция между проективными системы координат. (То есть точка с\nнекоторыми однородными координатами переходит в точку с теми же\nкоординатами в другой проетивной системе координат).</p>",
+        "url": "проективная-геометрия.html#definition-85"
+    },
+    {
+        "keyword": "кривая второго порядка на проективной плоскости",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-86\"><strong>Перейти к\nопределению:</strong></a> <em>Кривая второго порядка на проективной\nплоскости</em> – это множество точек, удовлетворяющих уравнению:</p>\n<p><span class=\"math display\">\\[a_{11} x_1^2 + 2 a_{12} x_1x_2 + a_{22}\nx_2^2 + a_{13} x_1x_3 + a_{23} x_2x_3 + a_{33} x_3^2 = 0\\]</span></p>",
+        "url": "проективная-геометрия.html#definition-86"
+    },
+    {
+        "keyword": "проективно-аффинное преобразование",
+        "html": "<p><a href=\"проективная-геометрия.html#definition-87\"><strong>Перейти к\nопределению:</strong></a> <em>Проективно-аффинное преобразование</em> –\nэто проективное преобразование, переводящее несобственную прямую в\nсебя.</p>",
+        "url": "проективная-геометрия.html#definition-87"
+    }
+]

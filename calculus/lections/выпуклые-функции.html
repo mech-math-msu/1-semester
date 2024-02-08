@@ -11,7 +11,9 @@
     
     <title>Выпуклые функции</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,14 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="формула-тейлора.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="формула-тейлора.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="search.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -246,13 +256,13 @@
 
 <h1 data-number="9" id="выпуклые-функции">Выпуклые функции</h1>
 <div id="definition-21">
-<p><strong>Определение:</strong> Для <span class="math inline">\(f(x),
+<p><strong>Определение: </strong>Для <span class="math inline">\(f(x),
 \,\,\,\, x_1, \,\,\,\, x_2 \,\,\,\,\,\,\,\, l(x) = \frac{f(x_1)\cdot
 (x_2 - x) + f(x_2)\cdot (x - x_1)}{x_2 - x_1}\)</span>. (Прямая,
 проходящая через две заданные точки функции)</p>
 </div>
 <div id="definition-22">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(f(x)\)</span> определена на <span
 class="math inline">\((a, b)\)</span>. Если <span
 class="math inline">\(\forall x_1 &lt; x_2 \in (a, b)\)</span> и <span
@@ -268,7 +278,7 @@ class="math inline">\(f(x)\)</span> <em>выпуклая вверх</em>.</li>
 id="достаточное-условие-строгой-выпуклости">Достаточное условие строгой
 выпуклости</h2>
 <div id="theorem-46">
-<p><strong>Теорема:</strong> Если на <span class="math inline">\((a, b)
+<p><strong>Теорема: </strong>Если на <span class="math inline">\((a, b)
 \,\,\,\, f’’(x) &gt; 0\)</span>, то <span
 class="math inline">\(f(x)\)</span> выпукла вниз на <span
 class="math inline">\((a, b)\)</span>.</p>
@@ -295,7 +305,7 @@ f’’(\eta)\cdot (\xi - \zeta)}{x_2 - x_1}\]</span> (Почему <span
 class="math inline">\(\xi - \zeta &gt;0\)</span>?)</p>
 </div>
 <div id="theorem-47">
-<p><strong>Теорема:</strong> Если на <span class="math inline">\((a, b)
+<p><strong>Теорема: </strong>Если на <span class="math inline">\((a, b)
 \,\,\,\, f’’(x) &gt; 0\)</span>, то <span class="math display">\[\forall
 x_0, x \in (a, b) \,\,\,\, f(x) &gt; f(x_0) + f’(x_0)\cdot (x -
 x_0)\]</span></p>
@@ -320,7 +330,7 @@ f’’(\xi) &gt; 0 \,\,\,\,\blacksquare\]</span></p>
 <p><strong>Упражнение:</strong><a name="exercise-4"></a> Докажите эту
 теорему для <span class="math inline">\(f’’(x) &lt; 0\)</span>.</p>
 <div id="definition-23">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(f(x)\)</span> определена в <span
 class="math inline">\(B(x_0)\)</span> и <span
 class="math inline">\(\exists f’(x_0)\)</span>.</p>
@@ -335,7 +345,7 @@ class="math inline">\(x_0\)</span> - <em>точка перегиба</em> гра
 id="необходимое-и-достаточные-условия-наличия-точки-перегиба">Необходимое
 и достаточные условия наличия точки перегиба</h2>
 <div id="theorem-48">
-<p><strong>Теорема:</strong> (<em>Необходимое условие существования
+<p><strong>Теорема: </strong>(<em>Необходимое условие существования
 точки перегиба</em>) Пусть <span class="math inline">\(f(x)\)</span>
 дважды дифференцируема в <span class="math inline">\(B(x_0)\)</span>.
 Если <span class="math inline">\(x_0\)</span> точка перегиба <span
@@ -350,7 +360,7 @@ class="math inline">\(f(x) - (f(x_0) + f’(x_0)\cdot (x - x_0) &gt; 0
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-49">
-<p><strong>Теорема:</strong> (<em>1-е достаточное условие существования
+<p><strong>Теорема: </strong>(<em>1-е достаточное условие существования
 точки перегиба</em>) Пусть <span class="math inline">\(f(x)\)</span>
 дифференцируема в <span class="math inline">\(B(x_0)\)</span> и дважды
 дифференцируема в <span
@@ -370,7 +380,7 @@ class="math inline">\(f(x) - (f(x_0) + f’(x_0)\cdot (x - x_0)\)</span>
 class="math inline">\(\,\,\,\,\blacksquare\)</span>.</p>
 </div>
 <div id="theorem-50">
-<p><strong>Теорема:</strong> (<em>2-е достаточное условие существования
+<p><strong>Теорема: </strong>(<em>2-е достаточное условие существования
 точки перегиба</em>) Пусть <span class="math inline">\(f(x)\)</span>
 трижды дифференцируема в <span class="math inline">\(B(x_0)\)</span>.
 Если <span class="math inline">\(f’’’(x_0) \ne 0\)</span> и <span
@@ -383,7 +393,7 @@ x_0) = f’’(\xi)\cdot (\zeta - x_0) \cdot (x - x_0)????\)</span></p>
 </div>
 <h3 data-number="9.2.1" id="асимптоты">Асимптоты</h3>
 <div id="definition-24">
-<p><strong>Определение:</strong> Если <span
+<p><strong>Определение: </strong>Если <span
 class="math inline">\(f(x)\)</span> определена в <span
 class="math inline">\(\mathring{B}(x_0)\)</span> и <span
 class="math inline">\(\displaystyle \lim_{x\to x_0+0}f(x) =
@@ -393,14 +403,14 @@ class="math inline">\(y = x_0\)</span> - <em>вертикальная асимп
 графика функции <span class="math inline">\(f(x)\)</span>.</p>
 </div>
 <div id="definition-25">
-<p><strong>Определение:</strong> Если <span
+<p><strong>Определение: </strong>Если <span
 class="math inline">\(\displaystyle \lim_{x\to \pm\infty}(f(x) - (kx +
 b)) = 0\)</span> то прямая <span class="math inline">\(y = kx +
 b\)</span> - <em>наклонная асимптота</em> графика функции <span
 class="math inline">\(f(x)\)</span>.</p>
 </div>
 <div id="theorem-51">
-<p><strong>Теорема:</strong> Прямая <span class="math inline">\(y = kx +
+<p><strong>Теорема: </strong>Прямая <span class="math inline">\(y = kx +
 b\)</span> наклонная асимптота графика функции <span
 class="math inline">\(f(x)\)</span> <span
 class="math inline">\(\Leftrightarrow \exists \displaystyle \lim_{x\to
@@ -417,7 +427,7 @@ b\)</span>.</p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="формула-тейлора.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>
@@ -425,6 +435,7 @@ b\)</span>.</p>
                         <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
                     </span>
         <span class="navlink">
+                        <a href="search.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
                     </span>
     </div>
 </nav>

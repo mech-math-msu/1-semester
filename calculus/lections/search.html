@@ -9,7 +9,7 @@
     
     
     
-    <title>Снова линии второго порядка</title>
+    <title>Поиск</title>
     <style>
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
@@ -223,8 +223,6 @@
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
 
-            <link rel="stylesheet" type="text/css" href="https://jsxgraph.org/distrib/jsxgraph.css" />
-            <script type="text/javascript" src="https://jsxgraph.org/distrib/jsxgraphcore.js"></script>
     
             <script
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
@@ -242,13 +240,12 @@
         </div>
         <div class="sitenav_right">
             <span class="navlink">
-                                <a href="проективная-геометрия.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                                <a href="выпуклые-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                             </span>
             <span class="navlink">
                                 <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
                             </span>
             <span class="navlink">
-                                <a href="search.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
                             </span>
         </div>
     </div>
@@ -256,30 +253,64 @@
 
 
 
-<h1 data-number="7" id="снова-линии-второго-порядка">Снова линии второго
-порядка</h1>
-<h2 data-number="7.1"
-id="оптические-свойства-эллипса-гиперболы-и-параболы">Оптические
-свойства эллипса, гиперболы и параболы</h2>
-<p><a href="https://dev.mccme.ru/~merzon/mirror/mp-optical/">тут просто
-огонь объяснение</a></p>
-<h2 data-number="7.2"
-id="теоремы-единственности-для-линий-второго-порядка">Теоремы
-единственности для линий второго порядка</h2>
-<h2 data-number="7.3" id="пучок-линий-второго-порядка">Пучок линий
-второго порядка</h2>
+<h1 class="unnumbered unlisted" id="search">Поиск</h1>
+<style>
+    h1#search {
+        display: none;
+    }
+    input#searchbar {
+        fontsize: 2rem;
+        width: 16rem;
+        height: 2.5rem;
+        border-radius: 25px;
+        padding-left: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+</style>
+<script type="module">
+    import data from "./defs.json" assert {type: 'json'};
+
+    let ans_div = document.getElementById('answer');
+
+    function search() {
+        let input = document.getElementById('searchbar').value
+        input = input.toLowerCase();
+
+        if (input.length < 3) {
+            return;
+        }
+
+        let ans = "";
+
+        data.forEach((item, i) => {
+            if (item.keyword.includes(input)) {
+                ans += item.html;
+            }
+        });
+
+        ans_div.innerHTML = ans;
+        MathJax.typeset();
+    }
+    window.search = search;
+</script>
+<center>
+<input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Поиск...">
+</center>
+<div id="answer">
+
+</div>
 
 
 <nav id="sitenav">
     <div class="sitenav_right">
         <span class="navlink">
-                        <a href="проективная-геометрия.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                        <a href="выпуклые-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>
         <span class="navlink">
                         <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
                     </span>
         <span class="navlink">
-                        <a href="search.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
                     </span>
     </div>
 </nav>

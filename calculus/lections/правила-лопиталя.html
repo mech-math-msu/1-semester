@@ -11,7 +11,9 @@
     
     <title>Правила Лопиталя</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="дифференцируемость-функций-первый-дифференциал.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="формула-тейлора.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="дифференцируемость-функций-первый-дифференциал.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="формула-тейлора.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,7 +256,7 @@
 
 <h1 data-number="7" id="правила-лопиталя">Правила Лопиталя</h1>
 <div id="theorem-39">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x),
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f(x),
 g(x) \in \mathcal{D}(B(x_0)),\,\,\,\, g(x) \ne 0 \,\,\,\, \forall x \in
 \mathring{B}(x_0), \,\,\,\, g’(x_0) \ne 0, \,\,\,\, g(x_0) = f(x_0) =
 0.\)</span> Тогда <span class="math display">\[\displaystyle \lim_{x\to
@@ -259,7 +268,7 @@ x_0}\frac{\frac{f(x) - f(x_0)}{x - x_0}}{\frac{g(x) - g(x_0)}{{x -
 x_0}}} = \frac{f’(x_0)}{g’(x_0)} \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-40">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x),
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f(x),
 g(x) \in \mathcal{D}(B(x_0)), \,\,\,\, g(x) \ne 0, \,\,\,\, g’(x) \ne 0,
 \,\,\,\, \displaystyle \lim_{x\to x_0}f(x) = \displaystyle \lim_{x\to
 x_0}g(x) = 0.\)</span> Тогда</p>
@@ -283,7 +292,7 @@ href="дифференцируемость-функций-первый-дифф�
 g(x_0)} = \frac{f’(c)}{g’(c)}\)</span></p>
 </div>
 <div id="theorem-41">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x),
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f(x),
 g(x) \in \mathcal{D}(a, +\infty), \,\,\,\, a &gt; 0, \,\,\,\, g(x) \ne
 0, \,\,\,\, g’(x) \ne 0, \,\,\,\, \displaystyle \lim_{x\to +\infty}f(x)
 = \displaystyle \lim_{x\to +\infty}g(x) = 0.\)</span> Тогда</p>
@@ -308,7 +317,7 @@ href="правила-лопиталя.html#theorem-40">теореме</a> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-42">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x),
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f(x),
 g(x) \in \mathcal{D}(a - \delta, a), \,\,\,\, g(x) \ne 0, \,\,\,\, g’(x)
 \ne 0, \,\,\,\, \displaystyle \lim_{x\to a-0}f(x) = \displaystyle
 \lim_{x\to a-0}g(x) = 0.\)</span> Тогда</p>
@@ -335,7 +344,7 @@ class="math inline">\(x_0 \in (a - \delta_1, a)\)</span></li>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="дифференцируемость-функций-первый-дифференциал.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>
