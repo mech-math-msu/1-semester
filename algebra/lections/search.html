@@ -9,7 +9,7 @@
     
     
     
-    <title>Симметрические многочлены</title>
+    <title>Поиск</title>
     <style>
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
@@ -240,13 +240,12 @@
         </div>
         <div class="sitenav_right">
             <span class="navlink">
-                                <a href="поле-рациональных-дробей.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                                <a href="снова-многочлены-должок.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                             </span>
             <span class="navlink">
                                 <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
                             </span>
             <span class="navlink">
-                                <a href="снова-многочлены-должок.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
                             </span>
         </div>
     </div>
@@ -254,57 +253,64 @@
 
 
 
-<h1 data-number="6" id="симметрические-многочлены">Симметрические
-многочлены</h1>
-<h2 data-number="6.1"
-id="симметрические-многочлены-свойства-их-старших-членов">Симметрические
-многочлены, свойства их старших членов</h2>
-<div id="definition-24">
-<p><strong>Определение: </strong>Если <span
-class="math inline">\(\forall \sigma \in S_n\)</span></p>
-<p><span class="math display">\[f(x_1, \ldots, x_n) = f(x_{\sigma(1)},
-\ldots, x_{\sigma(n)}),\]</span> то <span
-class="math inline">\(f\)</span> – <em>симметрический
-многочлен</em>.</p>
-</div>
-<div id="statement-15">
-<p><strong>Утверждение: </strong>Старший член симметрического многочлена
-– симметрический многочлен.</p>
-<p><em>Доказательство:</em></p>
-</div>
-<div id="definition-25">
-<p><strong>Определение: </strong>(элементарные симметричекие
-многочлены)</p>
-<p><span class="math display">\[\sigma_1 = x_1 + \ldots + x_n\]</span>
-<span class="math display">\[\sigma_2 = x_1\cdot x_2 + x_1 \cdot x_3 +
-\ldots + x_1\cdot x_n + \ldots\]</span> <span
-class="math display">\[\vdots\]</span> <span
-class="math display">\[\sigma_k = \displaystyle \sum_{i_1 &lt; i_2 &lt;
-\ldots &lt; i_k}x_{i_1}\cdot \ldots \cdot x_{i_k}\]</span> <span
-class="math display">\[\vdots\]</span> <span
-class="math display">\[\sigma_n = x_1\cdot \ldots x_n\]</span></p>
-</div>
-<h2 data-number="6.2"
-id="существование-и-единственность-представления-произвольного-симметрического-многочлена-в-виде-многочлена-от-элементарных-симметрических-многочленов">Существование
-и единственность представления произвольного симметрического многочлена
-в виде многочлена от элементарных симметрических многочленов</h2>
-<div id="theorem-13">
-<p><strong>Теорема: </strong>Любой симметрический многочлен представим в
-виде произведения элементарных.</p>
-<p><em>Доказательство:</em></p>
+<h1 class="unnumbered unlisted" id="search">Поиск</h1>
+<style>
+    h1#search {
+        display: none;
+    }
+    input#searchbar {
+        fontsize: 2rem;
+        width: 16rem;
+        height: 2.5rem;
+        border-radius: 25px;
+        padding-left: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+</style>
+<script type="module">
+    import data from "./defs.json" assert {type: 'json'};
+
+    let ans_div = document.getElementById('answer');
+
+    function search() {
+        let input = document.getElementById('searchbar').value
+        input = input.toLowerCase();
+
+        if (input.length < 3) {
+            return;
+        }
+
+        let ans = "";
+
+        data.forEach((item, i) => {
+            if (item.keyword.includes(input)) {
+                ans += item.html;
+            }
+        });
+
+        ans_div.innerHTML = ans;
+        MathJax.typeset();
+    }
+    window.search = search;
+</script>
+<center>
+<input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Поиск...">
+</center>
+<div id="answer">
+
 </div>
 
 
 <nav id="sitenav">
     <div class="sitenav_right">
         <span class="navlink">
-                        <a href="поле-рациональных-дробей.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                        <a href="снова-многочлены-должок.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>
         <span class="navlink">
                         <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
                     </span>
         <span class="navlink">
-                        <a href="снова-многочлены-должок.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
                     </span>
     </div>
 </nav>

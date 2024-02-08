@@ -11,7 +11,9 @@
     
     <title>Поле рациональных дробей</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="многочлены.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="симметрические-многочлены.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="многочлены.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="симметрические-многочлены.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,7 +257,7 @@
 <h1 data-number="5" id="поле-рациональных-дробей">Поле рациональных
 дробей</h1>
 <div id="definition-17">
-<p><strong>Определение:</strong> Рассмотрим множество <span
+<p><strong>Определение: </strong>Рассмотрим множество <span
 class="math inline">\(A\)</span> пар многочленов над полем <span
 class="math inline">\(F\)</span>. Будем обозначать пару <span
 class="math inline">\(f, g\)</span> как <span
@@ -269,7 +278,7 @@ class="math inline">\(\frac{f}{g}\)</span>.</p>
 g’}\]</span></p>
 </div>
 <div id="statement-10">
-<p><strong>Утверждение:</strong> (Корректность определения операций)
+<p><strong>Утверждение: </strong>(Корректность определения операций)
 Пусть <span class="math inline">\(\frac{f_1}{g_1} \sim
 \frac{f_1’}{g_1’}\)</span> и <span class="math inline">\(\frac{f_2}{g_2}
 \sim \frac{f_2’}{g_2’}\)</span>. Тогда <span
@@ -288,20 +297,20 @@ class="math display">\[f_1 f_2 \cdot g_1’ g_2’ = g_1 g_2 \cdot f_1’ f_2’
 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="statement-11">
-<p><strong>Утверждение:</strong> Поле рациональных дробей – поле.</p>
+<p><strong>Утверждение: </strong>Поле рациональных дробей – поле.</p>
 <p><em>Доказательство:</em></p>
 </div>
 <h2 data-number="5.1"
 id="разложение-правильной-дроби-в-сумму-простейших-дробей-без-единственности">Разложение
 правильной дроби в сумму простейших дробей (без единственности)</h2>
 <div id="definition-18">
-<p><strong>Определение:</strong> <span class="math inline">\(\frac{f}{g}
+<p><strong>Определение: </strong><span class="math inline">\(\frac{f}{g}
 \in F(x)\)</span> – <em>правильная дробь</em>, если <span
 class="math inline">\(\operatorname{deg}f &lt;
 \operatorname{deg}g\)</span>.</p>
 </div>
 <div id="definition-19">
-<p><strong>Определение:</strong> <span
+<p><strong>Определение: </strong><span
 class="math inline">\(\frac{f}{p^k} \in F(x)\)</span> – <em>простейшая
 дробь</em>, если <span class="math inline">\(p\)</span> – неприводимый
 многочлен над полем <span class="math inline">\(F\)</span> и <span
@@ -309,7 +318,7 @@ class="math inline">\(\operatorname{deg}f &lt;
 \operatorname{deg}p\)</span>.</p>
 </div>
 <div id="statement-12">
-<p><strong>Утверждение:</strong> Сумма правильных дробей – правильная
+<p><strong>Утверждение: </strong>Сумма правильных дробей – правильная
 дробь.</p>
 <p><em>Доказательство:</em> <span
 class="math inline">\(\frac{f}{g}\)</span> и <span
@@ -328,7 +337,7 @@ class="math inline">\(\operatorname{deg}(gv) = \operatorname{deg}g +
 \operatorname{deg} v \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-11">
-<p><strong>Теорема:</strong> Любая правильная дробь <span
+<p><strong>Теорема: </strong>Любая правильная дробь <span
 class="math inline">\(\frac{f}{g} \in F(x)\)</span> может быть
 представлена в виде произведения простейших единственным образом.</p>
 <p><em>Доказательство:</em> Пусть <span
@@ -350,20 +359,20 @@ id="единственность-разложения-правильной-др�
 id="кольцо-многочленов-от-многих-переменных">Кольцо многочленов от
 многих переменных</h2>
 <div id="definition-20">
-<p><strong>Определение:</strong> Кольцо многочленов от <span
+<p><strong>Определение: </strong>Кольцо многочленов от <span
 class="math inline">\(n\)</span> переменных – это множество <span
 class="math inline">\(F[x_1, \ldots, x_n] = F[x_1, \ldots, x_{n -
 1}][x_n]\)</span>.</p>
 </div>
 <div id="theorem-12">
-<p><strong>Теорема:</strong> Кольцо многочленов от <span
+<p><strong>Теорема: </strong>Кольцо многочленов от <span
 class="math inline">\(n\)</span> переменных – это ассоциативное,
 коммутативное кольцо с единицей без делителей нуля.</p>
 <p><em>Доказательство:</em> знаете, не так и очевидно, как хотелось
 бы.</p>
 </div>
 <div id="definition-21">
-<p><strong>Определение:</strong> Моном – это элемент кольца многочленов
+<p><strong>Определение: </strong>Моном – это элемент кольца многочленов
 от <span class="math inline">\(n\)</span> переменных, представимый в
 виде <span class="math inline">\(a\cdot x_1^{\alpha_1}\cdot \ldots \cdot
 x_n^{\alpha_n}\)</span>.</p>
@@ -372,7 +381,7 @@ x_n^{\alpha_n}\)</span>.</p>
 id="лексикографический-порядок-на-мономах">Лексикографический порядок на
 мономах</h2>
 <div id="definition-22">
-<p><strong>Определение:</strong> (Лексикографический порядок на мономах)
+<p><strong>Определение: </strong>(Лексикографический порядок на мономах)
 Пусть <span class="math display">\[a = x_1^{\alpha_1}\cdot \ldots \cdot
 x_n^{\alpha_n}\]</span></p>
 <p><span class="math display">\[b = x_1^{\beta_1}\cdot \ldots \cdot
@@ -383,7 +392,7 @@ class="math inline">\(b\)</span> с разными показателями, б�
 показателя второй.</p>
 </div>
 <div id="statement-13">
-<p><strong>Утверждение:</strong> лексикографический порядок линейный, то
+<p><strong>Утверждение: </strong>лексикографический порядок линейный, то
 есть:</p>
 <ol type="1">
 <li><span class="math inline">\(u \succ v\)</span> и <span
@@ -409,12 +418,12 @@ vw\)</span></li>
 <h2 data-number="5.6" id="старший-член-произведения">Старший член
 произведения</h2>
 <div id="definition-23">
-<p><strong>Определение:</strong> Моном многочлена, который
+<p><strong>Определение: </strong>Моном многочлена, который
 лексикографически старше всех остальных мономов многочлена – <em>старший
 член</em> многочлена.</p>
 </div>
 <div id="statement-14">
-<p><strong>Утверждение:</strong> Старший член произведения многочленов
+<p><strong>Утверждение: </strong>Старший член произведения многочленов
 от <span class="math inline">\(n\)</span> переменных равен произведению
 старших членов.</p>
 <p><em>Доказательство:</em> Пусть <span class="math inline">\(f_1, f_2
@@ -428,7 +437,7 @@ class="math inline">\(v_1, v_2\)</span> какие-то не старшие чл
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="многочлены.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

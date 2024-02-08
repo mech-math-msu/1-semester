@@ -1,0 +1,132 @@
+[
+    {
+        "keyword": "группа абелева",
+        "html": "<p><a href=\"кольца-и-поля.html#definition-0\"><strong>Перейти к\nопределению:</strong></a> <em>Группа</em> – это множество <span\nclass=\"math inline\">\\(A\\)</span> с операцией <span\nclass=\"math inline\">\\(+: A \\times A \\to A\\)</span>, для которого\nвыполнены аксиомы:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(a + (b + c) = (a + b) + c, \\,\\,\\,\\,\n\\forall a, b, c \\in A\\)</span> (ассоциативность)</li>\n<li><span class=\"math inline\">\\(\\exists 0 \\in A: \\,\\,\\,\\, \\forall a \\in\nA \\,\\,\\,\\, a + 0 = a\\)</span></li>\n<li><span class=\"math inline\">\\(\\forall a \\in A \\,\\,\\,\\, \\exists (-a):\n\\,\\,\\,\\, a + (-a) = 0\\)</span></li>\n</ol>\n<p>Если также верно: <span class=\"math inline\">\\(a + b = b + a, \\,\\,\\,\\,\n\\forall a, b \\in A\\)</span> (коммутативность), то группа\n<em>абелева</em>.</p>\n<p><strong>Группа не обязательно коммутативная!</strong></p>",
+        "url": "кольца-и-поля.html#definition-0"
+    },
+    {
+        "keyword": "кольцо",
+        "html": "<p><a href=\"кольца-и-поля.html#definition-1\"><strong>Перейти к\nопределению:</strong></a> <em>Кольцо</em> – это множество <span\nclass=\"math inline\">\\(A\\)</span> с операцией <span\nclass=\"math inline\">\\(+: A \\times A \\to A\\)</span> и <span\nclass=\"math inline\">\\(\\cdot: A \\times A \\to A\\)</span>, для которого\nвыполнены аксиомы:</p>\n<ol type=\"1\">\n<li>Относительно сложения – это коммутативная (абелева) группа.</li>\n<li><span class=\"math inline\">\\(a \\cdot (b + c) = a \\cdot b + a \\cdot c,\n\\,\\,\\,\\, \\forall a, b, c \\in A\\)</span></li>\n<li><span class=\"math inline\">\\((b + c) \\cdot a = b \\cdot a + c \\cdot a,\n\\,\\,\\,\\, \\forall a, b, c \\in A\\)</span></li>\n</ol>",
+        "url": "кольца-и-поля.html#definition-1"
+    },
+    {
+        "keyword": "поле",
+        "html": "<p><a href=\"кольца-и-поля.html#definition-2\"><strong>Перейти к\nопределению:</strong></a> <em>Поле</em> – это коммутативное,\nассоциативное (относительно умножения) кольцо с единицей, в котором\nкаждый ненулевой элемент обратим.</p>\n<p>В кванторах:</p>\n<p>Поле – это множество <span class=\"math inline\">\\(A\\)</span> с\nоперациями сложения <span class=\"math inline\">\\(+: A \\times A \\to\nA\\)</span> и умножения <span class=\"math inline\">\\(\\cdot: A \\times A \\to\nA\\)</span>, такое что <span class=\"math inline\">\\(\\forall a, b, c \\in\nA\\)</span> выполнены аксиомы:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(a + b = b + a\\)</span></li>\n<li><span class=\"math inline\">\\(a + (b + c) = (a + b) + c\\)</span></li>\n<li><span class=\"math inline\">\\(\\exists 0 \\in A: \\,\\,\\,\\, a + 0 =\na\\)</span></li>\n<li><span class=\"math inline\">\\(\\forall a \\in A \\,\\,\\,\\, \\exists (-a):\n\\,\\,\\,\\, a + (-a) = 0\\)</span></li>\n<li><span class=\"math inline\">\\(a \\cdot b = b \\cdot a\\)</span></li>\n<li><span class=\"math inline\">\\(a \\cdot (b \\cdot c) = (a \\cdot b) \\cdot\nc\\)</span></li>\n<li><span class=\"math inline\">\\(\\exists 1 \\ne 0 \\in A: \\,\\,\\,\\, 1 \\cdot\na = a\\)</span></li>\n<li><span class=\"math inline\">\\(\\forall a \\ne 0 \\in A \\,\\,\\,\\, \\exists\na^{-1} \\in A: \\,\\,\\,\\, a \\cdot a^{-1} = 1\\)</span></li>\n<li><span class=\"math inline\">\\(a \\cdot (b + c) = a \\cdot b + a \\cdot\nc\\)</span></li>\n</ol>",
+        "url": "кольца-и-поля.html#definition-2"
+    },
+    {
+        "keyword": "характеристика поля",
+        "html": "<p><a href=\"кольца-и-поля.html#definition-3\"><strong>Перейти к\nопределению:</strong></a> <em>Характеристика поля</em> <span\nclass=\"math inline\">\\(F\\)</span> – это минимальное натуральное число\n<span class=\"math inline\">\\(n\\)</span>, такое что <span\nclass=\"math inline\">\\(\\underbrace{1 + \\ldots + 1}_{n} = 0\\)</span>. Если\nтакого числа не существует, то характеристика либо <span\nclass=\"math inline\">\\(0\\)</span> либо <span\nclass=\"math inline\">\\(\\infty\\)</span>.</p>",
+        "url": "кольца-и-поля.html#definition-3"
+    },
+    {
+        "keyword": "комплексные числа",
+        "html": "<p><a href=\"поле-комплексных-чисел.html#definition-4\"><strong>Перейти к\nопределению:</strong></a> (<em>Комплексные числа</em>) Множество <span\nclass=\"math inline\">\\(\\mathbb{C} = \\{(a, b): \\,\\,\\,\\, a, b \\in\n\\mathbb{R}\\}\\)</span> – это множество комплексных чисел. Пара <span\nclass=\"math inline\">\\((a, b)\\)</span> записывается в виде <span\nclass=\"math inline\">\\(a + bi\\)</span>.</p>",
+        "url": "поле-комплексных-чисел.html#definition-4"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"поле-комплексных-чисел.html#definition-5\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(\\sqrt[n]z = \\{w\n\\in \\mathbb{C}: \\,\\,\\,\\, w^n = c\\}, \\,\\,\\,\\, n \\in\n\\mathbb{N}\\)</span></p>",
+        "url": "поле-комплексных-чисел.html#definition-5"
+    },
+    {
+        "keyword": "циклическая порождающий элемент",
+        "html": "<p><a href=\"поле-комплексных-чисел.html#definition-6\"><strong>Перейти к\nопределению:</strong></a> Группа <span class=\"math inline\">\\(G\\)</span>\n<em>циклическая</em>, если <span class=\"math inline\">\\(\\exists a \\in G:\n\\,\\,\\,\\, \\forall b \\in G \\,\\,\\,\\, \\exists k \\in \\mathbb{Z}: \\,\\,\\,\\, b =\na^k\\)</span>.<br></p>\n<p>Элемент <span class=\"math inline\">\\(a\\)</span> – <em>порождающий\nэлемент</em> группы <span class=\"math inline\">\\(G\\)</span>.</p>",
+        "url": "поле-комплексных-чисел.html#definition-6"
+    },
+    {
+        "keyword": "первообразный корень",
+        "html": "<p><a href=\"поле-комплексных-чисел.html#definition-7\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(a \\in\n\\sqrt[n]{1}\\)</span> – <em>первообразный корень</em>, если он является\nпорождающим элементом <span\nclass=\"math inline\">\\(\\sqrt[n]{1}\\)</span>.</p>",
+        "url": "поле-комплексных-чисел.html#definition-7"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"многочлены.html#definition-8\"><strong>Перейти к\nопределению:</strong></a> Пусть <span class=\"math inline\">\\(F\\)</span>\nполе, <span class=\"math inline\">\\(x\\)</span> – переменная. Тогда\nмножество <span class=\"math inline\">\\(F[x] = \\{a_0 + a_1\\cdot x + a_2\n\\cdot x^2 + \\ldots + a_n \\cdot x^n, \\,\\,\\,\\, a_k \\in F\\}\\)</span> с\nоперациями <span class=\"math inline\">\\(+\\)</span> и <span\nclass=\"math inline\">\\(\\cdot\\)</span>, для которого выполнено:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(+\\)</span></li>\n<li><span class=\"math inline\">\\(\\cdot\\)</span></li>\n</ol>",
+        "url": "многочлены.html#definition-8"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"многочлены.html#definition-10\"><strong>Перейти к\nопределению:</strong></a> (степень многочлена) <span\nclass=\"math inline\">\\(\\operatorname{deg} f\\)</span> – это <span\nclass=\"math inline\">\\(\\max\\{k: \\,\\,\\,\\, a_k \\ne 0\\}\\)</span></p>",
+        "url": "многочлены.html#definition-10"
+    },
+    {
+        "keyword": "моном",
+        "html": "<p><a href=\"многочлены.html#definition-9\"><strong>Перейти к\nопределению:</strong></a> <em>Моном</em> – это <span\nclass=\"math inline\">\\(a_k \\cdot x^k \\,\\,\\,\\,\\,\\,\\,\\, \\forall k &lt;\n\\operatorname{deg} f\\)</span>.</p>",
+        "url": "многочлены.html#definition-9"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"многочлены.html#definition-11\"><strong>Перейти к\nопределению:</strong></a> Старший член это <span\nclass=\"math inline\">\\(a_{\\operatorname{deg} f} \\cdot\nx^{\\operatorname{deg} f}\\)</span>.</p>",
+        "url": "многочлены.html#definition-11"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"многочлены.html#definition-12\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(g \\,\\,|\\,\\,\nf\\)</span>, если <span class=\"math inline\">\\(\\exists h \\in F[x]:\n\\,\\,\\,\\, f = g h\\)</span></p>",
+        "url": "многочлены.html#definition-12"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"многочлены.html#definition-13\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(\\gcd{(f,\ng)}\\)</span> – это многочлен <span class=\"math inline\">\\(d\\)</span>\nмаксимальной степени такой что <span class=\"math inline\">\\(d \\,\\,|\\,\\,\nf\\)</span> и <span class=\"math inline\">\\(d \\,\\,|\\,\\, g\\)</span></p>",
+        "url": "многочлены.html#definition-13"
+    },
+    {
+        "keyword": "неприводимый",
+        "html": "<p><a href=\"многочлены.html#definition-14\"><strong>Перейти к\nопределению:</strong></a> Многочлен ненулевой степени <span\nclass=\"math inline\">\\(p \\in F[x]\\)</span> – <em>неприводимый</em>, если\nдля любого его представления в виде произведения степень одного из\nсомножителей равна <span class=\"math inline\">\\(0\\)</span>.</p>",
+        "url": "многочлены.html#definition-14"
+    },
+    {
+        "keyword": "корень кратности",
+        "html": "<p><a href=\"многочлены.html#definition-15\"><strong>Перейти к\nопределению:</strong></a> Пусть <span class=\"math inline\">\\(f \\in\nF[x]\\)</span>. <span class=\"math inline\">\\(c\\)</span> – <em>корень\nкратности</em> <span class=\"math inline\">\\(k\\)</span> многочлена <span\nclass=\"math inline\">\\(f\\)</span>, если <span class=\"math inline\">\\(f(x)\n= (x - c)^k\\cdot g(x)\\)</span>.</p>",
+        "url": "многочлены.html#definition-15"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"многочлены.html#definition-16\"><strong>Перейти к\nопределению:</strong></a> Производная многочлена <span\nclass=\"math inline\">\\(f \\in F[x], \\,\\,\\,\\,\\,\\,\\,\\, f = a_0 + a_1 x + a_2\nx^2 + \\ldots + a_n x^n\\)</span> – это многочлен <span\nclass=\"math inline\">\\(f’ = a_1 + 2 \\cdot a_2 x + \\ldots + n \\cdot a_n\nx^{n - 1}\\)</span>.</p>",
+        "url": "многочлены.html#definition-16"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"поле-рациональных-дробей.html#definition-17\"><strong>Перейти\nк определению:</strong></a> Рассмотрим множество <span\nclass=\"math inline\">\\(A\\)</span> пар многочленов над полем <span\nclass=\"math inline\">\\(F\\)</span>. Будем обозначать пару <span\nclass=\"math inline\">\\(f, g\\)</span> как <span\nclass=\"math inline\">\\(\\frac{f}{g}\\)</span>. Введем отношение\nэквивалентности: <span class=\"math inline\">\\(\\frac{f}{g} \\sim\n\\frac{f’}{g’}\\)</span>, если <span class=\"math inline\">\\(f \\cdot g’ = f’\n\\cdot g\\)</span>. Поле рациональных дробей над полем <span\nclass=\"math inline\">\\(F\\)</span> – это множество <span\nclass=\"math inline\">\\(F(x)\\)</span> классов эквивалентности множества\n<span class=\"math inline\">\\(A\\)</span>. Класс эквивалентности <span\nclass=\"math inline\">\\(f, g\\)</span> обозначается <span\nclass=\"math inline\">\\(\\frac{f}{g}\\)</span>.</p>\n<p>На множестве <span class=\"math inline\">\\(F(x)\\)</span> определены\nоперации:</p>\n<p><span class=\"math display\">\\[\\frac{f}{g}\\cdot \\frac{f’}{g’} = \\frac{f\n\\cdot f’}{g \\cdot g’}\\]</span> <span class=\"math display\">\\[\\frac{f}{g}\n+ \\frac{f’}{g’} = \\frac{f \\cdot g’ + g \\cdot f’}{g \\cdot\ng’}\\]</span></p>",
+        "url": "поле-рациональных-дробей.html#definition-17"
+    },
+    {
+        "keyword": "правильная дробь",
+        "html": "<p><a href=\"поле-рациональных-дробей.html#definition-18\"><strong>Перейти\nк определению:</strong></a> <span class=\"math inline\">\\(\\frac{f}{g} \\in\nF(x)\\)</span> – <em>правильная дробь</em>, если <span\nclass=\"math inline\">\\(\\operatorname{deg}f &lt;\n\\operatorname{deg}g\\)</span>.</p>",
+        "url": "поле-рациональных-дробей.html#definition-18"
+    },
+    {
+        "keyword": "простейшая дробь",
+        "html": "<p><a href=\"поле-рациональных-дробей.html#definition-19\"><strong>Перейти\nк определению:</strong></a> <span class=\"math inline\">\\(\\frac{f}{p^k}\n\\in F(x)\\)</span> – <em>простейшая дробь</em>, если <span\nclass=\"math inline\">\\(p\\)</span> – неприводимый многочлен над полем\n<span class=\"math inline\">\\(F\\)</span> и <span\nclass=\"math inline\">\\(\\operatorname{deg}f &lt;\n\\operatorname{deg}p\\)</span>.</p>",
+        "url": "поле-рациональных-дробей.html#definition-19"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"поле-рациональных-дробей.html#definition-20\"><strong>Перейти\nк определению:</strong></a> Кольцо многочленов от <span\nclass=\"math inline\">\\(n\\)</span> переменных – это множество <span\nclass=\"math inline\">\\(F[x_1, \\ldots, x_n] = F[x_1, \\ldots, x_{n -\n1}][x_n]\\)</span>.</p>",
+        "url": "поле-рациональных-дробей.html#definition-20"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"поле-рациональных-дробей.html#definition-21\"><strong>Перейти\nк определению:</strong></a> Моном – это элемент кольца многочленов от\n<span class=\"math inline\">\\(n\\)</span> переменных, представимый в виде\n<span class=\"math inline\">\\(a\\cdot x_1^{\\alpha_1}\\cdot \\ldots \\cdot\nx_n^{\\alpha_n}\\)</span>.</p>",
+        "url": "поле-рациональных-дробей.html#definition-21"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"поле-рациональных-дробей.html#definition-22\"><strong>Перейти\nк определению:</strong></a> (Лексикографический порядок на мономах)\nПусть <span class=\"math display\">\\[a = x_1^{\\alpha_1}\\cdot \\ldots \\cdot\nx_n^{\\alpha_n}\\]</span></p>\n<p><span class=\"math display\">\\[b = x_1^{\\beta_1}\\cdot \\ldots \\cdot\nx_n^{\\beta_n}\\]</span> <span class=\"math inline\">\\(a \\succ b\\)</span>,\nесли показатель (степень) первой переменной, которая входит в <span\nclass=\"math inline\">\\(a\\)</span> и <span\nclass=\"math inline\">\\(b\\)</span> с разными показателями, больше\nпоказателя второй.</p>",
+        "url": "поле-рациональных-дробей.html#definition-22"
+    },
+    {
+        "keyword": "старший член",
+        "html": "<p><a href=\"поле-рациональных-дробей.html#definition-23\"><strong>Перейти\nк определению:</strong></a> Моном многочлена, который лексикографически\nстарше всех остальных мономов многочлена – <em>старший член</em>\nмногочлена.</p>",
+        "url": "поле-рациональных-дробей.html#definition-23"
+    },
+    {
+        "keyword": "симметрический многочлен",
+        "html": "<p><a\nhref=\"симметрические-многочлены.html#definition-24\"><strong>Перейти к\nопределению:</strong></a> Если <span class=\"math inline\">\\(\\forall\n\\sigma \\in S_n\\)</span></p>\n<p><span class=\"math display\">\\[f(x_1, \\ldots, x_n) = f(x_{\\sigma(1)},\n\\ldots, x_{\\sigma(n)}),\\]</span> то <span\nclass=\"math inline\">\\(f\\)</span> – <em>симметрический\nмногочлен</em>.</p>",
+        "url": "симметрические-многочлены.html#definition-24"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a\nhref=\"симметрические-многочлены.html#definition-25\"><strong>Перейти к\nопределению:</strong></a> (элементарные симметричекие многочлены)</p>\n<p><span class=\"math display\">\\[\\sigma_1 = x_1 + \\ldots + x_n\\]</span>\n<span class=\"math display\">\\[\\sigma_2 = x_1\\cdot x_2 + x_1 \\cdot x_3 +\n\\ldots + x_1\\cdot x_n + \\ldots\\]</span> <span\nclass=\"math display\">\\[\\vdots\\]</span> <span\nclass=\"math display\">\\[\\sigma_k = \\displaystyle \\sum_{i_1 &lt; i_2 &lt;\n\\ldots &lt; i_k}x_{i_1}\\cdot \\ldots \\cdot x_{i_k}\\]</span> <span\nclass=\"math display\">\\[\\vdots\\]</span> <span\nclass=\"math display\">\\[\\sigma_n = x_1\\cdot \\ldots x_n\\]</span></p>",
+        "url": "симметрические-многочлены.html#definition-25"
+    }
+]

@@ -11,7 +11,9 @@
     
     <title>Кольца и поля</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="определители.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="поле-комплексных-чисел.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="определители.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="поле-комплексных-чисел.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,14 +256,11 @@
 
 <h1 data-number="2" id="кольца-и-поля">Кольца и поля</h1>
 <div id="definition-0">
-<p><strong>Определение:</strong> Группа – это множество <span
+<p><strong>Определение: </strong><em>Группа</em> – это множество <span
 class="math inline">\(A\)</span> с операцией <span
 class="math inline">\(+: A \times A \to A\)</span>, для которого
 выполнены аксиомы:</p>
-</div>
 <ol type="1">
-<li><span class="math inline">\(a + b = b + a, \,\,\,\, \forall a, b \in
-A\)</span> (коммутативность)</li>
 <li><span class="math inline">\(a + (b + c) = (a + b) + c, \,\,\,\,
 \forall a, b, c \in A\)</span> (ассоциативность)</li>
 <li><span class="math inline">\(\exists 0 \in A: \,\,\,\, \forall a \in
@@ -262,13 +268,17 @@ A \,\,\,\, a + 0 = a\)</span></li>
 <li><span class="math inline">\(\forall a \in A \,\,\,\, \exists (-a):
 \,\,\,\, a + (-a) = 0\)</span></li>
 </ol>
+<p>Если также верно: <span class="math inline">\(a + b = b + a, \,\,\,\,
+\forall a, b \in A\)</span> (коммутативность), то группа
+<em>абелева</em>.</p>
+<p><strong>Группа не обязательно коммутативная!</strong></p>
+</div>
 <div id="definition-1">
-<p><strong>Определение:</strong> Кольцо – это множество <span
+<p><strong>Определение: </strong><em>Кольцо</em> – это множество <span
 class="math inline">\(A\)</span> с операцией <span
 class="math inline">\(+: A \times A \to A\)</span> и <span
 class="math inline">\(\cdot: A \times A \to A\)</span>, для которого
 выполнены аксиомы:</p>
-</div>
 <ol type="1">
 <li>Относительно сложения – это коммутативная (абелева) группа.</li>
 <li><span class="math inline">\(a \cdot (b + c) = a \cdot b + a \cdot c,
@@ -276,10 +286,11 @@ class="math inline">\(\cdot: A \times A \to A\)</span>, для которого
 <li><span class="math inline">\((b + c) \cdot a = b \cdot a + c \cdot a,
 \,\,\,\, \forall a, b, c \in A\)</span></li>
 </ol>
+</div>
 <div id="definition-2">
-<p><strong>Определение:</strong> Поле – это коммутативное, ассоциативное
-(относительно умножения) кольцо с единицей, в котором каждый ненулевой
-элемент обратим.</p>
+<p><strong>Определение: </strong><em>Поле</em> – это коммутативное,
+ассоциативное (относительно умножения) кольцо с единицей, в котором
+каждый ненулевой элемент обратим.</p>
 <p>В кванторах:</p>
 <p>Поле – это множество <span class="math inline">\(A\)</span> с
 операциями сложения <span class="math inline">\(+: A \times A \to
@@ -307,7 +318,7 @@ c\)</span></li>
 <h2 data-number="2.1" id="делители-нуля-и-обратимые-элементы">Делители
 нуля и обратимые элементы</h2>
 <div id="statement-0">
-<p><strong>Утверждение:</strong> В поле $F нет делителей нуля, то есть
+<p><strong>Утверждение: </strong>В поле $F нет делителей нуля, то есть
 из <span class="math inline">\(a \cdot b = 0\)</span> следует <span
 class="math inline">\(a = 0\)</span> или <span class="math inline">\(b =
 0\)</span></p>
@@ -326,7 +337,7 @@ class="math inline">\(a = 0\)</span> или <span class="math inline">\(b =
 id="число-решений-системы-линейных-уравнений-над-конечным-полем">Число
 решений системы линейных уравнений над конечным полем</h2>
 <div id="statement-1">
-<p><strong>Утверждение:</strong> Число решений системы линейных
+<p><strong>Утверждение: </strong>Число решений системы линейных
 уравнений над конечным полем <span class="math inline">\(F\)</span>
 равно <span class="math inline">\(0\)</span>, если система несовместна,
 и <span class="math inline">\(|F|^k\)</span>, где <span
@@ -338,7 +349,7 @@ class="math inline">\(F\)</span>.</p>
 </div>
 <h2 data-number="2.5" id="характеристика-поля">Характеристика поля</h2>
 <div id="definition-3">
-<p><strong>Определение:</strong> Характеристика поля <span
+<p><strong>Определение: </strong><em>Характеристика поля</em> <span
 class="math inline">\(F\)</span> – это минимальное натуральное число
 <span class="math inline">\(n\)</span>, такое что <span
 class="math inline">\(\underbrace{1 + \ldots + 1}_{n} = 0\)</span>. Если
@@ -347,7 +358,7 @@ class="math inline">\(0\)</span> либо <span
 class="math inline">\(\infty\)</span>.</p>
 </div>
 <div id="statement-2">
-<p><strong>Утверждение:</strong> Характеристика поля <span
+<p><strong>Утверждение: </strong>Характеристика поля <span
 class="math inline">\(\operatorname{char} F\)</span> либо <span
 class="math inline">\(0\)</span> либо простое число.</p>
 <p><em>Доказательство:</em> Следует из <a
@@ -357,7 +368,7 @@ href="кольца-и-поля.html#statement-0">отсутствия делит
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="определители.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>
