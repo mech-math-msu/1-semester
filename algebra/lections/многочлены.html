@@ -11,6 +11,7 @@
     
     <title>Многочлены</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -259,8 +269,8 @@
 id="кольцо-многочленов-от-одной-переменной-над-полем">Кольцо многочленов
 от одной переменной над полем</h2>
 <div id="definition-8">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(F\)</span> поле, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(F\)</span> поле, <span
 class="math inline">\(x\)</span> – переменная. Тогда множество <span
 class="math inline">\(F[x] = \{a_0 + a_1\cdot x + a_2 \cdot x^2 + \ldots
 + a_n \cdot x^n, \,\,\,\, a_k \in F\}\)</span> с операциями <span
@@ -276,47 +286,51 @@ class="math inline">\(\cdot\)</span>, для которого выполнено
 <p><span class="math display">\[f = f(x) = a_0 + a_1\cdot x + a_2 \cdot
 x^2 + \ldots + a_n \cdot x^n\]</span></p>
 <div id="definition-10">
-<p><strong>Определение: </strong>(степень многочлена) <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(степень многочлена) <span
 class="math inline">\(\operatorname{deg} f\)</span> – это <span
 class="math inline">\(\max\{k: \,\,\,\, a_k \ne 0\}\)</span></p>
 </div>
 <div id="definition-9">
-<p><strong>Определение: </strong><em>Моном</em> – это <span
-class="math inline">\(a_k \cdot x^k \,\,\,\,\,\,\,\, \forall k &lt;
-\operatorname{deg} f\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Моном</em> – это <span class="math inline">\(a_k
+\cdot x^k \,\,\,\,\,\,\,\, \forall k &lt; \operatorname{deg}
+f\)</span>.</p>
 </div>
 <div id="definition-11">
-<p><strong>Определение: </strong>Старший член это <span
-class="math inline">\(a_{\operatorname{deg} f} \cdot
+<p><span class="margin-lft"><strong>Определение: </strong></span>Старший
+член это <span class="math inline">\(a_{\operatorname{deg} f} \cdot
 x^{\operatorname{deg} f}\)</span>.</p>
 </div>
 <h2 data-number="4.3" id="степень-произведения-многочленов">Степень
 произведения многочленов</h2>
 <div id="statement-8">
-<p><strong>Утверждение: </strong><span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math display">\[\operatorname{deg} (f + g) \le
 \max\{\operatorname{deg} f, \operatorname{deg} g\}\]</span> <span
 class="math display">\[\operatorname{deg} (f \cdot g) =
 \operatorname{deg} f + \operatorname{deg} g\]</span></p>
-<p><em>Доказательство:</em> Так как в поле нет делителей нуля, то для
-ненулевых многочленов (коэффиценты при старшем члене не равны нулю)
-коэффицент при старшем члене их произведения не ноль <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Так как в
+поле нет делителей нуля, то для ненулевых многочленов (коэффиценты при
+старшем члене не равны нулю) коэффицент при старшем члене их
+произведения не ноль <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="4.4"
 id="отсутствие-делителей-нуля-и-обратимые-элементы-в-кольце-многочленов-над-полем">Отсутствие
 делителей нуля и обратимые элементы в кольце многочленов над полем</h2>
 <div id="corollary-0">
-<p><strong>Следствие: </strong>В кольце многочленов <span
-class="math inline">\(F[x]\)</span> нет делителей нуля.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Следствие: </strong></span>В кольце
+многочленов <span class="math inline">\(F[x]\)</span> нет делителей
+нуля.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="corollary-1">
-<p><strong>Следствие: </strong>В кольце многочленов <span
-class="math inline">\(F[x]\)</span> обратимы только многочлены нулевой
-степени, то есть элементы поля <span
+<p><span class="margin-lft"><strong>Следствие: </strong></span>В кольце
+многочленов <span class="math inline">\(F[x]\)</span> обратимы только
+многочлены нулевой степени, то есть элементы поля <span
 class="math inline">\(F\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="4.5"
 id="деление-с-остатком-в-кольце-многочленов-от-одной-переменной">Деление
@@ -326,12 +340,13 @@ class="math display">\[f = a_0 + a_1 x + a_2 x^2 + \ldots + a_n
 x^n\]</span> <span class="math display">\[g = b_0 + b_1 x + b_2 x^2 +
 \ldots + b_m x^m\]</span></p>
 <div id="theorem-1">
-<p><strong>Теорема: </strong><span class="math inline">\(\forall f, g
-\in F[x] \,\,\,\, \exists h, r \in F[x]: \,\,\,\, f = g \cdot h +
-r\)</span>, при этом <span class="math inline">\(\operatorname{deg}r
-&lt; \operatorname{deg}g\)</span> или <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span><span
+class="math inline">\(\forall f, g \in F[x] \,\,\,\, \exists h, r \in
+F[x]: \,\,\,\, f = g \cdot h + r\)</span>, при этом <span
+class="math inline">\(\operatorname{deg}r &lt;
+\operatorname{deg}g\)</span> или <span
 class="math inline">\(\operatorname{deg}r = 0\)</span></p>
-<p><em>Доказательство:</em> Если <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Если <span
 class="math inline">\(\operatorname{deg}f &lt;
 \operatorname{deg}g\)</span>, то очевидно. Иначе <span
 class="math inline">\(\operatorname{deg}f \ge
@@ -349,21 +364,23 @@ r_2\)</span>.</p>
 id="наибольший-общий-делитель-в-кольце-многочленов-от-одной-переменной-над-полем">Наибольший
 общий делитель в кольце многочленов от одной переменной над полем</h2>
 <div id="definition-12">
-<p><strong>Определение: </strong><span class="math inline">\(g \,\,|\,\,
-f\)</span>, если <span class="math inline">\(\exists h \in F[x]:
-\,\,\,\, f = g h\)</span></p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(g \,\,|\,\, f\)</span>, если <span
+class="math inline">\(\exists h \in F[x]: \,\,\,\, f = g h\)</span></p>
 </div>
 <div id="definition-13">
-<p><strong>Определение: </strong><span class="math inline">\(\gcd{(f,
-g)}\)</span> – это многочлен <span class="math inline">\(d\)</span>
-максимальной степени такой что <span class="math inline">\(d \,\,|\,\,
-f\)</span> и <span class="math inline">\(d \,\,|\,\, g\)</span></p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(\gcd{(f, g)}\)</span> – это многочлен <span
+class="math inline">\(d\)</span> максимальной степени такой что <span
+class="math inline">\(d \,\,|\,\, f\)</span> и <span
+class="math inline">\(d \,\,|\,\, g\)</span></p>
 </div>
 <div id="statement-9">
-<p><strong>Утверждение: </strong><span class="math inline">\(\forall f,
-g \in F[x] \,\,\,\, \exists \gcd{(f, g)}\)</span> и <span
-class="math inline">\(\gcd{(f, g)}\)</span> – единственный.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
+class="math inline">\(\forall f, g \in F[x] \,\,\,\, \exists \gcd{(f,
+g)}\)</span> и <span class="math inline">\(\gcd{(f, g)}\)</span> –
+единственный.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="4.7"
 id="делимость-наибольшего-общего-делителя-на-любой-общий-делитель">Делимость
@@ -372,7 +389,8 @@ id="делимость-наибольшего-общего-делителя-на
 <h2 data-number="4.9" id="неприводимые-многочлены">Неприводимые
 многочлены</h2>
 <div id="definition-14">
-<p><strong>Определение: </strong>Многочлен ненулевой степени <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Многочлен ненулевой степени <span
 class="math inline">\(p \in F[x]\)</span> – <em>неприводимый</em>, если
 для любого его представления в виде произведения степень одного из
 сомножителей равна <span class="math inline">\(0\)</span>.</p>
@@ -385,13 +403,14 @@ id="теорема-об-однозначном-разложении-на-неп�
 об однозначном разложении на неприводимые множители в кольце многочленов
 от одной переменной над полем</h2>
 <div id="theorem-2">
-<p><strong>Теорема:
-</strong><strong>Теорема:</strong><a name="theorem-2"></a> <span
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span><strong>Теорема:</strong><a name="theorem-2"></a> <span
 class="math inline">\(\forall f \in F[x] \,\,\,\,\,\,\,\, \exists
 p_1\cdot \ldots \cdot p_n, \,\,\,\, p_k\)</span> – неприводимый <span
 class="math inline">\(\forall k\)</span> такие что <span
 class="math inline">\(f = p_1\cdot \ldots \cdot p_n\)</span>.</p>
-<p><em>Доказательство:</em> (индукция по степени многочлена)</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> (индукция по
+степени многочлена)</p>
 <p>Б: <span class="math inline">\(\operatorname{deg} f = 0 \Rightarrow
 p_1 = f, \,\,\,\, k = 1\)</span> Ш: <span class="math inline">\(f = f_1
 \cdot f_2 \Rightarrow\)</span> <span
@@ -408,12 +427,12 @@ class="math inline">\(\operatorname{deg} r(x) &lt; \operatorname{deg} (x
 - c) = 1 \Rightarrow \operatorname{deg} r(x) = 0 \Rightarrow r(x) = r
 \in F \Rightarrow f(c) = r\)</span></p>
 <div id="theorem-3">
-<p><strong>Теорема: </strong>(Безу) Пусть <span class="math inline">\(f
-\in F[x], \,\,\,\, f \ne 0\)</span>. <span
-class="math inline">\(c\)</span> – корень многочлена <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Безу)
+Пусть <span class="math inline">\(f \in F[x], \,\,\,\, f \ne 0\)</span>.
+<span class="math inline">\(c\)</span> – корень многочлена <span
 class="math inline">\(f \Leftrightarrow f(x) = (x - c)\cdot g(x),
 \,\,\,\, g(x) \ne 0\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span> Поделим <span
 class="math inline">\(f\)</span> с остатком на <span
 class="math inline">\(x - c\)</span>: <span class="math inline">\(f(x) =
@@ -427,9 +446,10 @@ class="math inline">\(f(x) = (x - c)\cdot g(x) \Rightarrow f(c) = 0
 <h2 data-number="4.12" id="корни-многочлена-и-их-кратности">Корни
 многочлена и их кратности</h2>
 <div id="definition-15">
-<p><strong>Определение: </strong>Пусть <span class="math inline">\(f \in
-F[x]\)</span>. <span class="math inline">\(c\)</span> – <em>корень
-кратности</em> <span class="math inline">\(k\)</span> многочлена <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f \in F[x]\)</span>. <span
+class="math inline">\(c\)</span> – <em>корень кратности</em> <span
+class="math inline">\(k\)</span> многочлена <span
 class="math inline">\(f\)</span>, если <span class="math inline">\(f(x)
 = (x - c)^k\cdot g(x)\)</span>.</p>
 </div>
@@ -438,11 +458,11 @@ id="число-корней-с-учетом-кратностей-многочл�
 корней с учетом кратностей многочлена над полем не превосходит его
 степени</h2>
 <div id="theorem-4">
-<p><strong>Теорема: </strong>Число корней с учетом кратностей многочлена
-<span class="math inline">\(f \in F[x]\)</span> не превосходит его
-степени.</p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(x_1,
-\ldots, x_m\)</span> корни многочлена <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Число
+корней с учетом кратностей многочлена <span class="math inline">\(f \in
+F[x]\)</span> не превосходит его степени.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(x_1, \ldots, x_m\)</span> корни многочлена <span
 class="math inline">\(f\)</span> возможно совпадающие. Тогда по <a
 href="многочлены.html#theorem-3">теореме Безу</a> <span
 class="math inline">\(f(x) = (x - x_1)\cdot(x - x_2)\cdot \ldots \cdot
@@ -458,29 +478,29 @@ class="math inline">\(\operatorname{deg}((x - x_1)\cdot(x - x_2)\cdot
 id="основная-теорема-алгебры-без-доказательства-в-этом-билете">Основная
 теорема алгебры (без доказательства в этом билете)</h2>
 <div id="theorem-5">
-<p><strong>Теорема: </strong>Над полем <span
-class="math inline">\(\mathbb{C}\)</span> у любого многочлена ненулевой
-степени существует корень.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Над полем
+<span class="math inline">\(\mathbb{C}\)</span> у любого многочлена
+ненулевой степени существует корень.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="4.15"
 id="неприводимые-многочлены-над-полями-комплексных-и-действительных-чисел">Неприводимые
 многочлены над полями комплексных и действительных чисел</h2>
 <div id="theorem-6">
-<p><strong>Теорема: </strong>Над полем <span
-class="math inline">\(\mathbb{C}\)</span> неприводим только линейный
-многочлен.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Над полем
+<span class="math inline">\(\mathbb{C}\)</span> неприводим только
+линейный многочлен.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="theorem-7">
-<p><strong>Теорема: </strong>Над полем <span
-class="math inline">\(\mathbb{R}\)</span> неприводимы линейные и
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Над полем
+<span class="math inline">\(\mathbb{R}\)</span> неприводимы линейные и
 многочлены вида <span class="math inline">\(ax^2 + bx + c\)</span>, у
 которых <span class="math inline">\(D = b^2 - 4ac &lt; 0\)</span>.</p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(f\)</span>
-неприводим над полем <span class="math inline">\(\mathbb{R}\)</span>.
-Рассмотрим этот многочлен над полем <span
-class="math inline">\(\mathbb{C}\)</span>, по <a
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(f\)</span> неприводим над полем <span
+class="math inline">\(\mathbb{R}\)</span>. Рассмотрим этот многочлен над
+полем <span class="math inline">\(\mathbb{C}\)</span>, по <a
 href="многочлены.html#theorem-5">основной теореме алгебры</a> <span
 class="math inline">\(\exists c \in \mathbb{C}: \,\,\,\,\,\,\,\, f(c) =
 0 \Rightarrow f(x) = (x -- c)\cdot g(x)\)</span>. Так как <span
@@ -497,24 +517,26 @@ c\cdot \overline{c})\cdot h(x) \,\,\,\,\blacksquare\)</span></p>
 id="операция-дифференцирования-в-кольце-многочленов">Операция
 дифференцирования в кольце многочленов</h2>
 <div id="definition-16">
-<p><strong>Определение: </strong>Производная многочлена <span
-class="math inline">\(f \in F[x], \,\,\,\,\,\,\,\, f = a_0 + a_1 x + a_2
-x^2 + \ldots + a_n x^n\)</span> – это многочлен <span
-class="math inline">\(f’ = a_1 + 2 \cdot a_2 x + \ldots + n \cdot a_n
-x^{n - 1}\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Производная многочлена <span class="math inline">\(f \in
+F[x], \,\,\,\,\,\,\,\, f = a_0 + a_1 x + a_2 x^2 + \ldots + a_n
+x^n\)</span> – это многочлен <span class="math inline">\(f’ = a_1 + 2
+\cdot a_2 x + \ldots + n \cdot a_n x^{n - 1}\)</span>.</p>
 </div>
 <h3 data-number="4.16.1" id="свойства-производной">Свойства
 производной</h3>
 <div id="theorem-8">
-<p><strong>Теорема: </strong>(Свойства производной) Пусть <span
-class="math inline">\(f, g \in F[x]\)</span>. Тогда</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Свойства
+производной) Пусть <span class="math inline">\(f, g \in F[x]\)</span>.
+Тогда</p>
 <ol type="1">
 <li><span class="math display">\[(f + g)’ = f’ + g’\]</span></li>
 <li><span class="math display">\[(f \cdot g)’ = f’\cdot g + g’ \cdot
 f\]</span></li>
 </ol>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(f = f_1 +
-f_2\)</span> и <span class="math inline">\(\begin{cases}
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(f = f_1 + f_2\)</span> и <span
+class="math inline">\(\begin{cases}
   (f_1 \cdot g)’ = f_1’\cdot g + g’ \cdot f_1\\
   (f_2 \cdot g)’ = f_2’\cdot g + g’ \cdot f_2
 \end{cases}\)</span>. Тогда <span class="math inline">\((f \cdot g)’ =
@@ -532,33 +554,34 @@ id="поведение-при-дифференцировании-кратнос�
 при дифференцировании кратности корней многочлена над полем
 характеристики ноль</h2>
 <div id="theorem-9">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f \in
-F[x], \,\,\,\, c\)</span> – корень кратности <span
-class="math inline">\(k\)</span> многочлена <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f \in F[x], \,\,\,\, c\)</span> – корень кратности
+<span class="math inline">\(k\)</span> многочлена <span
 class="math inline">\(f\)</span>, <span
 class="math inline">\(\operatorname{char}F \nmid k\)</span>. Тогда <span
 class="math inline">\(c\)</span> – корень кратности <span
 class="math inline">\(k - 1\)</span> у производной многочлена <span
 class="math inline">\(f’\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math display">\[f(x) = (x -
-c)^k \cdot g(x), \,\,\,\, g(c) \ne 0\]</span> <span
-class="math display">\[f’(x) = k \cdot (x - c)^{k - 1} \cdot g(x) + (x -
-c)^k \cdot g’(x) = (x - c)^{k - 1} \cdot (k \cdot g(x) + (x - c)\cdot
-g’(x)), \,\,\,\, g(c) \ne 0 \,\,\,\,\blacksquare\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math display">\[f(x) = (x - c)^k \cdot g(x), \,\,\,\, g(c) \ne
+0\]</span> <span class="math display">\[f’(x) = k \cdot (x - c)^{k - 1}
+\cdot g(x) + (x - c)^k \cdot g’(x) = (x - c)^{k - 1} \cdot (k \cdot g(x)
++ (x - c)\cdot g’(x)), \,\,\,\, g(c) \ne 0
+\,\,\,\,\blacksquare\]</span></p>
 </div>
 <h2 data-number="4.18"
 id="число-комплексных-корней-многочлена-с-учётом-кратности.-как-найти-число-различных-комплексных-корней-данного-многочлена">Число
 комплексных корней многочлена с учётом кратности. Как найти число
 различных комплексных корней данного многочлена?</h2>
 <div id="theorem-10">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f \in
-\mathbb{C}[x], f \ne 0\)</span>. Тогда у многочлена <span
-class="math inline">\(\frac{f}{\gcd{(f, f’)}}\)</span> те же корни, что
-и у <span class="math inline">\(f\)</span>, но кратности <span
-class="math inline">\(1\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math display">\[f = (x -
-x_1)^{k_1}\cdot (x - x_2)^{k_2} \cdot \ldots \cdot (x - x_m)^{k_m} \cdot
-g(x)\]</span></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f \in \mathbb{C}[x], f \ne 0\)</span>. Тогда у
+многочлена <span class="math inline">\(\frac{f}{\gcd{(f, f’)}}\)</span>
+те же корни, что и у <span class="math inline">\(f\)</span>, но
+кратности <span class="math inline">\(1\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math display">\[f = (x - x_1)^{k_1}\cdot (x - x_2)^{k_2} \cdot
+\ldots \cdot (x - x_m)^{k_m} \cdot g(x)\]</span></p>
 <p>По <a href="многочлены.html#theorem-9">теореме</a> <span
 class="math display">\[f’ = (x - x_1)^{k_1 - 1}\cdot (x - x_2)^{k_2 - 1}
 \cdot \ldots \cdot (x - x_m)^{k_m - 1} \cdot h(x)\]</span></p>

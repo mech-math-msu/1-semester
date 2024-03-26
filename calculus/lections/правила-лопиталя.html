@@ -11,6 +11,7 @@
     
     <title>Правила Лопиталя</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -256,22 +266,24 @@
 
 <h1 data-number="7" id="правила-лопиталя">Правила Лопиталя</h1>
 <div id="theorem-39">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f(x),
-g(x) \in \mathcal{D}(B(x_0)),\,\,\,\, g(x) \ne 0 \,\,\,\, \forall x \in
-\mathring{B}(x_0), \,\,\,\, g’(x_0) \ne 0, \,\,\,\, g(x_0) = f(x_0) =
-0.\)</span> Тогда <span class="math display">\[\displaystyle \lim_{x\to
-x_0}\frac{f(x)}{g(x)} = \frac{f’(x_0)}{g’(x_0)}\]</span></p>
-<p><em>Доказательство:</em> <span class="math display">\[\displaystyle
-\lim_{x\to x_0}\frac{f(x)}{g(x)} = \displaystyle \lim_{x\to
-x_0}\frac{f(x) - f(x_0)}{g(x) - g(x_0)} = \displaystyle \lim_{x\to
-x_0}\frac{\frac{f(x) - f(x_0)}{x - x_0}}{\frac{g(x) - g(x_0)}{{x -
-x_0}}} = \frac{f’(x_0)}{g’(x_0)} \,\,\,\,\blacksquare\]</span></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f(x), g(x) \in \mathcal{D}(B(x_0)),\,\,\,\, g(x)
+\ne 0 \,\,\,\, \forall x \in \mathring{B}(x_0), \,\,\,\, g’(x_0) \ne 0,
+\,\,\,\, g(x_0) = f(x_0) = 0.\)</span> Тогда <span
+class="math display">\[\displaystyle \lim_{x\to x_0}\frac{f(x)}{g(x)} =
+\frac{f’(x_0)}{g’(x_0)}\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math display">\[\displaystyle \lim_{x\to x_0}\frac{f(x)}{g(x)} =
+\displaystyle \lim_{x\to x_0}\frac{f(x) - f(x_0)}{g(x) - g(x_0)} =
+\displaystyle \lim_{x\to x_0}\frac{\frac{f(x) - f(x_0)}{x -
+x_0}}{\frac{g(x) - g(x_0)}{{x - x_0}}} = \frac{f’(x_0)}{g’(x_0)}
+\,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-40">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f(x),
-g(x) \in \mathcal{D}(B(x_0)), \,\,\,\, g(x) \ne 0, \,\,\,\, g’(x) \ne 0,
-\,\,\,\, \displaystyle \lim_{x\to x_0}f(x) = \displaystyle \lim_{x\to
-x_0}g(x) = 0.\)</span> Тогда</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f(x), g(x) \in \mathcal{D}(B(x_0)), \,\,\,\, g(x)
+\ne 0, \,\,\,\, g’(x) \ne 0, \,\,\,\, \displaystyle \lim_{x\to x_0}f(x)
+= \displaystyle \lim_{x\to x_0}g(x) = 0.\)</span> Тогда</p>
 <ol type="1">
 <li>Если <span class="math inline">\(\exists \displaystyle \lim_{x\to
 x_0}\frac{f’(x)}{g’(x)} = A\)</span>, то <span
@@ -282,8 +294,8 @@ x_0}\frac{f’(x)}{g’(x)} = \infty\)</span>, то <span
 class="math inline">\(\exists \displaystyle \lim_{x\to
 x_0}\frac{f(x)}{g(x)} = \infty\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em> Доопределим <span
-class="math inline">\(f(x)\)</span> и <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Доопределим
+<span class="math inline">\(f(x)\)</span> и <span
 class="math inline">\(g(x)\)</span> в т. <span
 class="math inline">\(x_0\)</span> нулями. По <a
 href="дифференцируемость-функций-первый-дифференциал.html#theorem-35">формуле
@@ -292,10 +304,11 @@ href="дифференцируемость-функций-первый-дифф�
 g(x_0)} = \frac{f’(c)}{g’(c)}\)</span></p>
 </div>
 <div id="theorem-41">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f(x),
-g(x) \in \mathcal{D}(a, +\infty), \,\,\,\, a &gt; 0, \,\,\,\, g(x) \ne
-0, \,\,\,\, g’(x) \ne 0, \,\,\,\, \displaystyle \lim_{x\to +\infty}f(x)
-= \displaystyle \lim_{x\to +\infty}g(x) = 0.\)</span> Тогда</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f(x), g(x) \in \mathcal{D}(a, +\infty), \,\,\,\, a
+&gt; 0, \,\,\,\, g(x) \ne 0, \,\,\,\, g’(x) \ne 0, \,\,\,\,
+\displaystyle \lim_{x\to +\infty}f(x) = \displaystyle \lim_{x\to
++\infty}g(x) = 0.\)</span> Тогда</p>
 <ol type="1">
 <li>Если <span class="math inline">\(\exists \displaystyle \lim_{x\to
 +\infty}\frac{f’(x)}{g’(x)} = A\)</span>, то <span
@@ -306,8 +319,8 @@ class="math inline">\(\exists \displaystyle \lim_{x\to
 class="math inline">\(\exists \displaystyle \lim_{x\to
 +\infty}\frac{f(x)}{g(x)} = \infty\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em> Рассмотрим <span
-class="math inline">\(\phi(t) = f(\frac{1}{t}), \,\,\,\, \psi(t) =
+<p><span class="margin-lft"><em>Доказательство:</em></span> Рассмотрим
+<span class="math inline">\(\phi(t) = f(\frac{1}{t}), \,\,\,\, \psi(t) =
 g(\frac{1}{t})\)</span> на <span class="math inline">\((0,
 \frac{1}{a})\)</span>. <span class="math inline">\(\phi’(t) =
 -\frac{1}{t^2}\cdot f’(\frac{1}{t}), \,\,\,\, \psi’(t) =
@@ -317,10 +330,11 @@ href="правила-лопиталя.html#theorem-40">теореме</a> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-42">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f(x),
-g(x) \in \mathcal{D}(a - \delta, a), \,\,\,\, g(x) \ne 0, \,\,\,\, g’(x)
-\ne 0, \,\,\,\, \displaystyle \lim_{x\to a-0}f(x) = \displaystyle
-\lim_{x\to a-0}g(x) = 0.\)</span> Тогда</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f(x), g(x) \in \mathcal{D}(a - \delta, a),
+\,\,\,\, g(x) \ne 0, \,\,\,\, g’(x) \ne 0, \,\,\,\, \displaystyle
+\lim_{x\to a-0}f(x) = \displaystyle \lim_{x\to a-0}g(x) = 0.\)</span>
+Тогда</p>
 <ol type="1">
 <li>Если <span class="math inline">\(\exists \displaystyle \lim_{x\to
 a-0}\frac{f’(x)}{g’(x)} = A\)</span>, то <span
@@ -331,7 +345,7 @@ a-0}\frac{f’(x)(}{g’(x)} = \infty\)</span>, то <span
 class="math inline">\(\exists \displaystyle \lim_{x\to
 a-0}\frac{f(x)}{g(x)} = \infty\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li><span class="math inline">\(\displaystyle \lim_{x\to
 a-0}\frac{f’(x)}{g’(x)} = A\)</span>, то есть <span

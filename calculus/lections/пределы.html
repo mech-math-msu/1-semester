@@ -11,6 +11,7 @@
     
     <title>Пределы</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -260,7 +270,8 @@ id="предел-функции-по-коши-и-по-гейне-их-эквив
 функции по Коши и по Гейне, их эквивалентность. Основные свойства
 предела функции</h2>
 <div id="definition-0">
-<p><strong>Определение: </strong>(По Коши) Предел функции <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>(<em>По
+Коши</em>) <em>Предел функции</em> <span
 class="math inline">\(f(x)\)</span> при <span
 class="math inline">\(x\)</span> стремящемся к <span
 class="math inline">\(x_0\)</span> равен <span
@@ -272,7 +283,8 @@ class="math display">\[\forall \varepsilon &gt; 0 \,\,\,\, \exists
 x_0} f(x) = a\)</span></p>
 </div>
 <div id="definition-1">
-<p><strong>Определение: </strong>(По Гейне) Предел функции <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>(<em>По
+Гейне</em>) <em>Предел функции</em> <span
 class="math inline">\(f(x)\)</span> при <span
 class="math inline">\(x\)</span> стремящемся к <span
 class="math inline">\(x_0\)</span> равен <span
@@ -283,45 +295,47 @@ class="math inline">\(a\)</span>, если:</p>
 \exists \displaystyle \lim_{n\to \infty}f(x_n) = a\]</span></p>
 </div>
 <div id="theorem-0">
-<p><strong>Теорема: </strong>Определение предела по Коши <span
-class="math inline">\(\Leftrightarrow\)</span> определнию предела по
-Гейне.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Определение
+предела по Коши <span class="math inline">\(\Leftrightarrow\)</span>
+определнию предела по Гейне.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="theorem-7">
-<p><strong>Теорема: </strong>Если <span class="math inline">\(\exists
-\displaystyle \lim_{x\to x_0}f(x) = a\)</span>, то он единственный.</p>
-<p><em>Доказательство:</em> Гейне.</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если <span
+class="math inline">\(\exists \displaystyle \lim_{x\to x_0}f(x) =
+a\)</span>, то он единственный.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Гейне.</p>
 </div>
 <div id="theorem-8">
-<p><strong>Теорема: </strong>Если <span class="math inline">\(\exists
-\displaystyle \lim_{x\to x_0}f(x) = a\)</span>, то <span
-class="math inline">\(\exists c, \,\,\,\, \exists \delta &gt; 0:
-\,\,\,\,\forall x \in \mathring{B}_{\delta}(x_0) \,\,\,\, |f(x)| &lt;
-c\)</span></p>
-<p><em>Доказательство:</em> <span class="math inline">\(\exists \delta
-&gt; 0: \,\,\,\, \forall x: 0 &lt; |x - x_0| &lt; \delta \,\,\,\, |f(x)
-- a| &lt; 1 \Rightarrow a - 1 &lt; f(x) &lt; a + 1
-\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если <span
+class="math inline">\(\exists \displaystyle \lim_{x\to x_0}f(x) =
+a\)</span>, то <span class="math inline">\(\exists c, \,\,\,\, \exists
+\delta &gt; 0: \,\,\,\,\forall x \in \mathring{B}_{\delta}(x_0) \,\,\,\,
+|f(x)| &lt; c\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\exists \delta &gt; 0: \,\,\,\, \forall x: 0 &lt;
+|x - x_0| &lt; \delta \,\,\,\, |f(x) - a| &lt; 1 \Rightarrow a - 1 &lt;
+f(x) &lt; a + 1 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-9">
-<p><strong>Теорема: </strong>(Отделимость) Пусть <span
-class="math inline">\(\exists \displaystyle \lim_{x\to x_0}f(x) =
-a\)</span> и <span class="math inline">\(b \ne a\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(Отделимость) Пусть <span class="math inline">\(\exists
+\displaystyle \lim_{x\to x_0}f(x) = a\)</span> и <span
+class="math inline">\(b \ne a\)</span>. Тогда <span
 class="math inline">\(\exists \varepsilon &gt; 0, \,\,\,\, \exists
 \delta &gt; 0: \,\,\,\, f(\mathring{B}_{\delta}(x_0)) \cap
 B_{\varepsilon}(b) = \varnothing\)</span></p>
-<p><em>Доказательство:</em> <span class="math inline">\(\exists \delta
-&gt; 0: \,\,\,\, \forall x: 0 &lt; |x - x_0| &lt; \delta \,\,\,\, |f(x)
-- a| &lt; \frac{|b - a|}{3}\)</span>. Возьмем <span
-class="math inline">\(\varepsilon = \frac{|b - a|}{3}
-\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\exists \delta &gt; 0: \,\,\,\, \forall x: 0 &lt;
+|x - x_0| &lt; \delta \,\,\,\, |f(x) - a| &lt; \frac{|b -
+a|}{3}\)</span>. Возьмем <span class="math inline">\(\varepsilon =
+\frac{|b - a|}{3} \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-6">
-<p><strong>Определение: </strong>Пусть <span class="math inline">\(A
-\subset \mathbb{R}\)</span> и <span class="math inline">\(x_0 \in
-A’\)</span> (множество предельных точек <span
-class="math inline">\(A\)</span>). Если <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(A \subset \mathbb{R}\)</span> и <span
+class="math inline">\(x_0 \in A’\)</span> (множество предельных точек
+<span class="math inline">\(A\)</span>). Если <span
 class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists \delta
 &gt; 0: \,\,\,\, \forall x \in \mathring{B}_{\delta}(x_0) \cap A
 \,\,\,\, |f(x) - a| &lt; \varepsilon\)</span>, то <span
@@ -336,12 +350,12 @@ x_0, x \in A}f(x) = a\)</span></p>
 class="math inline">\(\displaystyle \lim_{x\to x_0+0}f(x)\)</span></p>
 </div>
 <div id="theorem-10">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(\displaystyle \lim_{x\to x_0, x \in A}f(x) =
 a\)</span> и <span class="math inline">\(A_1 \subset A, \,\,\,\, x_0 \in
 A_1\)</span>. Тогда <span class="math inline">\(\exists \displaystyle
 \lim_{x\to x_0, x \in A_1}f(x) = a\)</span></p>
-<p><em>Доказательство:</em> Гейне.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Гейне.</p>
 </div>
 <h2 data-number="1.2"
 id="о-символика-для-функций-бесконечно-малые-и-бесконечно-большие-функции.-исчисление-бесконечно-малых-арифметические-свойства-предела.-предельный-переход-в-неравенствах.-критерий-коши-существования-предела-функции">О-символика
@@ -349,23 +363,23 @@ id="о-символика-для-функций-бесконечно-малые-
 бесконечно малых, арифметические свойства предела. Предельный переход в
 неравенствах. Критерий Коши существования предела функции</h2>
 <div id="definition-4">
-<p><strong>Определение: </strong><span class="math inline">\(f(x) =
-\underline{\underline{O}}(g(x))\)</span>на <span
-class="math inline">\(\mathring{B}_{\delta}(x_0)\)</span>, при <span
-class="math inline">\(x \to x_0\)</span>, если</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(f(x) = \underline{\underline{O}}(g(x))\)</span>на
+<span class="math inline">\(\mathring{B}_{\delta}(x_0)\)</span>, при
+<span class="math inline">\(x \to x_0\)</span>, если</p>
 <p><span class="math display">\[\exists C&gt;0: \,\,\,\,|f(x)| \le C
 \cdot |g(x)| \,\,\,\, \forall x \in
 \mathring{B}_{\delta}(x_0)\]</span></p>
 </div>
 <div id="definition-5">
-<p><strong>Определение: </strong><span class="math inline">\(f(x) =
-\overline{\overline{o}}(g(x))\)</span>, при <span
-class="math inline">\(x \to x_0\)</span>, если</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(f(x) = \overline{\overline{o}}(g(x))\)</span>, при
+<span class="math inline">\(x \to x_0\)</span>, если</p>
 <p><span class="math display">\[f(x) = \alpha(x) \cdot g(x), \,\,\,\,
 \displaystyle \lim_{x\to x_0}\alpha(x) = 0\]</span></p>
 </div>
 <div id="definition-2">
-<p><strong>Определение: </strong><span
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
 class="math inline">\(f(x)\)</span> – бесконечно большая функция при
 <span class="math inline">\(x \to x_0 \,\,\,\, (x \to \infty)\)</span>,
 если:</p>
@@ -376,8 +390,8 @@ class="math inline">\(f(x)\)</span> – бесконечно большая фу
 x_0}f(x) = \infty\)</span></p>
 </div>
 <div id="definition-3">
-<p><strong>Определение: </strong><span
-class="math inline">\(f(x)\)</span> - бесконечно малая (функция) при
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(f(x)\)</span> – бесконечно малая (функция) при
 <span class="math inline">\(x \to x_0 \,\,\,\, (x \to \infty)\)</span>,
 если <span class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) = 0
 \,\,\,\, (\displaystyle \lim_{x\to \infty}f(x) = 0)\)</span></p>
@@ -386,36 +400,38 @@ class="math inline">\(\overline{\overline{o}}(1)\)</span>, при <span
 class="math inline">\(x \to x_0\)</span></p>
 </div>
 <div id="theorem-1">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(f(x)\)</span> бесконечно большая при <span
 class="math inline">\(x \to x_0\)</span>. Тогда <span
 class="math inline">\(\frac{1}{f(x)}\)</span> бесконечно малая при <span
 class="math inline">\(x \to x_0\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(\forall
-\varepsilon &gt; 0 \,\,\,\, \exists \delta &gt; 0: \forall x \in
-\mathring{B}_{\delta}(x_0) \,\,\,\, (x &gt; \delta) \,\,\,\,\,\,\,\,
-|f(x)| &gt; \varepsilon \Rightarrow \frac{1}{f(x)} &lt;
-\frac{1}{\varepsilon} \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists \delta
+&gt; 0: \forall x \in \mathring{B}_{\delta}(x_0) \,\,\,\, (x &gt;
+\delta) \,\,\,\,\,\,\,\, |f(x)| &gt; \varepsilon \Rightarrow
+\frac{1}{f(x)} &lt; \frac{1}{\varepsilon}
+\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-2">
-<p><strong>Теорема: </strong><span class="math inline">\(\displaystyle
-\lim_{x\to x_0}f(x) = a \Leftrightarrow f(x) - a
-=  \bar{\bar{o}}(1)\)</span>, при <span class="math inline">\(x \to
-x_0\)</span></p>
-<p><em>Доказательство:</em> <span class="math inline">\(\forall
-\varepsilon &gt; 0 \,\,\,\, \exists \delta &gt; 0: \,\,\,\, \forall x
-\in \mathring{B}_{\delta}(x_0) \,\,\,\, |f(x)| \in B_{\varepsilon}(a)
-\Rightarrow\)</span></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span><span
+class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) = a
+\Leftrightarrow f(x) - a =  \bar{\bar{o}}(1)\)</span>, при <span
+class="math inline">\(x \to x_0\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists \delta
+&gt; 0: \,\,\,\, \forall x \in \mathring{B}_{\delta}(x_0) \,\,\,\,
+|f(x)| \in B_{\varepsilon}(a) \Rightarrow\)</span></p>
 <p><span class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\,
 \exists \delta &gt; 0: \,\,\,\, \forall x \in \mathring{B}_{\delta}(x_0)
 \,\,\,\, |(f(x) - a) - 0| &lt; \varepsilon
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-3">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f(x) =
-\overline{\overline{o}}(1), \,\,\,\, g(x) = \overline{\overline{o}}(1),
-\,\,\,\, h(x) = \underline{\underline{O}}(1)\)</span>, при <span
-class="math inline">\(x \to x_0\)</span>. Тогда:</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f(x) = \overline{\overline{o}}(1), \,\,\,\, g(x) =
+\overline{\overline{o}}(1), \,\,\,\, h(x) =
+\underline{\underline{O}}(1)\)</span>, при <span class="math inline">\(x
+\to x_0\)</span>. Тогда:</p>
 <ol type="1">
 <li><span class="math display">\[f(x) \cdot g(x) =
 \overline{\overline{o}}(1)\]</span></li>
@@ -424,7 +440,7 @@ class="math inline">\(x \to x_0\)</span>. Тогда:</p>
 <li><span class="math display">\[f(x) \cdot h(x) =
 \overline{\overline{o}}(1)\]</span></li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li><span class="math inline">\(f(x) = \overline{\overline{o}}
 \Rightarrow \forall \displaystyle \{x_n\}_{n = 1}^{\infty}: \left(
@@ -455,13 +471,14 @@ class="math inline">\(\Rightarrow\)</span> множество
 </ol>
 </div>
 <div id="theorem-4">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) = a \ne
 0\)</span>. Тогда <span class="math inline">\(\exists
 \mathring{B}_{\delta}(x_0): \,\,\,\, \frac{1}{f(x)} =
 \underline{\underline{O}}(1)\)</span></p>
-<p><em>Доказательство:</em> Перепишу доказательство из конспекта. Ничего
-не понятно :( а ладно, может и понятно. не понятно все-таки.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Перепишу
+доказательство из конспекта. Ничего не понятно :( а ладно, может и
+понятно. не понятно все-таки.</p>
 <p><span class="math inline">\(\exists
 \mathring{B}_{\delta}(x_0)\)</span>, в которой <span
 class="math inline">\(f(x)\)</span> ограничена по <a
@@ -474,7 +491,7 @@ class="math inline">\(\exists \inf_\limits{x \in
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-5">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) = a\)</span> и
 <span class="math inline">\(\displaystyle \lim_{x\to x_0}g(x) =
 b\)</span>. Тогда</p>
@@ -487,25 +504,29 @@ x_0}f(x)\cdot g(x) = a \cdot b\)</span></li>
 class="math inline">\(\exists \displaystyle \lim_{x\to
 x_0}\frac{f(x)}{g(x)} = \frac{a}{b}\)</span></li>
 </ol>
-<p><em>Доказательство:</em> следует из доказанного выше.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> следует из
+доказанного выше.</p>
 </div>
 <div id="theorem-6">
-<p><strong>Теорема: </strong><span class="math display">\[\exists
-\displaystyle \lim_{x\to x_0}f(x) = a \Leftrightarrow \exists
-\displaystyle \lim_{x\to x_0+0}f(x) = a \,\,\,\, и \,\,\,\,\exists
-\displaystyle \lim_{x\to x_0-0}f(x) = a\]</span></p>
-<p><em>Доказательство:</em> записать определение.</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span><span
+class="math display">\[\exists \displaystyle \lim_{x\to x_0}f(x) = a
+\Leftrightarrow \exists \displaystyle \lim_{x\to x_0+0}f(x) = a \,\,\,\,
+и \,\,\,\,\exists \displaystyle \lim_{x\to x_0-0}f(x) = a\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> записать
+определение.</p>
 </div>
 <div id="theorem-11">
-<p><strong>Теорема: </strong>(Критерий Коши существования предела) <span
-class="math display">\[\exists \displaystyle \lim_{x\to x_0}f(x) = a
-\Leftrightarrow \forall \varepsilon &gt; 0 \,\,\,\, \exists \delta &gt;
-0: \,\,\,\, \forall x_1, x_2 \in \mathring{B}_{\delta}(x_0) \,\,\,\,
-|f(x_1) - f(x_2)| &lt; \varepsilon\]</span></p>
-<p><em>Доказательство:</em> <span class="math inline">\(\Rightarrow
-\,\,\,\, |f(x_1) - f(x_2)| = |f(x_1) - a - (f(x_2) - a)| \le |f(x_1) -
-a| + |f(x_2) - a| &lt; 2 \varepsilon \,\,\,\,\blacksquare\)</span> <span
-class="math inline">\(\Leftarrow \,\,\,\, ????\)</span></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Критерий
+Коши существования предела) <span class="math display">\[\exists
+\displaystyle \lim_{x\to x_0}f(x) = a \Leftrightarrow \forall
+\varepsilon &gt; 0 \,\,\,\, \exists \delta &gt; 0: \,\,\,\, \forall x_1,
+x_2 \in \mathring{B}_{\delta}(x_0) \,\,\,\, |f(x_1) - f(x_2)| &lt;
+\varepsilon\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\Rightarrow \,\,\,\, |f(x_1) - f(x_2)| = |f(x_1) -
+a - (f(x_2) - a)| \le |f(x_1) - a| + |f(x_2) - a| &lt; 2 \varepsilon
+\,\,\,\,\blacksquare\)</span> <span class="math inline">\(\Leftarrow
+\,\,\,\, ????\)</span></p>
 </div>
 
 

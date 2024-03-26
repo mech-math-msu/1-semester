@@ -11,6 +11,7 @@
     
     <title>Производная функции</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -259,8 +269,8 @@
 id="производная-суммы-произведения-и-отношения-функций">Производная
 суммы, произведения и отношения функций</h2>
 <div id="definition-13">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(f(x)\)</span> определена в <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена в <span
 class="math inline">\(B(x_0), \,\,\,\, \Delta x = x - x_0\)</span>. Если
 <span class="math display">\[\exists \displaystyle \lim_{\Delta x\to
 0}\frac{f(x + \Delta x) - f(x)}{\Delta x} = f’(x_0),\]</span> то <span
@@ -269,13 +279,14 @@ class="math inline">\(f’(x_0)\)</span> в т. <span
 class="math inline">\(x_0\)</span>.</p>
 </div>
 <div id="definition-14">
-<p><strong>Определение: </strong>Пусть <span class="math inline">\(A
-\subset \mathbb{R}, \,\,\,\, \Delta x = x - x_0\)</span>. Если <span
-class="math display">\[\exists \displaystyle \lim_{\Delta x\to 0, \Delta
-x + x_0 \in A}\frac{f(x + \Delta x) - f(x)}{\Delta x} =
-f’(x_0),\]</span> то <span class="math inline">\(f(x)\)</span> имеет
-производную <span class="math inline">\(f’(x_0)\)</span> по множеству
-<span class="math inline">\(A\)</span> в т. <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(A \subset \mathbb{R}, \,\,\,\, \Delta x = x
+- x_0\)</span>. Если <span class="math display">\[\exists \displaystyle
+\lim_{\Delta x\to 0, \Delta x + x_0 \in A}\frac{f(x + \Delta x) -
+f(x)}{\Delta x} = f’(x_0),\]</span> то <span
+class="math inline">\(f(x)\)</span> имеет производную <span
+class="math inline">\(f’(x_0)\)</span> по множеству <span
+class="math inline">\(A\)</span> в т. <span
 class="math inline">\(x_0\)</span>.</p>
 </div>
 <p><strong>Обозначение:</strong> <span
@@ -287,58 +298,64 @@ class="math inline">\(\displaystyle \lim_{\Delta x\to 0, \Delta x &gt;
 0}\frac{f(x + \Delta x) - f(x)}{\Delta x} \stackrel{def}{=} f’_{+}(x_0)
 \stackrel{def}{=} f’(x_0 + 0)\)</span></p>
 <div id="theorem-25">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(f(x)\)</span> имеет производную <span
 class="math inline">\(f’(x_0)\)</span> в т. <span
 class="math inline">\(x_0\)</span>. Тогда <span
 class="math inline">\(f(x)\)</span> непрерывна в т. <span
 class="math inline">\(x_0\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(\displaystyle
-\lim_{x\to x_0}(f(x) - f(x_0)) = \displaystyle \lim_{x\to x_0}\frac{f(x)
-- f(x_0)}{x - x_0}\cdot(x - x_0) = f’(x_0)\cdot 0 = 0\)</span>. А значит
-по <a href="пределы.html#theorem-2">теореме</a> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\displaystyle \lim_{x\to x_0}(f(x) - f(x_0)) =
+\displaystyle \lim_{x\to x_0}\frac{f(x) - f(x_0)}{x - x_0}\cdot(x - x_0)
+= f’(x_0)\cdot 0 = 0\)</span>. А значит по <a
+href="пределы.html#theorem-2">теореме</a> <span
 class="math inline">\(f(x)\)</span> непрерывна в т. <span
 class="math inline">\(x_0 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-26">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(\exists
-f’(x_0)\)</span> и <span class="math inline">\(\exists g’(x_0)\)</span>.
-Тогда <span class="math display">\[\exists (f(x) + g(x))’_{|x = x_0} =
-f’(x_0) + g’(x_0)\]</span></p>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(\exists f’(x_0)\)</span> и <span
+class="math inline">\(\exists g’(x_0)\)</span>. Тогда <span
+class="math display">\[\exists (f(x) + g(x))’_{|x = x_0} = f’(x_0) +
+g’(x_0)\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-27">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(\exists
-f’(x_0)\)</span> и <span class="math inline">\(\exists g’(x_0)\)</span>.
-Тогда <span class="math display">\[\exists (f(x) \cdot g(x))’_{|x = x_0}
-= f’(x_0)\cdot g(x_0) + g’(x_0) \cdot f(x_0)\]</span></p>
-<p><em>Доказательство:</em> <span class="math display">\[\displaystyle
-\lim_{\Delta x\to 0}\frac{f(x + \Delta x) \cdot g(x + \Delta x) -
-f(x)\cdot g(x)}{\Delta x} =\]</span> <span
-class="math display">\[=\displaystyle \lim_{\Delta x\to 0}\frac{f(x +
-\Delta x) \cdot g(x + \Delta x) - g(x + \Delta x) \cdot f(x) - f(x)\cdot
-g(x) + g(x + \Delta x) \cdot f(x)}{\Delta x} =\]</span> <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(\exists f’(x_0)\)</span> и <span
+class="math inline">\(\exists g’(x_0)\)</span>. Тогда <span
+class="math display">\[\exists (f(x) \cdot g(x))’_{|x = x_0} =
+f’(x_0)\cdot g(x_0) + g’(x_0) \cdot f(x_0)\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math display">\[\displaystyle \lim_{\Delta x\to 0}\frac{f(x +
+\Delta x) \cdot g(x + \Delta x) - f(x)\cdot g(x)}{\Delta x} =\]</span>
+<span class="math display">\[=\displaystyle \lim_{\Delta x\to
+0}\frac{f(x + \Delta x) \cdot g(x + \Delta x) - g(x + \Delta x) \cdot
+f(x) - f(x)\cdot g(x) + g(x + \Delta x) \cdot f(x)}{\Delta x} =\]</span>
+<span class="math display">\[=\displaystyle \lim_{\Delta x\to
+0}\frac{g(x + \Delta x)\cdot (f(x + \Delta x) - f(x)) + f(x)\cdot (g(x +
+\Delta x) - g(x))}{\Delta x} =\]</span> <span
 class="math display">\[=\displaystyle \lim_{\Delta x\to 0}\frac{g(x +
-\Delta x)\cdot (f(x + \Delta x) - f(x)) + f(x)\cdot (g(x + \Delta x) -
-g(x))}{\Delta x} =\]</span> <span class="math display">\[=\displaystyle
-\lim_{\Delta x\to 0}\frac{g(x + \Delta x)\cdot (f(x + \Delta x) -
-f(x))}{\Delta x} + \frac{f(x)\cdot (g(x + \Delta x) - g(x))}{\Delta x}
-=\]</span> <span class="math display">\[=f’(x_0)\cdot g(x_0) + g’(x_0)
-\cdot f(x_0) \,\,\,\,\blacksquare\]</span></p>
+\Delta x)\cdot (f(x + \Delta x) - f(x))}{\Delta x} + \frac{f(x)\cdot
+(g(x + \Delta x) - g(x))}{\Delta x} =\]</span> <span
+class="math display">\[=f’(x_0)\cdot g(x_0) + g’(x_0) \cdot f(x_0)
+\,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-28">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(\exists
-f’(x_0)\)</span> и <span class="math inline">\(\exists g’(x_0)\)</span>.
-Тогда <span class="math display">\[\exists \left(
-\frac{f(x)}{g(x)}\right)’_{|x = x_0} = \frac{f’(x_0)\cdot g(x_0) -
-g’(x_0) \cdot f(x_0)}{g(x_0)^2}\]</span></p>
-<p><em>Доказательство:</em> <span class="math display">\[\left(
-\frac{f(x)}{g(x)}\right)’_{|x = x_0} =\]</span> <span
-class="math display">\[\displaystyle \lim_{\Delta x\to 0}\frac{\frac{f(x
-+ \Delta x)}{g(x + \Delta x)} - \frac{f(x)}{g(x)}}{\Delta x} =\]</span>
-<span class="math display">\[\displaystyle \lim_{\Delta x\to 0}\frac{f(x
-+ \Delta x) \cdot g(x) - f(x)\cdot g(x + \Delta x)}{\Delta x \cdot g(x +
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(\exists f’(x_0)\)</span> и <span
+class="math inline">\(\exists g’(x_0)\)</span>. Тогда <span
+class="math display">\[\exists \left( \frac{f(x)}{g(x)}\right)’_{|x =
+x_0} = \frac{f’(x_0)\cdot g(x_0) - g’(x_0) \cdot
+f(x_0)}{g(x_0)^2}\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math display">\[\left( \frac{f(x)}{g(x)}\right)’_{|x = x_0}
+=\]</span> <span class="math display">\[\displaystyle \lim_{\Delta x\to
+0}\frac{\frac{f(x + \Delta x)}{g(x + \Delta x)} -
+\frac{f(x)}{g(x)}}{\Delta x} =\]</span> <span
+class="math display">\[\displaystyle \lim_{\Delta x\to 0}\frac{f(x +
+\Delta x) \cdot g(x) - f(x)\cdot g(x + \Delta x)}{\Delta x \cdot g(x +
 \Delta x) \cdot g(x)} =\]</span> <span class="math display">\[= \left(
 \frac{f(x)}{g(x)}\right)’_{|x = x_0} = \frac{f’(x_0)\cdot g(x_0) -
 g’(x_0) \cdot f(x_0)}{g(x_0)^2} \,\,\,\,\blacksquare\]</span></p>
@@ -347,7 +364,7 @@ g’(x_0) \cdot f(x_0)}{g(x_0)^2} \,\,\,\,\blacksquare\]</span></p>
 id="производная-композиции-функций-производная-обратной-функции">Производная
 композиции функций, производная обратной функции</h2>
 <div id="theorem-29">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(f(x)\)</span> непрерывна строго возрастает в <span
 class="math inline">\(B(x_0)\)</span>, <span
 class="math inline">\(\exists f^{-1}(y)\)</span> в <span
@@ -355,7 +372,7 @@ class="math inline">\(B(y_0), \,\,\,\, y_0 = f(x_0)\)</span> и <span
 class="math inline">\(\exists f’(x_0) \ne 0\)</span>. Тогда <span
 class="math inline">\(\exists \left(f^{-1}(y)\right)’_{|y = y_0} =
 \frac{1}{f’(x_0)}\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\left(f^{-1}(y)\right)’_{|y = y_0} = \displaystyle
 \lim_{y\to y_0}\frac{f^{-1}(y) - f^{-1}(y_0)}{y - y_0} = \displaystyle
 \lim_{x\to x_0}\frac{x - x_0}{f(x) - f(x_0)} =
@@ -364,14 +381,16 @@ class="math inline">\(x \to x_0\)</span> на <span
 class="math inline">\(y \to y_0\)</span>?)</p>
 </div>
 <div id="theorem-30">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(\exists
-g’(x_0)\)</span> и <span class="math inline">\(\exists
-f’(g(x_0)\)</span>. Тогда <span class="math display">\[\exists
-f(g(x))’_{|x = x_0} = f’(g(x_0))\cdot g’(x_0)\]</span></p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(f(x) \ne
-f(x_0)\)</span> при <span class="math inline">\(x \ne x_0\)</span>.
-<span class="math display">\[f(g(x))’_{|x = x_0} = \displaystyle
-\lim_{x\to x_0}\frac{f(g(x)) - f(g(x_0))}{x - x_0}\]</span> <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(\exists g’(x_0)\)</span> и <span
+class="math inline">\(\exists f’(g(x_0)\)</span>. Тогда <span
+class="math display">\[\exists f(g(x))’_{|x = x_0} = f’(g(x_0))\cdot
+g’(x_0)\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(f(x) \ne f(x_0)\)</span> при <span
+class="math inline">\(x \ne x_0\)</span>. <span
+class="math display">\[f(g(x))’_{|x = x_0} = \displaystyle \lim_{x\to
+x_0}\frac{f(g(x)) - f(g(x_0))}{x - x_0}\]</span> <span
 class="math display">\[= \displaystyle \lim_{x\to x_0}\frac{f(g(x)) -
 f(g(x_0))}{x - x_0}\cdot \frac{g(x) - g(x_0)}{g(x) - g(x_0)} =
 f’(g(x_0))\cdot g’(x_0)\,\,\,\,\blacksquare\]</span></p>

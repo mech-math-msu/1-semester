@@ -11,6 +11,7 @@
     
     <title>Кольца и поля</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -256,7 +266,8 @@
 
 <h1 data-number="2" id="кольца-и-поля">Кольца и поля</h1>
 <div id="definition-0">
-<p><strong>Определение: </strong><em>Группа</em> – это множество <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Группа</em> – это множество <span
 class="math inline">\(A\)</span> с операцией <span
 class="math inline">\(+: A \times A \to A\)</span>, для которого
 выполнены аксиомы:</p>
@@ -274,7 +285,8 @@ A \,\,\,\, a + 0 = a\)</span></li>
 <p><strong>Группа не обязательно коммутативная!</strong></p>
 </div>
 <div id="definition-1">
-<p><strong>Определение: </strong><em>Кольцо</em> – это множество <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Кольцо</em> – это множество <span
 class="math inline">\(A\)</span> с операцией <span
 class="math inline">\(+: A \times A \to A\)</span> и <span
 class="math inline">\(\cdot: A \times A \to A\)</span>, для которого
@@ -288,9 +300,10 @@ class="math inline">\(\cdot: A \times A \to A\)</span>, для которого
 </ol>
 </div>
 <div id="definition-2">
-<p><strong>Определение: </strong><em>Поле</em> – это коммутативное,
-ассоциативное (относительно умножения) кольцо с единицей, в котором
-каждый ненулевой элемент обратим.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Поле</em> – это коммутативное, ассоциативное
+(относительно умножения) кольцо с единицей, в котором каждый ненулевой
+элемент обратим.</p>
 <p>В кванторах:</p>
 <p>Поле – это множество <span class="math inline">\(A\)</span> с
 операциями сложения <span class="math inline">\(+: A \times A \to
@@ -318,15 +331,15 @@ c\)</span></li>
 <h2 data-number="2.1" id="делители-нуля-и-обратимые-элементы">Делители
 нуля и обратимые элементы</h2>
 <div id="statement-0">
-<p><strong>Утверждение: </strong>В поле $F нет делителей нуля, то есть
-из <span class="math inline">\(a \cdot b = 0\)</span> следует <span
-class="math inline">\(a = 0\)</span> или <span class="math inline">\(b =
-0\)</span></p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(a \ne
-0\)</span>. Тогда <span class="math display">\[a \cdot b = 0\]</span>
-<span class="math display">\[a^{-1} \cdot a \cdot b = a^{-1} \cdot
-0\]</span> <span class="math display">\[b = 0 \,\,\,\,
-\blacksquare\]</span></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>В поле
+$F нет делителей нуля, то есть из <span class="math inline">\(a \cdot b
+= 0\)</span> следует <span class="math inline">\(a = 0\)</span> или
+<span class="math inline">\(b = 0\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(a \ne 0\)</span>. Тогда <span
+class="math display">\[a \cdot b = 0\]</span> <span
+class="math display">\[a^{-1} \cdot a \cdot b = a^{-1} \cdot 0\]</span>
+<span class="math display">\[b = 0 \,\,\,\, \blacksquare\]</span></p>
 </div>
 <h2 data-number="2.2" id="примеры-колец-и-полей">Примеры колец и
 полей</h2>
@@ -337,19 +350,21 @@ class="math inline">\(a = 0\)</span> или <span class="math inline">\(b =
 id="число-решений-системы-линейных-уравнений-над-конечным-полем">Число
 решений системы линейных уравнений над конечным полем</h2>
 <div id="statement-1">
-<p><strong>Утверждение: </strong>Число решений системы линейных
-уравнений над конечным полем <span class="math inline">\(F\)</span>
-равно <span class="math inline">\(0\)</span>, если система несовместна,
-и <span class="math inline">\(|F|^k\)</span>, где <span
-class="math inline">\(k = n - \operatorname{rank} A\)</span>, иначе.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(k = n -
-\operatorname{rank} A\)</span> – это число свободных неизвестных,
-которые могут принимать любое значение из поля <span
-class="math inline">\(F\)</span>.</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Число
+решений системы линейных уравнений над конечным полем <span
+class="math inline">\(F\)</span> равно <span
+class="math inline">\(0\)</span>, если система несовместна, и <span
+class="math inline">\(|F|^k\)</span>, где <span class="math inline">\(k
+= n - \operatorname{rank} A\)</span>, иначе.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(k = n - \operatorname{rank} A\)</span> – это число
+свободных неизвестных, которые могут принимать любое значение из поля
+<span class="math inline">\(F\)</span>.</p>
 </div>
 <h2 data-number="2.5" id="характеристика-поля">Характеристика поля</h2>
 <div id="definition-3">
-<p><strong>Определение: </strong><em>Характеристика поля</em> <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Характеристика поля</em> <span
 class="math inline">\(F\)</span> – это минимальное натуральное число
 <span class="math inline">\(n\)</span>, такое что <span
 class="math inline">\(\underbrace{1 + \ldots + 1}_{n} = 0\)</span>. Если
@@ -358,11 +373,12 @@ class="math inline">\(0\)</span> либо <span
 class="math inline">\(\infty\)</span>.</p>
 </div>
 <div id="statement-2">
-<p><strong>Утверждение: </strong>Характеристика поля <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Характеристика поля <span
 class="math inline">\(\operatorname{char} F\)</span> либо <span
 class="math inline">\(0\)</span> либо простое число.</p>
-<p><em>Доказательство:</em> Следует из <a
-href="кольца-и-поля.html#statement-0">отсутствия делителей нуля в
+<p><span class="margin-lft"><em>Доказательство:</em></span> Следует из
+<a href="кольца-и-поля.html#statement-0">отсутствия делителей нуля в
 поле</a>.</p>
 </div>
 

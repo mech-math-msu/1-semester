@@ -11,6 +11,7 @@
     
     <title>Поле рациональных дробей</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -257,7 +267,8 @@
 <h1 data-number="5" id="поле-рациональных-дробей">Поле рациональных
 дробей</h1>
 <div id="definition-17">
-<p><strong>Определение: </strong>Рассмотрим множество <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Рассмотрим множество <span
 class="math inline">\(A\)</span> пар многочленов над полем <span
 class="math inline">\(F\)</span>. Будем обозначать пару <span
 class="math inline">\(f, g\)</span> как <span
@@ -278,18 +289,18 @@ class="math inline">\(\frac{f}{g}\)</span>.</p>
 g’}\]</span></p>
 </div>
 <div id="statement-10">
-<p><strong>Утверждение: </strong>(Корректность определения операций)
-Пусть <span class="math inline">\(\frac{f_1}{g_1} \sim
-\frac{f_1’}{g_1’}\)</span> и <span class="math inline">\(\frac{f_2}{g_2}
-\sim \frac{f_2’}{g_2’}\)</span>. Тогда <span
-class="math display">\[\frac{f_1 \cdot f_2}{g_1 \cdot g_2} \sim
-\frac{f_1’ \cdot f_2’}{g_1’ \cdot g_2’}\]</span> <span
-class="math display">\[\frac{f_1 \cdot g_2 + g_1 \cdot f_2}{g_1 \cdot
-g_2} \sim \frac{f_1’ \cdot g_2’ + g_1’ \cdot f_2’}{g_1’ \cdot
-g_2’}\]</span></p>
-<p><em>Доказательство:</em> <span class="math display">\[\frac{f_1}{g_1}
-\sim \frac{f_1’}{g_1’} \Rightarrow f_1 \cdot g_1’ = g_1 \cdot
-f_1’\]</span></p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>(Корректность определения операций) Пусть <span
+class="math inline">\(\frac{f_1}{g_1} \sim \frac{f_1’}{g_1’}\)</span> и
+<span class="math inline">\(\frac{f_2}{g_2} \sim
+\frac{f_2’}{g_2’}\)</span>. Тогда <span class="math display">\[\frac{f_1
+\cdot f_2}{g_1 \cdot g_2} \sim \frac{f_1’ \cdot f_2’}{g_1’ \cdot
+g_2’}\]</span> <span class="math display">\[\frac{f_1 \cdot g_2 + g_1
+\cdot f_2}{g_1 \cdot g_2} \sim \frac{f_1’ \cdot g_2’ + g_1’ \cdot
+f_2’}{g_1’ \cdot g_2’}\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math display">\[\frac{f_1}{g_1} \sim \frac{f_1’}{g_1’}
+\Rightarrow f_1 \cdot g_1’ = g_1 \cdot f_1’\]</span></p>
 <p><span class="math display">\[\frac{f_2}{g_2} \sim \frac{f_2’}{g_2’}
 \Rightarrow f_2 \cdot g_2’ = g_2 \cdot f_2’\]</span> <span
 class="math display">\[\Downarrow\]</span> <span
@@ -297,20 +308,21 @@ class="math display">\[f_1 f_2 \cdot g_1’ g_2’ = g_1 g_2 \cdot f_1’ f_2’
 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="statement-11">
-<p><strong>Утверждение: </strong>Поле рациональных дробей – поле.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Поле
+рациональных дробей – поле.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="5.1"
 id="разложение-правильной-дроби-в-сумму-простейших-дробей-без-единственности">Разложение
 правильной дроби в сумму простейших дробей (без единственности)</h2>
 <div id="definition-18">
-<p><strong>Определение: </strong><span class="math inline">\(\frac{f}{g}
-\in F(x)\)</span> – <em>правильная дробь</em>, если <span
-class="math inline">\(\operatorname{deg}f &lt;
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(\frac{f}{g} \in F(x)\)</span> – <em>правильная
+дробь</em>, если <span class="math inline">\(\operatorname{deg}f &lt;
 \operatorname{deg}g\)</span>.</p>
 </div>
 <div id="definition-19">
-<p><strong>Определение: </strong><span
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
 class="math inline">\(\frac{f}{p^k} \in F(x)\)</span> – <em>простейшая
 дробь</em>, если <span class="math inline">\(p\)</span> – неприводимый
 многочлен над полем <span class="math inline">\(F\)</span> и <span
@@ -318,9 +330,9 @@ class="math inline">\(\operatorname{deg}f &lt;
 \operatorname{deg}p\)</span>.</p>
 </div>
 <div id="statement-12">
-<p><strong>Утверждение: </strong>Сумма правильных дробей – правильная
-дробь.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Сумма
+правильных дробей – правильная дробь.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\frac{f}{g}\)</span> и <span
 class="math inline">\(\frac{u}{v}\)</span> правильные дроби.
 Следовательно <span class="math inline">\(\operatorname{deg}f &lt;
@@ -337,10 +349,11 @@ class="math inline">\(\operatorname{deg}(gv) = \operatorname{deg}g +
 \operatorname{deg} v \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-11">
-<p><strong>Теорема: </strong>Любая правильная дробь <span
-class="math inline">\(\frac{f}{g} \in F(x)\)</span> может быть
-представлена в виде произведения простейших единственным образом.</p>
-<p><em>Доказательство:</em> Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Любая
+правильная дробь <span class="math inline">\(\frac{f}{g} \in
+F(x)\)</span> может быть представлена в виде произведения простейших
+единственным образом.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
 class="math inline">\(\frac{f}{g} = \frac{f}{g_1\cdot g_2}\)</span> и
 <span class="math inline">\(\gcd{(g_1, g_2)} = 1\)</span>. Тогда по <a
 href="#">утверждению</a> <span class="math inline">\(\exists u, v \in
@@ -359,30 +372,31 @@ id="единственность-разложения-правильной-др�
 id="кольцо-многочленов-от-многих-переменных">Кольцо многочленов от
 многих переменных</h2>
 <div id="definition-20">
-<p><strong>Определение: </strong>Кольцо многочленов от <span
-class="math inline">\(n\)</span> переменных – это множество <span
-class="math inline">\(F[x_1, \ldots, x_n] = F[x_1, \ldots, x_{n -
-1}][x_n]\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Кольцо
+многочленов от <span class="math inline">\(n\)</span> переменных – это
+множество <span class="math inline">\(F[x_1, \ldots, x_n] = F[x_1,
+\ldots, x_{n - 1}][x_n]\)</span>.</p>
 </div>
 <div id="theorem-12">
-<p><strong>Теорема: </strong>Кольцо многочленов от <span
-class="math inline">\(n\)</span> переменных – это ассоциативное,
-коммутативное кольцо с единицей без делителей нуля.</p>
-<p><em>Доказательство:</em> знаете, не так и очевидно, как хотелось
-бы.</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Кольцо
+многочленов от <span class="math inline">\(n\)</span> переменных – это
+ассоциативное, коммутативное кольцо с единицей без делителей нуля.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> знаете, не
+так и очевидно, как хотелось бы.</p>
 </div>
 <div id="definition-21">
-<p><strong>Определение: </strong>Моном – это элемент кольца многочленов
-от <span class="math inline">\(n\)</span> переменных, представимый в
-виде <span class="math inline">\(a\cdot x_1^{\alpha_1}\cdot \ldots \cdot
-x_n^{\alpha_n}\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Моном –
+это элемент кольца многочленов от <span class="math inline">\(n\)</span>
+переменных, представимый в виде <span class="math inline">\(a\cdot
+x_1^{\alpha_1}\cdot \ldots \cdot x_n^{\alpha_n}\)</span>.</p>
 </div>
 <h2 data-number="5.5"
 id="лексикографический-порядок-на-мономах">Лексикографический порядок на
 мономах</h2>
 <div id="definition-22">
-<p><strong>Определение: </strong>(Лексикографический порядок на мономах)
-Пусть <span class="math display">\[a = x_1^{\alpha_1}\cdot \ldots \cdot
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(Лексикографический порядок на мономах) Пусть <span
+class="math display">\[a = x_1^{\alpha_1}\cdot \ldots \cdot
 x_n^{\alpha_n}\]</span></p>
 <p><span class="math display">\[b = x_1^{\beta_1}\cdot \ldots \cdot
 x_n^{\beta_n}\]</span> <span class="math inline">\(a \succ b\)</span>,
@@ -392,8 +406,8 @@ class="math inline">\(b\)</span> с разными показателями, б�
 показателя второй.</p>
 </div>
 <div id="statement-13">
-<p><strong>Утверждение: </strong>лексикографический порядок линейный, то
-есть:</p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>лексикографический порядок линейный, то есть:</p>
 <ol type="1">
 <li><span class="math inline">\(u \succ v\)</span> и <span
 class="math inline">\(v \succ w \Rightarrow u \succ w\)</span></li>
@@ -408,7 +422,7 @@ vw\)</span></li>
 <p>лексикографический порядок полный, то есть непустое множество мономов
 содержит максимальный элемент (моном, который лексикографически старше
 всех остальных).</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol start="2" type="1">
 <li><span class="math inline">\(u_1 \succ u_2 \Rightarrow u_1\cdot v_1
 \succ u_2 \cdot v_1 \succ u_2 \cdot v_2
@@ -418,19 +432,19 @@ vw\)</span></li>
 <h2 data-number="5.6" id="старший-член-произведения">Старший член
 произведения</h2>
 <div id="definition-23">
-<p><strong>Определение: </strong>Моном многочлена, который
-лексикографически старше всех остальных мономов многочлена – <em>старший
-член</em> многочлена.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Моном
+многочлена, который лексикографически старше всех остальных мономов
+многочлена – <em>старший член</em> многочлена.</p>
 </div>
 <div id="statement-14">
-<p><strong>Утверждение: </strong>Старший член произведения многочленов
-от <span class="math inline">\(n\)</span> переменных равен произведению
-старших членов.</p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(f_1, f_2
-\in F[x_1, \ldots, x_n], \,\,\,\, f_1, f_2 \ne 0\)</span>, <span
-class="math inline">\(u_1, u_2\)</span> их старшие члены <span
-class="math inline">\(v_1, v_2\)</span> какие-то не старшие члены.
-Тогда</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Старший
+член произведения многочленов от <span class="math inline">\(n\)</span>
+переменных равен произведению старших членов.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(f_1, f_2 \in F[x_1, \ldots, x_n], \,\,\,\, f_1,
+f_2 \ne 0\)</span>, <span class="math inline">\(u_1, u_2\)</span> их
+старшие члены <span class="math inline">\(v_1, v_2\)</span> какие-то не
+старшие члены. Тогда</p>
 <p><span class="math display">\[u_1\cdot u_2 \succ v_1\cdot v_2
 \,\,\,\,\blacksquare\]</span></p>
 </div>

@@ -11,6 +11,7 @@
     
     <title>Глобальные свойства непрерывных функций</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -258,19 +268,21 @@
 id="глобальные-свойства-непрерывных-функций">Глобальные свойства
 непрерывных функций</h1>
 <div id="definition-11">
-<p><strong>Определение: </strong>Если функция <span
-class="math inline">\(f(x)\)</span> непрерывна в каждой точке множества
-<span class="math inline">\(A \subset \mathbb{R}\)</span>, то пишут
-<span class="math inline">\(f \in C(A)\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+функция <span class="math inline">\(f(x)\)</span> непрерывна в каждой
+точке множества <span class="math inline">\(A \subset
+\mathbb{R}\)</span>, то пишут <span class="math inline">\(f \in
+C(A)\)</span>.</p>
 </div>
 <div id="theorem-17">
-<p><strong>Теорема: </strong>(<em>1-я теорема Вейерштрасса</em>) Пусть
-<span class="math inline">\(f(x) \in C[a, b]\)</span> (непрерывна на
-отрезке). Тогда <span class="math inline">\(f(x)\)</span> ограничена на
-отрезке <span class="math inline">\([a, b]\)</span>.</p>
-<p><em>Доказательство:</em> (От противного) Пусть <span
-class="math inline">\(f(x)\)</span> не ограничена на <span
-class="math inline">\([a, b]\)</span>, т.е. <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(<em>1-я
+теорема Вейерштрасса</em>) Пусть <span class="math inline">\(f(x) \in
+C[a, b]\)</span> (непрерывна на отрезке). Тогда <span
+class="math inline">\(f(x)\)</span> ограничена на отрезке <span
+class="math inline">\([a, b]\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> (От
+противного) Пусть <span class="math inline">\(f(x)\)</span> не
+ограничена на <span class="math inline">\([a, b]\)</span>, т.е. <span
 class="math inline">\(\forall M &gt; 0 \,\,\,\, \exists x_M \in [a, b]:
 \,\,\,\, |f(x_M)| &gt; M\)</span>. Рассмотрим последовательность <span
 class="math inline">\(\{x_n\}_{n = 1}^{\infty}\)</span>: <span
@@ -289,23 +301,23 @@ class="math inline">\([a, b]\)</span> и <span class="math inline">\(x_0
 \forall k\)</span>(Где противоречие?).</p>
 </div>
 <div id="theorem-18">
-<p><strong>Теорема: </strong>(<em>2-я теорема Вейерштрасса</em>) Если
-<span class="math inline">\(f(x) \in C[a, b]\)</span>, то <span
-class="math inline">\(\exists \min f(x)\)</span> и <span
-class="math inline">\(\max f(x)\)</span> на <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(<em>2-я
+теорема Вейерштрасса</em>) Если <span class="math inline">\(f(x) \in
+C[a, b]\)</span>, то <span class="math inline">\(\exists \min
+f(x)\)</span> и <span class="math inline">\(\max f(x)\)</span> на <span
 class="math inline">\([a, b]\)</span>.</p>
-<p><em>Доказательство:</em> По <a
+<p><span class="margin-lft"><em>Доказательство:</em></span> По <a
 href="глобальные-свойства-непрерывных-функций.html#theorem-17">1-й
 теореме Вейерштрасса</a> <span class="math inline">\(f(x)\)</span>
 ограничена, а значит <span class="math inline">\(\exists \sup \limits_{x
 \in [a, b]}f(x) = \alpha\)</span>. Хочется доказать, что <span
 class="math inline">\(\alpha \in [a, b]\)</span>. <br> <span
-class="math inline">\(\alpha\)</span> - точная верхняя грань,
+class="math inline">\(\alpha\)</span> – точная верхняя грань,
 следовательно <span class="math inline">\(\exists x_1 \in [a, b]:
 \,\,\,\, f(x_1) &gt; \alpha - 1, \,\,\,\,\ldots, \,\,\,\, \exists x_n
 \in [a, b]: \,\,\,\, f(x_n) &gt; \alpha - \frac{1}{n},
 \,\,\,\,\ldots\)</span> <span class="math inline">\(x_n \in [a, b]
-\,\,\,\,\forall n \Rightarrow \{x_n\}\)</span> - ограничена на <span
+\,\,\,\,\forall n \Rightarrow \{x_n\}\)</span> – ограничена на <span
 class="math inline">\([a, b]\)</span>. Значит <span
 class="math inline">\(\exists \{x_{n_k}\}: \,\,\,\, \exists
 \displaystyle \lim_{k\to \infty}x_{n_k} = x_m \in [a,
@@ -318,18 +330,18 @@ class="math inline">\(\displaystyle \lim_{k \to \infty}f(x_{n_k}) =
 f(x_m) \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-19">
-<p><strong>Теорема: </strong>(<em>О промежуточных значениях</em>) Пусть
-<span class="math inline">\(f(x) \in C[a, b], \,\,\,\, A = f(a),
-\,\,\,\, B = f(b)\)</span>. Пусть для определенности <span
-class="math inline">\(A \le B\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(<em>О
+промежуточных значениях</em>) Пусть <span class="math inline">\(f(x) \in
+C[a, b], \,\,\,\, A = f(a), \,\,\,\, B = f(b)\)</span>. Пусть для
+определенности <span class="math inline">\(A \le B\)</span>. Тогда <span
 class="math inline">\(\forall C: A \le C \le B \,\,\,\, \exists c \in
 [a, b]: C = f(c)\)</span>.</p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(C = 0,
-\,\,\,\, A \le 0, \,\,\,\, B \ge 0\)</span>.(В остальных случаях
-достаточно рассмотреть <span class="math inline">\(f_1(x) = f(x) -
-C\)</span>) Рассмотрим последовательность вложенных отрезков <span
-class="math inline">\(a_1 = a, \,\,\,\, b_1 = b,\,\,\,\, [a_{n+1},
-b_{n+1}] = \begin{cases}
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(C = 0, \,\,\,\, A \le 0, \,\,\,\, B \ge
+0\)</span>.(В остальных случаях достаточно рассмотреть <span
+class="math inline">\(f_1(x) = f(x) - C\)</span>) Рассмотрим
+последовательность вложенных отрезков <span class="math inline">\(a_1 =
+a, \,\,\,\, b_1 = b,\,\,\,\, [a_{n+1}, b_{n+1}] = \begin{cases}
     [\frac{a_n + b_n}{2}, b_n], &amp;\text{ если }\frac{a_n + b_n}{2}
 \le 0\\
     [a_n, \frac{a_n + b_n}{2}], &amp;\text{ если }\frac{a_n + b_n}{2}
@@ -351,22 +363,24 @@ id="теорема-о-разрывах-монотонной-функции-те�
 о разрывах монотонной функции Теорема о обратной функции к непрерывной и
 монотонной</h2>
 <div id="theorem-20">
-<p><strong>Теорема: </strong>Пусть <span
-class="math inline">\(f(x)\)</span> - монотонно возрастает. Тогда <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f(x)\)</span> – монотонно возрастает. Тогда <span
 class="math inline">\(f(x)\)</span> может иметь разрывы только первого
 рода.</p>
-<p><em>Доказательство:</em> Какая-то тут лажа.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Какая-то тут
+лажа.</p>
 </div>
 <div id="theorem-21">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(y =
-f(x)\)</span> непрерывна и строго возрастает на <span
-class="math inline">\([a, b]\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(y = f(x)\)</span> непрерывна и строго возрастает
+на <span class="math inline">\([a, b]\)</span>. Тогда <span
 class="math inline">\(\exists x = f^{-1}(y)\)</span> непрерывная и
 строго возрастающая на <span class="math inline">\([f(a),
 f(b)]\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(f(x)\)</span>
-непрерывна на <span class="math inline">\([a, b] \Rightarrow \forall C:
-f(a) \le C \le f(b) \,\,\,\, \exists c: f(c) = C\)</span> по <a
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(f(x)\)</span> непрерывна на <span
+class="math inline">\([a, b] \Rightarrow \forall C: f(a) \le C \le f(b)
+\,\,\,\, \exists c: f(c) = C\)</span> по <a
 href="глобальные-свойства-непрерывных-функций.html#theorem-19">теореме</a>.
 Так как функция строго возрастает, такое <span
 class="math inline">\(c\)</span> единственно для каждого <span

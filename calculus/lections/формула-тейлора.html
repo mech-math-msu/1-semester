@@ -11,6 +11,7 @@
     
     <title>Формула Тейлора</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -256,10 +266,10 @@
 
 <h1 data-number="8" id="формула-тейлора">Формула Тейлора</h1>
 <div id="definition-20">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(\exists f^{(n)}(x_0)\)</span>. Выражение <span
-class="math inline">\(f(x) = \displaystyle \sum_{k =
-0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x - x_0)^k + r_n(x, x_0)\)</span> -
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\exists f^{(n)}(x_0)\)</span>. Выражение
+<span class="math inline">\(f(x) = \displaystyle \sum_{k =
+0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x - x_0)^k + r_n(x, x_0)\)</span> –
 <em>формула Тейлора</em> для <span class="math inline">\(f(x)\)</span> с
 центром разложения в т.<span class="math inline">\(x_0\)</span>.</p>
 </div>
@@ -268,14 +278,14 @@ id="остаточный-член-в-форме-пеано-и-в-общей-фо
 член в форме Пеано и в общей форме. Остаточный член в форме
 Лагранжа</h2>
 <div id="theorem-43">
-<p><strong>Теорема: </strong>(Остаточный член в форме Пеано) <span
-class="math display">\[r_n(x, x_0) = \overline{\overline{o}}((x -
-x_0)^n)\]</span></p>
-<p><em>Доказательство:</em> <span class="math display">\[\displaystyle
-\lim_{x\to x_0}\frac{r_n(x, x_0)}{(x - x_0)^n} = \displaystyle
-\lim_{x\to x_0}\frac{f(x) - \displaystyle \sum_{k =
-0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x - x_0)^k}{(x - x_0)^n}
-\stackrel{?}{=}\]</span> <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Остаточный
+член в форме Пеано) <span class="math display">\[r_n(x, x_0) =
+\overline{\overline{o}}((x - x_0)^n)\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math display">\[\displaystyle \lim_{x\to x_0}\frac{r_n(x,
+x_0)}{(x - x_0)^n} = \displaystyle \lim_{x\to x_0}\frac{f(x) -
+\displaystyle \sum_{k = 0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x -
+x_0)^k}{(x - x_0)^n} \stackrel{?}{=}\]</span> <span
 class="math display">\[\stackrel{?}{=}\displaystyle \lim_{x\to
 x_0}\frac{f’(x) - \displaystyle \sum_{k = 1}^{n}\frac{f^{(k)}(x_0)}{(k -
 1)!}\cdot (x - x_0)^{k - 1}}{n \cdot (x - x_0)^{n -
@@ -285,22 +295,23 @@ x_0}\frac{f^{(n - 1)}(x) - f^{(n - 1)}(x_0) - f^{(n)}(x_0)\cdot (x -
 x_0)}{n! \cdot (x - x_0)} = 0 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-44">
-<p><strong>Теорема: </strong>(Остаточный член в общей форме) Пусть <span
-class="math inline">\(f(t) \in \mathcal{D}^n[x, x_0]\)</span> и <span
-class="math inline">\(f(t) \in \mathcal{D}^{n + 1}(x, x_0), \,\,\,\,
-\varphi (x) \in C[x, x_0], \,\,\,\, \varphi (x) \in \mathcal{D}(x, x_0),
-\,\,\,\, \varphi’(x) \ne 0\)</span>. Тогда <span
-class="math display">\[\exists c \in (x, x_0): \,\,\,\,r_n(x, x_0) =
-\frac{f^{(n + 1)}(c) \cdot (x - c)^n}{n!} \cdot \frac{\varphi(x) -
-\varphi(x_0)}{\varphi’(c)}\]</span></p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(\psi(t) =
-\displaystyle \sum_{k = 0}^{n}\frac{f^{(k)}(t)}{k!}\cdot (x -
-t)^k\)</span>. Тогда <span class="math inline">\(\psi(x_0) =
-\displaystyle \sum_{k = 0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x - x_0)^k,
-\,\,\,\, \psi(x) = f(x)\)</span>. <span class="math display">\[\psi’(t)
-= \displaystyle \sum_{k = 0}^{n}\frac{f^{(k + 1)}(t)}{k!}\cdot (x - t)^k
-- \displaystyle \sum_{k = 1}^{n}\frac{f^{(k)}(t)}{(k - 1)!}\cdot (x -
-t)^{k - 1} = \frac{f^{(n + 1)}(t)}{n!}\cdot (x - t)^n\]</span> <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Остаточный
+член в общей форме) Пусть <span class="math inline">\(f(t) \in
+\mathcal{D}^n[x, x_0]\)</span> и <span class="math inline">\(f(t) \in
+\mathcal{D}^{n + 1}(x, x_0), \,\,\,\, \varphi (x) \in C[x, x_0],
+\,\,\,\, \varphi (x) \in \mathcal{D}(x, x_0), \,\,\,\, \varphi’(x) \ne
+0\)</span>. Тогда <span class="math display">\[\exists c \in (x, x_0):
+\,\,\,\,r_n(x, x_0) = \frac{f^{(n + 1)}(c) \cdot (x - c)^n}{n!} \cdot
+\frac{\varphi(x) - \varphi(x_0)}{\varphi’(c)}\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(\psi(t) = \displaystyle \sum_{k =
+0}^{n}\frac{f^{(k)}(t)}{k!}\cdot (x - t)^k\)</span>. Тогда <span
+class="math inline">\(\psi(x_0) = \displaystyle \sum_{k =
+0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x - x_0)^k, \,\,\,\, \psi(x) =
+f(x)\)</span>. <span class="math display">\[\psi’(t) = \displaystyle
+\sum_{k = 0}^{n}\frac{f^{(k + 1)}(t)}{k!}\cdot (x - t)^k - \displaystyle
+\sum_{k = 1}^{n}\frac{f^{(k)}(t)}{(k - 1)!}\cdot (x - t)^{k - 1} =
+\frac{f^{(n + 1)}(t)}{n!}\cdot (x - t)^n\]</span> <span
 class="math display">\[\frac{r_n(x, x_0)}{\varphi(x) - \varphi(x_0)} =
 \frac{\psi(x) - \psi(x_0)}{\varphi(x) - \varphi(x_0)} \stackrel{\text{т.
 Коши}}{=} \frac{\psi’(c)}{\varphi’(c)} = \frac{1}{\varphi’(c)}\cdot
@@ -308,11 +319,12 @@ class="math display">\[\frac{r_n(x, x_0)}{\varphi(x) - \varphi(x_0)} =
 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="corollary-5">
-<p><strong>Следствие: </strong>(Остаточный член в форме Лагранжа) <span
+<p><span class="margin-lft"><strong>Следствие:
+</strong></span>(Остаточный член в форме Лагранжа) <span
 class="math display">\[r_n(x, x_0) = \frac{f^{(n + 1)}(c)\cdot (x -
 x_0)^{n + 1}}{(n + 1)!}\]</span></p>
-<p><em>Доказательство:</em> Возьмем <span
-class="math inline">\(\varphi(x) = (x - x_0)^{n}\)</span>. Запишем
+<p><span class="margin-lft"><em>Доказательство:</em></span> Возьмем
+<span class="math inline">\(\varphi(x) = (x - x_0)^{n}\)</span>. Запишем
 остаточный член в общей форме: <span class="math display">\[\frac{f^{(n
 + 1)}(c) \cdot (x - c)^n}{n!} \cdot \frac{(x - x_0)^{n} - 0}{n \cdot (x
 - x_0)^{n - 1}} = \frac{f^{(n + 1)}(c)\cdot (x - x_0)^{n + 1}}{(n + 1)!}
@@ -324,13 +336,13 @@ id="формула-тейлора-для-основных-элементарны
 локального экстремума. Общая схема поиска глобального экстремума функции
 на отрезке</h2>
 <div id="theorem-45">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f(x) \in
-\mathcal{D}(x_0)\)</span>. Если при <span class="math inline">\(x &lt;
-x_0 \,\,\,\, f’(x) &lt; 0\)</span>, при <span class="math inline">\(x
-&gt; x_0 \,\,\,\, f’(x) &gt; 0\)</span>, то в т. <span
-class="math inline">\(x_0\)</span> минимум функции <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f(x) \in \mathcal{D}(x_0)\)</span>. Если при <span
+class="math inline">\(x &lt; x_0 \,\,\,\, f’(x) &lt; 0\)</span>, при
+<span class="math inline">\(x &gt; x_0 \,\,\,\, f’(x) &gt; 0\)</span>,
+то в т. <span class="math inline">\(x_0\)</span> минимум функции <span
 class="math inline">\(f(x)\)</span>.</p>
-<p><em>Доказательство:</em> По <a
+<p><span class="margin-lft"><em>Доказательство:</em></span> По <a
 href="дифференцируемость-функций-первый-дифференциал.html#theorem-34">т.
 Лагранжа</a> для <span class="math inline">\(\forall x &lt; x_0 \,\,\,\,
 \exists c \in (x, x_0): \,\,\,\, f(x_0) - f(x) = f’(c)\cdot (x_0 - x)

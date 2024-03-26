@@ -11,6 +11,7 @@
     
     <title>Выпуклые функции</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -256,14 +266,15 @@
 
 <h1 data-number="9" id="выпуклые-функции">Выпуклые функции</h1>
 <div id="definition-21">
-<p><strong>Определение: </strong>Для <span class="math inline">\(f(x),
-\,\,\,\, x_1, \,\,\,\, x_2 \,\,\,\,\,\,\,\, l(x) = \frac{f(x_1)\cdot
-(x_2 - x) + f(x_2)\cdot (x - x_1)}{x_2 - x_1}\)</span>. (Прямая,
-проходящая через две заданные точки функции)</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Для
+<span class="math inline">\(f(x), \,\,\,\, x_1, \,\,\,\, x_2
+\,\,\,\,\,\,\,\, l(x) = \frac{f(x_1)\cdot (x_2 - x) + f(x_2)\cdot (x -
+x_1)}{x_2 - x_1}\)</span>. (Прямая, проходящая через две заданные точки
+функции)</p>
 </div>
 <div id="definition-22">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(f(x)\)</span> определена на <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена на <span
 class="math inline">\((a, b)\)</span>. Если <span
 class="math inline">\(\forall x_1 &lt; x_2 \in (a, b)\)</span> и <span
 class="math inline">\(\forall x \in (x_1, x_2)\)</span>:</p>
@@ -278,12 +289,12 @@ class="math inline">\(f(x)\)</span> <em>выпуклая вверх</em>.</li>
 id="достаточное-условие-строгой-выпуклости">Достаточное условие строгой
 выпуклости</h2>
 <div id="theorem-46">
-<p><strong>Теорема: </strong>Если на <span class="math inline">\((a, b)
-\,\,\,\, f’’(x) &gt; 0\)</span>, то <span
-class="math inline">\(f(x)\)</span> выпукла вниз на <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если на
+<span class="math inline">\((a, b) \,\,\,\, f’’(x) &gt; 0\)</span>, то
+<span class="math inline">\(f(x)\)</span> выпукла вниз на <span
 class="math inline">\((a, b)\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(\forall x_1 &lt;
-x_2 \in (a, b)\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\forall x_1 &lt; x_2 \in (a, b)\)</span></p>
 <p><span class="math display">\[l(x) - f(x) = \frac{f(x_1)\cdot (x_2 -
 x) + f(x_2)\cdot (x - x_1)}{x_2 - x_1} - f(x) \cdot \frac{(x_2 - x) + (x
 - x_1)}{x_2 - x_1} =\]</span> <span
@@ -305,14 +316,14 @@ f’’(\eta)\cdot (\xi - \zeta)}{x_2 - x_1}\]</span> (Почему <span
 class="math inline">\(\xi - \zeta &gt;0\)</span>?)</p>
 </div>
 <div id="theorem-47">
-<p><strong>Теорема: </strong>Если на <span class="math inline">\((a, b)
-\,\,\,\, f’’(x) &gt; 0\)</span>, то <span class="math display">\[\forall
-x_0, x \in (a, b) \,\,\,\, f(x) &gt; f(x_0) + f’(x_0)\cdot (x -
-x_0)\]</span></p>
-<p><em>Доказательство:</em> Без ограничения общности докажем для <span
-class="math inline">\(x_0 &lt; x\)</span>. <span
-class="math display">\[f(x) = f(x_0) + f’(x_0)\cdot (x - x_0) + (f(x) -
-f(x_0)) - f’(x_0)\cdot (x - x_0) =\]</span> По <a
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если на
+<span class="math inline">\((a, b) \,\,\,\, f’’(x) &gt; 0\)</span>, то
+<span class="math display">\[\forall x_0, x \in (a, b) \,\,\,\, f(x)
+&gt; f(x_0) + f’(x_0)\cdot (x - x_0)\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Без
+ограничения общности докажем для <span class="math inline">\(x_0 &lt;
+x\)</span>. <span class="math display">\[f(x) = f(x_0) + f’(x_0)\cdot (x
+- x_0) + (f(x) - f(x_0)) - f’(x_0)\cdot (x - x_0) =\]</span> По <a
 href="дифференцируемость-функций-первый-дифференциал.html#theorem-34">теореме
 Лагранжа</a> <span class="math inline">\(\exists x_0 &lt; \zeta &lt;
 x:\,\,\,\, f(x) - f(x_0) = f’(\zeta)\cdot (x - x_0)\)</span>. <span
@@ -330,47 +341,48 @@ f’’(\xi) &gt; 0 \,\,\,\,\blacksquare\]</span></p>
 <p><strong>Упражнение:</strong><a name="exercise-4"></a> Докажите эту
 теорему для <span class="math inline">\(f’’(x) &lt; 0\)</span>.</p>
 <div id="definition-23">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(f(x)\)</span> определена в <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена в <span
 class="math inline">\(B(x_0)\)</span> и <span
 class="math inline">\(\exists f’(x_0)\)</span>.</p>
 <p>Если выражение <span class="math inline">\(f(x) - (f(x_0) +
 f’(x_0)\cdot (x - x_0)\)</span> имеет разный знак при <span
 class="math inline">\(x &lt; x_0\)</span> и <span
 class="math inline">\(x &gt; x_0\)</span>, <span
-class="math inline">\(x_0\)</span> - <em>точка перегиба</em> графика
+class="math inline">\(x_0\)</span> – <em>точка перегиба</em> графика
 функции <span class="math inline">\(f(x)\)</span>.</p>
 </div>
 <h2 data-number="9.2"
 id="необходимое-и-достаточные-условия-наличия-точки-перегиба">Необходимое
 и достаточные условия наличия точки перегиба</h2>
 <div id="theorem-48">
-<p><strong>Теорема: </strong>(<em>Необходимое условие существования
-точки перегиба</em>) Пусть <span class="math inline">\(f(x)\)</span>
-дважды дифференцируема в <span class="math inline">\(B(x_0)\)</span>.
-Если <span class="math inline">\(x_0\)</span> точка перегиба <span
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(<em>Необходимое условие существования точки
+перегиба</em>) Пусть <span class="math inline">\(f(x)\)</span> дважды
+дифференцируема в <span class="math inline">\(B(x_0)\)</span>. Если
+<span class="math inline">\(x_0\)</span> точка перегиба <span
 class="math inline">\(f(x)\)</span>, то <span
 class="math inline">\(f’’(x_0) = 0\)</span>.</p>
-<p><em>Доказательство:</em> (от противного) Пусть <span
-class="math inline">\(f’’(x_0) &gt; 0\)</span>. Тогда <span
-class="math inline">\(\exists B_1(x_0):\,\,\,\, \forall x \in B_1(x_0)
-\Rightarrow\)</span> по <a
+<p><span class="margin-lft"><em>Доказательство:</em></span> (от
+противного) Пусть <span class="math inline">\(f’’(x_0) &gt; 0\)</span>.
+Тогда <span class="math inline">\(\exists B_1(x_0):\,\,\,\, \forall x
+\in B_1(x_0) \Rightarrow\)</span> по <a
 href="выпуклые-функции.html#theorem-47">теореме</a> <span
 class="math inline">\(f(x) - (f(x_0) + f’(x_0)\cdot (x - x_0) &gt; 0
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-49">
-<p><strong>Теорема: </strong>(<em>1-е достаточное условие существования
-точки перегиба</em>) Пусть <span class="math inline">\(f(x)\)</span>
-дифференцируема в <span class="math inline">\(B(x_0)\)</span> и дважды
-дифференцируема в <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(<em>1-е
+достаточное условие существования точки перегиба</em>) Пусть <span
+class="math inline">\(f(x)\)</span> дифференцируема в <span
+class="math inline">\(B(x_0)\)</span> и дважды дифференцируема в <span
 class="math inline">\(\mathring{B(x_0)}\)</span>. Если <span
 class="math inline">\(f’’(x_0)\)</span> имеет разные знаки при <span
 class="math inline">\(x &lt; x_0\)</span> и <span
 class="math inline">\(x &gt; x_0\)</span>, то <span
-class="math inline">\(x_0\)</span> - точка перегиба <span
+class="math inline">\(x_0\)</span> – точка перегиба <span
 class="math inline">\(f(x)\)</span>.</p>
-<p><em>Доказательство:</em> Из <a
+<p><span class="margin-lft"><em>Доказательство:</em></span> Из <a
 href="выпуклые-функции.html#theorem-47">теоремы</a> и <a
 href="#exercise-4">упражнения</a> следует, что при <span
 class="math inline">\(x &lt; x_0\)</span> и <span
@@ -380,49 +392,51 @@ class="math inline">\(f(x) - (f(x_0) + f’(x_0)\cdot (x - x_0)\)</span>
 class="math inline">\(\,\,\,\,\blacksquare\)</span>.</p>
 </div>
 <div id="theorem-50">
-<p><strong>Теорема: </strong>(<em>2-е достаточное условие существования
-точки перегиба</em>) Пусть <span class="math inline">\(f(x)\)</span>
-трижды дифференцируема в <span class="math inline">\(B(x_0)\)</span>.
-Если <span class="math inline">\(f’’’(x_0) \ne 0\)</span> и <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(<em>2-е
+достаточное условие существования точки перегиба</em>) Пусть <span
+class="math inline">\(f(x)\)</span> трижды дифференцируема в <span
+class="math inline">\(B(x_0)\)</span>. Если <span
+class="math inline">\(f’’’(x_0) \ne 0\)</span> и <span
 class="math inline">\(f’’(x_0) = 0\)</span>, то <span
-class="math inline">\(x_0\)</span> - точка перегиба <span
+class="math inline">\(x_0\)</span> – точка перегиба <span
 class="math inline">\(f(x)\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(f(x) - f(x_0) -
-f’(x_0)\cdot (x - x_0) = f’(\zeta)\cdot (x - x_0) - f’(x_0)\cdot (x -
-x_0) = f’’(\xi)\cdot (\zeta - x_0) \cdot (x - x_0)????\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(f(x) - f(x_0) - f’(x_0)\cdot (x - x_0) =
+f’(\zeta)\cdot (x - x_0) - f’(x_0)\cdot (x - x_0) = f’’(\xi)\cdot (\zeta
+- x_0) \cdot (x - x_0)????\)</span></p>
 </div>
 <h3 data-number="9.2.1" id="асимптоты">Асимптоты</h3>
 <div id="definition-24">
-<p><strong>Определение: </strong>Если <span
-class="math inline">\(f(x)\)</span> определена в <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+<span class="math inline">\(f(x)\)</span> определена в <span
 class="math inline">\(\mathring{B}(x_0)\)</span> и <span
 class="math inline">\(\displaystyle \lim_{x\to x_0+0}f(x) =
 \pm\infty\)</span> или <span class="math inline">\(\displaystyle
 \lim_{x\to x_0-0}f(x) = \pm\infty\)</span>, то прямая <span
-class="math inline">\(y = x_0\)</span> - <em>вертикальная асимптота</em>
+class="math inline">\(y = x_0\)</span> – <em>вертикальная асимптота</em>
 графика функции <span class="math inline">\(f(x)\)</span>.</p>
 </div>
 <div id="definition-25">
-<p><strong>Определение: </strong>Если <span
-class="math inline">\(\displaystyle \lim_{x\to \pm\infty}(f(x) - (kx +
-b)) = 0\)</span> то прямая <span class="math inline">\(y = kx +
-b\)</span> - <em>наклонная асимптота</em> графика функции <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+<span class="math inline">\(\displaystyle \lim_{x\to \pm\infty}(f(x) -
+(kx + b)) = 0\)</span> то прямая <span class="math inline">\(y = kx +
+b\)</span> – <em>наклонная асимптота</em> графика функции <span
 class="math inline">\(f(x)\)</span>.</p>
 </div>
 <div id="theorem-51">
-<p><strong>Теорема: </strong>Прямая <span class="math inline">\(y = kx +
-b\)</span> наклонная асимптота графика функции <span
-class="math inline">\(f(x)\)</span> <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Прямая
+<span class="math inline">\(y = kx + b\)</span> наклонная асимптота
+графика функции <span class="math inline">\(f(x)\)</span> <span
 class="math inline">\(\Leftrightarrow \exists \displaystyle \lim_{x\to
 \pm\infty}\frac{f(x)}{x} = k\)</span> и <span
 class="math inline">\(\displaystyle \lim_{x\to \pm\infty}(f(x) - kx) =
 b\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(\displaystyle
-\lim_{x\to \pm\infty}(f(x) - (kx + b)) = 0 \Rightarrow f(x) - kx = b +
-\overline{\overline{o}}(1)\)</span>, при <span class="math inline">\(x
-\to \pm\infty \Rightarrow \frac{f(x)}{x} = k +
-\overline{\overline{o}}(1)\)</span> , при <span class="math inline">\(x
-\to \pm\infty \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\displaystyle \lim_{x\to \pm\infty}(f(x) - (kx +
+b)) = 0 \Rightarrow f(x) - kx = b + \overline{\overline{o}}(1)\)</span>,
+при <span class="math inline">\(x \to \pm\infty \Rightarrow
+\frac{f(x)}{x} = k + \overline{\overline{o}}(1)\)</span> , при <span
+class="math inline">\(x \to \pm\infty \,\,\,\,\blacksquare\)</span></p>
 </div>
 
 

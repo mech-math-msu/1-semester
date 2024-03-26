@@ -11,6 +11,7 @@
     
     <title>Поле комплексных чисел</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -257,8 +267,9 @@
 <h1 data-number="3" id="поле-комплексных-чисел">Поле комплексных
 чисел</h1>
 <div id="definition-4">
-<p><strong>Определение: </strong>(<em>Комплексные числа</em>) Множество
-<span class="math inline">\(\mathbb{C} = \{(a, b): \,\,\,\, a, b \in
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(<em>Комплексные числа</em>) Множество <span
+class="math inline">\(\mathbb{C} = \{(a, b): \,\,\,\, a, b \in
 \mathbb{R}\}\)</span> – это множество комплексных чисел. Пара <span
 class="math inline">\((a, b)\)</span> записывается в виде <span
 class="math inline">\(a + bi\)</span>.</p>
@@ -275,40 +286,44 @@ id="изображение-комплексных-чисел-на-плоскос
 id="тригонометрическая-форма-комплексного-числа">Тригонометрическая
 форма комплексного числа</h2>
 <div id="statement-3">
-<p><strong>Утверждение: </strong><span class="math inline">\(\forall z
-\in \mathbb{C} \,\,\,\, \exists \rho \in \mathbb{R} \ge 0, \,\,\,\,
-\varphi \in \mathbb{R}\)</span> такие что <span class="math inline">\(z
-= \rho \cdot (\cos{\varphi} + i \cdot \sin{\varphi})\)</span>.</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
+class="math inline">\(\forall z \in \mathbb{C} \,\,\,\, \exists \rho \in
+\mathbb{R} \ge 0, \,\,\,\, \varphi \in \mathbb{R}\)</span> такие что
+<span class="math inline">\(z = \rho \cdot (\cos{\varphi} + i \cdot
+\sin{\varphi})\)</span>.</p>
 <p><span class="math inline">\(\rho\)</span> – <em>модуль</em> <span
 class="math inline">\(z\)</span> и обозначается <span
 class="math inline">\(\rho = |z|\)</span> <span
 class="math inline">\(\varphi\)</span> – <em>аргумент</em> <span
 class="math inline">\(z\)</span> и обозначается <span
 class="math inline">\(\varphi = \operatorname{Arg} z\)</span></p>
-<p><em>Доказательство:</em> <span class="math inline">\(\rho = \sqrt{a^2
-+ b^2} \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\rho = \sqrt{a^2 + b^2}
+\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="3.6"
 id="умножение-и-деление-комплексных-чисел-в-тригонометрической-форме">Умножение
 и деление комплексных чисел в тригонометрической форме</h2>
 <div id="statement-4">
-<p><strong>Утверждение: </strong><span class="math inline">\(\forall x,
-y \in \mathbb{C}\)</span> <span class="math display">\[|x\cdot y| =
-|x||y|\]</span> <span class="math display">\[\operatorname{Arg} (x \cdot
-y) = \operatorname{Arg}x + \operatorname{Arg}y\]</span></p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(x =
-\rho(\cos{\varphi} + i\sin{\varphi}), \,\,\,\, y = \rho’(\cos{\varphi’}
-+ i\sin{\varphi’})\)</span> <span class="math display">\[xy =
-(\rho(\cos{\varphi} + i\sin{\varphi}))\cdot (\rho’(\cos{\varphi’} +
-i\sin{\varphi’})) = \rho \cdot \rho ’ (\cos{(\varphi + \varphi’)} + i
-\sin{(\varphi + \varphi’)}) \,\,\,\,\blacksquare\]</span></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
+class="math inline">\(\forall x, y \in \mathbb{C}\)</span> <span
+class="math display">\[|x\cdot y| = |x||y|\]</span> <span
+class="math display">\[\operatorname{Arg} (x \cdot y) =
+\operatorname{Arg}x + \operatorname{Arg}y\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(x = \rho(\cos{\varphi} + i\sin{\varphi}), \,\,\,\,
+y = \rho’(\cos{\varphi’} + i\sin{\varphi’})\)</span> <span
+class="math display">\[xy = (\rho(\cos{\varphi} + i\sin{\varphi}))\cdot
+(\rho’(\cos{\varphi’} + i\sin{\varphi’})) = \rho \cdot \rho ’
+(\cos{(\varphi + \varphi’)} + i \sin{(\varphi + \varphi’)})
+\,\,\,\,\blacksquare\]</span></p>
 </div>
 <h2 data-number="3.7" id="формула-муавра">Формула Муавра</h2>
 <div id="statement-5">
-<p><strong>Утверждение: </strong><span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math display">\[(\rho(\cos{\varphi} + i\sin{\varphi}))^n =
 \rho^n(\cos{n\varphi} + i\sin{n\varphi})\]</span></p>
-<p><em>Доказательство:</em> <a
+<p><span class="margin-lft"><em>Доказательство:</em></span> <a
 href="поле-комплексных-чисел.html#statement-4">следует отсюда</a> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
@@ -316,41 +331,43 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 id="извлечение-корней-из-комплексных-чисел">Извлечение корней из
 комплексных чисел</h2>
 <div id="definition-5">
-<p><strong>Определение: </strong><span class="math inline">\(\sqrt[n]z =
-\{w \in \mathbb{C}: \,\,\,\, w^n = c\}, \,\,\,\, n \in
-\mathbb{N}\)</span></p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(\sqrt[n]z = \{w \in \mathbb{C}: \,\,\,\, w^n =
+c\}, \,\,\,\, n \in \mathbb{N}\)</span></p>
 </div>
 <h2 data-number="3.9" id="комплексные-корни-из-единицы">Комплексные
 корни из единицы</h2>
 <div id="statement-7">
-<p><strong>Утверждение: </strong><span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math inline">\(\sqrt[n]{1}\)</span> – коммутативная (абелева)
 группа.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="3.10" id="первообразные-корни">Первообразные корни</h2>
 <div id="definition-6">
-<p><strong>Определение: </strong>Группа <span
-class="math inline">\(G\)</span> <em>циклическая</em>, если <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Группа
+<span class="math inline">\(G\)</span> <em>циклическая</em>, если <span
 class="math inline">\(\exists a \in G: \,\,\,\, \forall b \in G \,\,\,\,
 \exists k \in \mathbb{Z}: \,\,\,\, b = a^k\)</span>.<br></p>
 <p>Элемент <span class="math inline">\(a\)</span> – <em>порождающий
 элемент</em> группы <span class="math inline">\(G\)</span>.</p>
 </div>
 <div id="definition-7">
-<p><strong>Определение: </strong><span class="math inline">\(a \in
-\sqrt[n]{1}\)</span> – <em>первообразный корень</em>, если он является
-порождающим элементом <span
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(a \in \sqrt[n]{1}\)</span> – <em>первообразный
+корень</em>, если он является порождающим элементом <span
 class="math inline">\(\sqrt[n]{1}\)</span>.</p>
 </div>
 <h2 data-number="3.11"
 id="среди-корней-степени-сто-из-единицы-сколько-первообразных">Среди
 корней степени сто из единицы сколько первообразных?</h2>
 <div id="theorem-0">
-<p><strong>Теорема: </strong><span class="math inline">\(\varepsilon_l
-\in \sqrt[n]{1}\)</span> – первообразный корень <span
-class="math inline">\(\Leftrightarrow \gcd{(n, l)} = 1\)</span></p>
-<p><em>Доказательство:</em> непонятно.</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span><span
+class="math inline">\(\varepsilon_l \in \sqrt[n]{1}\)</span> –
+первообразный корень <span class="math inline">\(\Leftrightarrow
+\gcd{(n, l)} = 1\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span>
+непонятно.</p>
 </div>
 
 

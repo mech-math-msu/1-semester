@@ -1,137 +1,137 @@
 [
     {
         "keyword": "делит",
-        "html": "<p><a href=\"делимость.html#definition-1\"><strong>Перейти к\nопределению:</strong></a> Пусть <span class=\"math inline\">\\(a \\in\n\\mathbb{Z}, b \\in \\mathbb{Z}, a \\ne 0\\)</span>. Если <span\nclass=\"math inline\">\\(\\exists c \\in \\mathbb{Z}\\)</span>, такое что <span\nclass=\"math inline\">\\(b = ac\\)</span>, то <span\nclass=\"math inline\">\\(a\\,\\,|\\,\\,b\\)</span> (<span\nclass=\"math inline\">\\(a\\)</span> <em>делит</em> <span\nclass=\"math inline\">\\(b\\)</span>)</p>",
+        "html": "<p><a href=\"делимость.html#definition-1\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(a \\in \\mathbb{Z}, b \\in \\mathbb{Z}, a\n\\ne 0\\)</span>. Если <span class=\"math inline\">\\(\\exists c \\in\n\\mathbb{Z}\\)</span>, такое что <span class=\"math inline\">\\(b =\nac\\)</span>, то <span class=\"math inline\">\\(a\\,\\,|\\,\\,b\\)</span> (<span\nclass=\"math inline\">\\(a\\)</span> <em>делит</em> <span\nclass=\"math inline\">\\(b\\)</span>)</p>",
         "url": "делимость.html#definition-1"
     },
     {
         "keyword": "(нижняя) целая часть числа",
-        "html": "<p><a href=\"делимость.html#definition-2\"><strong>Перейти к\nопределению:</strong></a> (<em>(нижняя) целая часть числа</em>) <span\nclass=\"math inline\">\\([x] = \\max \\{z \\in \\mathbb{Z}: z \\le x\\} = \\lceil\nx \\rceil\\)</span></p>",
+        "html": "<p><a href=\"делимость.html#definition-2\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>(нижняя) целая часть числа</em>) <span class=\"math inline\">\\([x] =\n\\max \\{z \\in \\mathbb{Z}: z \\le x\\} = \\lceil x \\rceil\\)</span></p>",
         "url": "делимость.html#definition-2"
     },
     {
         "keyword": "дробная часть числа",
-        "html": "<p><a href=\"делимость.html#definition-3\"><strong>Перейти к\nопределению:</strong></a> (<em>дробная часть числа</em>) <span\nclass=\"math inline\">\\(\\{x\\} = x - [x]\\)</span></p>",
+        "html": "<p><a href=\"делимость.html#definition-3\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>дробная часть числа</em>) <span class=\"math inline\">\\(\\{x\\} = x -\n[x]\\)</span></p>",
         "url": "делимость.html#definition-3"
     },
     {
         "keyword": "верхняя целая часть числа",
-        "html": "<p><a href=\"делимость.html#definition-4\"><strong>Перейти к\nопределению:</strong></a> (<em>верхняя целая часть числа</em>) <span\nclass=\"math inline\">\\(\\lfloor x \\rfloor = \\min \\{z \\in \\mathbb{Z}: z \\ge\nx\\}\\)</span></p>\n<blockquote>\n<p><span class=\"math inline\">\\(\\lfloor -4.5 \\rfloor = -4\\)</span> <br>\n<span class=\"math inline\">\\(\\lfloor 5.5 \\rfloor = [6]\\)</span></p>\n</blockquote>",
+        "html": "<p><a href=\"делимость.html#definition-4\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>верхняя целая часть числа</em>) <span class=\"math inline\">\\(\\lfloor\nx \\rfloor = \\min \\{z \\in \\mathbb{Z}: z \\ge x\\}\\)</span></p>\n<blockquote>\n<p><span class=\"math inline\">\\(\\lfloor -4.5 \\rfloor = -4\\)</span> <br>\n<span class=\"math inline\">\\(\\lfloor 5.5 \\rfloor = [6]\\)</span></p>\n</blockquote>",
         "url": "делимость.html#definition-4"
     },
     {
         "keyword": "расстояние до ближайшего целого",
-        "html": "<p><a href=\"делимость.html#definition-5\"><strong>Перейти к\nопределению:</strong></a> (<em>расстояние до ближайшего целого</em>)\n<span class=\"math inline\">\\(\\displaystyle ||x|| = \\min_{a \\in\n\\mathbb{Z}} |x - a|\\)</span></p>",
+        "html": "<p><a href=\"делимость.html#definition-5\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>расстояние до ближайшего целого</em>) <span\nclass=\"math inline\">\\(\\displaystyle ||x|| = \\min_{a \\in \\mathbb{Z}} |x -\na|\\)</span></p>",
         "url": "делимость.html#definition-5"
     },
     {
         "keyword": "нод",
-        "html": "<p><a href=\"делимость.html#definition-6\"><strong>Перейти к\nопределению:</strong></a> (<em>НОД</em>) Пусть <span\nclass=\"math inline\">\\(a, b \\in \\mathbb{Z},\\,\\,\\,\\,\\mathcal{D}_{a, b}=\n\\{z \\in \\mathbb{N}: z\\,\\,|\\,\\,a, z\\,\\,|\\,\\,b\\}\\)</span>. Тогда <span\nclass=\"math display\">\\[\\mathbf{НОД}(a, b) = \\max\n\\mathcal{D}\\]</span></p>",
+        "html": "<p><a href=\"делимость.html#definition-6\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>НОД</em>) Пусть <span class=\"math inline\">\\(a, b \\in\n\\mathbb{Z},\\,\\,\\,\\,\\mathcal{D}_{a, b}= \\{z \\in \\mathbb{N}: z\\,\\,|\\,\\,a,\nz\\,\\,|\\,\\,b\\}\\)</span>. Тогда <span\nclass=\"math display\">\\[\\mathbf{НОД}(a, b) = \\max\n\\mathcal{D}\\]</span></p>",
         "url": "делимость.html#definition-6"
     },
     {
         "keyword": "",
-        "html": "<p><a href=\"делимость.html#definition-7\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(z \\in\n\\mathbb{Z}\\)</span> - общее кратное чисел <span\nclass=\"math inline\">\\(a_1, \\ldots, a_n\\)</span>, если <span\nclass=\"math inline\">\\(a_j \\,\\,|\\,\\,z \\forall j\\)</span></p>",
+        "html": "<p><a href=\"делимость.html#definition-7\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(z \\in \\mathbb{Z}\\)</span> – общее кратное\nчисел <span class=\"math inline\">\\(a_1, \\ldots, a_n\\)</span>, если <span\nclass=\"math inline\">\\(a_j \\,\\,|\\,\\,z \\forall j\\)</span></p>",
         "url": "делимость.html#definition-7"
     },
     {
         "keyword": "",
-        "html": "<p><a href=\"делимость.html#definition-8\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(\\mathbf{НОК} (a_1,\n\\ldots, a_n) = \\min \\{z \\in \\mathbb{N} : z\\)</span> общее кратное чисел\n<span class=\"math inline\">\\(a_1, \\ldots, a_n \\}\\)</span></p>",
+        "html": "<p><a href=\"делимость.html#definition-8\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(\\mathbf{НОК} (a_1, \\ldots, a_n) = \\min \\{z\n\\in \\mathbb{N} : z\\)</span> общее кратное чисел <span\nclass=\"math inline\">\\(a_1, \\ldots, a_n \\}\\)</span></p>",
         "url": "делимость.html#definition-8"
     },
     {
         "keyword": "",
-        "html": "<p><a href=\"делимость.html#definition-9\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(\\mathbf{НОД} (a_1,\n\\ldots, a_n) = \\max \\{z \\in \\mathbb{N}: z \\,\\,|\\,\\,a_j \\,\\,\\,\\,\\,\\,\n\\forall j = 1, \\ldots, n\\}\\)</span></p>",
+        "html": "<p><a href=\"делимость.html#definition-9\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(\\mathbf{НОД} (a_1, \\ldots, a_n) = \\max \\{z\n\\in \\mathbb{N}: z \\,\\,|\\,\\,a_j \\,\\,\\,\\,\\,\\, \\forall j = 1, \\ldots,\nn\\}\\)</span></p>",
         "url": "делимость.html#definition-9"
     },
     {
         "keyword": "",
-        "html": "<p><a href=\"конечные-цепные-дроби.html#definition-10\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\([A_0, \\ldots,\nA_n]\\)</span> - разложение числа <span\nclass=\"math inline\">\\(\\frac{a}{b}\\)</span> в конечную цепную дробь.</p>",
+        "html": "<p><a href=\"конечные-цепные-дроби.html#definition-10\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\([A_0, \\ldots, A_n]\\)</span> – разложение\nчисла <span class=\"math inline\">\\(\\frac{a}{b}\\)</span> в конечную цепную\nдробь.</p>",
         "url": "конечные-цепные-дроби.html#definition-10"
     },
     {
         "keyword": "",
-        "html": "<p><a href=\"конечные-цепные-дроби.html#definition-11\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\([A_0, \\ldots,\nA_k], \\,\\,\\,\\, k \\le n\\)</span> - подходящая дробь для разложения <span\nclass=\"math inline\">\\(\\frac{a}{b}\\)</span> в конечную цепную дробь.</p>",
+        "html": "<p><a href=\"конечные-цепные-дроби.html#definition-11\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\([A_0, \\ldots, A_k], \\,\\,\\,\\, k \\le\nn\\)</span> – подходящая дробь для разложения <span\nclass=\"math inline\">\\(\\frac{a}{b}\\)</span> в конечную цепную дробь.</p>",
         "url": "конечные-цепные-дроби.html#definition-11"
     },
     {
         "keyword": "",
-        "html": "<p><a href=\"теория-сравнений.html#definition-12\"><strong>Перейти к\nопределению:</strong></a> <strong>Определение:</strong> <span\nclass=\"math display\">\\[a, b \\in \\mathbb{Z} \\,\\,\\,\\, m \\in \\mathbb{N},\n\\,\\,\\,\\, m \\ge 2\\]</span> <span class=\"math display\">\\[a \\equiv b \\mod m\n\\,\\,\\,\\, m \\,\\,|\\,\\,(a - b)\\]</span></p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-12\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math display\">\\[a, b \\in \\mathbb{Z} \\,\\,\\,\\, m \\in\n\\mathbb{N}, \\,\\,\\,\\, m \\ge 2\\]</span> <span class=\"math display\">\\[a\n\\equiv b \\mod m \\,\\,\\,\\, m \\,\\,|\\,\\,(a - b)\\]</span></p>",
         "url": "теория-сравнений.html#definition-12"
     },
     {
         "keyword": "",
-        "html": "<p><a href=\"теория-сравнений.html#definition-13\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(\\varphi\n(m)=\\)</span> количество элементов в множестве <span\nclass=\"math inline\">\\(\\{x \\in \\mathbb{N}, x \\le m, (x, m) =\n1\\}\\)</span></p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-13\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(\\varphi (m)=\\)</span> количество элементов в\nмножестве <span class=\"math inline\">\\(\\{x \\in \\mathbb{N}, x \\le m, (x,\nm) = 1\\}\\)</span></p>",
         "url": "теория-сравнений.html#definition-13"
     },
     {
         "keyword": "класс вычетов по модулю доказательство: корректности",
-        "html": "<p><a href=\"теория-сравнений.html#definition-15\"><strong>Перейти к\nопределению:</strong></a> <em>Класс вычетов</em> <span\nclass=\"math inline\">\\(a\\)</span> <em>по модулю</em> <span\nclass=\"math inline\">\\(m\\)</span><br></p>\n<p><span class=\"math inline\">\\(\\overline{a} = \\{x \\in \\mathbb{Z}: x\n\\equiv a \\mod m\\}\\)</span><br> <span class=\"math inline\">\\(\\overline{a}\n+ \\overline{b} = \\overline{a_0 + b_0} \\,\\,\\,\\, a_0 \\in \\overline{a},\n\\,\\, b_0 \\in \\overline{b}\\)</span><br> <span\nclass=\"math inline\">\\(\\overline{a} \\cdot \\overline{b} = \\overline{a_0\n\\cdot b_0} \\,\\,\\,\\, a_0 \\in \\overline{a}, \\,\\, b_0 \\in\n\\overline{b}\\)</span></p>\n<p><em>Доказательство: корректности</em></p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-15\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Класс вычетов</em> <span class=\"math inline\">\\(a\\)</span> <em>по\nмодулю</em> <span class=\"math inline\">\\(m\\)</span><br></p>\n<p><span class=\"math inline\">\\(\\overline{a} = \\{x \\in \\mathbb{Z}: x\n\\equiv a \\mod m\\}\\)</span><br> <span class=\"math inline\">\\(\\overline{a}\n+ \\overline{b} = \\overline{a_0 + b_0} \\,\\,\\,\\, a_0 \\in \\overline{a},\n\\,\\, b_0 \\in \\overline{b}\\)</span><br> <span\nclass=\"math inline\">\\(\\overline{a} \\cdot \\overline{b} = \\overline{a_0\n\\cdot b_0} \\,\\,\\,\\, a_0 \\in \\overline{a}, \\,\\, b_0 \\in\n\\overline{b}\\)</span></p>\n<p><em>Доказательство: корректности</em></p>",
         "url": "теория-сравнений.html#definition-15"
     },
     {
         "keyword": "обратимым доказательство:",
-        "html": "<p><a href=\"теория-сравнений.html#definition-16\"><strong>Перейти к\nопределению:</strong></a> класс <span\nclass=\"math inline\">\\(\\overline{a}\\)</span> вычетов по модулю <span\nclass=\"math inline\">\\(m\\)</span> называется <em>обратимым</em>,\nесли:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(\\exists \\,\\, a_1 \\in \\overline{a}: (a_1,\nm) = 1\\)</span></li>\n<li><span class=\"math inline\">\\(\\forall \\,\\, a_1 \\in \\overline{a}: (a_1,\nm) = 1\\)</span></li>\n<li><span class=\"math inline\">\\(\\exists \\,\\, b \\in \\mathbb{Z}:\n\\overline{a} \\cdot \\overline{b} = \\overline{1}\\)</span></li>\n</ol>\n<p><em>Доказательство:</em> (эквивалентности 1. 2. 3.)</p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-16\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nкласс <span class=\"math inline\">\\(\\overline{a}\\)</span> вычетов по\nмодулю <span class=\"math inline\">\\(m\\)</span> называется\n<em>обратимым</em>, если:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(\\exists \\,\\, a_1 \\in \\overline{a}: (a_1,\nm) = 1\\)</span></li>\n<li><span class=\"math inline\">\\(\\forall \\,\\, a_1 \\in \\overline{a}: (a_1,\nm) = 1\\)</span></li>\n<li><span class=\"math inline\">\\(\\exists \\,\\, b \\in \\mathbb{Z}:\n\\overline{a} \\cdot \\overline{b} = \\overline{1}\\)</span></li>\n</ol>\n<p><em>Доказательство:</em> (эквивалентности 1. 2. 3.)</p>",
         "url": "теория-сравнений.html#definition-16"
     },
     {
         "keyword": "полная",
-        "html": "<p><a href=\"теория-сравнений.html#definition-17\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(B \\subset\n\\mathbb{Z}\\)</span> - <em>полная</em> система вычетов по модулю <span\nclass=\"math inline\">\\(m\\)</span>, если <span\nclass=\"math inline\">\\(B\\)</span> содержит ровно по одному числу из\nкаждого класса вычетов по модулю <span\nclass=\"math inline\">\\(m\\)</span>.</p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-17\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(B \\subset \\mathbb{Z}\\)</span> –\n<em>полная</em> система вычетов по модулю <span\nclass=\"math inline\">\\(m\\)</span>, если <span\nclass=\"math inline\">\\(B\\)</span> содержит ровно по одному числу из\nкаждого класса вычетов по модулю <span\nclass=\"math inline\">\\(m\\)</span>.</p>",
         "url": "теория-сравнений.html#definition-17"
     },
     {
         "keyword": "приведенная",
-        "html": "<p><a href=\"теория-сравнений.html#definition-18\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(B^* \\subset\n\\mathbb{Z}\\)</span> - <em>приведенная</em> система вычетов по модулю\n<span class=\"math inline\">\\(m\\)</span>, если <span\nclass=\"math inline\">\\(B^*\\)</span> содержит ровно по одному числу из\nкаждого обратимого класса вычетов по модулю <span\nclass=\"math inline\">\\(m\\)</span>.</p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-18\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(B^* \\subset \\mathbb{Z}\\)</span> –\n<em>приведенная</em> система вычетов по модулю <span\nclass=\"math inline\">\\(m\\)</span>, если <span\nclass=\"math inline\">\\(B^*\\)</span> содержит ровно по одному числу из\nкаждого обратимого класса вычетов по модулю <span\nclass=\"math inline\">\\(m\\)</span>.</p>",
         "url": "теория-сравнений.html#definition-18"
     },
     {
         "keyword": "простое",
-        "html": "<p><a href=\"теория-сравнений.html#definition-19\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(n \\in\n\\mathbb{N}\\)</span> - <em>простое</em>, если имеет ровно 2 делителя\n<span class=\"math inline\">\\(1\\)</span> и <span\nclass=\"math inline\">\\(n\\)</span>.</p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-19\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(n \\in \\mathbb{N}\\)</span> –\n<em>простое</em>, если имеет ровно 2 делителя <span\nclass=\"math inline\">\\(1\\)</span> и <span\nclass=\"math inline\">\\(n\\)</span>.</p>",
         "url": "теория-сравнений.html#definition-19"
     },
     {
         "keyword": "составное",
-        "html": "<p><a href=\"теория-сравнений.html#definition-20\"><strong>Перейти к\nопределению:</strong></a> <span class=\"math inline\">\\(n \\in \\mathbb{N}\n\\,\\,\\,\\, n &gt; 1\\)</span> - <em>составное</em>, если оно не\nпростое.</p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-20\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(n \\in \\mathbb{N} \\,\\,\\,\\, n &gt; 1\\)</span>\n– <em>составное</em>, если оно не простое.</p>",
         "url": "теория-сравнений.html#definition-20"
     },
     {
         "keyword": "",
-        "html": "<p><a href=\"теория-сравнений.html#definition-21\"><strong>Перейти к\nопределению:</strong></a> (количество простых меньших <span\nclass=\"math inline\">\\(x\\)</span>) <span class=\"math display\">\\[\\pi(x) =\n\\displaystyle \\sum_{p \\le x}^{}1\\]</span></p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-21\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(количество простых меньших <span class=\"math inline\">\\(x\\)</span>)\n<span class=\"math display\">\\[\\pi(x) = \\displaystyle \\sum_{p \\le\nx}^{}1\\]</span></p>",
         "url": "теория-сравнений.html#definition-21"
     },
     {
         "keyword": "функция мёбиуса",
-        "html": "<p><a href=\"теория-сравнений.html#definition-22\"><strong>Перейти к\nопределению:</strong></a> (<em>функция Мёбиуса</em>)</p>\n<p><span class=\"math display\">\\[\\mu(n) = \\begin{cases} 1,\\,\\,\\,\\, n = 1\n\\\\\n0,\\,\\,\\,\\, n = p^2m,\\,\\,\\,\\, p - простое \\\\\n(-1)^k,\\,\\,\\,\\, n = p_1 \\cdot \\ldots \\cdot p_k \\end{cases}\\]</span></p>\n<p><strong>Обозначение:</strong> <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{d \\,\\,|\\,\\, n}\\)</span> -\nсумма по всем делителям числа <span class=\"math inline\">\\(n\\)</span>,\nвключая <span class=\"math inline\">\\(n\\)</span> и <span\nclass=\"math inline\">\\(1\\)</span>.</p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-22\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>функция Мёбиуса</em>)</p>\n<p><span class=\"math display\">\\[\\mu(n) = \\begin{cases} 1,\\,\\,\\,\\, n = 1\n\\\\\n0,\\,\\,\\,\\, n = p^2m,\\,\\,\\,\\, p - простое \\\\\n(-1)^k,\\,\\,\\,\\, n = p_1 \\cdot \\ldots \\cdot p_k \\end{cases}\\]</span></p>\n<p><strong>Обозначение:</strong> <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{d \\,\\,|\\,\\, n}\\)</span> –\nсумма по всем делителям числа <span class=\"math inline\">\\(n\\)</span>,\nвключая <span class=\"math inline\">\\(n\\)</span> и <span\nclass=\"math inline\">\\(1\\)</span>.</p>",
         "url": "теория-сравнений.html#definition-22"
     },
     {
         "keyword": "",
-        "html": "<p><a href=\"теория-сравнений.html#definition-23\"><strong>Перейти к\nопределению:</strong></a> <strong>Определение:</strong> <span\nclass=\"math display\">\\[\\tau(n) = \\displaystyle \\sum_{d \\,\\,|\\,\\,\nn}1\\]</span></p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-23\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<strong>Определение:</strong> <span class=\"math display\">\\[\\tau(n) =\n\\displaystyle \\sum_{d \\,\\,|\\,\\, n}1\\]</span></p>",
         "url": "теория-сравнений.html#definition-23"
     },
     {
         "keyword": "",
-        "html": "<p><a href=\"теория-сравнений.html#definition-24\"><strong>Перейти к\nопределению:</strong></a> <strong>Определение:</strong> <span\nclass=\"math display\">\\[\\sigma(n) = \\displaystyle \\sum_{d \\,\\,|\\,\\,\nn}d\\]</span></p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-24\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<strong>Определение:</strong> <span class=\"math display\">\\[\\sigma(n) =\n\\displaystyle \\sum_{d \\,\\,|\\,\\, n}d\\]</span></p>",
         "url": "теория-сравнений.html#definition-24"
     },
     {
         "keyword": "",
-        "html": "<p><a href=\"теория-сравнений.html#definition-25\"><strong>Перейти к\nопределению:</strong></a> Если сравнение, написанное выше, имеет\nрешение, то <span class=\"math inline\">\\(a\\)</span> - вычет <span\nclass=\"math inline\">\\(n\\)</span>-й степени.</p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-25\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЕсли сравнение, написанное выше, имеет решение, то <span\nclass=\"math inline\">\\(a\\)</span> – вычет <span\nclass=\"math inline\">\\(n\\)</span>-й степени.</p>",
         "url": "теория-сравнений.html#definition-25"
     },
     {
         "keyword": "символ лежандра",
-        "html": "<p><a href=\"теория-сравнений.html#definition-26\"><strong>Перейти к\nопределению:</strong></a> (<em>Символ Лежандра</em>) <span\nclass=\"math inline\">\\(a \\in \\mathbb{Z}, \\,\\,\\,\\, p \\ge 3,\n\\,\\,\\,\\,p\\)</span> - простое.</p>\n<p><span class=\"math display\">\\[\\left(\\frac{a}{p}\\right) = \\begin{cases}\n-1, \\,\\,\\,\\, (a, p) = 1, \\,\\,\\,\\, a - квадратичный \\,\\,\\,\\, невычет\n\\,\\,\\,\\, по \\,\\,\\,\\, модулю \\,\\,\\,\\, p \\\\\n\\,\\,\\,\\,\\,0, \\,\\,\\,\\, p \\,\\,|\\,\\, a \\\\\n\\,\\,\\,\\,\\,1, \\,\\,\\,\\, (a, p) = 1, \\,\\,\\,\\, a - квадратичный \\,\\,\\,\\,\nвычет \\,\\,\\,\\,по \\,\\,\\,\\, модулю \\,\\,\\,\\, p \\end{cases}\\]</span></p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-26\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>Символ Лежандра</em>) <span class=\"math inline\">\\(a \\in \\mathbb{Z},\n\\,\\,\\,\\, p \\ge 3, \\,\\,\\,\\,p\\)</span> – простое.</p>\n<p><span class=\"math display\">\\[\\left(\\frac{a}{p}\\right) = \\begin{cases}\n-1, \\,\\,\\,\\, (a, p) = 1, \\,\\,\\,\\, a -- квадратичный \\,\\,\\,\\, невычет\n\\,\\,\\,\\, по \\,\\,\\,\\, модулю \\,\\,\\,\\, p \\\\\n\\,\\,\\,\\,\\,0, \\,\\,\\,\\, p \\,\\,|\\,\\, a \\\\\n\\,\\,\\,\\,\\,1, \\,\\,\\,\\, (a, p) = 1, \\,\\,\\,\\, a -- квадратичный \\,\\,\\,\\,\nвычет \\,\\,\\,\\,по \\,\\,\\,\\, модулю \\,\\,\\,\\, p \\end{cases}\\]</span></p>",
         "url": "теория-сравнений.html#definition-26"
     },
     {
         "keyword": "показатель числа",
-        "html": "<p><a href=\"теория-сравнений.html#definition-14\"><strong>Перейти к\nопределению:</strong></a> <em>Показатель числа</em> <span\nclass=\"math inline\">\\(a\\)</span> по модулю <span\nclass=\"math inline\">\\(m\\)</span> (<span\nclass=\"math inline\">\\(ord_ma\\)</span>)</p>\n<p>Рассмотрим <span class=\"math inline\">\\(M = \\{x \\in \\mathbb{N}: a^x\n\\equiv 1 \\mod m\\}\\)</span><br> <span class=\"math inline\">\\(M \\ne\n\\varnothing\\)</span> по <a href=\"#theorem-6\">теореме Эйлера</a><br> По\nаксиоме Архимеда <span class=\"math inline\">\\(\\exists \\,\\, \\min M =\nord_ma\\)</span></p>",
+        "html": "<p><a href=\"теория-сравнений.html#definition-14\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Показатель числа</em> <span class=\"math inline\">\\(a\\)</span> по\nмодулю <span class=\"math inline\">\\(m\\)</span> (<span\nclass=\"math inline\">\\(ord_ma\\)</span>)</p>\n<p>Рассмотрим <span class=\"math inline\">\\(M = \\{x \\in \\mathbb{N}: a^x\n\\equiv 1 \\mod m\\}\\)</span><br> <span class=\"math inline\">\\(M \\ne\n\\varnothing\\)</span> по <a href=\"#theorem-6\">теореме Эйлера</a><br> По\nаксиоме Архимеда <span class=\"math inline\">\\(\\exists \\,\\, \\min M =\nord_ma\\)</span></p>",
         "url": "теория-сравнений.html#definition-14"
     },
     {
         "keyword": "",
-        "html": "<p><a href=\"первообразные-корни.html#definition-27\"><strong>Перейти к\nопределению:</strong></a> Пусть <span class=\"math inline\">\\((a, m) =\n1\\)</span>. Если <span class=\"math inline\">\\(ord_ma =\n\\varphi(m)\\)</span>, то <span class=\"math inline\">\\(a\\)</span> -\nпервообразный корень по модулю <span\nclass=\"math inline\">\\(m\\)</span>.</p>",
+        "html": "<p><a href=\"первообразные-корни.html#definition-27\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((a, m) = 1\\)</span>. Если <span\nclass=\"math inline\">\\(ord_ma = \\varphi(m)\\)</span>, то <span\nclass=\"math inline\">\\(a\\)</span> – первообразный корень по модулю <span\nclass=\"math inline\">\\(m\\)</span>.</p>",
         "url": "первообразные-корни.html#definition-27"
     }
 ]

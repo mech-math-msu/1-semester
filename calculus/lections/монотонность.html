@@ -11,6 +11,7 @@
     
     <title>Монотонность</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -259,31 +269,31 @@
 id="монотонные-функции-теорема-о-пределе-монотонной-и-ограниченной-функции">Монотонные
 функции, теорема о пределе монотонной и ограниченной функции</h2>
 <div id="definition-7">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(f(x)\)</span> определена на <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена на <span
 class="math inline">\((a, b)\)</span> и <span
 class="math inline">\(\forall x_1 &lt; x_2 \in (a, b):\)</span></p>
 <ol type="1">
-<li><span class="math inline">\(f(x_1) &lt; f(x_2)\)</span> - функция
-<span class="math inline">\(f(x)\)</span> возрастающая на <span
+<li><span class="math inline">\(f(x_1) &lt; f(x_2)\)</span> – функция
+<span class="math inline">\(f(x)\)</span> <em>возрастающая</em> на <span
 class="math inline">\((a, b)\)</span></li>
-<li><span class="math inline">\(f(x_1) \le f(x_2)\)</span> - функция
-<span class="math inline">\(f(x)\)</span> неубывающая на <span
+<li><span class="math inline">\(f(x_1) \le f(x_2)\)</span> – функция
+<span class="math inline">\(f(x)\)</span> <em>неубывающая</em> на <span
 class="math inline">\((a, b)\)</span></li>
-<li><span class="math inline">\(f(x_1) \ge f(x_2)\)</span> - функция
-<span class="math inline">\(f(x)\)</span> невозрастающая на <span
-class="math inline">\((a, b)\)</span></li>
-<li><span class="math inline">\(f(x_1) &gt; f(x_2)\)</span> - функция
-<span class="math inline">\(f(x)\)</span> убывающая на <span
+<li><span class="math inline">\(f(x_1) \ge f(x_2)\)</span> – функция
+<span class="math inline">\(f(x)\)</span> <em>невозрастающая</em> на
+<span class="math inline">\((a, b)\)</span></li>
+<li><span class="math inline">\(f(x_1) &gt; f(x_2)\)</span> – функция
+<span class="math inline">\(f(x)\)</span> <em>убывающая на</em> <span
 class="math inline">\((a, b)\)</span></li>
 </ol>
 </div>
 <div id="theorem-12">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(\forall x
-\in \mathring{B}_{\delta}(x_0) \,\,\,\, f(x) \ge g(x)\)</span> и <span
-class="math inline">\(\exists \displaystyle \lim_{x\to x_0}f(x) = a,
-\,\,\,\,\exists \displaystyle \lim_{x\to x_0}g(x) = b\)</span>.
-Тогда</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(\forall x \in \mathring{B}_{\delta}(x_0) \,\,\,\,
+f(x) \ge g(x)\)</span> и <span class="math inline">\(\exists
+\displaystyle \lim_{x\to x_0}f(x) = a, \,\,\,\,\exists \displaystyle
+\lim_{x\to x_0}g(x) = b\)</span>. Тогда</p>
 <ol type="1">
 <li><span class="math inline">\(a \ge b\)</span></li>
 <li>Если <span class="math inline">\(a &gt; b\)</span>, то <span
@@ -291,7 +301,7 @@ class="math inline">\(\exists \mathring{B}_{\delta_1}(x_0):\,\,\,\, f(x)
 &gt; g(x) \,\,\,\, \forall x \in
 \mathring{B}_{\delta_1}(x_0)\)</span></li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li>Гейне.</li>
 <li>Определение для <span class="math inline">\(\varepsilon = \frac{|a -
@@ -299,26 +309,27 @@ b|}{3}\)</span></li>
 </ol>
 </div>
 <div id="theorem-13">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) = \displaystyle
 \lim_{x\to x_0}g(x) = a\)</span> и <span class="math inline">\(f(x) \le
 h(x) \le g(x) \,\,\,\, \forall x \in
 \mathring{B}_{\delta}(x_0)\)</span>. Тогда <span
 class="math inline">\(\displaystyle \lim_{x\to x_0}h(x) =
 a\)</span>.</p>
-<p><em>Доказательство:</em> Гейне.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Гейне.</p>
 </div>
 <div id="theorem-14">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(f(x)\)</span> неубывает и ограничена сверху в
 <span class="math inline">\((x_0 - \delta, x_0)\)</span>. Тогда <span
 class="math inline">\(\exists \displaystyle \lim_{x\to
 x_0-0}f(x)\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(f(x)\)</span>
-ограничена сверху <span class="math inline">\(\Rightarrow \exists \sup
-(f(x)) = \alpha \,\,\,\, \forall \varepsilon &gt; 0 \,\,\,\,\exists
-x_{\varepsilon} \in (x_0 - \delta, x_0): \,\,\,\, f(x_{\varepsilon})
-&gt; \alpha - \varepsilon \Rightarrow\)</span>, т.к. функция <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(f(x)\)</span> ограничена сверху <span
+class="math inline">\(\Rightarrow \exists \sup (f(x)) = \alpha \,\,\,\,
+\forall \varepsilon &gt; 0 \,\,\,\,\exists x_{\varepsilon} \in (x_0 -
+\delta, x_0): \,\,\,\, f(x_{\varepsilon}) &gt; \alpha - \varepsilon
+\Rightarrow\)</span>, т.к. функция <span
 class="math inline">\(f(x)\)</span> неубывает <span
 class="math inline">\(\forall x &gt; x_{\varepsilon} \,\,\,\, x &gt;
 \alpha - \varepsilon ????\)</span></p>
@@ -328,8 +339,8 @@ id="непрерывные-функции-локальные-свойства-н
 функции, локальные свойства непрерывных функций. Точки разрыва, их
 классификация</h2>
 <div id="definition-8">
-<p><strong>Определение: </strong>Функция <span
-class="math inline">\(f(x)\)</span> непрерывна в т. <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Функция
+<span class="math inline">\(f(x)\)</span> непрерывна в т. <span
 class="math inline">\(x_0\)</span>, если <span
 class="math inline">\(f(x)\)</span> определена в т. <span
 class="math inline">\(x_0\)</span> и <span
@@ -340,34 +351,36 @@ f(x_0)\)</span></p>
 отличий с определением предела и придумайте определение непрерывности
 “по Гейне”.</p>
 <div id="theorem-15">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(f(x),
-g(x)\)</span> непрерывны в т. <span class="math inline">\(x_0\)</span>.
-Тогда <span class="math inline">\(\forall \alpha, \beta \in
-\mathbb{R}\)</span></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f(x), g(x)\)</span> непрерывны в т. <span
+class="math inline">\(x_0\)</span>. Тогда <span
+class="math inline">\(\forall \alpha, \beta \in \mathbb{R}\)</span></p>
 <ol type="1">
-<li><span class="math inline">\(\alpha f(x) + \beta g(x)\)</span> -
+<li><span class="math inline">\(\alpha f(x) + \beta g(x)\)</span> –
 непрерывна в точке <span class="math inline">\(x_0\)</span>.</li>
-<li><span class="math inline">\(f(x)\cdot g(x)\)</span> - непрерывна в
+<li><span class="math inline">\(f(x)\cdot g(x)\)</span> – непрерывна в
 точке <span class="math inline">\(x_0\)</span>.</li>
 <li>Если <span class="math inline">\(g(x_0) \ne 0\)</span>, то <span
-class="math inline">\(\frac{f(x)}{g(x)}\)</span> - непрерывна в точке
+class="math inline">\(\frac{f(x)}{g(x)}\)</span> – непрерывна в точке
 <span class="math inline">\(x_0\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em> Пределы.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пределы.</p>
 </div>
 <div id="theorem-16">
-<p><strong>Теорема: </strong>(Непрерывность композиции) Пусть <span
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(Непрерывность композиции) Пусть <span
 class="math inline">\(f(x)\)</span> непрерывна в т. <span
 class="math inline">\(x_0\)</span>, <span class="math inline">\(y_0 =
 f(x_0), \,\,\,\, g(y)\)</span> непрерывна в т. <span
 class="math inline">\(y_0\)</span>. Тогда <span
 class="math inline">\(g(f(x))\)</span> непрерывна в т. <span
 class="math inline">\(x_0\)</span>.</p>
-<p><em>Доказательство:</em> Гейне ????.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Гейне
+????.</p>
 </div>
 <div id="definition-9">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(f(x)\)</span> определена в <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена в <span
 class="math inline">\(B(x_0)\)</span> и <span
 class="math inline">\(f(x)\)</span> не является непрерывной в т. <span
 class="math inline">\(x_0\)</span>. Тогда <span
@@ -375,8 +388,9 @@ class="math inline">\(x_0\)</span> <em>точка разрыва</em> функц
 class="math inline">\(f(x)\)</span>.</p>
 </div>
 <div id="definition-10">
-<p><strong>Определение: </strong>(Классификация точек разрыва) Пусть
-<span class="math inline">\(x_0\)</span> точка разрыва функции <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(Классификация точек разрыва) Пусть <span
+class="math inline">\(x_0\)</span> точка разрыва функции <span
 class="math inline">\(f(x)\)</span></p>
 <ol type="1">
 <li>Если <span class="math inline">\(\exists \displaystyle \lim_{x\to

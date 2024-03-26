@@ -11,6 +11,7 @@
     
     <title>Равномерно непрерывные функции, теорема Кантора</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -258,31 +268,32 @@
 id="равномерно-непрерывные-функции-теорема-кантора">Равномерно
 непрерывные функции, теорема Кантора</h1>
 <div id="definition-12">
-<p><strong>Определение: </strong>Пусть <span class="math inline">\(I
-\subset \mathbb{R}\)</span> - промежуток. Если <span
-class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists \delta
-&gt; 0: \forall x_1, x_2 \in I: |x_1 - x_2| &lt; \delta \,\,\,\, |f(x_1)
-- f(x_2)| &lt; \varepsilon\)</span>, то <span
-class="math inline">\(f(x)\)</span> - <em>равномерно непрерыва</em> на
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(I \subset \mathbb{R}\)</span> – промежуток.
+Если <span class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\,
+\exists \delta &gt; 0: \forall x_1, x_2 \in I: |x_1 - x_2| &lt; \delta
+\,\,\,\, |f(x_1) - f(x_2)| &lt; \varepsilon\)</span>, то <span
+class="math inline">\(f(x)\)</span> – <em>равномерно непрерыва</em> на
 <span class="math inline">\(I\)</span>.</p>
 </div>
 <div id="theorem-22">
-<p><strong>Теорема: </strong>(<em>Кантора о равномерной
-непрерывности</em>) Если <span class="math inline">\(f(x)\)</span>
-непрерывна на <span class="math inline">\([a, b]\)</span>, то <span
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(<em>Кантора о равномерной непрерывности</em>) Если
+<span class="math inline">\(f(x)\)</span> непрерывна на <span
+class="math inline">\([a, b]\)</span>, то <span
 class="math inline">\(f(x)\)</span> равномерно непрерывна на <span
 class="math inline">\([a, b]\)</span>.</p>
-<p><em>Доказательство:</em> (От противного) Пусть <span
-class="math inline">\(f(x)\)</span> не является равномерно непрерывной
-на <span class="math inline">\([a, b]\)</span>, то есть <span
-class="math inline">\(\exists \varepsilon_0 &gt; 0: \forall \delta &gt;
-0 \,\,\,\,\exists x’, x’’ \in [a, b], \,\,\,\, |x’ - x’’| &lt; \delta:
-\,\,\,\, |f(x’) - f(x’’)| \ge \varepsilon_0\)</span>. Построим
-последовательность: <span class="math display">\[x_1’, x_1’’ \in [a, b],
-\,\,\,\, |x_1’ - x_1’’| &lt; 1: \,\,\,\, |f(x_1’) - f(x_1’’)| \ge
-\varepsilon_0\]</span> <span class="math display">\[x_2’, x_2’’ \in [a,
-b], \,\,\,\, |x_2’ - x_2’’| &lt; \frac{1}{2}: \,\,\,\, |f(x_2’) -
-f(x_2’’)| \ge \varepsilon_0\]</span> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> (От
+противного) Пусть <span class="math inline">\(f(x)\)</span> не является
+равномерно непрерывной на <span class="math inline">\([a, b]\)</span>,
+то есть <span class="math inline">\(\exists \varepsilon_0 &gt; 0:
+\forall \delta &gt; 0 \,\,\,\,\exists x’, x’’ \in [a, b], \,\,\,\, |x’ -
+x’’| &lt; \delta: \,\,\,\, |f(x’) - f(x’’)| \ge \varepsilon_0\)</span>.
+Построим последовательность: <span class="math display">\[x_1’, x_1’’
+\in [a, b], \,\,\,\, |x_1’ - x_1’’| &lt; 1: \,\,\,\, |f(x_1’) -
+f(x_1’’)| \ge \varepsilon_0\]</span> <span class="math display">\[x_2’,
+x_2’’ \in [a, b], \,\,\,\, |x_2’ - x_2’’| &lt; \frac{1}{2}: \,\,\,\,
+|f(x_2’) - f(x_2’’)| \ge \varepsilon_0\]</span> <span
 class="math display">\[\vdots\]</span> <span
 class="math display">\[x_n’, x_n’’ \in [a, b], \,\,\,\, |x_n’ - x_n’’|
 &lt; \frac{1}{n}: \,\,\,\, |f(x_n’) - f(x_n’’)| \ge
@@ -307,39 +318,41 @@ id="построение-показательной-функции.-логари
 id="замечательные-пределы-следствия-из-них">Замечательные пределы,
 следствия из них</h2>
 <div id="theorem-23">
-<p><strong>Теорема: </strong>(<em>Первый замечательный предел</em>)
-<span class="math display">\[\exists \displaystyle \lim_{x\to
-0}\frac{\sin(x)}{x} = 1\]</span></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(<em>Первый
+замечательный предел</em>) <span class="math display">\[\exists
+\displaystyle \lim_{x\to 0}\frac{\sin(x)}{x} = 1\]</span></p>
 </div>
 <div id="theorem-24">
-<p><strong>Теорема: </strong><span class="math display">\[\exists
-\displaystyle \lim_{x\to \infty} \left(1+ \frac{1}{x}\right)^x =
-e\]</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span><span
+class="math display">\[\exists \displaystyle \lim_{x\to \infty} \left(1+
+\frac{1}{x}\right)^x = e\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="corollary-0">
-<p><strong>Следствие: </strong><span
+<p><span class="margin-lft"><strong>Следствие: </strong></span><span
 class="math display">\[\displaystyle \lim_{x\to 0}(1+x)^{\frac{1}{x}} =
 e\]</span></p>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-1">
-<p><strong>Следствие: </strong><span
+<p><span class="margin-lft"><strong>Следствие: </strong></span><span
 class="math display">\[\displaystyle \lim_{x\to 0}\frac{\ln(1 + x)}{x} =
 1\]</span></p>
-<p><em>Доказательство:</em> <span class="math inline">\(\displaystyle
-\lim_{x\to 0}\frac{\ln(1 + x)}{x} = \displaystyle \lim_{x\to 0}\ln((1 +
-x)^{\frac{1}{x}}) = \ln(e) = 1 \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\displaystyle \lim_{x\to 0}\frac{\ln(1 + x)}{x} =
+\displaystyle \lim_{x\to 0}\ln((1 + x)^{\frac{1}{x}}) = \ln(e) = 1
+\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-2">
-<p><strong>Следствие: </strong><span
+<p><span class="margin-lft"><strong>Следствие: </strong></span><span
 class="math display">\[\displaystyle \lim_{x\to 0}\frac{e^x - 1}{x} =
 1\]</span></p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(t = e^x -
-1\)</span>. Тогда <span class="math inline">\(\displaystyle \lim_{x\to
-0}\frac{e^x - 1}{x} = \displaystyle \lim_{t\to 0}\frac{t}{\ln(t + 1)} =
-1 \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(t = e^x - 1\)</span>. Тогда <span
+class="math inline">\(\displaystyle \lim_{x\to 0}\frac{e^x - 1}{x} =
+\displaystyle \lim_{t\to 0}\frac{t}{\ln(t + 1)} = 1
+\,\,\,\,\blacksquare\)</span></p>
 </div>
 
 

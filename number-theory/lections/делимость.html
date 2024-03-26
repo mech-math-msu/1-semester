@@ -11,6 +11,7 @@
     
     <title>Делимость</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -258,11 +268,11 @@
 <h2 data-number="1.1" id="теоремы-о-делении-с-остатком">Теоремы о
 делении с остатком</h2>
 <div id="definition-1">
-<p><strong>Определение: </strong>Пусть <span class="math inline">\(a \in
-\mathbb{Z}, b \in \mathbb{Z}, a \ne 0\)</span>. Если <span
-class="math inline">\(\exists c \in \mathbb{Z}\)</span>, такое что <span
-class="math inline">\(b = ac\)</span>, то <span
-class="math inline">\(a\,\,|\,\,b\)</span> (<span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(a \in \mathbb{Z}, b \in \mathbb{Z}, a \ne
+0\)</span>. Если <span class="math inline">\(\exists c \in
+\mathbb{Z}\)</span>, такое что <span class="math inline">\(b =
+ac\)</span>, то <span class="math inline">\(a\,\,|\,\,b\)</span> (<span
 class="math inline">\(a\)</span> <em>делит</em> <span
 class="math inline">\(b\)</span>)</p>
 </div>
@@ -287,42 +297,47 @@ class="math inline">\(|a| \le |b|\)</span></li>
 </ol>
 <h3 data-number="1.1.2" id="простейшие-функции">Простейшие функции</h3>
 <div id="definition-2">
-<p><strong>Определение: </strong>(<em>(нижняя) целая часть числа</em>)
-<span class="math inline">\([x] = \max \{z \in \mathbb{Z}: z \le x\} =
-\lceil x \rceil\)</span></p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(<em>(нижняя) целая часть числа</em>) <span
+class="math inline">\([x] = \max \{z \in \mathbb{Z}: z \le x\} = \lceil
+x \rceil\)</span></p>
 </div>
 <blockquote>
 <p><span class="math inline">\([-4.5] = -5\)</span><br> <span
 class="math inline">\([5.6] = [5]\)</span></p>
 </blockquote>
 <div id="definition-3">
-<p><strong>Определение: </strong>(<em>дробная часть числа</em>) <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(<em>дробная часть числа</em>) <span
 class="math inline">\(\{x\} = x - [x]\)</span></p>
 </div>
 <div id="definition-4">
-<p><strong>Определение: </strong>(<em>верхняя целая часть числа</em>)
-<span class="math inline">\(\lfloor x \rfloor = \min \{z \in \mathbb{Z}:
-z \ge x\}\)</span></p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(<em>верхняя целая часть числа</em>) <span
+class="math inline">\(\lfloor x \rfloor = \min \{z \in \mathbb{Z}: z \ge
+x\}\)</span></p>
 <blockquote>
 <p><span class="math inline">\(\lfloor -4.5 \rfloor = -4\)</span> <br>
 <span class="math inline">\(\lfloor 5.5 \rfloor = [6]\)</span></p>
 </blockquote>
 </div>
 <div id="definition-5">
-<p><strong>Определение: </strong>(<em>расстояние до ближайшего
-целого</em>) <span class="math inline">\(\displaystyle ||x|| = \min_{a
-\in \mathbb{Z}} |x - a|\)</span></p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(<em>расстояние до ближайшего целого</em>) <span
+class="math inline">\(\displaystyle ||x|| = \min_{a \in \mathbb{Z}} |x -
+a|\)</span></p>
 </div>
 <p><strong>Упражнение:</strong><a name="exercise-1"></a> <span
 class="math inline">\(||x|| = \min (\{x\}, 1 - \{x\})\)</span></p>
 <p><strong>Упражнение:</strong><a name="exercise-2"></a> <span
 class="math inline">\(||x + y|| \le ||x|| + ||y||\)</span></p>
 <div id="theorem-1">
-<p><strong>Теорема: </strong>(<em>обычное деление с остатком</em>) <span
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(<em>обычное деление с остатком</em>) <span
 class="math display">\[\forall a \in \mathbb{Z},\, b \in
 \mathbb{N}\,\,\,\, \exists !\,\, q, r \in \mathbb{Z}: a = bq + r,\,\, 0
 \le r &lt; b\]</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><em>Существование</em>: 1. Если <span
 class="math inline">\(a\,\,|\,\,b\)</span>, то <span
 class="math inline">\(q = \frac{a}{b} \in \mathbb{Z},\,\,\,\,r =
@@ -350,20 +365,23 @@ class="math display">\[0 \le r_0, r_1 \le b - 1 \Rightarrow |r_0 - r_1|
 </div>
 <h2 data-number="1.2" id="нод">НОД</h2>
 <div id="definition-6">
-<p><strong>Определение: </strong>(<em>НОД</em>) Пусть <span
-class="math inline">\(a, b \in \mathbb{Z},\,\,\,\,\mathcal{D}_{a, b}=
-\{z \in \mathbb{N}: z\,\,|\,\,a, z\,\,|\,\,b\}\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(<em>НОД</em>) Пусть <span class="math inline">\(a, b
+\in \mathbb{Z},\,\,\,\,\mathcal{D}_{a, b}= \{z \in \mathbb{N}:
+z\,\,|\,\,a, z\,\,|\,\,b\}\)</span>. Тогда <span
 class="math display">\[\mathbf{НОД}(a, b) = \max
 \mathcal{D}\]</span></p>
 </div>
 <div id="statement-1">
-<p><strong>Утверждение: </strong>(корректность определения)
-<em>Доказательство:</em> очев.</p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>(корректность определения) <span
+class="margin-lft"><em>Доказательство:</em></span> очев.</p>
 </div>
 <div id="lemma-1">
-<p><strong>Лемма: </strong><span class="math display">\[(a, b) = (a, a
-\pm b)\]</span></p>
-<p><em>Доказательство:</em> <span class="math display">\[\begin{cases}
+<p><span class="margin-lft"><strong>Лемма: </strong></span><span
+class="math display">\[(a, b) = (a, a \pm b)\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math display">\[\begin{cases}
 z\,\,|\,\,a \\ z\,\,|\,\,b
 \end{cases} \Rightarrow z\,\,|\,\,b \pm a \Rightarrow \mathcal{D}_{a, b}
 \subset \mathcal{D}_{a, b \pm a}\]</span> <span
@@ -387,25 +405,30 @@ class="math display">\[\vdots\]</span> <span class="math display">\[r_{n
 1}, \,\,\,\, r_{n + 1} = 0\]</span> <span class="math display">\[\exists
 n \in \mathbb{N}: r_{n + 1} = 0\]</span></p>
 <div id="statement-2">
-<p><strong>Утверждение: </strong><span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math inline">\(\mathbf{НОД} (a, b) = r_n\)</span></p>
-<p><em>Доказательство:</em> <span class="math inline">\(\forall j \le n
-(r_{j - 1}, r_j) = (r_j, r_{j + 1}) \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\forall j \le n (r_{j - 1}, r_j) = (r_j, r_{j +
+1}) \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-2">
-<p><strong>Теорема: </strong>(<em>о линейном представлении НОД</em>)
-Пусть <span class="math inline">\(a, b \in \mathbb{Z}, \,\,\,\,\,\, d =
-(a, b)\)</span>. Тогда <span class="math display">\[\exists x, y \in
-\mathbb{Z}: d = ax + by\]</span></p>
-<p><em>Доказательство:</em> Обратный ход алгоритма Евклида <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(<em>о
+линейном представлении НОД</em>) Пусть <span class="math inline">\(a, b
+\in \mathbb{Z}, \,\,\,\,\,\, d = (a, b)\)</span>. Тогда <span
+class="math display">\[\exists x, y \in \mathbb{Z}: d = ax +
+by\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Обратный ход
+алгоритма Евклида <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span>.</p>
 </div>
 <div id="lemma-2">
-<p><strong>Лемма: </strong>(<em>важная</em>) <span
+<p><span class="margin-lft"><strong>Лемма:
+</strong></span>(<em>важная</em>) <span
 class="math display">\[\begin{cases}
 a\,\,|\,\,bc \\ (a, b) = 1
-\end{cases} \Rightarrow a\,\,|\,\,c\]</span> <em>Доказательство:</em>
-<span class="math display">\[(a, b) = 1 \Rightarrow \exists x, y \in
+\end{cases} \Rightarrow a\,\,|\,\,c\]</span> <span
+class="margin-lft"><em>Доказательство:</em></span> <span
+class="math display">\[(a, b) = 1 \Rightarrow \exists x, y \in
 \mathbb{Z}: 1 = ax + by\]</span> <span class="math display">\[acx + bcy
 = c\]</span> <span class="math display">\[\begin{cases}
 a\,\,|\,\,acx \\ a\,\,|\,\,bcy
@@ -414,36 +437,36 @@ a\,\,|\,\,acx \\ a\,\,|\,\,bcy
 <h2 data-number="1.4" id="нок-и-нод-нескольких-чисел">НОК и НОД
 нескольких чисел</h2>
 <div id="definition-7">
-<p><strong>Определение: </strong><span class="math inline">\(z \in
-\mathbb{Z}\)</span> - общее кратное чисел <span
-class="math inline">\(a_1, \ldots, a_n\)</span>, если <span
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(z \in \mathbb{Z}\)</span> – общее кратное чисел
+<span class="math inline">\(a_1, \ldots, a_n\)</span>, если <span
 class="math inline">\(a_j \,\,|\,\,z \forall j\)</span></p>
 </div>
 <div id="definition-8">
-<p><strong>Определение: </strong><span
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
 class="math inline">\(\mathbf{НОК} (a_1, \ldots, a_n) = \min \{z \in
 \mathbb{N} : z\)</span> общее кратное чисел <span
 class="math inline">\(a_1, \ldots, a_n \}\)</span></p>
 </div>
 <div id="theorem-3">
-<p><strong>Теорема: </strong>Если <span class="math inline">\(z_0 -
-\mathbf{НОК} (a_1, \ldots, a_n)\)</span>, то <span
-class="math inline">\(z_0 \,\,|\,\,z\)</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если <span
+class="math inline">\(z_0 - \mathbf{НОК} (a_1, \ldots, a_n)\)</span>, то
+<span class="math inline">\(z_0 \,\,|\,\,z\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="definition-9">
-<p><strong>Определение: </strong><span
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
 class="math inline">\(\mathbf{НОД} (a_1, \ldots, a_n) = \max \{z \in
 \mathbb{N}: z \,\,|\,\,a_j \,\,\,\,\,\, \forall j = 1, \ldots,
 n\}\)</span></p>
 </div>
 <div id="theorem-4">
-<p><strong>Теорема: </strong>Пусть <span
-class="math inline">\(d\)</span> - общий делитель <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(d\)</span> – общий делитель <span
 class="math inline">\(a_1, \ldots, a_n\)</span>. Тогда <span
 class="math inline">\(d \,\,|\,\,\mathbf{НОД} (a_1, \ldots,
 a_n)\)</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 
 

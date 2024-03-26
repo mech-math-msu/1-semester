@@ -11,6 +11,7 @@
     
     <title>Дифференцируемость функций, первый дифференциал</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -258,12 +268,13 @@
 id="дифференцируемость-функций-первый-дифференциал">Дифференцируемость
 функций, первый дифференциал</h1>
 <div id="definition-15">
-<p><strong>Определение: </strong><em>Дифференцирование</em> - это
-нахождение дифференциала.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Дифференцирование</em> – это нахождение
+дифференциала.</p>
 </div>
 <div id="definition-16">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(f(x)\)</span> определена в <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена в <span
 class="math inline">\(B(x_0)\)</span>. Если <span
 class="math inline">\(\exists A \in \mathbb{R}\)</span>, такое что <span
 class="math display">\[f(x + \Delta x) - f(x) = A\cdot \Delta x +
@@ -271,7 +282,7 @@ class="math display">\[f(x + \Delta x) - f(x) = A\cdot \Delta x +
 <span class="math inline">\(f(x)\)</span> <em>дифференцируема</em> в т.
 <span class="math inline">\(x_0\)</span>, а главная линейная часть <span
 class="math inline">\(A\cdot \Delta x\)</span> ее полного приращения
-<span class="math inline">\(f(x + \Delta x) - f(x)\)</span> - <em>первый
+<span class="math inline">\(f(x + \Delta x) - f(x)\)</span> – <em>первый
 дифференциал</em> <span class="math inline">\(f(x)\)</span> в т. <span
 class="math inline">\(x_0\)</span>.</p>
 <p><strong>Обозначение:</strong> <span class="math inline">\(df(x)
@@ -281,14 +292,15 @@ class="math inline">\(x_0\)</span>.</p>
 id="связь-между-дифференцируемостью-и-существованием-производной">Связь
 между дифференцируемостью и существованием производной</h2>
 <div id="theorem-31">
-<p><strong>Теорема: </strong><span class="math inline">\(f(x)\)</span>
-дифференцируема в т. <span class="math inline">\(x_0 \Leftrightarrow
-\exists f’(x_0)\)</span>.</p>
-<p><em>Доказательство:</em> Записать определение того и другого.</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span><span
+class="math inline">\(f(x)\)</span> дифференцируема в т. <span
+class="math inline">\(x_0 \Leftrightarrow \exists f’(x_0)\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Записать
+определение того и другого.</p>
 </div>
 <div id="definition-17">
-<p><strong>Определение: </strong>Если <span
-class="math inline">\(f(x)\)</span> дифференцируема во всех точках
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+<span class="math inline">\(f(x)\)</span> дифференцируема во всех точках
 множества <span class="math inline">\(X \subset \mathbb{R}\)</span>, то
 <span class="math inline">\(f(x) \in \mathcal{D}(X)\)</span> (множество
 всех дифференцируемых функций на <span
@@ -330,10 +342,10 @@ id="полукасательные-и-касательная-к-графику-�
 <iframe src="https://www.desmos.com/calculator/ozskwyjrex?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0">
 </iframe>
 <div id="definition-18">
-<p><strong>Определение: </strong>Если в т. <span
-class="math inline">\(x_0 \,\,\,\, f_{-}’(x_0) = f_{+}’(x_0)\)</span>,
-то прямая <span class="math inline">\(y = f(x_0) + f’(x_0)\cdot (x -
-x_0)\)</span> - <em>касательная</em> к графику <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если в
+т. <span class="math inline">\(x_0 \,\,\,\, f_{-}’(x_0) =
+f_{+}’(x_0)\)</span>, то прямая <span class="math inline">\(y = f(x_0) +
+f’(x_0)\cdot (x - x_0)\)</span> – <em>касательная</em> к графику <span
 class="math inline">\(f(x)\)</span> в т. <span
 class="math inline">\(x_0\)</span>.</p>
 </div>
@@ -343,7 +355,7 @@ id="геометрический-смысл-первого-дифференци�
 <p><span class="math inline">\(df(x_0) = f’(x_0)dx = f’(x_0)(x -
 x_0)\)</span>. То есть касательная к графику <span
 class="math inline">\(f(x)\)</span> в т. <span
-class="math inline">\(x_0\)</span> - это <span class="math inline">\(y =
+class="math inline">\(x_0\)</span> – это <span class="math inline">\(y =
 f(x_0) + df(x_0)\)</span>.</p>
 <h2 data-number="6.3"
 id="старшие-производные.-старшие-дифференциалы.-неинвариантность-второго-дифференциала">Старшие
@@ -351,8 +363,8 @@ id="старшие-производные.-старшие-дифференциа
 дифференциала</h2>
 <p><img src="img/cat.gif" width="200" height="200" /></p>
 <div id="definition-19">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(f(x)\)</span> определена в <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена в <span
 class="math inline">\(B_{\delta}(x_0)\)</span> и <span
 class="math inline">\(\forall x \in B_{\delta}(x_0) \,\,\,\, f(x) &lt;
 f(x_0)\)</span>. Тогда <span class="math inline">\(f(x)\)</span> имеет
@@ -362,8 +374,8 @@ class="math inline">\(x_0\)</span>.</p>
 <p><strong>Упражнение:</strong><a name="exercise-1"></a> Вы ведь все
 поняли? Запишите, не глядя сюда, определение локального минимума.</p>
 <div id="theorem-32">
-<h2 data-number="6.4" id="теорема-ферма"><strong>Теорема:
-</strong>Теорема Ферма</h2>
+<h2 data-number="6.4" id="теорема-ферма"><span
+class="margin-lft"><strong>Теорема: </strong></span>Теорема Ферма</h2>
 <p>(Ферма) Пусть <span class="math inline">\(f(x)\)</span> определена в
 <span class="math inline">\(B_{\delta}(x_0)\)</span> и имеет строгий
 локальный максимум в т. <span class="math inline">\(x_0\)</span>. Тогда
@@ -371,30 +383,31 @@ class="math inline">\(x_0\)</span>.</p>
 <span class="math inline">\(f_{-}’(x_0) \ge 0\)</span><br> Если <span
 class="math inline">\(\exists f_{+}’(x_0)\)</span>, то <span
 class="math inline">\(f_{+}’(x_0) \le 0\)</span><br></p>
-<p><em>Доказательство:</em> <span class="math inline">\(\forall x \in
-B(x_0) \,\,\,\, f(x) &lt; f(x_0)\)</span>. <span
-class="math inline">\(f_{-}’(x_0) = \displaystyle \lim_{\Delta x\to 0,
-\Delta x &lt; 0}\frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} \Rightarrow
-f_{-}’(x_0) \ge 0 \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\forall x \in B(x_0) \,\,\,\, f(x) &lt;
+f(x_0)\)</span>. <span class="math inline">\(f_{-}’(x_0) = \displaystyle
+\lim_{\Delta x\to 0, \Delta x &lt; 0}\frac{f(x_0 + \Delta x) -
+f(x_0)}{\Delta x} \Rightarrow f_{-}’(x_0) \ge 0
+\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="6.5"
 id="необходимый-признак-локального-экстремума">Необходимый признак
 локального экстремума</h2>
 <div id="corollary-3">
-<p><strong>Следствие: </strong>Если в условиях теоремы <span
-class="math inline">\(\exists f’(x_0)\)</span>, то <span
-class="math inline">\(f’(x_0) = 0\)</span>.</p>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><strong>Следствие: </strong></span>Если в
+условиях теоремы <span class="math inline">\(\exists f’(x_0)\)</span>,
+то <span class="math inline">\(f’(x_0) = 0\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-33">
-<h2 data-number="6.6" id="теорема-ролля"><strong>Теорема:
-</strong>Теорема Ролля</h2>
+<h2 data-number="6.6" id="теорема-ролля"><span
+class="margin-lft"><strong>Теорема: </strong></span>Теорема Ролля</h2>
 <p>(Ролля) Если <span class="math inline">\(f(x) \in C[a, b], \,\,\,\,
 f(x) \in \mathcal{D}(a, b)\)</span> и <span class="math inline">\(f(a) =
 f(b)\)</span>, то <span class="math inline">\(\exists c \in (a, b):
 f’(c) = 0\)</span>.</p>
-<p><em>Доказательство:</em> По <a
+<p><span class="margin-lft"><em>Доказательство:</em></span> По <a
 href="глобальные-свойства-непрерывных-функций.html#theorem-18">2-й
 теореме Вейерштрасса</a> на <span class="math inline">\([a, b] \,\,\,\,
 \exists \min{f(x)} = x_{min}\)</span> и <span
@@ -413,36 +426,37 @@ f(x) = const \Rightarrow \forall x \in (a, b) \,\,\,\, f’(x) = 0
 <h2 data-number="6.7" id="формула-лагранжа-и-следствие-из-неё">Формула
 Лагранжа и следствие из неё</h2>
 <div id="theorem-34">
-<p><strong>Теорема: </strong>(Лагранжа) Если <span
-class="math inline">\(f(x) \in C[a, b], \,\,\,\, f(x) \in \mathcal{D}(a,
-b)\)</span>, то <span class="math inline">\(\exists c \in (a, b):
-f’(c)\cdot (b - a) = f(b) - f(a)\)</span>.</p>
-<p><em>Доказательство:</em> Рассмотрим функцию <span
-class="math inline">\(\varphi (x) = f(x) - \frac{f(b) - f(a)}{b - a}(x -
-a)\)</span>. <span class="math inline">\(\varphi (a) = f(a) = \varphi
-(b) \Rightarrow\)</span> по <a
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Лагранжа)
+Если <span class="math inline">\(f(x) \in C[a, b], \,\,\,\, f(x) \in
+\mathcal{D}(a, b)\)</span>, то <span class="math inline">\(\exists c \in
+(a, b): f’(c)\cdot (b - a) = f(b) - f(a)\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Рассмотрим
+функцию <span class="math inline">\(\varphi (x) = f(x) - \frac{f(b) -
+f(a)}{b - a}(x - a)\)</span>. <span class="math inline">\(\varphi (a) =
+f(a) = \varphi (b) \Rightarrow\)</span> по <a
 href="дифференцируемость-функций-первый-дифференциал.html#theorem-33">теореме
 Ролля</a> <span class="math inline">\(\exists c \in (a, b): \,\,\,\,
 \varphi ’(c) = 0 = f’(c) - \frac{f(b) - f(a)}{b - a}
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-4">
-<p><strong>Следствие: </strong>Если <span class="math inline">\(\forall
-x \in (a, b) \,\,\,\, f ’(x) = 0\)</span>, то <span
-class="math inline">\(f(x) = const\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Следствие: </strong></span>Если
+<span class="math inline">\(\forall x \in (a, b) \,\,\,\, f ’(x) =
+0\)</span>, то <span class="math inline">\(f(x) = const\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="6.8"
 id="формула-коши.-связь-монотонности-функции-и-знака-производной">Формула
 Коши. Связь монотонности функции и знака производной</h2>
 <div id="theorem-35">
-<p><strong>Теорема: </strong>(<em>Формула Коши</em>) Если <span
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(<em>Формула Коши</em>) Если <span
 class="math inline">\(f(x), g(x) \in C[a, b], \,\,\,\, f(x), g(x) \in
 \mathcal{D}(a, b), \,\,\,\, g’(x) \ne 0 \,\,\,\, \forall x \in (a,
 b)\)</span>, то <span class="math inline">\(\exists c \in (a, b):
 \frac{f’(c)}{g’(c)} = \frac{f(b) - f(a)}{g(b) - g(a)}\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(g(b) \ne
-g(a)\)</span> по <a
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(g(b) \ne g(a)\)</span> по <a
 href="дифференцируемость-функций-первый-дифференциал.html#theorem-33">теореме
 Ролля</a>. Рассмотрим функцию <span class="math inline">\(\varphi (x) =
 f(x) - \frac{f(b) - f(a)}{g(b) - g(a)}(g(x) - g(a))\)</span>. <span
@@ -454,8 +468,8 @@ href="дифференцируемость-функций-первый-дифф�
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-38">
+<span class="margin-lft"><strong>Теорема: </strong></span>
 <ol type="1">
-<li><strong>Теорема: </strong></li>
 <li>Пусть <span class="math inline">\(f(x) \in \mathcal{D}(a,
 b)\)</span> и возрастает на <span class="math inline">\((a, b)\)</span>.
 Тогда <span class="math inline">\(f’(x) \ge 0\)</span> на <span
@@ -471,11 +485,12 @@ class="math inline">\((a, b)\)</span>. Тогда <span
 class="math inline">\(f(x)\)</span> строго возрастает на <span
 class="math inline">\((a, b)\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em> 1. <span class="math inline">\(\forall x_1,
-x_2 \in (a, b) \,\,\,\, \frac{f(x_2) - f(x_1)}{x_2 - x_1} \ge
-0\)</span>, так как из <span class="math inline">\(x_2 &gt; x_1\)</span>
-следует <span class="math inline">\(f(x_2) \ge f(x_1)\)</span>.
-Зафиксируем <span class="math inline">\(x_1\)</span>. Тогда из <a
+<p><span class="margin-lft"><em>Доказательство:</em></span> 1. <span
+class="math inline">\(\forall x_1, x_2 \in (a, b) \,\,\,\, \frac{f(x_2)
+- f(x_1)}{x_2 - x_1} \ge 0\)</span>, так как из <span
+class="math inline">\(x_2 &gt; x_1\)</span> следует <span
+class="math inline">\(f(x_2) \ge f(x_1)\)</span>. Зафиксируем <span
+class="math inline">\(x_1\)</span>. Тогда из <a
 href="монотонность.html#theorem-12">теоремы</a> следует <span
 class="math inline">\(f’(x_1) \ge 0 \,\,\,\,\blacksquare\)</span></p>
 <ol start="2" type="1">
@@ -488,23 +503,25 @@ id="отсутствие-у-производной-дифференцируем�
 у производной дифференцируемой функции устранимых разрывов и разрывов
 первого рода</h2>
 <div id="theorem-36">
-<p><strong>Теорема: </strong>Если <span class="math inline">\(f(x) \in
-\mathcal{D}(a, b)\)</span>, то у <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если <span
+class="math inline">\(f(x) \in \mathcal{D}(a, b)\)</span>, то у <span
 class="math inline">\(f(x)\)</span> нет разрывов первого рода и
 устранимых разрывов на <span class="math inline">\((a, b)\)</span>.</p>
-<p><em>Доказательство:</em> Ну, лажа тут какая-то.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Ну, лажа тут
+какая-то.</p>
 </div>
 <div id="theorem-37">
 <h2 data-number="6.10"
-id="теорема-дарбу-о-промежуточных-значениях-производной"><strong>Теорема:
-</strong>Теорема Дарбу о промежуточных значениях производной</h2>
+id="теорема-дарбу-о-промежуточных-значениях-производной"><span
+class="margin-lft"><strong>Теорема: </strong></span>Теорема Дарбу о
+промежуточных значениях производной</h2>
 <p>(Дарбу) Пусть <span class="math inline">\(f(x) \in \mathcal{D}[a, b],
 \,\,\,\, A = f’(a), \,\,\,\, B = f’(b)\)</span>. Тогда <span
 class="math inline">\(\forall C\)</span> между <span
 class="math inline">\(A\)</span> и <span class="math inline">\(B
 \,\,\,\, \exists c \in [a, b]: \,\,\,\, f’(c) = C\)</span>.</p>
-<p><em>Доказательство:</em> Интересно, я просто устала или тут тоже
-лажа? Никому не интересно.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Интересно, я
+просто устала или тут тоже лажа? Никому не интересно.</p>
 <p>короче, и тут котик получился:</p>
 <p><img src="img/cat.gif" width="200" height="200" /></p>
 </div>
